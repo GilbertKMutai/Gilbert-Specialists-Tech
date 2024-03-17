@@ -9,6 +9,9 @@
   <ItemGroup>
     <ProjectReference Include="..\MagnusApp.Client\MagnusApp.Client.csproj" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.0" />
+    <PackageReference Include="Syncfusion.Blazor.Buttons" Version="25.1.35" />
+    <PackageReference Include="Syncfusion.Blazor.Navigations" Version="25.1.35" />
+    <PackageReference Include="Syncfusion.Blazor.Themes" Version="25.1.35" />
   </ItemGroup>
 
 </Project>
