@@ -1,17 +1,25 @@
 ﻿@page "/"
 @using Syncfusion.Blazor.Buttons
+@inject NavigationManager NavigationManager
 <PageTitle>Home</PageTitle>
 
-<SfAppBar>
-    <SfButton CssClass="e-inherit ralign" IconCss="e-icons e-menu"></SfButton>
+<div class="container">
+<SfAppBar ColorMode="AppBarColor.Dark">
     <span class="regular ralign">Essential Studio for Blazor</span>
-    <div style="width: 300px" class="ralign">
+    <div style="width:300px;">
         <span class="e-input-group e-control-wrapper e-inherit">
-            <input type="text" class="e-searchinput e-input" placeholder="Search"/>
+            <input type="search" class="e-searchinput e-input" placeholder="Search"/>
             <span class="e-icons e-search e-input-group-icon"></span>
         </span>
     </div>
+    <AppBarSpacer></AppBarSpacer>
+    <AppBarSeparator></AppBarSeparator>
+    <span><a href="https://www.syncfusion.com/demos">Demos</a></span>
+    <span><a href="https://www.syncfusion.com/forums">Forum</a></span>
+    <span<a a href="https://www.syncfusion.com/upgrade-guide">Upgrade</a>></span>
+    <SfButton Content="Free Trial" CssClass="e-inherit ralign" OnClick="OnBtnClick"></SfButton>
 </SfAppBar>
+</div>
 <br />
 
 <h1>Hello, world!</h1>
@@ -19,7 +27,32 @@
 Welcome to your new app.
 
 <style>
+    .container {
+        max-width: 1024px;
+        min-height: 500px;
+    }
+
     .ralign {
         margin-right: 15px;
     }
+
+    a {
+        font-size: 13px;
+        font-weight: bold;
+        color: inherit;
+        letter-spacing: -.18px;
+        padding: 10px 15px;
+        text-decoration: none;
+        margin-right: 10px
+    }
 </style>
+
+@code{
+    private bool forceLoad = false;
+
+    public void OnBtnClick()
+    {
+        NavigationManager.NavigateTo("https://www.syncfusion.com/downloads");
+    }
+}
+
