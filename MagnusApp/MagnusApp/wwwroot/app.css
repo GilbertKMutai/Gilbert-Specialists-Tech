@@ -49,3 +49,11 @@ h1:focus {
 .darker-border-checkbox.form-check-input {
     border-color: #929292;
 }
+
+body {
+    background-color: gray;
+    /*background-image: url(../images/background-adare-restaurant.jpg);*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
