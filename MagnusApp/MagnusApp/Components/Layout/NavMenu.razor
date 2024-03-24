@@ -1,61 +1,68 @@
-﻿    <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-        <a href="#">Hire Me</a>
-        <a href="#">Projects</a>
-        <a href="#">Sign Up</a>
-        <a href="#">Login</a>
-    </nav>
+﻿@using Syncfusion.Blazor.Buttons
+@inject NavigationManager NavigationManager
+<PageTitle>Home</PageTitle>
+
+<SfAppBar Mode="AppBarMode.Dense" CssClass="applbar">
+
+    <div class="appnav">
+    <span class="home"><a href="https://www.syncfusion.com/forums">Home</a></span>
+    <span><a href="https://www.syncfusion.com/forums">About</a></span>
+    <span><a href="https://www.syncfusion.com/forums">Contact</a></span>
+    <span><a href="https://www.syncfusion.com/forums">Hire Me</a></span>
+    <span><a href="https://www.syncfusion.com/forums">Projects</a></span>
+
+    <AppBarSpacer></AppBarSpacer>
+
+    <span><a href="https://www.syncfusion.com/forums">Login</a></span>
+    <span class="ralign"><a href="https://www.syncfusion.com/upgrade-guide">Sign Up</a></span>
+    </div>
+    <span>
+    <SfButton Content="Hire Me" CssClass="outline ralign down" OnClick="OnBtnClick"></SfButton>
+    </span>
+</SfAppBar>
 
 <style>
+    .e-btn.outline {
+        border: 1px solid rgb(64, 234, 132);
+        color: rgb(64, 234, 132);
+        background: none;
+        padding: 2px 18px;
+        border-radius: 0;
+    }
 
-nav {
-    background-color: black;
-    height: 100px;
-    text-align: center;
-   /*  padding-top: 14px;
-    padding-bottom: 14px; */
-}
+    .ralign {
+        margin-right: 15px;
+    }
 
-    nav a {
-    text-decoration: none;
-    font-size: 12px;
-    /* padding-left: 10px;
-    padding-right: 10px; */
-    color: white;
-}
+    .down {
+        color: forestgreen;
+        position: absolute;
+        bottom: 12px;
+        right: 15px;
+    }
+
+    .e-appbar.applbar {
+        background-color: black;
+        color: white;
+        /* min-height: 80px; */
+        padding:60px 0px;
+    }
+
 </style>
 
+@code{
+    private bool forceLoad = false;
 
-@* <div class="top-row ps-3 navbar navbar-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="">MagnusApp</a>
-    </div>
-</div>
+    public void OnBtnClick()
+    {
+        NavigationManager.NavigateTo("https://www.syncfusion.com/downloads");
+    }
+}
 
-<input type="checkbox" title="Navigation menu" class="navbar-toggler" />
-
-<div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
-    <nav class="flex-column">
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
-            </NavLink>
-        </div>
-
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="counter">
-                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Counter
-            </NavLink>
-        </div>
-
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="weather">
-                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Weather
-            </NavLink>
-        </div>
-    </nav>
-</div>
-
- *@
+    @* <span class="regular ralign">Essential Studio for Blazor</span> 
+    <div style="width:300px;">
+        <span class="e-input-group e-control-wrapper e-inherit">
+            <input type="search" class="e-searchinput e-input" placeholder="Search"/>
+            <span class="e-icons e-search e-input-group-icon"></span>
+        </span>
+    </div>*@
