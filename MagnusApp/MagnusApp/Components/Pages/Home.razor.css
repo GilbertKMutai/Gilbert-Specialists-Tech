@@ -1,4 +1,50 @@
-﻿/*nav {
+﻿
+header {
+    background-color: green;
+    background-image: url(../images/portfolio.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.index-intro {
+    padding-top: 10px;
+    color: white;
+    background-color: rgb(48, 41, 123, 0.60);
+    /*border-radius: 5%;*/
+    margin-right: auto;
+    margin-left: auto;
+    width: 700px;
+    margin-top: 30px;
+}
+
+.skill {
+    margin-right: 8px;
+    background-color: rgb(48, 41, 123, 0.60);
+    font-size: 15px;
+}
+
+section {
+    margin-top: 75px;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    color: white;
+    /*align-items: center;*/
+    
+    text-align: center;
+}
+
+.index-intro p {
+    font-size: 15px;
+}
+
+
+/*nav {
     background-color: black;
     height: 100px;
     text-align: center;*/
