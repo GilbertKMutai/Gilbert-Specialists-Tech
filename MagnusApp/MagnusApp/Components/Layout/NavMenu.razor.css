@@ -15,6 +15,30 @@ a {
     margin-right: 15px;
     border: 1px solid rgb(255, 215, 0);
     border-radius: 1000px;
-    padding: 5px 10px;
+    padding: 5px 15px;
     font-family: "Montserrat", sans-serif;
 }
+
+/*home page*/
+/*
+header {
+    background-color: green;
+    background-image: url(../images/portfolio.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 300px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.index-intro {
+    color: white;
+    background-color: aqua;
+    border-radius: 5%;
+    margin-right: auto;
+    margin-left: auto;
+    width: 700px;
+}
+*/
