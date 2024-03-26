@@ -1,6 +1,16 @@
 ﻿@using Syncfusion.Blazor.Buttons
 @inject NavigationManager NavigationManager
+<header>
 <SfAppBar Mode="AppBarMode.Dense" CssClass="applbar">
+     <div class="sidebar">
+   <a href="https://www.syncfusion.com/forums">About</a>
+   <a href="https://www.syncfusion.com/forums">Contact</a>
+   <a href="https://www.syncfusion.com/forums">Home</a>
+   <a href="https://www.syncfusion.com/forums">Hire Me</a>
+   <a href="https://www.syncfusion.com/forums">Projects</a>
+   <a href="https://www.syncfusion.com/forums">Login</a>
+   <a href="https://www.syncfusion.com/upgrade-guide">Sign Up</a>
+    </div>
 
     <div class="appnav">
     <span class="home"><a href="https://www.syncfusion.com/forums">Home</a></span>
@@ -18,7 +28,7 @@
     <SfButton Content="Hire Me" CssClass="outline ralign down" OnClick="OnBtnClick"></SfButton>
     </span>
 </SfAppBar>
-
+</header>
 
 
 <style>
