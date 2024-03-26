@@ -1,3 +1,14 @@
 
-
-
+footer {
+    background-color: rgba(0, 0, 0, 0.474);
+   /* padding-top: 17px;
+    padding-bottom: 17px;*/
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+}
