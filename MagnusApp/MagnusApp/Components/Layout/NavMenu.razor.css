@@ -3,7 +3,7 @@
 }
 
 .home {
-    margin-left: 200px;
+    margin-left: 400px;
 }
 
 .appnav a {
@@ -29,48 +29,58 @@
     right: 0;
     height: 100vh;
     width: 250px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
     box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
     z-index: 999;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    text-decoration: none;
-    color: black;
-    font-size: 13px;
-    font-weight: 500;
-    font-family: "Montserrat", sans-serif;
 }
 
+    .sidebar span {
+        width: 100%;
+        margin:5px;
+    }
+
     .sidebar a {
+
+        margin-left: 25px;
+        width: 100%;
         text-decoration: none;
-        color: black;
-        font-size: 13px;
+        color: white;
+        font-size: 16px;
         font-weight: 500;
         font-family: "Montserrat", sans-serif;
     }
 
-/*home page*/
-/*
-header {
-    background-color: green;
-    background-image: url(../images/portfolio.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    min-height: 300px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-}
+    /*new code*/
+    .navbar-toggler {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
 
-.index-intro {
-    color: white;
-    background-color: aqua;
-    border-radius: 5%;
-    margin-right: auto;
-    margin-left: auto;
-    width: 700px;
-}
-*/
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+
+    .top-row {
+        height: 3.5rem;
+        background-color: rgba(0,0,0,0.4);
+    }
+
+    .show {
+    display: flex;
+    /*641 upwards and not 641 downwards*/
+    }
+
+    @media (min-width: 641px) {
+
+        .navbar-toggler {
+            display: none;
+        }
+       
+    }
+
+
+
