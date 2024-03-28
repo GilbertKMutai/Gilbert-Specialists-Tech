@@ -1,7 +1,18 @@
 ﻿@using Syncfusion.Blazor.Buttons
 @inject NavigationManager NavigationManager
+
+<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">EmployeeManagement.Web</a>
+        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</div>
+
 <header>
-    <div class="sidebar">
+    @* <div class="@NavMenuCssClass" @onclick="ToggleNavMenu"> *@
+    <nav class=" @NavMenuCssClass sidebar" @onclick="ToggleNavMenu">
     <span><a href="https://www.syncfusion.com/forums">Home</a></span>
     <span><a href="https://www.syncfusion.com/forums">About</a></span>
     <span><a href="https://www.syncfusion.com/forums">Contact</a></span>
@@ -9,7 +20,8 @@
     <span><a href="https://www.syncfusion.com/forums">Projects</a></span>
     <span><a href="https://www.syncfusion.com/forums">Login</a></span>
     <span><a href="https://www.syncfusion.com/upgrade-guide">Sign Up</a></span>
-    </div>
+    </nav>
+   @*  </div> *@
 <SfAppBar Mode="AppBarMode.Dense" CssClass="applbar">
     <div class="appnav">
     <span class="home"><a href="https://www.syncfusion.com/forums">Home</a></span>
@@ -17,20 +29,27 @@
     <span><a href="https://www.syncfusion.com/forums">Contact</a></span>
     <span><a href="https://www.syncfusion.com/forums">Hire Me</a></span>
     <span class="maright"><a href="https://www.syncfusion.com/forums">Projects</a></span>
-
-    <AppBarSeparator/>
-
+    <AppBarSpacer/>
     <span><a href="https://www.syncfusion.com/forums">Login</a></span>
     <span class="ralign"><a href="https://www.syncfusion.com/upgrade-guide">Sign Up</a></span>
     </div>
+        <span class="icon" @onclick="ToggleNavMenu"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" /></svg></a></span>
     <span>
-    <SfButton Content="Hire Me" CssClass="outline ralign down" OnClick="OnBtnClick"></SfButton>
+            <SfButton Content="Hire Me" CssClass="outline ralign down" OnClick="OnBtnClick"></SfButton>
     </span>
 </SfAppBar>
+
+
 </header>
 
 
 <style>
+    .icon {
+        fill: white;
+        margin-top: -20px;
+        background-color: white;
+    }
+
     .e-btn.outline {
         border: 1px solid rgb(64, 234, 132);
         color: rgb(64, 234, 132);
@@ -62,10 +81,21 @@
 @code{
     private bool forceLoad = false;
 
+    private bool collapseNavMenu = false;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "show" : null;
+
     public void OnBtnClick()
     {
         NavigationManager.NavigateTo("https://www.syncfusion.com/downloads");
     }
+
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+
 }
 
     @* <span class="regular ralign">Essential Studio for Blazor</span> 
