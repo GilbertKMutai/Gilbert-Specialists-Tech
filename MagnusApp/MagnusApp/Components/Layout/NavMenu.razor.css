@@ -5,8 +5,9 @@
 }
 
 .home {
-    margin-left: 400px;
+    margin-left: 100px;
 }
+
 
 .appnav a {
     font-size: 13px;
@@ -19,7 +20,9 @@
     border-radius: 1000px;
     padding: 5px 15px;
     font-family: "Montserrat", sans-serif;
+    white-space: nowrap;
 }
+
  
 .sidebar {
     position: fixed;
@@ -47,18 +50,48 @@
         font-family: "Montserrat", sans-serif;
     }
 
-    .first-part {
-        margin-right: 410px;
-    }
+.first-part {
+    padding-right: 410px;
+    margin-top: -20px;
+}
 
-    .showsidebar {
-        display: flex;
+.second-part {
+    position: absolute;
+    bottom: 55px;
+    right: 15px;
+}
+
+
+
+/* Tablet View */
+@media (max-width: 768px) {
+    .menu {
+        fill: white;
+        position: absolute;
+        bottom: 58px;
+        right: 25px;
     }
-@media (max-width: 1096px) {
 
     .appnav {
+        margin-top: -20px;
+        display: none;
+    }
+
+    .navbutton {
+        display: none;
+    }
+
+    .second-part {
+        position: absolute;
+        bottom: 55px;
+        right: 15px;
         display: none;
     }
 }
-  
+
+/* Mobile View */
+@media (max-width: 435px) {
+
+}
+
 
