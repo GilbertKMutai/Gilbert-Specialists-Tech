@@ -3,8 +3,8 @@
 
 <header>
  
-    <nav class="sidebar @CsClass" @onclick="HideSidebar">
-        <a href="#" ><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="m251.333-204.667-46.666-46.666L433.334-480 204.667-708.667l46.666-46.666L480-526.666l228.667-228.667 46.666 46.666L526.666-480l228.667 228.667-46.666 46.666L480-433.334 251.333-204.667Z" /></svg></a>
+    <nav class="sidebar" onclick=hideSidebar>
+        <a href="#" class="close" ><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="m251.333-204.667-46.666-46.666L433.334-480 204.667-708.667l46.666-46.666L480-526.666l228.667-228.667 46.666 46.666L526.666-480l228.667 228.667-46.666 46.666L480-433.334 251.333-204.667Z" /></svg></a>
         <a href="https://www.syncfusion.com/forums">Home</a>
         <a href="https://www.syncfusion.com/forums">About</a>
         <a href="https://www.syncfusion.com/forums">Contact</a>
@@ -15,24 +15,23 @@
     </nav>
   
 <SfAppBar Mode="AppBarMode.Dense" CssClass="applbar">
-    <nav class="appnav">
-    <div class="first-part">
-        <a href="https://www.syncfusion.com/forums" class="home">Home</a>
-        <a href="https://www.syncfusion.com/forums">About</a>
-        <a href="https://www.syncfusion.com/forums">Contact</a>
-        <a href="https://www.syncfusion.com/forums">Hire Me</a>
-        <a href="https://www.syncfusion.com/forums">Projects</a>
+    
+    <div class="first-part appnav">
+        <a href="https://www.syncfusion.com/forums" class="home navbutton">Home</a>
+        <a href="https://www.syncfusion.com/forums" class="navbutton">About</a>
+        <a href="https://www.syncfusion.com/forums" class="navbutton">Contact</a>
+        <a href="https://www.syncfusion.com/forums" class="navbutton">Hire Me</a>
+        <a href="https://www.syncfusion.com/forums" class="navbutton">Projects</a>
     </div>
 
-    <div class="second-part">
+        <div class="second-part appnav">
         <a href="https://www.syncfusion.com/forums">Login</a>
         <a href="https://www.syncfusion.com/upgrade-guide" class="ralign">Sign Up</a>
     </div>
-    </nav>
 
-        <div class="class2" @onclick="ShowSidebar">
-        <a href="#" class="icon"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" /></svg></a>
-    </div>
+
+        <a href="#" class="menu"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" /></svg></a>
+
     <SfButton Content="Hire Me" CssClass="outline ralign down" OnClick="OnBtnClick"></SfButton>
     
 </SfAppBar>
@@ -55,15 +54,10 @@
 
 <style>
 
-    .class2 {
-        margin-top: -20px;
-        display: inline;
-        align-items: flex-end;
-    }
 
-    .icon {
+
+    .close {
         fill: white;
-       
     }
 
     .e-btn.outline {
@@ -93,9 +87,6 @@
        
     }
 
-    .maright {
-        margin-right: 450px;
-    }
 
     
 
@@ -105,26 +96,22 @@
 @code{
     private bool forceLoad = false;
 
-    protected string CsClass { get; set; } = null;
+    // protected string CsClass { get; set; } = null;
 
-    protected override Task OnAfterRenderAsync(bool firstRender)
-    {
-        return base.OnAfterRenderAsync(firstRender);
-    }
-
+    
     public void OnBtnClick()
     {
         NavigationManager.NavigateTo("https://www.syncfusion.com/downloads");
     }
 
-    protected void ShowSidebar()
-    {
-        CsClass = "showsidebar";
-    }
-    protected void HideSidebar()
-    {
-        CsClass = null;
-    }
+    // protected void ShowSidebar()
+    // {
+    //     CsClass = "showsidebar";
+    // }
+    // protected void HideSidebar()
+    // {
+    //     CsClass = null;
+    // }
 
 
 
