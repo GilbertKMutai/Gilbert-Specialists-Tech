@@ -5,7 +5,7 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    min-height: 300px;
+    min-height: 400px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -15,7 +15,7 @@ header {
     padding-top: 10px;
     color: white;
     background-color: rgb(48, 41, 123, 0.60);
-    /*border-radius: 5%;*/
+    border-radius: 20px;
     margin-right: auto;
     margin-left: auto;
     width: 700px;
@@ -23,26 +23,74 @@ header {
 }
 
 .skill {
-    margin-right: 8px;
+    margin-right: 12px;
     background-color: rgb(48, 41, 123, 0.60);
     font-size: 15px;
+    border-radius: 1000px;
+    padding:5px 0;
+    width: 94px;
+    display: flex;
+
 }
 
+    .skill p {
+        text-align: center;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
 section {
-    margin-top: 75px;
+    margin-top: 170px;
     display: flex;
     margin-right: auto;
     margin-left: auto;
     color: white;
-    /*align-items: center;*/
-    
-    text-align: center;
 }
 
 .index-intro p {
     font-size: 15px;
 }
 
+
+@media (max-width: 768px) {
+    .index-intro {
+        width: 60%;
+    }
+
+    section {
+        width: 60%;
+        padding-bottom: 20px;
+    }
+
+    .hide-tablet {
+        display: none;
+    }
+    .skill {
+        width: 94px;
+    }
+
+}
+
+@media (max-width: 435px)
+{
+    section {
+        width: 60%;
+        padding-bottom: 20px;
+    }
+
+    .hide-mobile {
+        display: none;
+    }
+    
+    .hide-tablet {
+        display: none;
+    }
+
+    .skill {
+        width: 94px;
+    }
+
+}
 
 /*nav {
     background-color: black;
