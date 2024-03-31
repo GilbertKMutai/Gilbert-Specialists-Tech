@@ -87,6 +87,10 @@
         right: 15px;
         display: none;
     }
+
+    .dropdown-menu {
+        display: flex;
+    }
 }
 
 /* Mobile View */
