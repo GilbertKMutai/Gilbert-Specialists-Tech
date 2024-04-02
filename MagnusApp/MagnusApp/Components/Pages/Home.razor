@@ -1,11 +1,11 @@
 ﻿@page "/"
-@using Syncfusion.Blazor.Buttons
 
 <header>
     <div class="index-intro">
         <h1>FULL-STACK .NET DEVELOPER</h1>
         <p>Hello World! It's Magnus Mutai a Full-stack .NET/Blazor Engineer <br /> Based in Nairobi, Kenya and I enjoy creating meaningful and exciting softwares using C#. <br />I have freebies for you! Hold Tight!</p>
     </div>
+
 
    <div class="stick"></div> <div class="arrow"></div>
 
@@ -52,6 +52,19 @@
 
 </header>
 
+<body>
+
+    <SfCard ID="Card">
+        <CardHeader Title="Online Shopping Cart"></CardHeader>
+
+        <CardContent>
+            <img src="images/OnlineStore.png" alt="Canon 135mm" height="300px" width="100%" />
+        </CardContent>
+
+    </SfCard>
+
+</body>
+
 
 <style>
     .e-btn.borders {
@@ -67,25 +80,16 @@
     }
     
     .e-btn.borders:hover {
-        background-color: black;
+        background-image: linear-gradient(#3D1299, #D10FD0);
+        color: gold;
+        border: 1px solid rgb(0, 0, 0);
+        transition-duration: 2s;
     }
 
-    .stick {
-        height: 60px;
-        width: 1px;
-        background: white;
-        align-self: center;
-        margin-top: 15px;
+    #Card {
+        width: 300px;
     }
-    .arrow {
-        width: 0px;
-        height: 0px;
-        border-left: 5px solid transparent;
-        border-top: 15px solid white;
-        border-right: 5px solid transparent;
-        align-self: center;
-    }
-
+   
 </style>
 
 @code{
