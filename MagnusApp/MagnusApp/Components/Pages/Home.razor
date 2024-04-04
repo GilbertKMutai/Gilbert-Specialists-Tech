@@ -53,12 +53,14 @@
 </header>
 
 <body>
+    
+    <h2>My world of personal projects</h2>
 
     <SfCard ID="Card">
         <CardHeader Title="Online Shopping Cart"></CardHeader>
 
         <CardContent>
-            <img src="images/OnlineStore.png" alt="Canon 135mm" height="300px" width="100%" />
+            <img src="images/OnlineStore.png" alt="Canon 135mm" height="248px" width="auto"/>
         </CardContent>
 
     </SfCard>
@@ -87,9 +89,30 @@
     }
 
     #Card {
-        width: 300px;
+        width: 600px;
+        height: 422px;
+        margin-bottom: 50px;
+        margin-top: 178px;
+        background-color: rgb(78, 0, 243, 26%);
+        border-style: none;
+        color: white;
+    }
+
+    .e-card .e-card-header {
+        display: flex;
+        align-items: center;
+
+
+    }
+
+    .e-card .e-card-header .e-card-header-caption .e-card-header-title {
+        color: white;
     }
    
+    .e-card .e-card-content {
+        width: auto;
+        margin-right : auto;
+    }
 </style>
 
 @code{
