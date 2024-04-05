@@ -13,27 +13,27 @@
 
   <section>
     <div class="skill">
-        <img src="/icons/skill/blazor-icon.svg" alt="">
+        <img src="/icons/skill/blazor-icon.svg" alt="blazor icon">
         <p>Blazor</p>
     </div>
     <div class="skill">
-      <img src="/icons/skill/dotnet-icon.svg" alt="">
+      <img src="/icons/skill/dotnet-icon.svg" alt="dotnet icon">
         <p>.NET/C#</p>
     </div>
     <div class="skill hide-zfold">
-       <img src="/icons/skill/syncfusion-icon.svg" alt="">
+       <img src="/icons/skill/syncfusion-icon.svg" alt="syncfusion icon">
         <p>Syncfusion</p>
     </div>
     <div class="skill hide-mobile">
-      <img src="/icons/skill/html-icon.svg" alt="">
+      <img src="/icons/skill/html-icon.svg" alt="html icon">
         <p>Html/Css</p>
     </div>
     <div class="skill hide-tablet">
-      <img src="/icons/skill/azure-icon.svg" alt="">
+      <img src="/icons/skill/azure-icon.svg" alt="azure icon">
         <p>Azure</p>
     </div> 
     <div class="skill hide-tablet">
-      <img src="/icons/skill/docker-icon.svg" alt="">
+      <img src="/icons/skill/docker-icon.svg" alt="docker icon">
         <p>Docker</p>
     </div>
 
@@ -41,31 +41,40 @@
 
    <div class="second-layer">
     <div class="skill-over hide-tablet">
-      <img src="/icons/skill/kubernetes-icon.svg" alt="">
+      <img src="/icons/skill/kubernetes-icon.svg" alt="kubernetes icon">
         <p>Kubernetes</p>
     </div>
         <div class="skill-over hide-tablet">
-      <img src="/icons/skill/figma-icon.svg" alt="">
+      <img src="/icons/skill/figma-icon.svg" alt="figma icon">
         <p>Figma</p>
     </div>
     </div>
 
 </header>
 
-<body>
+<div class="holder">
     
-    <h2>My world of personal projects</h2>
+    <h4 class="body-header">My world of personal projects</h4>
 
     <SfCard ID="Card">
         <CardHeader Title="Online Shopping Cart"></CardHeader>
 
         <CardContent>
-            <img src="images/OnlineStore.png" alt="Canon 135mm" height="248px" width="auto"/>
+            <img src="images/OnlineStore.png" alt="Canon 135mm" width ="100%"/>
         </CardContent>
 
     </SfCard>
 
-</body>
+<SfCard ID="mini-card">
+        <CardHeader Title="Online Shopping Cart"></CardHeader>
+
+        <CardContent>
+            <img src="images/OnlineStore.png" alt="Canon 135mm" width ="100%"/>
+        </CardContent>
+
+    </SfCard>
+
+</div>
 
 
 <style>
@@ -89,30 +98,32 @@
     }
 
     #Card {
-        width: 600px;
-        height: 422px;
+        width: 450px;
+        height: 300px;
         margin-bottom: 50px;
-        margin-top: 178px;
+        margin-top: 100px;
         background-color: rgb(78, 0, 243, 26%);
         border-style: none;
         color: white;
+        margin-right: auto;
+        margin-left: auto;
     }
 
     .e-card .e-card-header {
-        display: flex;
-        align-items: center;
-
-
+     
     }
 
     .e-card .e-card-header .e-card-header-caption .e-card-header-title {
         color: white;
+        text-align: center;
+      /*   margin-bottom: 60px; */
     }
    
     .e-card .e-card-content {
-        width: auto;
-        margin-right : auto;
+     
     }
+
+
 </style>
 
 @code{
