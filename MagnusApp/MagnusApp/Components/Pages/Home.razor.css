@@ -102,8 +102,14 @@ img {
     align-self: center;
 }
 
-body {
+.holder {
     color: white;
+    margin-top: 60px;
+}
+
+.holder h4 {
+    text-align: center;
+    
 }
 
 /*.pointer { 
