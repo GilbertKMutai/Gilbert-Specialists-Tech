@@ -131,6 +131,17 @@ img {
     }
 }
 
+.small-card {
+    display:block;
+    gap: 20px;
+
+}
+
+.sub-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
 
 
 @media (max-width: 768px) {
