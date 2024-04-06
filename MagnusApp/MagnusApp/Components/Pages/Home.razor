@@ -53,9 +53,11 @@
 </header>
 
 <div class="holder">
-    
     <h4 class="body-header">My world of personal projects</h4>
 
+    <div class="sub-container">
+
+    <div class="main-card">
     <SfCard ID="Card">
         <CardHeader Title="Online Shopping Cart"></CardHeader>
 
@@ -64,8 +66,47 @@
         </CardContent>
 
     </SfCard>
+    </div>
 
-<SfCard ID="mini-card">
+    <div class="small-card">
+    <SfCard ID="mini-card">
+        <CardHeader>
+                    <SfButton Content="Link" CssClass="view" OnClick="OnBtnClick"></SfButton>
+        </CardHeader>
+
+        <CardContent>
+                    <p>
+                        This is  an Online Shopping Cart <br />
+                        like Amazon where people can view<br />
+                        and buy items.
+                    </p>
+        </CardContent>
+
+    </SfCard>
+    
+    
+    <SfCard ID="mini-card2">
+        <CardHeader>
+                    <SfButton Content="Code" CssClass="git" OnClick="OnBtnClick"></SfButton>
+        </CardHeader>
+
+        <CardContent>
+                    <p>
+                        Technologies used include:<br />
+                        C#, Blazor WASM, BootstrapV5,<br />
+                        MSSQL, EF Core and REST API<br />
+                    </p>
+        </CardContent>
+
+    </SfCard>
+    </div>
+    </div>
+
+
+   <div class="sub-container">
+
+    <div class="main-card">
+    <SfCard ID="Card">
         <CardHeader Title="Online Shopping Cart"></CardHeader>
 
         <CardContent>
@@ -73,14 +114,50 @@
         </CardContent>
 
     </SfCard>
+    </div>
+
+    <div class="small-card">
+    <SfCard ID="mini-card">
+        <CardHeader>
+                    <SfButton Content="Link" CssClass="view" OnClick="OnBtnClick"></SfButton>
+        </CardHeader>
+
+        <CardContent>
+                    <p>
+                        This is  an Online Shopping Cart <br />
+                        like Amazon where people can view<br />
+                        and buy items.
+                    </p>
+        </CardContent>
+
+    </SfCard>
+    
+    
+    <SfCard ID="mini-card2">
+        <CardHeader>
+                    <SfButton Content="Code" CssClass="git" OnClick="OnBtnClick"></SfButton>
+        </CardHeader>
+
+        <CardContent>
+                    <p>
+                        Technologies used include:<br />
+                        C#, Blazor WASM, BootstrapV5,<br />
+                        MSSQL, EF Core and REST API<br />
+                    </p>
+        </CardContent>
+
+    </SfCard>
+    </div>
+    </div>
 
 </div>
 
 
 <style>
+
     .e-btn.borders {
         border: 1px solid rgb(64, 234, 132);
-        color: rgb(255, 215, 0);
+        color: white;
         background: none;
         padding: 6px 36px;
         align-self: safe center;
@@ -92,14 +169,14 @@
     
     .e-btn.borders:hover {
         background-image: linear-gradient(#3D1299, #D10FD0);
-        color: gold;
+        color: white;
         border: 1px solid rgb(0, 0, 0);
         transition-duration: 2s;
     }
 
     #Card {
         width: 450px;
-        height: 300px;
+        height: 360px;
         margin-bottom: 50px;
         margin-top: 100px;
         background-color: rgb(78, 0, 243, 26%);
@@ -107,22 +184,57 @@
         color: white;
         margin-right: auto;
         margin-left: auto;
+        border-radius: 15px;
     }
 
-    .e-card .e-card-header {
-     
-    }
-
-    .e-card .e-card-header .e-card-header-caption .e-card-header-title {
+    #Card .e-card-header .e-card-header-caption .e-card-header-title, #mini-card .e-card-header .e-card-header-caption .e-card-header-title, #mini-card2 .e-card-header .e-card-header-caption .e-card-header-title {
         color: white;
         text-align: center;
-      /*   margin-bottom: 60px; */
     }
-   
-    .e-card .e-card-content {
-     
+    
+    #mini-card {
+        width: 245px;
+        height: 170px;
+        background-color: rgb(78, 0, 243, 26%);
+        border-style: none;
+        color: white;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 100px;
+        border-radius: 15px;
     }
 
+    #mini-card2 {
+        width: 245px;
+        height: 170px;
+        background-color: rgb(78, 0, 243, 26%);
+        border-style: none;
+        color: white;
+        margin-right: auto;
+        margin-left: auto;
+        border-radius: 15px;
+        margin-top: 20px;
+    }
+
+        #mini-card2 .e-card-content, #mini-card .e-card-content {
+            color: white;
+        }
+
+    .e-btn.view {
+        background-image: linear-gradient(#3D1299, #D10FD0);
+        padding: 6px 25px;
+        margin-right: 135px;
+    }
+
+    .e-btn.git {
+        background-color: #3D1299;
+        padding: 6px 25px;
+        margin-right: 135px;
+    }
+
+    #mini-card2 .e-card-header, #mini-card .e-card-header {
+
+    }
 
 </style>
 
