@@ -143,6 +143,17 @@ img {
     justify-content: center;
 }
 
+.git {
+    background-color: #3D1299;
+    padding: 10px 14px;
+    margin-right: 125px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    display: flex;
+}
+
+
 
 @media (max-width: 768px) {
     .index-intro {

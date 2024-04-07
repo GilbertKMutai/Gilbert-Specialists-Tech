@@ -62,7 +62,7 @@
         <CardHeader Title="Online Shopping Cart"></CardHeader>
 
         <CardContent>
-            <img src="images/OnlineStore.png" alt="Canon 135mm" width ="100%"/>
+                    <img src="images/onlinestore.png" alt="Canon 135mm"  />
         </CardContent>
 
     </SfCard>
@@ -76,9 +76,9 @@
 
         <CardContent>
                     <p>
-                        This is  an Online Shopping Cart <br />
-                        like Amazon where people can view<br />
-                        and buy items.
+                        This is an Online Shopping Cart <br />
+                        like Amazon where people can <br />
+                        view and buy items.
                     </p>
         </CardContent>
 
@@ -87,7 +87,7 @@
     
     <SfCard ID="mini-card2">
         <CardHeader>
-                    <SfButton Content="Code" CssClass="git" OnClick="OnBtnClick"></SfButton>
+                    <a href="#" class="git"> <img src="/icons/git-icon.svg" alt="github icon" /> Code</a>
         </CardHeader>
 
         <CardContent>
@@ -107,10 +107,10 @@
 
     <div class="main-card">
     <SfCard ID="Card">
-        <CardHeader Title="Online Shopping Cart"></CardHeader>
+        <CardHeader Title="Sales Management App"></CardHeader>
 
         <CardContent>
-            <img src="images/OnlineStore.png" alt="Canon 135mm" width ="100%"/>
+                    <img src="images/salesmanagement.png" alt="Canon 135mm"  />
         </CardContent>
 
     </SfCard>
@@ -124,9 +124,10 @@
 
         <CardContent>
                     <p>
-                        This is  an Online Shopping Cart <br />
-                        like Amazon where people can view<br />
-                        and buy items.
+                        This is a sales management app  <br />
+                        which can be tailored to be used <br />
+                        by any company’s sales team.
+
                     </p>
         </CardContent>
 
@@ -135,12 +136,102 @@
     
     <SfCard ID="mini-card2">
         <CardHeader>
-                    <SfButton Content="Code" CssClass="git" OnClick="OnBtnClick"></SfButton>
+                        <a href="#" class="git"> <img src="/icons/git-icon.svg" alt="github icon"/> Code</a>
         </CardHeader>
 
         <CardContent>
                     <p>
-                        Technologies used include:<br />
+                        Technologies used include: <br />
+                        C#, Blazor Server, Syncfusion,<br />
+                        MSSQL, EF Core and REST API
+                    </p>
+        </CardContent>
+
+    </SfCard>
+    </div>
+    </div>
+    <div class="sub-container">
+
+    <div class="main-card">
+    <SfCard ID="Card">
+        <CardHeader Title="Loomon - A Chat Web app"></CardHeader>
+
+        <CardContent>
+                    <img src="images/lomonimage.png" alt="Canon 135mm" />
+        </CardContent>
+
+    </SfCard>
+    </div>
+
+    <div class="small-card">
+    <SfCard ID="mini-card">
+        <CardHeader>
+                    <SfButton Content="Link" CssClass="view" OnClick="OnBtnClick"></SfButton>
+        </CardHeader>
+
+        <CardContent>
+                    <p>
+                        This is a chat web application. It’s a <br />
+                        web version of an app like Whatsapp.
+                    </p>
+        </CardContent>
+
+    </SfCard>
+    
+    
+    <SfCard ID="mini-card2">
+        <CardHeader>
+                        <a href="#" class="git"> <img src="/icons/git-icon.svg" alt="github icon"/> Code</a>
+        </CardHeader>
+
+        <CardContent>
+                    <p>
+                        Technologies used: C#,<br />
+                        Blazor Web, SignalR, MSSQL,<br />
+                        BootstrapV5, EFCore & gRPC
+                    </p>
+        </CardContent>
+
+    </SfCard>
+    </div>
+    </div>
+    <div class="sub-container">
+
+    <div class="main-card">
+    <SfCard ID="Card">
+        <CardHeader Title="BeFit"></CardHeader>
+
+        <CardContent>
+                    <img src="images/befit.png" alt="Canon 135mm"  />
+        </CardContent>
+
+    </SfCard>
+    </div>
+
+    <div class="small-card">
+    <SfCard ID="mini-card">
+        <CardHeader>
+                    <SfButton Content="Link" CssClass="view" OnClick="OnBtnClick"></SfButton>
+        </CardHeader>
+
+        <CardContent>
+                    <p>
+                        This is a virtual fitness site that has <br />
+                        free fitness courses for all!
+                    </p>
+        </CardContent>
+
+    </SfCard>
+    
+    
+    <SfCard ID="mini-card2">
+        <CardHeader>
+                        <a href="#" class="git"> <img src="/icons/git-icon.svg" alt="github icon"/> Code</a>
+        </CardHeader>
+
+        <CardContent>
+                    <p>
+                        Technologies used:<br /> 
                         C#, Blazor WASM, BootstrapV5,<br />
                         MSSQL, EF Core and REST API<br />
                     </p>
@@ -176,7 +267,7 @@
 
     #Card {
         width: 450px;
-        height: 360px;
+        height: 320px;
         margin-bottom: 50px;
         margin-top: 100px;
         background-color: rgb(78, 0, 243, 26%);
@@ -187,14 +278,29 @@
         border-radius: 15px;
     }
 
+        #Card .e-card-content {
+            width: 400px;
+            height: 270px;
+            margin-right: auto;
+            margin-left: auto;
+            margin-bottom: 0;
+            align-items: center;
+        }
+
+        #Card .e-card-content img {
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+        }
+
     #Card .e-card-header .e-card-header-caption .e-card-header-title, #mini-card .e-card-header .e-card-header-caption .e-card-header-title, #mini-card2 .e-card-header .e-card-header-caption .e-card-header-title {
         color: white;
         text-align: center;
-    }
+        margin-bottom: 30px; }
     
     #mini-card {
         width: 245px;
-        height: 170px;
+        height: 150px;
         background-color: rgb(78, 0, 243, 26%);
         border-style: none;
         color: white;
@@ -206,7 +312,7 @@
 
     #mini-card2 {
         width: 245px;
-        height: 170px;
+        height: 150px;
         background-color: rgb(78, 0, 243, 26%);
         border-style: none;
         color: white;
@@ -218,19 +324,21 @@
 
         #mini-card2 .e-card-content, #mini-card .e-card-content {
             color: white;
+            margin-left: 5px;
         }
 
-    .e-btn.view {
+            #mini-card2 .e-card-content p, #mini-card .e-card-content p{
+                line-height: 20px;
+            }
+
+            .e-btn.view {
         background-image: linear-gradient(#3D1299, #D10FD0);
-        padding: 6px 25px;
+        padding: 8px 24px;
         margin-right: 135px;
+        border-style: none;
+        border-radius: 8px;
     }
 
-    .e-btn.git {
-        background-color: #3D1299;
-        padding: 6px 25px;
-        margin-right: 135px;
-    }
 
     #mini-card2 .e-card-header, #mini-card .e-card-header {
 
