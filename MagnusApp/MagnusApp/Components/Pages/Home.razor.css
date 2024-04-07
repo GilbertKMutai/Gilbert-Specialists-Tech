@@ -153,7 +153,31 @@ img {
     display: flex;
 }
 
+.circle {
+    background-image: url(../images/myicon.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #bbb;
+    margin-bottom: 40px;
+    margin-left: 15px;
+}
 
+.opinion {
+    display: flex;
+    color: white;
+    gap: 12px;
+}
+
+.opinion p {
+    margin-top: 4px;
+}
+
+body-header {
+
+}
 
 @media (max-width: 768px) {
     .index-intro {
