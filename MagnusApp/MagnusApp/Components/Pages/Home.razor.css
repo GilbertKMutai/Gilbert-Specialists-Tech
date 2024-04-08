@@ -188,11 +188,19 @@ img {
         display: none;
     }
 
-/*    .skill {
+    .sub-container {
+        display: block;
+    }
+
+    .small-card {
+        display: block;
+        margin-bottom: 40px;
+        margin-top: -20px;
+    }
+        /*    .skill {
         width: 40%;
     }*/
-
-}
+    }
 
 @media (max-width: 474px)
 {
