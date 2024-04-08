@@ -367,15 +367,22 @@
 
         #Card .e-card-content {
             width: 320px;
-            height: 270px;
-            margin-right: auto;
-            margin-left: auto;
+            height: 240px;
         }
     }
   
-    #mini-card2 .e-card-header, #mini-card .e-card-header {
+    @@media (max-width: 355px) {
+        #Card {
+            width: 280px;
+            height: 320px;
+        }
 
+            #Card .e-card-content {
+                width: 248px;
+                height: 240px;
+            }
     }
+
 
 </style>
 
