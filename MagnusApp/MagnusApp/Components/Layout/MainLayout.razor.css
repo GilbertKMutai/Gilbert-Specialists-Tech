@@ -1,14 +1,14 @@
 body {
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 footer {
     background-color: rgba(20, 9, 9);
     color: white;
-    position: sticky;
-    top: 100%;
-    height: 150px;
     display: block;
+    margin-top: auto;
     font-size: 15px;
 }
 
@@ -25,18 +25,18 @@ footer {
 }
 
 .contact-group img {
-    margin-bottom: 15px;
+    margin-bottom: -4px;
     margin-right: 10px;
 }
 
-.contact-group p {
-    margin-top: 2px;
+.contact-group p{
+    white-space: nowrap;
 }
 
 .social {
-   float: right;
-   margin-top: -50px;
-   margin-right: 15px;
+    float: right;
+    margin-top: -42px;
+    margin-right: 15px;
 }
 
 .social img {
@@ -48,3 +48,68 @@ footer p {
     margin-top: 20px;
 }
 
+.location-block {
+    display: none;
+}
+@media (max-width: 959px) {
+    .social {
+        float: none;
+        margin-top: 0px;
+        display: flex;
+        justify-content: center;
+    }
+/*
+    footer {
+        height: 180px;
+    }*/
+}
+
+
+@media (max-width: 612px) {
+    .contact-group img {
+        margin-right: 5px;
+    }
+
+    .contact {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .hide-location {
+        display: none;
+    }
+
+    .loc-soc {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .location-block {
+        display: flex;
+    }
+
+/*    .footer {
+        height: 200px;
+    }*/
+}
+
+@media (max-width: 474px){
+    .contact-group img {
+        margin-right: 0px;
+    }
+
+    .contact {
+        gap: 1px;
+        margin-top: 28px;
+    }
+
+    .contact-group {
+        margin-top: -25px;
+    }
+
+    .go-center {
+       /* display: block;*/
+    }
+}
