@@ -105,6 +105,7 @@ img {
 .holder {
     color: white;
     margin-top: 60px;
+    align-content: center;
 }
 
     .holder h4 {
@@ -136,6 +137,7 @@ img {
 .small-card {
     display:block;
     gap: 20px;
+
 
 }
 
