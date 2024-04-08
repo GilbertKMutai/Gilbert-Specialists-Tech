@@ -109,7 +109,19 @@ footer p {
         margin-top: -25px;
     }
 
-    .go-center {
-       /* display: block;*/
+}
+
+@media (max-width: 355px) {
+
+    .hide-fold {
+        display: none;
+    }
+
+    .contact-group img {
+        margin-right: 4px;
+    }
+
+    .location-block img{
+        margin-right: -6px;
     }
 }
