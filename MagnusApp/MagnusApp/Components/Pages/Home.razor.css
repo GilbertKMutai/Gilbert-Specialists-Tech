@@ -165,7 +165,6 @@ img {
     width: 50px;
     border-radius: 50%;
     background-color: #bbb;
-    margin-bottom: 40px;
     margin-left: 15px;
 }
 
@@ -173,6 +172,7 @@ img {
     display: flex;
     color: white;
     gap: 12px;
+    margin-bottom: 40px;
 }
 
 .opinion p {
@@ -199,10 +199,18 @@ img {
         margin-bottom: 40px;
         margin-top: -20px;
     }
-        /*    .skill {
-        width: 40%;
-    }*/
+
+    .opinion {
+        display: block;
+        margin-top: 40px;
     }
+
+        .opinion p {
+            margin-left: 15px;
+            margin-top: 15px;
+        }
+
+}
 
 @media (max-width: 474px)
 {
@@ -232,18 +240,4 @@ img {
     }
 }
 
-    /*nav {
-    background-color: black;
-    height: 100px;
-    text-align: center;*/
-    /*  padding-top: 14px;
-    padding-bottom: 14px; */
-    /*}
-
-    nav a {
-        text-decoration: none;
-        font-size: 12px;*/
-    /* padding-left: 10px;
-    padding-right: 10px; */
-    /*color: white;
-    }*/
+    
