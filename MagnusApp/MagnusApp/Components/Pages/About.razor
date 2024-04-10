@@ -2,3 +2,34 @@
 <div class="index-intro">
     <h4>About Me</h4>
 </div>
+
+<section>
+    <h4>About Me</h4>
+
+  <div class="upper-cards">
+
+    <img src="images/myimage.jpg" alt="picture of an fitness website"/>
+
+    <SfCard ID="about-me">
+            <CardHeader Title="@Title" SubTitle="A passionate  Full-Stack .NET Developer with over 3 years of commercial experience"></CardHeader>
+        <CardContent> 
+            <p>
+                I do “DDM” i.e system and web design, development , deployment and maintenance of progressive,
+                web and hybrid apps using Blazor 8 and .Net 8.
+                <br /> <br />
+                Below are my career metrics.
+            </p>
+        </CardContent>
+    </SfCard>
+
+  </div>
+
+</section>
+
+@code {
+    public string Title { get; set; } = "Hello, I'm Magnus Mutai";
+
+    public string SubTitle = "";
+
+    
+}
