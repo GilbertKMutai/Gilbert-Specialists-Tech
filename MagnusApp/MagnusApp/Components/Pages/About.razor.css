@@ -1,0 +1,13 @@
+﻿.index-intro {
+    height: 243px;
+    background-color: white;
+    background-image: url(../images/about.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
