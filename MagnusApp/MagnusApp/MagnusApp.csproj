@@ -7,12 +7,28 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Components\Pages\Contact.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\MagnusApp.Client\MagnusApp.Client.csproj" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.0" />
     <PackageReference Include="Syncfusion.Blazor.Buttons" Version="25.1.35" />
     <PackageReference Include="Syncfusion.Blazor.Cards" Version="25.1.35" />
     <PackageReference Include="Syncfusion.Blazor.Navigations" Version="25.1.35" />
     <PackageReference Include="Syncfusion.Blazor.Themes" Version="25.1.35" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Components\Pages\Contact.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Components\Pages\Contact.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Components\Pages\Contact.razor" />
   </ItemGroup>
 
 </Project>
