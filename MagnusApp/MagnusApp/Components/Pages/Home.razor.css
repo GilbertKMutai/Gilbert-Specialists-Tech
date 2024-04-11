@@ -23,6 +23,25 @@ header {
     margin-top: 30px;
 }
 
+::deep .e-btn.borders {
+    border: 1px solid rgb(64, 234, 132);
+    color: white;
+    background: none;
+    padding: 6px 36px;
+    align-self: safe center;
+    border-radius: 0;
+    margin-top: 10px;
+    font-size: 18px;
+    font-style: italic;
+}
+
+    ::deep .e-btn.borders:hover {
+        background-image: linear-gradient(#3D1299, #D10FD0);
+        color: white;
+        border: 1px solid rgb(0, 0, 0);
+        transition-duration: 2s;
+    }
+
 .skill {
     margin-right: 8px;
     background-color: rgba(78, 0, 243, 0.26);
@@ -100,6 +119,80 @@ img {
     border-top: 15px solid white;
     border-right: 5px solid transparent;
     align-self: center;
+}
+
+
+::deep #Card {
+    width: 450px;
+    height: 320px;
+    margin-bottom: 50px;
+    margin-top: 100px;
+    background-color: rgba(78, 0, 243, 0.26);
+    border-style: none;
+    color: white;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 15px;
+}
+
+    ::deep #Card .e-card-content {
+        width: 400px;
+        height: 270px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+        ::deep #Card .e-card-content img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+
+    ::deep #Card .e-card-header .e-card-header-caption .e-card-header-title, #mini-card .e-card-header .e-card-header-caption .e-card-header-title, #mini-card2 .e-card-header .e-card-header-caption .e-card-header-title {
+        color: white;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+::deep  #mini-card {
+    width: 245px;
+    height: 150px;
+    background-color: rgba(78, 0, 243, 0.26);
+    border-style: none;
+    color: white;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 100px;
+    border-radius: 15px;
+}
+
+::deep  #mini-card2 {
+    width: 245px;
+    height: 150px;
+    background-color: rgba(78, 0, 243, 0.26);
+    border-style: none;
+    color: white;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+    ::deep #mini-card2 .e-card-content, ::deep #mini-card .e-card-content {
+        color: white;
+        margin-left: 5px;
+    }
+
+        ::deep #mini-card2 .e-card-content p, ::deep #mini-card .e-card-content p {
+            line-height: 20px;
+        }
+
+::deep .e-btn.view {
+    background-image: linear-gradient(#3D1299, #D10FD0);
+    padding: 8px 24px;
+    margin-right: 135px;
+    border-style: none;
+    border-radius: 8px;
 }
 
 .holder {
@@ -200,6 +293,15 @@ img {
         margin-top: -20px;
     }
 
+    ::deep #mini-card, #mini-card2 {
+        margin-top: 0px;
+    }
+
+    ::deep #mini-card {
+        margin-bottom: 20px;
+    }
+
+
     .opinion {
         display: block;
         margin-top: 40px;
@@ -223,6 +325,16 @@ img {
         display: none;
     }
 
+    ::deep #Card {
+        width: 360px;
+        height: 320px;
+    }
+
+        ::deep #Card .e-card-content {
+            width: 320px;
+            height: 240px;
+        }
+
 
 }
 
@@ -238,6 +350,16 @@ img {
     .hide-zfold {
         display: none;
     }
+
+    ::deep #Card {
+        width: 280px;
+        height: 320px;
+    }
+
+        ::deep #Card .e-card-content {
+            width: 248px;
+            height: 240px;
+        }
 }
 
     

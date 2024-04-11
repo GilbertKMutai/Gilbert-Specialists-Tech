@@ -50,6 +50,19 @@
         font-family: "Montserrat", sans-serif;
     }
 
+.close {
+    fill: white;
+}
+
+
+::deep .e-appbar.applbar {
+    background-color: black;
+    color: white;
+    /* min-height: 80px; */
+    padding: 60px 0px;
+}
+
+
 .first-part {
     padding-right: 410px;
     margin-top: -20px;
@@ -61,6 +74,23 @@
     right: 15px;
 }
 
+::deep .e-btn.outline {
+    border: 1px solid rgb(64, 234, 132);
+    color: rgb(64, 234, 132);
+    background: none;
+    padding: 2px 18px;
+    border-radius: 0;
+    position: absolute;
+    bottom: 12px;
+    right: 15px;
+}
+
+
+
+
+::deep .ralign {
+    margin-right: 15px;
+}
 
 
 /* Tablet View */
@@ -88,9 +118,6 @@
         display: none;
     }
 
-    .dropdown-menu {
-        display: flex;
-    }
 }
 
 /* Mobile View */
