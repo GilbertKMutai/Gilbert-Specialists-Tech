@@ -33,7 +33,7 @@ img {
 }
 
 ::deep #about-me {
-    background-color: rgb(48, 41, 123, 0.60);
+    background-color: rgba(78, 0, 243, 0.26);
     width: 840px;
     height: 340px;
     margin-top: 60px;
@@ -69,3 +69,32 @@ img {
         align-items: center;
         margin-bottom: 200px;
     }
+
+    ::deep #metrics {
+        width: 1121px;
+        height: 140px;
+        margin-bottom:  60px;
+        margin-top: 60px;
+        align-self: center;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+        ::deep #metrics .e-card-content {
+            display: flex;
+            justify-content: space-between;
+            color: #0EAC4D;
+            align-items: center;
+            padding: 0 40px;
+            text-align: center;
+        }
+
+        ::deep #metrics .e-card-content p {
+        
+            margin-top: -6px;
+
+        }
+            .vertical-line {
+    border-left: 1px solid #3D1299;
+    height: 100px;
+}
