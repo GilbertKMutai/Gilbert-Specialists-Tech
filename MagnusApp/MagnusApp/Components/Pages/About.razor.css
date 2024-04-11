@@ -98,3 +98,26 @@ img {
     border-left: 1px solid #3D1299;
     height: 100px;
 }
+
+
+.opinion {
+    display: flex;
+    color: white;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+    .opinion p {
+        margin-top: 4px;
+    }
+
+.circle {
+    background-image: url(../images/myicon.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #bbb;
+    margin-left: 15px;
+}
