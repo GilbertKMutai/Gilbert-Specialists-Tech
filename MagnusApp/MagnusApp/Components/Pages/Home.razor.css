@@ -15,7 +15,7 @@ header {
 .index-intro {
     padding-top: 10px;
     color: white;
-    background-color: rgb(48, 41, 123, 0.60);
+    background-color: rgba(78, 0, 243, 0.26);
     border-radius: 20px;
     margin-right: auto;
     margin-left: auto;
@@ -25,10 +25,10 @@ header {
 
 .skill {
     margin-right: 8px;
-    background-color: rgb(48, 41, 123, 0.60);
+    background-color: rgba(78, 0, 243, 0.26);
     font-size: 15px;
     border-radius: 1000px;
-    padding:3px 0;
+    padding: 3px 0;
     min-width: 110px;
     display: flex;
     justify-content: center;
@@ -42,7 +42,7 @@ header {
 
 .skill-over {
     margin-right: 8px;
-    background-color: rgb(48, 41, 123, 0.60);
+    background-color: rgba(78, 0, 243, 0.26);
     font-size: 15px;
     border-radius: 1000px;
     padding: 3px 0;
