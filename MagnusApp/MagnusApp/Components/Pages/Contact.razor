@@ -1,1 +1,76 @@
-﻿@page "/contact"
+﻿@page "/contact"   
+@using MagnusApp.Shared
+@using Microsoft.Extensions.Logging
+
+<section>
+
+    <div class="upper-body">
+        <div class="left-text">
+            <h3>
+                I am here to build you<br />
+                a fantastic software!
+            </h3>
+            <p>
+                At MagnusQ, I am dedicated to helping you achieve the tools of <br/>
+                your dreams. With my expert experience I will work with <br />
+                you to create a personalized software that helps <br />
+                you reach your specific goals.
+            </p>
+
+        <div class="text-flex">
+
+            <div class="left-side">
+                <h5>Nairobi, Kenya</h5>
+                <p>
+                    Nairobi,<br />
+                    Kenya
+                </p>
+                <h5>Information</h5>
+                <p>
+                    +254726995500 <br />
+                    Magnusmq07@gmail.om
+                </p>
+            </div>
+            
+            <div class="right-side">
+                <h5>Opening Hours</h5>
+                <p> Monday to Friday: 8.00am - 16.00pm</p>
+                <h5 class="f-margin">Follow Me On</h5>
+                    <div class="social">
+                        <img src="/icons/footer/linkedin-icon.svg" alt="linkedin icon">
+                        <img src="/icons/footer/git-icon.svg" alt="github icon">
+                        <img src="/icons/footer/instagram-icon.svg" alt="instagram icon">
+                        <img src="/icons/footer/x-icon.svg" alt="x icon">
+                    </div>
+            </div>
+            </div>
+
+        </div>
+
+        <div class="right-form">
+            <SfDataForm>
+
+            </SfDataForm>
+
+        </div>
+    </div>
+
+
+  </section>
+
+
+@code {
+
+    [SupplyParameterFromForm]
+    public Client? Model { get; set; }
+
+    protected override void OnInitialized() => Model ??= new();
+
+    private void Submit()
+    {
+        // Logger.LogInformation("Id = {Id}", Model?.Id);
+    }
+
+}
+
+
