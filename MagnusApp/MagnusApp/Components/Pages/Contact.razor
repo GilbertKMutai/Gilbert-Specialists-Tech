@@ -1,6 +1,8 @@
 ﻿@page "/contact"   
 @using MagnusApp.Shared
 @using Microsoft.Extensions.Logging
+@using System.ComponentModel.DataAnnotations
+
 
 <section>
 
@@ -48,8 +50,18 @@
         </div>
 
         <div class="right-form">
-            <SfDataForm>
-
+            <SfDataForm ID="MyForm" Width="100%" Model="@ClientModel">
+                <FormValidator>
+                    <DataAnnotationsValidator/>
+                </FormValidator>
+                <FormItems>
+                    <FormItem Field="@nameof(ClientModel.Name)" Placeholder="Full Name*"></FormItem>
+                    <FormItem Field="@nameof(ClientModel.Email)" Placeholder="Email Adddress*"></FormItem>
+                    <FormItem Field="@nameof(ClientModel.Message)" Placeholder="Comment*" EditorType="FormEditorType.TextArea"></FormItem>
+                </FormItems>
+                <FormButtons>
+                    <SfButton typeof="submit">Register</SfButton>
+                </FormButtons>
             </SfDataForm>
 
         </div>
@@ -60,16 +72,13 @@
 
 
 @code {
+    private Client ClientModel = new Client();
 
-    [SupplyParameterFromForm]
-    public Client? Model { get; set; }
-
-    protected override void OnInitialized() => Model ??= new();
-
-    private void Submit()
+    protected override void OnInitialized()
     {
-        // Logger.LogInformation("Id = {Id}", Model?.Id);
+        base.OnInitialized();
     }
+
 
 }
 
