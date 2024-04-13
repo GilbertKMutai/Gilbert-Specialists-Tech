@@ -50,17 +50,18 @@
         </div>
 
         <div class="right-form">
-            <SfDataForm ID="MyForm" Width="400px" Model="@ClientModel" ButtonsAlignment="FormButtonsAlignment.Center" EnableFloatingLabel="true">
+            <SfDataForm ID="MyForm" Width="330px" Model="@ClientModel" ButtonsAlignment="FormButtonsAlignment.Center">
                 <FormValidator>
                     <DataAnnotationsValidator/>
                 </FormValidator>
                 <FormItems>
-                    <FormItem Field="@nameof(ClientModel.Name)" Placeholder="Full Name*" CssClass=""></FormItem>
-                    <FormItem Field="@nameof(ClientModel.Email)" Placeholder="Email Adddress*" CssClass=""></FormItem>
-                    <FormItem Field="@nameof(ClientModel.Message)" Placeholder="Comment*" EditorType="FormEditorType.TextArea" CssClass=""></FormItem>
+                    <h4>Leave a Message</h4>
+                    <FormItem Field="@nameof(ClientModel.Name)" Placeholder="Full Name*" CssClass="formitem"></FormItem>
+                    <FormItem Field="@nameof(ClientModel.Email)" Placeholder="Email Adddress*" CssClass="formitem"></FormItem>
+                    <FormItem Field="@nameof(ClientModel.Message)" Placeholder="Comment*" EditorType="FormEditorType.TextArea" CssClass="formitem textbox"></FormItem>
                 </FormItems>
                 <FormButtons>
-                    <SfButton typeof="submit">Register</SfButton>
+                    <SfButton CssClass="submitbtn" typeof="submit">Submit Now</SfButton>
                 </FormButtons>
             </SfDataForm>
 
@@ -69,6 +70,12 @@
 
 
   </section>
+
+  <style>
+
+
+
+</style>
 
 
 @code {

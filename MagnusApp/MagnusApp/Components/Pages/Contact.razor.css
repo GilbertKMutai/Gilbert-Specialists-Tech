@@ -4,7 +4,7 @@
 
 .left-text {
     margin-top: 120px;
-    margin-left: 40px;
+    margin-left: 25px;
 }
 
 .left-text h3 {
@@ -14,15 +14,14 @@
 .upper-body {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    /*gap: 40px;*/
+    justify-content: space-around;
+    gap: 20px;
+
 }
 
 .text-flex {
     display: flex;
-    gap: 50px;
-    /*justify-content: space-between;*/
-   /* margin-top: 60px;*/
+    gap: 30px
 }
 
 .left-side h5, .right-side h5 {
@@ -34,9 +33,11 @@
     margin-bottom: 70px;
 }
 
-
 .f-margin {
     padding-top: 20px;
+}
+.social {
+    /*white-space: nowrap;*/
 }
 
 .social img {
@@ -44,11 +45,57 @@
 }
 
 .right-form {
-    margin-right: 40px;
+    margin-right: 25px;
 }
 
 ::deep #MyForm {
     background-color: #01903A;
-    padding: 40px;
+    height: 370px;
+    padding: 40px 30px;
     border-radius: 15px;
+}
+
+::deep #MyForm .formitem {
+    border-radius: 0;
+}
+
+    ::deep #MyForm .submitbtn {
+        border-radius: 0;
+        color: white;
+        background-color: #FF0000;
+        padding: 4px 18px;
+        font-weight: 500;
+    }
+
+    ::deep #MyForm h4 {
+        text-align: center;
+    }
+
+    ::deep #MyForm .textbox {
+        height: 70px;
+    }
+
+@media (max-width: 768px) {
+    .upper-body {
+        flex-direction: column;
+        margin-bottom: 60px;
+    }
+
+    .left-text {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+
+    .right-form {
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 474px) {
+    .text-flex {
+        display: block;
+        gap: 20px
+    }
 }
