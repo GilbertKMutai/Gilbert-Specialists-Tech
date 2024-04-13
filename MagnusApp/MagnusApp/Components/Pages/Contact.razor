@@ -50,14 +50,14 @@
         </div>
 
         <div class="right-form">
-            <SfDataForm ID="MyForm" Width="100%" Model="@ClientModel">
+            <SfDataForm ID="MyForm" Width="400px" Model="@ClientModel" ButtonsAlignment="FormButtonsAlignment.Center" EnableFloatingLabel="true">
                 <FormValidator>
                     <DataAnnotationsValidator/>
                 </FormValidator>
                 <FormItems>
-                    <FormItem Field="@nameof(ClientModel.Name)" Placeholder="Full Name*"></FormItem>
-                    <FormItem Field="@nameof(ClientModel.Email)" Placeholder="Email Adddress*"></FormItem>
-                    <FormItem Field="@nameof(ClientModel.Message)" Placeholder="Comment*" EditorType="FormEditorType.TextArea"></FormItem>
+                    <FormItem Field="@nameof(ClientModel.Name)" Placeholder="Full Name*" CssClass=""></FormItem>
+                    <FormItem Field="@nameof(ClientModel.Email)" Placeholder="Email Adddress*" CssClass=""></FormItem>
+                    <FormItem Field="@nameof(ClientModel.Message)" Placeholder="Comment*" EditorType="FormEditorType.TextArea" CssClass=""></FormItem>
                 </FormItems>
                 <FormButtons>
                     <SfButton typeof="submit">Register</SfButton>
