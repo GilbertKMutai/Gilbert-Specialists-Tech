@@ -1,0 +1,141 @@
+﻿@page "/contact"   
+@using System.ComponentModel.DataAnnotations
+@rendermode InteractiveAuto
+@inherits ContactBase
+
+<section>
+    
+    <div class="contact-intro">
+        <h4>Contact Me</h4>
+    </div>
+
+    @* <button class="btn btn-primary" @onclick="OnButtonClick">Get Dimensions</button><br /><br /> *@
+
+@*     <p>Window Height: @Height</p>
+    <p>Window Width: @Width</p>
+ *@
+    <div class="upper-body">
+        <div class="left-text">
+            <h3>
+                I am here to build you<br />
+                a fantastic software!
+            </h3>
+            <p>
+                At MagnusQ, I am dedicated to helping you achieve the tools of <br/>
+                your dreams. With my expert experience I will work with <br />
+                you to create a personalized software that helps <br />
+                you reach your specific goals.
+            </p>
+
+        <div class="text-flex">
+
+            <div class="left-side">
+                <h5>Nairobi, Kenya</h5>
+                <p>
+                    Nairobi,<br />
+                    Kenya
+                </p>
+                <h5>Information</h5>
+                <p>
+                    +254726995500 <br />
+                    Magnusmq07@gmail.om
+                </p>
+            </div>
+            
+            <div class="right-side">
+                <h5>Opening Hours</h5>
+                <p> Monday to Friday: 8.00am - 16.00pm</p>
+                <h5 class="f-margin">Follow Me On</h5>
+                    <div class="social">
+                        <img src="/icons/footer/linkedin-icon.svg" alt="linkedin icon">
+                        <img src="/icons/footer/git-icon.svg" alt="github icon">
+                        <img src="/icons/footer/instagram-icon.svg" alt="instagram icon">
+                        <img src="/icons/footer/x-icon.svg" alt="x icon">
+                    </div>
+            </div>
+            </div>
+
+        </div>
+
+        <div class="right-form">
+            <div class="formone">
+            <SfDataForm ID="MyForm" Width="300px" Model="@ClientModel" ButtonsAlignment="FormButtonsAlignment.Center">
+                <FormValidator>
+                    <DataAnnotationsValidator/>
+                </FormValidator>
+                <FormItems>
+                    <h4>Leave a Message</h4>
+                    <FormItem Field="@nameof(ClientModel.Name)"  CssClass="formitem">
+                        <Template>
+                        <label>Full Name:</label>
+                            <SfTextBox Placeholder="Full Name*" @bind-Value="ClientModel.Name"></SfTextBox>
+                        </Template>
+                    </FormItem>
+                    <FormItem Field="@nameof(ClientModel.Email)" CssClass="formitem">
+                        <Template>
+                            <label>Email Address:</label>
+                            <SfTextBox Placeholder="Email Adddress*" @bind-Value="ClientModel.Email"></SfTextBox>
+                        </Template>
+                    </FormItem>
+                    <FormItem Field="@nameof(ClientModel.Message)" Placeholder="Comment*" EditorType="FormEditorType.TextArea" CssClass="formitem textbox">
+                        <Template>
+                            <label>Message:</label>
+                            <SfTextBox Placeholder="Comment*" @bind-Value="ClientModel.Message" Multiline="true"></SfTextBox>
+                        </Template>
+                    </FormItem>
+                </FormItems>
+                <FormButtons>
+                    <SfButton CssClass="submitbtn" typeof="submit">Submit Now</SfButton>
+                </FormButtons>
+            </SfDataForm>
+            </div>
+
+            <div class="formtwo">
+            <SfDataForm ID="FormTwo" Width="500px" Model="@ClientModel" ButtonsAlignment="FormButtonsAlignment.Center">
+                <FormValidator>
+                    <DataAnnotationsValidator />
+                </FormValidator>
+                <FormItems>
+                    <h4>Leave a Message</h4>
+                    <FormItem Field="@nameof(ClientModel.Name)" CssClass="formitem">
+                        <Template>
+                            <label>Full Name:</label>
+                            <SfTextBox Placeholder="Full Name*" @bind-Value="ClientModel.Name"></SfTextBox>
+                        </Template>
+                    </FormItem>
+                    <FormItem Field="@nameof(ClientModel.Email)" CssClass="formitem">
+                        <Template>
+                            <label>Email Address:</label>
+                            <SfTextBox Placeholder="Email Adddress*" @bind-Value="ClientModel.Email"></SfTextBox>
+                        </Template>
+                    </FormItem>
+                    <FormItem Field="@nameof(ClientModel.Message)" Placeholder="Comment*" EditorType="FormEditorType.TextArea" CssClass="formitem textbox">
+                        <Template>
+                            <label>Message:</label>
+                            <SfTextBox Placeholder="Comment*" @bind-Value="ClientModel.Message" Multiline="true"></SfTextBox>
+                        </Template>
+                    </FormItem>
+                </FormItems>
+                <FormButtons>
+                    <SfButton CssClass="submitbtn" typeof="submit">Submit Now</SfButton>
+                </FormButtons>
+            </SfDataForm>
+            </div>
+        </div>
+    </div>
+
+    <div class="opinion">
+        <div class="circle"></div>
+        <p>
+            “Take your web design and development to the next level with <br />
+            in-depth C#/.NET and Blazor skills which will help you reach your business goals.” <br />
+            <br />
+            ~Magnus
+        </p>
+    </div>
+
+  </section>
+
+
+
+
