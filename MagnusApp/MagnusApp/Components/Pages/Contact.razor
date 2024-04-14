@@ -1,10 +1,18 @@
 ﻿@page "/contact"   
-@using MagnusApp.Shared
-@using Microsoft.Extensions.Logging
 @using System.ComponentModel.DataAnnotations
+@using System.Windows
 
-
+@inherits ContactBase
 <section>
+    
+    <div class="contact-intro">
+        <h4>Contact Me</h4>
+    </div>
+
+    <button class="btn btn-primary" @onclick="OnButtonClick">Get Dimensions</button><br /><br />
+
+    <p>Window Height: @Height</p>
+    <p>Window Width: @Width</p>
 
     <div class="upper-body">
         <div class="left-text">
@@ -50,7 +58,7 @@
         </div>
 
         <div class="right-form">
-            <SfDataForm ID="MyForm" Width="330px" Model="@ClientModel" ButtonsAlignment="FormButtonsAlignment.Center">
+            <SfDataForm ID="MyForm" Width="100%" Model="@ClientModel" ButtonsAlignment="FormButtonsAlignment.Center">
                 <FormValidator>
                     <DataAnnotationsValidator/>
                 </FormValidator>
@@ -68,25 +76,18 @@
         </div>
     </div>
 
+    <div class="opinion">
+        <div class="circle"></div>
+        <p>
+            “Take your web design and development to the next level with <br />
+            in-depth C#/.NET and Blazor skills which will help you reach your business goals.” <br />
+            <br />
+            ~Magnus
+        </p>
+    </div>
 
   </section>
 
-  <style>
 
-
-
-</style>
-
-
-@code {
-    private Client ClientModel = new Client();
-
-    protected override void OnInitialized()
-    {
-        base.OnInitialized();
-    }
-
-
-}
 
 

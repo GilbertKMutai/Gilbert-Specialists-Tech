@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MagnusApp.Shared
 {
-    public class Client
+    public class ClientInfo
     {
         [Required (ErrorMessage = "The field Name is required")]
         //[Display(Name = "Full Name")]
