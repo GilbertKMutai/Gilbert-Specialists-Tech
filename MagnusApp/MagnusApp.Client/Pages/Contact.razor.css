@@ -63,9 +63,9 @@
 
 ::deep #MyForm {
     background-color: #01903A;
-    height: 370px;
-    padding: 40px 30px;
-    border-radius: 15px;
+    /*height: 370px;*/
+    padding: 30px;
+    border-radius: 7px;
 }
 
 ::deep #MyForm .formitem {
@@ -87,6 +87,10 @@
     ::deep #MyForm .textbox {
         height: 70px;
     }
+
+.formtwo {
+    display: none;
+}
 
 .opinion {
     display: flex;
@@ -127,6 +131,42 @@
         margin-left: auto;
     }
 
+    .formone {
+        display: none;
+    }
+
+    .formtwo {
+        display: block;
+    }
+
+    ::deep #FormTwo {
+        background-color: #01903A;
+        /*height: 370px;*/
+        padding: 30px;
+        border-radius: 7px;
+    }
+
+        ::deep #FormTwo .formitem {
+            border-radius: 0;
+        }
+
+        ::deep #FormTwo .submitbtn {
+            border-radius: 0;
+            color: white;
+            background-color: #FF0000;
+            padding: 4px 18px;
+            font-weight: 500;
+        }
+
+        ::deep #FormTwo h4 {
+            text-align: center;
+        }
+
+        ::deep #FormTwo .textbox {
+            height: 70px;
+        }
+
+
     .opinion {
         display: block;
         margin-top: 40px;
@@ -152,6 +192,5 @@
     ::deep #MyForm {
         
         width: 500px;
-        height: 340px;
     }
 }

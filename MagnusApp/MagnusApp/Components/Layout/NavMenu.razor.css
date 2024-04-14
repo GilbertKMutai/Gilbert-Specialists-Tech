@@ -93,6 +93,10 @@
     display: flex;
 }
 
+.hidesidebar {
+    display: none;
+}
+
 /* Tablet View */
 @media (max-width: 768px) {
     .menu {
@@ -117,6 +121,15 @@
         right: 15px;
         display: none;
     }
+
+    .showsidebar {
+        display: flex;
+    }
+
+    .hidesidebar {
+        display: none;
+    }
+
 
 }
 
