@@ -3,8 +3,8 @@ using MagnusApp.Components;
 using Syncfusion.Blazor;
 
 
-Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("Ngo9BigBOggjHTQxAR8/V1NHaF5cWWdCf1FpRmJGdld5fUVHYVZUTXxaS00DNHVRdkdnWXxfd3VQRmBcWExwXEU=");
 var builder = WebApplication.CreateBuilder(args);
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("Ngo9BigBOggjHTQxAR8/V1NHaF5cWWdCf1FpRmJGdld5fUVHYVZUTXxaS00DNHVRdkdnWXtfdHRRRWheWEV+V0I=");
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
