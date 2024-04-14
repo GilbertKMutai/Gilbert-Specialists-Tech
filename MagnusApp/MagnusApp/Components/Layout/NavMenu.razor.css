@@ -89,6 +89,9 @@
     margin-right: 15px;
 }
 
+.showsidebar {
+    display: flex;
+}
 
 /* Tablet View */
 @media (max-width: 768px) {
