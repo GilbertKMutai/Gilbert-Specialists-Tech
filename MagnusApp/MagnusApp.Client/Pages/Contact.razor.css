@@ -92,6 +92,10 @@
     display: none;
 }
 
+/*::deep #FormTwo {
+    display: none;
+}*/
+
 .opinion {
     display: flex;
     color: white;
@@ -112,6 +116,23 @@
     border-radius: 50%;
     background-color: #bbb;
     margin-left: 15px;
+}
+
+.maps {
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+    .maps iframe {
+        width: 1024px;
+        height: 500px;
+    }
+
+@media (max-width: 1024px) {
+    .maps iframe {
+        width: 768px;
+        height: 450px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -142,6 +163,7 @@
     ::deep #FormTwo {
         background-color: #01903A;
         /*height: 370px;*/
+       /* width: 270px*/;
         padding: 30px;
         border-radius: 7px;
     }
@@ -176,13 +198,21 @@
             margin-left: 15px;
             margin-top: 15px;
         }
-
+    .maps iframe {
+        width: 474px;
+        height: 400px;
+    }
 }
 
 @media (max-width: 474px) {
     .text-flex {
         display: block;
         gap: 20px
+    }
+
+    .maps iframe {
+        width: 355px;
+        height: 350px;
     }
 }
 
@@ -192,5 +222,10 @@
     ::deep #MyForm {
         
         width: 500px;
+    }
+
+    .maps iframe {
+        width: 280px;
+        height: 300px;
     }
 }
