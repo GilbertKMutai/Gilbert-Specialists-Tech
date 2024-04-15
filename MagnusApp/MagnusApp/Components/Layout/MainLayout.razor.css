@@ -21,61 +21,33 @@ footer {
 
 .contact-group {
     display: flex;
-    margin-top: 45px;
-}
-
-.contact-group img {
-    margin-bottom: -4px;
-    margin-right: 10px;
+    margin-top: 20px;
 }
 
 .contact-group p{
     white-space: nowrap;
 }
 
-.social {
-    float: right;
-    margin-top: -42px;
-    margin-right: 15px;
-}
 
-.social img {
-    margin-left: 10px;
-}
-
-footer p {
+footer p{
     text-align: center;
     margin-top: 20px;
 }
+
+ .social {
+    display: flex;
+    margin-top: 20px;
+    gap: 15px;
+    
+   
+ }
 
 .location-block {
     display: none;
 }
 
-@media (max-width: 959px) {
-    .social {
-        float: none;
-        margin-top: 0px;
-        display: flex;
-        justify-content: center;
-        gap: 8px;
-        margin-right: 0;
-    }
 
-    .social img {
-        margin-left: 0;
-    }
-/*  
-    footer {
-        height: 180px;
-    }*/
-}
-
-
-@media (max-width: 612px) {
-    .contact-group img {
-        margin-right: 5px;
-    }
+@media (max-width: 768px) {
 
     .contact {
         display: flex;
@@ -97,37 +69,29 @@ footer p {
         display: flex;
     }
 
-/*    .footer {
-        height: 200px;
-    }*/
 }
 
-@media (max-width: 474px){
-    .contact-group img {
-        margin-right: 0px;
-    }
+@media (max-width: 474px) {
 
     .contact {
         display: block;
         margin-top: 28px;
-
     }
 
     .contact-group {
         margin-top: -25px;
-
     }
 
+        .contact-group p {
+            margin-left: auto;
+            margin-right: auto;
+        }
 }
 
 @media (max-width: 355px) {
 
     .hide-fold {
         display: none;
-    }
-
-    .contact-group img {
-        margin-right: 4px;
     }
 
     .loc-soc {
