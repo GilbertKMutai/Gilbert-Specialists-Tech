@@ -51,14 +51,21 @@ footer p {
 .location-block {
     display: none;
 }
+
 @media (max-width: 959px) {
     .social {
         float: none;
         margin-top: 0px;
         display: flex;
         justify-content: center;
+        gap: 8px;
+        margin-right: 0;
     }
-/*
+
+    .social img {
+        margin-left: 0;
+    }
+/*  
     footer {
         height: 180px;
     }*/
@@ -83,7 +90,7 @@ footer p {
     .loc-soc {
         display: flex;
         justify-content: center;
-        gap: 15px;
+        gap: 40px;
     }
 
     .location-block {
@@ -101,12 +108,14 @@ footer p {
     }
 
     .contact {
-        gap: 1px;
+        display: block;
         margin-top: 28px;
+
     }
 
     .contact-group {
         margin-top: -25px;
+
     }
 
 }
@@ -121,7 +130,11 @@ footer p {
         margin-right: 4px;
     }
 
-    .location-block img{
-        margin-right: -6px;
+    .loc-soc {
+        display: block;
     }
+    .location-block {
+        justify-content: center;
+    }
+
 }
