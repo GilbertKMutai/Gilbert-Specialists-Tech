@@ -1,4 +1,4 @@
-﻿namespace MagnusApp.Client.Configuration;
+﻿namespace MagnusApp.Shared.Configuration;
 
 public class MailSettings
 {
