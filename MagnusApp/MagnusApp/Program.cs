@@ -12,6 +12,7 @@ builder.Services.AddRazorComponents()
     .AddInteractiveWebAssemblyComponents();
 
 builder.Services.AddSyncfusionBlazor();
+builder.Services.AddControllers();
 
 var app = builder.Build();
 
@@ -27,6 +28,7 @@ else
     app.UseHsts();
 }
 
+app.MapControllers();
 app.UseHttpsRedirection();
 
 app.UseStaticFiles();

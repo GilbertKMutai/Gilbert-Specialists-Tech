@@ -6,4 +6,18 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="MailSettings.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Configuration\MailSettings.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MailKit" Version="4.5.0" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="8.0.2" />
+    <PackageReference Include="MimeKit" Version="4.5.0" />
+  </ItemGroup>
+
 </Project>
