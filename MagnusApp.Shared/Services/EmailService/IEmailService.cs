@@ -5,9 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MagnusApp.Shared.Services;
-
-public interface IMailService
+namespace MagnusApp.Shared.Services.EmailService
 {
-    bool SendMail(MailData mailData);
+    public interface IEmailService
+    {
+        void SendEmail(EmailDto request);
+    }
 }
