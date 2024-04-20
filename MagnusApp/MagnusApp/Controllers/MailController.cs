@@ -13,18 +13,18 @@ namespace MagnusApp.Controllers
     [ApiController]
     public class MailController : ControllerBase
     {
-        private readonly IEmailService _emailService;
+        private readonly IEmailService emailService;
 
         public MailController(IEmailService emailService)
         {
-            _emailService = emailService;
+            this.emailService = emailService;
         }
 
         [HttpPost]
         [Route("SendMail")]
         public IActionResult SendMail(EmailDto request)
         {
-            _emailService.SendEmail(request);
+            emailService.SendEmail(request);
 
             return Ok();
         }

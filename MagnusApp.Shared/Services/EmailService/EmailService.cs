@@ -3,29 +3,31 @@ using MimeKit.Text;
 using MimeKit;
 using MailKit.Net.Smtp;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Options;
+using MagnusApp.Shared.Configuration;
 
 namespace MagnusApp.Shared.Services.EmailService
 {
     public class EmailService : IEmailService
     {
-        private readonly IConfiguration config;
+        private readonly MailSettings mailSettings;
 
-        public EmailService(IConfiguration config)
+        public EmailService(IOptions<MailSettings> mailSettingsOptions)
         {
-            this.config = config;
+            this.mailSettings = mailSettingsOptions.Value;
         }
 
         public void SendEmail(EmailDto request)
         {
             var email = new MimeMessage();
-            email.From.Add(MailboxAddress.Parse(config.GetSection("EmailUserName").Value));
+            email.From.Add(MailboxAddress.Parse(ApplicationConfiguration.GetSetting("EmailHost")));
             email.To.Add(MailboxAddress.Parse(request.To));
             email.Subject = request.Subject;
             email.Body = new TextPart(TextFormat.Html) { Text = request.Body };
 
             using var smtp = new SmtpClient();
-            smtp.Connect(config.GetSection("EmailHost").Value, 587, MailKit.Security.SecureSocketOptions.StartTls);
-            smtp.Authenticate(config.GetSection("EmailUserName").Value, config.GetSection("EmailPassword").Value);
+            smtp.Connect(mailSettings.EmailHost, 587, MailKit.Security.SecureSocketOptions.StartTls);
+            smtp.Authenticate(mailSettings.EmailUserName, mailSettings.EmailPassword);
             smtp.Send(email);
             smtp.Disconnect(true);
         }
