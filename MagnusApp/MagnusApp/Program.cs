@@ -2,7 +2,7 @@ using MagnusApp.Client.Pages;
 using MagnusApp.Components;
 using Syncfusion.Blazor;
 using Microsoft.OpenApi.Models;
-using MagnusApp.Shared.Services;
+using MagnusApp.Shared.Services.EmailService;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,7 +16,7 @@ builder.Services.AddRazorComponents()
 builder.Services.AddSyncfusionBlazor();
 builder.Services.AddControllers();
 
-builder.Services.AddTransient<IMailService, MailService>();
+builder.Services.AddScoped<IEmailService, EmailService>();
 
 
 builder.Services.AddSwaggerGen(c =>

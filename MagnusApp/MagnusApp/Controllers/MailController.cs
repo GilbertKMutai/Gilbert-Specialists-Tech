@@ -1,7 +1,11 @@
-﻿using MagnusApp.Shared.Models;
-using MagnusApp.Shared.Services;
+﻿
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using MimeKit;
+using MimeKit.Text;
+using MailKit.Net.Smtp;
+using MagnusApp.Shared.Services.EmailService;
+using MagnusApp.Shared.Models;
 
 namespace MagnusApp.Controllers
 {
@@ -9,18 +13,20 @@ namespace MagnusApp.Controllers
     [ApiController]
     public class MailController : ControllerBase
     {
-        private readonly IMailService mailService;
+        private readonly IEmailService _emailService;
 
-        public MailController(IMailService mailService)
+        public MailController(IEmailService emailService)
         {
-            this.mailService = mailService;
+            _emailService = emailService;
         }
 
         [HttpPost]
         [Route("SendMail")]
-        public bool SendMail(MailData mailData)
+        public IActionResult SendMail(EmailDto request)
         {
-            return mailService.SendMail(mailData);
+            _emailService.SendEmail(request);
+
+            return Ok();
         }
     }
 }
