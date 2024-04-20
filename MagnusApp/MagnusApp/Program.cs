@@ -16,7 +16,7 @@ builder.Services.AddRazorComponents()
 builder.Services.AddSyncfusionBlazor();
 builder.Services.AddControllers();
 
-builder.Services.AddScoped<IEmailService, EmailService>();
+builder.Services.AddTransient<IEmailService, EmailService>();
 
 
 builder.Services.AddSwaggerGen(c =>
