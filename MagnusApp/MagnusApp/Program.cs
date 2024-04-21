@@ -2,8 +2,10 @@ using MagnusApp.Client.Pages;
 using MagnusApp.Components;
 using Syncfusion.Blazor;
 using Microsoft.OpenApi.Models;
-using MagnusApp.Shared.Services.EmailService;
 using MagnusApp.Shared.Configuration;
+using MagnusApp.Repositories.EmailRepository;
+using MagnusApp.Shared.Services.EmailService;
+using Microsoft.AspNetCore.Http.Extensions;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -17,9 +19,12 @@ builder.Services.AddRazorComponents()
 builder.Services.AddSyncfusionBlazor();
 builder.Services.AddControllers();
 
-builder.Services.AddTransient<IEmailService, EmailService>();
+builder.Services.AddScoped<IEmailRepository, EmailRepository>();
 
-
+builder.Services.AddHttpClient<IEmailService, EmailService>(client =>
+{
+    client.BaseAddress = new Uri("https://localhost:7157");
+});
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo

@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MagnusApp.Shared.Services.EmailService
+namespace MagnusApp.Repositories.EmailRepository
 {
-    public interface IEmailService
+    public interface IEmailRepository
     {
-        Task SendEmail(EmailDto request);
+        void SendEmail(EmailDto request);
     }
 }
