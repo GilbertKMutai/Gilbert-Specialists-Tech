@@ -3,6 +3,7 @@ using MagnusApp.Components;
 using Syncfusion.Blazor;
 using Microsoft.OpenApi.Models;
 using MagnusApp.Shared.Services.EmailService;
+using MagnusApp.Shared.Configuration;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -34,6 +35,9 @@ builder.Services.AddSwaggerGen(c =>
         },
     });
 });
+
+
+builder.Services.AddSingleton<IMailSettings, MailSettings>();
 
 var app = builder.Build();
 
