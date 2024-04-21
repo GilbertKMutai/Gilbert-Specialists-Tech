@@ -4,9 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 using MimeKit;
 using MimeKit.Text;
 using MailKit.Net.Smtp;
-using MagnusApp.Shared.Services.EmailService;
 using MagnusApp.Shared.Models;
 using MagnusApp.Shared.Configuration;
+using MagnusApp.Repositories.EmailRepository;
 
 namespace MagnusApp.Controllers
 {
@@ -14,12 +14,12 @@ namespace MagnusApp.Controllers
     [ApiController]
     public class MailController : ControllerBase
     {
-        //private readonly IConfiguration configuration;
-        private readonly IEmailService emailService;
+        private readonly IEmailRepository emailRepository;
 
-        public MailController(IEmailService emailService)
+        //private readonly IConfiguration configuration;
+        public MailController(IEmailRepository emailRepository)
         {
-            this.emailService = emailService;
+            this.emailRepository = emailRepository;
         }
 
         [HttpPost]
@@ -32,7 +32,7 @@ namespace MagnusApp.Controllers
 
 
 
-            emailService.SendEmail(request);
+            emailRepository.SendEmail(request);
 
             return Ok();
         }

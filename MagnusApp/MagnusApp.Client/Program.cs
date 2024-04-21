@@ -8,6 +8,11 @@ using Microsoft.Extensions.Configuration;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 
+builder.Services.AddHttpClient<IEmailService, EmailService>(client =>
+{
+    client.BaseAddress = new Uri(builder.HostEnvironment.BaseAddress);
+});
+
 //Gets values from appsettings.json
 //var clientSecret = builder.Configuration.GetValue<string>("MailSettings:EmailHost");
 

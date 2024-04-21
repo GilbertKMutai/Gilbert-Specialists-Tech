@@ -10,11 +10,6 @@
         <h4>Contact Me</h4>
     </div>
 
-    @* <button class="btn btn-primary" @onclick="OnButtonClick">Get Dimensions</button><br /><br /> *@
-
-@*     <p>Window Height: @Height</p>
-    <p>Window Width: @Width</p>
- *@
     <div class="upper-body">
         <div class="left-text">
             <h3>
@@ -60,7 +55,7 @@
 
       <div class="right-form">
              <div class="formone">
-                <SfDataForm ID="MyForm" Width="330px" Model="@ClientModel" ButtonsAlignment="FormButtonsAlignment.Center" OnValidSubmit="HandleValidSubmit" OnSubmit="HandleSubmit">
+                <SfDataForm @ref="dataForm" ID="MyForm" Width="330px" Model="@ClientModel" ButtonsAlignment="FormButtonsAlignment.Center" OnValidSubmit="HandleValidSubmit" OnSubmit="HandleSubmit">
                 <FormValidator>
                     <DataAnnotationsValidator/>
                 </FormValidator>
@@ -91,8 +86,9 @@
             </SfDataForm>
             </div>
 
+
             <div class="formtwo">
-                <SfDataForm ID="FormTwo" Width="280px" Model="@ClientModel" ButtonsAlignment="FormButtonsAlignment.Center" OnValidSubmit="HandleValidSubmit">
+                <SfDataForm ID="FormTwo" Width="280px" Model="@ClientModel" ButtonsAlignment="FormButtonsAlignment.Center">
                 <FormValidator>
                     <DataAnnotationsValidator />
                 </FormValidator>
