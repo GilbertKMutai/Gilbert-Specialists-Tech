@@ -1,11 +1,14 @@
 ﻿using MagnusApp.Shared;
 using Microsoft.AspNetCore.Components;
+using Syncfusion.Blazor.DataForm;
+using Syncfusion.Blazor.Inputs;
 
 
 namespace MagnusApp.Client.Pages;
 
 public class ContactBase : ComponentBase
-{ 
+{
+
     protected EmailDto ClientModel = new EmailDto();
 
     [Inject]
@@ -19,12 +22,13 @@ public class ContactBase : ComponentBase
     {
         EmailService.SendEmail(ClientModel);
 
-        void refresh()
-        {
-
-            ClientModel = new EmailDto();
-
-        }
+        //ClientModel.Subject = string.Empty;
+        //ClientModel.From = string.Empty;
+        //ClientModel.Body = string.Empty;
     }
 
+    protected void HandleSubmit()
+    {
+        //
+    }
 }
