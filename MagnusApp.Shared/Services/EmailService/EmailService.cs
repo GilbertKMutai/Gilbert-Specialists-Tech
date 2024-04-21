@@ -10,18 +10,18 @@ namespace MagnusApp.Shared.Services.EmailService
 {
     public class EmailService : IEmailService
     {
-        private readonly MailSettings mailSettings;
+        private readonly IMailSettings mailSettings;
 
-        public EmailService(IOptions<MailSettings> mailSettingsOptions)
+        public EmailService(IMailSettings mailSettings)
         {
-            this.mailSettings = mailSettingsOptions.Value;
+            this.mailSettings = mailSettings;
         }
 
         public void SendEmail(EmailDto request)
         {
             var email = new MimeMessage();
-            email.From.Add(MailboxAddress.Parse(ApplicationConfiguration.GetSetting("EmailHost")));
-            email.To.Add(MailboxAddress.Parse(request.To));
+            email.From.Add(MailboxAddress.Parse(request.From));
+            email.To.Add(MailboxAddress.Parse("mutaigilly02@gmail.com"));
             email.Subject = request.Subject;
             email.Body = new TextPart(TextFormat.Html) { Text = request.Body };
 
