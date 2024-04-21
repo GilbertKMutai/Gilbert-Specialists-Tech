@@ -60,28 +60,28 @@
 
       <div class="right-form">
              <div class="formone">
-            <SfDataForm ID="MyForm" Width="330px" Model="@ClientModel" ButtonsAlignment="FormButtonsAlignment.Center">
+            <SfDataForm ID="MyForm" Width="330px" Model="@ClientModel" ButtonsAlignment="FormButtonsAlignment.Center" OnValidSubmit="HandleValidSubmit" >
                 <FormValidator>
                     <DataAnnotationsValidator/>
                 </FormValidator>
                 <FormItems>
                     <h4>Leave a Message</h4>
-                    <FormItem Field="@nameof(ClientModel.Name)"  CssClass="formitem">
+                    <FormItem Field="@nameof(ClientModel.Subject)"  CssClass="formitem">
                         <Template>
                         <label>Full Name:</label>
-                            <SfTextBox Placeholder="Full Name*" @bind-Value="ClientModel.Name"></SfTextBox>
+                            <SfTextBox Placeholder="Full Name*" @bind-Value="ClientModel.Subject"></SfTextBox>
                         </Template>
                     </FormItem>
-                    <FormItem Field="@nameof(ClientModel.Email)" CssClass="formitem">
+                    <FormItem Field="@nameof(ClientModel.From)" CssClass="formitem">
                         <Template>
                             <label>Email Address:</label>
-                            <SfTextBox Placeholder="Email Adddress*" @bind-Value="ClientModel.Email"></SfTextBox>
+                                <SfTextBox Placeholder="Email Adddress*" @bind-Value="ClientModel.From"></SfTextBox>
                         </Template>
                     </FormItem>
-                    <FormItem Field="@nameof(ClientModel.Message)" Placeholder="Comment*" EditorType="FormEditorType.TextArea" CssClass="formitem textbox">
+                    <FormItem Field="@nameof(ClientModel.Body)" Placeholder="Comment*" EditorType="FormEditorType.TextArea" CssClass="formitem textbox">
                         <Template>
                             <label>Message:</label>
-                            <SfTextBox Placeholder="Comment*" @bind-Value="ClientModel.Message" Multiline="true"></SfTextBox>
+                            <SfTextBox Placeholder="Comment*" @bind-Value="ClientModel.Body" Multiline="true"></SfTextBox>
                         </Template>
                     </FormItem>
                 </FormItems>
@@ -92,28 +92,28 @@
             </div>
 
             <div class="formtwo">
-            <SfDataForm ID="FormTwo" Width="280px" Model="@ClientModel" ButtonsAlignment="FormButtonsAlignment.Center">
+                <SfDataForm ID="FormTwo" Width="280px" Model="@ClientModel" ButtonsAlignment="FormButtonsAlignment.Center" OnValidSubmit="HandleValidSubmit">
                 <FormValidator>
                     <DataAnnotationsValidator />
                 </FormValidator>
                 <FormItems>
                     <h4>Leave a Message</h4>
-                    <FormItem Field="@nameof(ClientModel.Name)" CssClass="formitem">
+                    <FormItem Field="@nameof(ClientModel.Subject)" CssClass="formitem">
                         <Template>
                             <label>Full Name:</label>
-                            <SfTextBox Placeholder="Full Name*" @bind-Value="ClientModel.Name"></SfTextBox>
+                            <SfTextBox Placeholder="Full Name*" @bind-Value="ClientModel.Subject"></SfTextBox>
                         </Template>
                     </FormItem>
-                    <FormItem Field="@nameof(ClientModel.Email)" CssClass="formitem">
+                    <FormItem Field="@nameof(ClientModel.From)" CssClass="formitem">
                         <Template>
                             <label>Email Address:</label>
-                            <SfTextBox Placeholder="Email Adddress*" @bind-Value="ClientModel.Email"></SfTextBox>
+                            <SfTextBox Placeholder="Email Adddress*" @bind-Value="ClientModel.From"></SfTextBox>
                         </Template>
                     </FormItem>
-                    <FormItem Field="@nameof(ClientModel.Message)" Placeholder="Comment*" EditorType="FormEditorType.TextArea" CssClass="formitem textbox">
+                    <FormItem Field="@nameof(ClientModel.Body)" Placeholder="Comment*" EditorType="FormEditorType.TextArea" CssClass="formitem textbox">
                         <Template>
                             <label>Message:</label>
-                            <SfTextBox Placeholder="Comment*" @bind-Value="ClientModel.Message" Multiline="true"></SfTextBox>
+                            <SfTextBox Placeholder="Comment*" @bind-Value="ClientModel.Body" Multiline="true"></SfTextBox>
                         </Template>
                     </FormItem>
                 </FormItems>
