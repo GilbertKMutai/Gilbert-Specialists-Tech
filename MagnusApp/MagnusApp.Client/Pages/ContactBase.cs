@@ -9,7 +9,9 @@ namespace MagnusApp.Client.Pages;
 
 public class ContactBase : ComponentBase
 {
-    public SfDataForm editForm;
+    public SfDataForm editForm = new SfDataForm();
+    
+    //public SfDataForm editFormRespon = new SfDataForm();
 
     protected EmailDto ClientModel = new EmailDto();
     [Inject]
