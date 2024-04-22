@@ -55,7 +55,7 @@
 
       <div class="right-form">
              <div class="formone">
-                <SfDataForm ID="MyForm" Width="330px" Model="@ClientModel" ButtonsAlignment="FormButtonsAlignment.Center" OnValidSubmit="HandleValidSubmit">
+                <SfDataForm @ref="editForm" ID="MyForm" Width="330px" Model="@ClientModel" ButtonsAlignment="FormButtonsAlignment.Center" OnValidSubmit="HandleValidSubmit">
                 <FormValidator>
                     <DataAnnotationsValidator/>
                 </FormValidator>
@@ -88,7 +88,7 @@
 
 
             <div class="formtwo">
-                <SfDataForm ID="FormTwo" Width="280px" Model="@ClientModel" ButtonsAlignment="FormButtonsAlignment.Center" >
+                <SfDataForm @ref="editForm" ID="FormTwo" Width="280px" Model="@ClientModel" ButtonsAlignment="FormButtonsAlignment.Center" OnValidSubmit="HandleValidSubmit">
                 <FormValidator>
                     <DataAnnotationsValidator />
                 </FormValidator>
