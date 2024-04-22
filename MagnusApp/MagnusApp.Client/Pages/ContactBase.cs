@@ -9,7 +9,7 @@ namespace MagnusApp.Client.Pages;
 
 public class ContactBase : ComponentBase
 {
-    public SfDataForm dataForm;
+    public SfDataForm editForm;
 
     protected EmailDto ClientModel = new EmailDto();
     [Inject]
@@ -19,24 +19,14 @@ public class ContactBase : ComponentBase
         base.OnInitialized();
     }
 
-    protected async void HandleSubmit ()
+    protected async void HandleValidSubmit ()
     {
-        await EmailService.SendEmail(ClientModel);
-        ClearForm();
+       await EmailService.SendEmail(ClientModel);
+        ClientModel = new EmailDto();
+        editForm.Refresh();
     }
-
-
-    protected void ClearForm()
-    {
-        ClientModel.Subject = "";
-        ClientModel.Body = "";
-        ClientModel.From = "";
-    }
-
-    protected void HandleValidSubmit ()
-    {
-       
-
-    }
+        //ClientModel.Subject = string.Empty;
+        //ClientModel.Body = string.Empty;
+        //ClientModel.From = string.Empty;
 
 }
