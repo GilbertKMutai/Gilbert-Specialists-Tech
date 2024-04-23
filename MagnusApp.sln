@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MagnusApp", "MagnusApp\Magn
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MagnusApp.Client", "MagnusApp\MagnusApp.Client\MagnusApp.Client.csproj", "{04FB309F-CB0D-4DBE-8DF0-D710DB639F84}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagnusApp.Shared", "MagnusApp.Shared\MagnusApp.Shared.csproj", "{2263268F-C2FA-4B1B-AA9A-3AC1D78B2611}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MagnusApp.Shared", "MagnusApp.Shared\MagnusApp.Shared.csproj", "{2263268F-C2FA-4B1B-AA9A-3AC1D78B2611}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
