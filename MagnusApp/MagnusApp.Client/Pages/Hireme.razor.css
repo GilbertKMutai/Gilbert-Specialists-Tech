@@ -1,0 +1,105 @@
+﻿body {
+    color: white;
+}
+
+.hireme-intro {
+    height: 200px;
+    background-color: white;
+    background-image: url(../images/about.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+}
+
+i {
+    text-align: left;
+
+}
+
+h5 {
+    text-align: center;
+}
+
+.stick {
+    height: 40px;
+    width: 1px;
+    background: white;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.arrow {
+    width: 0px;
+    height: 0px;
+    border-left: 5px solid transparent;
+    border-top: 15px solid white;
+    border-right: 5px solid transparent;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+::deep .e-btn.borders {
+    border: 1px solid rgb(64, 234, 132);
+    color: white;
+    background: none;
+    padding: 6px 36px;
+    border-radius: 0;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+    ::deep .e-btn.borders:hover {
+        background-color: white;
+        color: green;
+        border: 1px solid rgb(0, 0, 0);
+        transition-duration: 2s;
+    }
+.hireme-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.circle {
+    background-image: url(../images/myicon.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #bbb;
+    margin-left: 15px;
+}
+
+.opinion {
+    display: flex;
+    color: white;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+    .opinion p {
+        margin-top: 4px;
+    }
+
+    @media (max-width: 768px){
+        .opinion {
+            display: block;
+            margin-top: 40px;
+        }
+
+            .opinion p {
+                margin-left: 15px;
+                margin-top: 15px;
+            }
+    }

@@ -21,12 +21,13 @@ public class ContactBase : ComponentBase
         base.OnInitialized();
     }
 
-    protected async void HandleValidSubmit ()
+    protected async void HandleValidSubmit()
     {
        await EmailService.SendEmail(ClientModel);
         ClientModel = new EmailDto();
         editForm.Refresh();
     }
+
         //ClientModel.Subject = string.Empty;
         //ClientModel.Body = string.Empty;
         //ClientModel.From = string.Empty;
