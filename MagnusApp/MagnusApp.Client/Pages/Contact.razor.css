@@ -42,9 +42,9 @@
     margin-bottom: 10px;
 }
 
-.right-side, .left-side {
+/*.right-side, .left-side {
     margin-bottom: 70px;
-}
+}*/
 
 .f-margin {
     padding-top: 20px;
@@ -119,8 +119,9 @@
 }
 
 .maps {
-    margin-bottom: 100px;
+    margin-bottom: 200px;
     text-align: center;
+    margin-top: 200px;
 }
 
     .maps iframe {

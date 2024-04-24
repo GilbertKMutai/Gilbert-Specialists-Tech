@@ -18,7 +18,8 @@
 .text {
     display: flex;
     justify-content: center;
-    margin-top: 200px;
+    margin-top: 150px;
+    padding: 0 15px;
 }
 
 i {
@@ -28,13 +29,14 @@ i {
 
 h5 {
     text-align: center;
+    margin-top: 120px;
 }
 
 .stick {
     height: 40px;
-    width: 1px;
+    width: 1.6px;
     background: white;
-    margin-top: 15px;
+    margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -55,16 +57,17 @@ h5 {
     background: none;
     padding: 6px 36px;
     border-radius: 0;
-    margin-top: 10px;
+    margin-top: 30px;
     font-size: 18px;
 }
 
     ::deep .e-btn.borders:hover {
         background-color: white;
-        color: green;
+        color: #1FEB27;
         border: 1px solid rgb(0, 0, 0);
         transition-duration: 2s;
     }
+
 .hireme-btn {
     display: flex;
     justify-content: center;
@@ -84,11 +87,12 @@ h5 {
 .opinion {
     display: flex;
     color: white;
-    gap: 12px;
+    gap: 15px;
     margin-bottom: 40px;
+    margin-top: 300px;
 }
 
-    .opinion p {
+    .opinion i {
         margin-top: 4px;
     }
 
@@ -98,8 +102,13 @@ h5 {
             margin-top: 40px;
         }
 
-            .opinion p {
+            .opinion i {
                 margin-left: 15px;
                 margin-top: 15px;
+                padding: 0 15px;
             }
+
+        .circle {
+            margin-bottom: 20px;
+        }
     }
