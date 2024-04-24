@@ -1,6 +1,7 @@
 ﻿@page "/contact"   
 @using System.ComponentModel.DataAnnotations
 @using MagnusApp.Client.Pages
+@using MagnusApp.Client.Pages.Reusable
 @rendermode InteractiveAuto
 @inherits ContactBase
 
@@ -56,7 +57,7 @@
 
       <div class="right-form">
              <div class="formone">
-                <SfDataForm @ref="editForm" ID="MyForm" Width="330px" Model="@ClientModel" ButtonsAlignment="FormButtonsAlignment.Center" OnValidSubmit="HandleValidSubmit">
+@*                 <SfDataForm @ref="editForm" ID="MyForm" Width="330px" Model="@ClientModel" ButtonsAlignment="FormButtonsAlignment.Center" OnValidSubmit="HandleValidSubmit">
                 <FormValidator>
                     <DataAnnotationsValidator/>
                 </FormValidator>
@@ -84,7 +85,10 @@
                 <FormButtons>
                         <SfButton CssClass="submitbtn" typeof="submit">Submit Now</SfButton>
                 </FormButtons>
-            </SfDataForm>
+            </SfDataForm> *@
+            <CascadingValue Value="@ClientModel">
+                <DataForm/>
+            </CascadingValue>
             </div>
 
 
@@ -137,7 +141,5 @@
     </div>
 
   </section>
-
-
 
 

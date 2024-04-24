@@ -1,0 +1,31 @@
+﻿@inherits DataFormBase
+
+<SfDataForm @ref="editForm" ID="MyForm" Width="330px" Model="@ClientModel" ButtonsAlignment="FormButtonsAlignment.Center" OnValidSubmit="HandleValidSubmit">
+    <FormValidator>
+        <DataAnnotationsValidator />
+    </FormValidator>
+    <FormItems>
+        <h4>Leave a Message</h4>
+        <FormItem Field="@nameof(ClientModel.Subject)" CssClass="formitem">
+            <Template>
+                <label>Full Name:</label>
+                <SfTextBox Placeholder="Full Name*" @bind-Value="ClientModel.Subject"></SfTextBox>
+            </Template>
+        </FormItem>
+        <FormItem Field="@nameof(ClientModel.From)" CssClass="formitem">
+            <Template>
+                <label>Email Address:</label>
+                <SfTextBox Placeholder="Email Adddress*" @bind-Value="ClientModel.From"></SfTextBox>
+            </Template>
+        </FormItem>
+        <FormItem Field="@nameof(ClientModel.Body)" Placeholder="Comment*" EditorType="FormEditorType.TextArea" CssClass="formitem textbox">
+            <Template>
+                <label>Message:</label>
+                <SfTextBox Placeholder="Comment*" @bind-Value="ClientModel.Body" Multiline="true"></SfTextBox>
+            </Template>
+        </FormItem>
+    </FormItems>
+    <FormButtons>
+        <SfButton CssClass="submitbtn" typeof="submit">Submit Now</SfButton>
+    </FormButtons>
+</SfDataForm>
