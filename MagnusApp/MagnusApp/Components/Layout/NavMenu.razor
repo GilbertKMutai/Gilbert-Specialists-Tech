@@ -17,13 +17,13 @@
     
     <div class="first-part appnav">
         <a href="@("/")" class="home navbutton">Home</a>
-            <a href="@("/about")" class="navbutton">About</a>
+        <a href="@("/about")" class="navbutton">About</a>
         <a href="@("/contact")" class="navbutton">Contact</a>
-            <a href="@("/hireme")" class="navbutton">Hire Me</a>
-            <a href="@("/projects")" class="navbutton">Projects</a>
+        <a href="@("/hireme")" class="navbutton">Hire Me</a>
+        <a href="@("/projects")" class="navbutton">Projects</a>
     </div>
 
-        <div class="second-part appnav">
+    <div class="second-part appnav">
             <a href="@("/login")">Login</a>
             <a href="@("/signup")" class="ralign">Sign Up</a>
     </div>
@@ -48,7 +48,7 @@
     public void OnBtnClick()
     {
         
-        NavigationManager.NavigateTo("https://www.syncfusion.com/downloads");
+        NavigationManager.NavigateTo("/hireme");
     }
     
     protected void ShowSidebar()
