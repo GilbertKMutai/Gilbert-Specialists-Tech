@@ -1,5 +1,6 @@
 ﻿@page "/hireme"
 @inherits HiremeBase
+@using MagnusApp.Client.Pages.Reusable
 
 <PageTitle>Hire Me</PageTitle>
 
@@ -18,7 +19,11 @@
     <h5>Click Here!</h5>
 
         <div class="stick"></div> <div class="arrow"></div>
-        <div class="hireme-btn"><SfButton Content="Hire Me" CssClass="borders"></SfButton></div>
+        <div class="hireme-btn"><SfButton Content="Hire Me" CssClass="borders" @onclick
+            ="(args)=>DisplayCard(args)"></SfButton></div>
+        <PopupCard>
+
+        </PopupCard>
 
     <div class="opinion">
         <div class="circle"></div>
