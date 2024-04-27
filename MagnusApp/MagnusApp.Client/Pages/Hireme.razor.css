@@ -92,21 +92,11 @@ h5 {
     margin-top: 300px;
 }
 
-    .opinion i {
-        margin-top: 4px;
-    }
-
     @media (max-width: 768px){
         .opinion {
             display: block;
             margin-top: 40px;
         }
-
-            .opinion i {
-                margin-left: 15px;
-                margin-top: 15px;
-                padding: 0 15px;
-            }
 
         .circle {
             margin-bottom: 20px;
