@@ -103,10 +103,6 @@
     margin-bottom: 40px;
 }
 
-    .opinion p {
-        margin-top: 4px;
-    }
-
 .circle {
     background-image: url(../images/myicon.jpg);
     background-size: cover;
@@ -159,6 +155,7 @@
 
     .formtwo {
         display: block;
+        margin-top: 30px;
     }
 
     ::deep #FormTwo {
@@ -195,10 +192,6 @@
         margin-top: 40px;
     }
 
-        .opinion p {
-            margin-left: 15px;
-            margin-top: 15px;
-        }
     .maps iframe {
         width: 474px;
         height: 400px;

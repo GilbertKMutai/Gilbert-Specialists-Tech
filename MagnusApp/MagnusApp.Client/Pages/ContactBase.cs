@@ -4,12 +4,10 @@ using Microsoft.AspNetCore.Components.Web;
 using Syncfusion.Blazor.DataForm;
 using Syncfusion.Blazor.Inputs;
 
-
 namespace MagnusApp.Client.Pages;
 
 public class ContactBase : ComponentBase
 {
-    public SfDataForm editForm = new SfDataForm();
     
     //public SfDataForm editFormRespon = new SfDataForm();
 
@@ -21,15 +19,20 @@ public class ContactBase : ComponentBase
         base.OnInitialized();
     }
 
-    protected async void HandleValidSubmit()
+    //protected async void HandleValidSubmit()
+    //{
+    //   await EmailService.SendEmail(ClientModel);
+    //    ClientModel = new EmailDto();
+    //    dataForm.Refresh();
+    //}
+
+    public async Task HandleValidSubmit()
     {
-       await EmailService.SendEmail(ClientModel);
-        ClientModel = new EmailDto();
-        editForm.Refresh();
+        //ClientModel = new EmailDto();
     }
 
-        //ClientModel.Subject = string.Empty;
-        //ClientModel.Body = string.Empty;
-        //ClientModel.From = string.Empty;
+    //ClientModel.Subject = string.Empty;
+    //ClientModel.Body = string.Empty;
+    //ClientModel.From = string.Empty;
 
 }

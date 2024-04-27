@@ -113,10 +113,6 @@ img {
     margin-bottom: 40px;
 }
 
-    .opinion p {
-        margin-top: 4px;
-    }
-
 .circle {
     background-image: url(../images/myicon.jpg);
     background-size: cover;
@@ -145,11 +141,6 @@ img {
         display: block;
         margin-top: 40px;
     }
-
-        .opinion p {
-            margin-left: 15px;
-            margin-top: 15px;
-        }
 
     .lower-card {
         display: none;
