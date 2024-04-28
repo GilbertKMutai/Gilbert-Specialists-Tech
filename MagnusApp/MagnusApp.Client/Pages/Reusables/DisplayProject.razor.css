@@ -1,0 +1,155 @@
+﻿.holder {
+    color: white;
+    margin-top: 60px;
+    align-content: center;
+}
+
+    .holder h4 {
+        text-align: center;
+        background: linear-gradient(#401882, #450A46);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+::deep #Card {
+    width: 450px;
+    height: 320px;
+    margin-bottom: 50px;
+    margin-top: 100px;
+    background-color: rgba(78, 0, 243, 0.26);
+    border-style: none;
+    color: white;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 15px;
+}
+
+    ::deep #Card .e-card-content {
+        width: 400px;
+        height: 270px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+        ::deep #Card .e-card-content img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+
+    ::deep #Card .e-card-header .e-card-header-caption .e-card-header-title, #mini-card .e-card-header .e-card-header-caption .e-card-header-title, #mini-card2 .e-card-header .e-card-header-caption .e-card-header-title {
+        color: white;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+::deep #mini-card {
+    width: 245px;
+    height: 150px;
+    background-color: rgba(78, 0, 243, 0.26);
+    border-style: none;
+    color: white;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 100px;
+    border-radius: 15px;
+}
+
+::deep #mini-card2 {
+    width: 245px;
+    height: 150px;
+    background-color: rgba(78, 0, 243, 0.26);
+    border-style: none;
+    color: white;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+    ::deep #mini-card2 .e-card-content, ::deep #mini-card .e-card-content {
+        color: white;
+        margin-left: 5px;
+    }
+
+        ::deep #mini-card2 .e-card-content p, ::deep #mini-card .e-card-content p {
+            line-height: 20px;
+        }
+
+::deep .e-btn.view {
+    background-image: linear-gradient(#3D1299, #D10FD0);
+    padding: 8px 24px;
+    margin-right: 135px;
+    border-style: none;
+    border-radius: 8px;
+}
+
+.small-card {
+    display: block;
+    gap: 20px;
+}
+
+.sub-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.git {
+    background-color: #3D1299;
+    padding: 10px 14px;
+    margin-right: 125px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    display: flex;
+}
+
+@media (max-width: 768px) {
+
+    .sub-container {
+        display: block;
+    }
+
+    .small-card {
+        display: block;
+        margin-bottom: 40px;
+        margin-top: -20px;
+    }
+
+    ::deep #mini-card, #mini-card2 {
+        margin-top: 0px;
+    }
+
+    ::deep #mini-card {
+        margin-bottom: 20px;
+    }
+
+}
+
+@media (max-width: 474px) {
+
+    ::deep #Card {
+        width: 360px;
+        height: 320px;
+    }
+
+        ::deep #Card .e-card-content {
+            width: 320px;
+            height: 240px;
+        }
+
+}
+
+@media (max-width: 355px) {
+
+    ::deep #Card {
+        width: 280px;
+        height: 320px;
+    }
+
+        ::deep #Card .e-card-content {
+            width: 248px;
+            height: 240px;
+        }
+}
