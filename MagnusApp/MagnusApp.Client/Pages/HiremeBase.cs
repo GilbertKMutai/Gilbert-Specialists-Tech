@@ -1,16 +1,19 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
-using MagnusApp.Client.Pages.Reusable;
 namespace MagnusApp.Client.Pages;
 
 public class HiremeBase : ComponentBase
 {
+    protected EmailDto ClientModel = new EmailDto();
+    protected bool IsVisible { get; set; } = true;
 
-    PopupCard card;
-
-    public void DisplayCard(MouseEventArgs args)
+    protected void OpenDialog()
     {
-        card.Show(args);
+        this.IsVisible = true;
     }
 
+    protected void CloseDialog()
+    {
+        this.IsVisible = false;
+    }
 }
