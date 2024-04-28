@@ -1,4 +1,4 @@
-﻿section {
+﻿body {
     color: white;
 }
 
@@ -24,7 +24,6 @@
 
 i {
     text-align: left;
-
 }
 
 h5 {
@@ -92,13 +91,13 @@ h5 {
     margin-top: 300px;
 }
 
-    @media (max-width: 768px){
-        .opinion {
-            display: block;
-            margin-top: 40px;
-        }
-
-        .circle {
-            margin-bottom: 20px;
-        }
+@media (max-width: 768px) {
+    .opinion {
+        display: block;
+        margin-top: 40px;
     }
+
+    .circle {
+        margin-bottom: 20px;
+    }
+}
