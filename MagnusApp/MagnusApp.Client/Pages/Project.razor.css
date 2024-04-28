@@ -1,0 +1,16 @@
+﻿section {
+    color: white;
+}
+
+.project-intro {
+    height: 200px;
+    background-color: white;
+    background-image: url(../images/project.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
