@@ -96,26 +96,7 @@
     display: none;
 }*/
 
-.opinion {
-    display: flex;
-    color: white;
-    gap: 12px;
-    margin-bottom: 40px;
-}
-
-.circle {
-    background-image: url(../images/myicon.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    background-color: #bbb;
-    margin-left: 15px;
-}
-
 .maps {
-    margin-bottom: 200px;
     text-align: center;
     margin-top: 200px;
 }
@@ -156,11 +137,6 @@
     .formtwo {
         display: block;
         margin-top: 30px;
-    }
-
-    .opinion {
-        display: block;
-        margin-top: 40px;
     }
 
     .maps iframe {

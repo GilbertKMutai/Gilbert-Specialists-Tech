@@ -143,30 +143,6 @@ img {
 
 
 
-.circle {
-    background-image: url(../images/myicon.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    background-color: #bbb;
-    margin-left: 15px;
-}
-
-.opinion {
-    display: flex;
-    color: white;
-    gap: 12px;
-    margin-bottom: 40px;
-}
-
-.opinion i {
-    margin-top: 4px;
-}
-
-
-
 @media (max-width: 768px) {
     .index-intro {
         width: 60%;
@@ -174,11 +150,6 @@ img {
 
     .hide-tablet {
         display: none;
-    }
-
-    .opinion {
-        display: block;
-        margin-top: 40px;
     }
 
 }

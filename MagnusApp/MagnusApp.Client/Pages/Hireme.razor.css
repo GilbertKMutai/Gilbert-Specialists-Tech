@@ -72,33 +72,3 @@ h5 {
     display: flex;
     justify-content: center;
 }
-
-.circle {
-    background-image: url(../images/myicon.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    background-color: #bbb;
-    margin-left: 15px;
-}
-
-.opinion {
-    display: flex;
-    color: white;
-    gap: 15px;
-    margin-bottom: 40px;
-    margin-top: 300px;
-}
-
-    @media (max-width: 768px){
-        .opinion {
-            display: block;
-            margin-top: 40px;
-        }
-
-        .circle {
-            margin-bottom: 20px;
-        }
-    }
