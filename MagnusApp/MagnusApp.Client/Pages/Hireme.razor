@@ -20,19 +20,28 @@
 
         <div class="stick"></div> <div class="arrow"></div>
 
-    <SfDialog Width="400px" Height="358px" ID="Dialog" ShowCloseIcon="true" @bind-Visible="@IsVisible" EnableResize="true">
+    <SfDialog Width="350px" ID="Dialog" ShowCloseIcon="true" @bind-Visible="@IsVisible">
             <DialogTemplates>
                 <Content>
                     <CascadingValue Value="@ClientModel">
-                        <DataForm></DataForm>
+                    <DataForm></DataForm>
                     </CascadingValue>
                 </Content>
             </DialogTemplates>
-        <DialogButtons>
-            <DialogButton Content="Submit" IsPrimary="true" OnClick="@CloseDialog" />
-        </DialogButtons>
+        <DialogPositionData X="@Xvalue" Y="@Yvalue"></DialogPositionData>
         </SfDialog>
-
     <div class="hireme-btn"><SfButton Content="Hire Me" CssClass="borders" @onclick="@OpenDialog"></SfButton></div>
 
 </section>
+
+<style>
+
+ #Dialog .e-dlg-content #MyForm .submitbtn {
+    border-radius: 0;
+    color: white;
+    background-color: #0EAC4D;
+    padding: 6px 25px;
+    font-weight: 500;
+}
+
+</style>

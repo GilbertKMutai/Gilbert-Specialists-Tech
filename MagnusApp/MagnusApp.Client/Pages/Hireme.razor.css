@@ -73,16 +73,11 @@ h5 {
     justify-content: center;
 }
 
-::deep #Dialog .e-dlg-content .submitbtn {
+/*Non-functional | monitor to see if functions*/
+::deep #Dialog .e-dlg-content #MyForm .submitbtn {
     border-radius: 0;
     color: white;
     background-color: #FF0000;
     padding: 4px 18px;
     font-weight: 500;
-}
-
-::deep #Dialog .e-btn.e-flat, .e-css.e-btn.e-flat {
-/*    background-color: transparent;
-    border-color: transparent;
-    color: blue;*/
 }
