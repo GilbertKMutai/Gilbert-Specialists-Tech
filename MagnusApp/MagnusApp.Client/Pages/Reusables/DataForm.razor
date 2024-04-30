@@ -8,7 +8,7 @@
         <h4>Leave a Message</h4>
         <FormItem Field="@nameof(ClientModel.Subject)" CssClass="formitem">
             <Template>
-                <label>Full Name:</label>
+                <label>Company/Personal Name:</label>
                 <SfTextBox Placeholder="Full Name*" @bind-Value="ClientModel.Subject"></SfTextBox>
             </Template>
         </FormItem>
@@ -26,7 +26,7 @@
         </FormItem>
     </FormItems>
     <FormButtons>
-        <SfButton CssClass="submitbtn" typeof="submit">Submit Now</SfButton>
+        <SfButton CssClass="submitbtn" typeof="submit">Submit</SfButton>
     </FormButtons>
 </SfDataForm>
 
