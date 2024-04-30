@@ -20,7 +20,7 @@
 
         <div class="stick"></div> <div class="arrow"></div>
 
-        <SfDialog Width="400px" Height="358px" ShowCloseIcon="true" @bind-Visible="@IsVisible">
+    <SfDialog Width="400px" Height="358px" ID="Dialog" ShowCloseIcon="true" @bind-Visible="@IsVisible" EnableResize="true">
             <DialogTemplates>
                 <Content>
                     <CascadingValue Value="@ClientModel">
@@ -28,6 +28,9 @@
                     </CascadingValue>
                 </Content>
             </DialogTemplates>
+        <DialogButtons>
+            <DialogButton Content="Submit" IsPrimary="true" OnClick="@CloseDialog" />
+        </DialogButtons>
         </SfDialog>
 
     <div class="hireme-btn"><SfButton Content="Hire Me" CssClass="borders" @onclick="@OpenDialog"></SfButton></div>

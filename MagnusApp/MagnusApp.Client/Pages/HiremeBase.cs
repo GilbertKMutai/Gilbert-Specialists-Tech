@@ -5,7 +5,7 @@ namespace MagnusApp.Client.Pages;
 public class HiremeBase : ComponentBase
 {
     protected EmailDto ClientModel = new EmailDto();
-    protected bool IsVisible { get; set; } = true;
+    protected bool IsVisible { get; set; } = false;
 
     protected void OpenDialog()
     {
