@@ -23,7 +23,7 @@ builder.Services.AddScoped<IEmailRepository, EmailRepository>();
 
 builder.Services.AddHttpClient<IEmailService, EmailService>(client =>
 {
-    client.BaseAddress = new Uri("https://localhost:7157");
+    client.BaseAddress = new Uri(builder.Configuration.GetValue<string>("BaseUri")!);
 });
 builder.Services.AddSwaggerGen(c =>
 {

@@ -24,7 +24,6 @@
 
 i {
     text-align: left;
-
 }
 
 h5 {
@@ -81,3 +80,7 @@ h5 {
     padding: 4px 18px;
     font-weight: 500;
 }
+
+/*::deep #Dialog {
+    width: 350px;
+}*/
