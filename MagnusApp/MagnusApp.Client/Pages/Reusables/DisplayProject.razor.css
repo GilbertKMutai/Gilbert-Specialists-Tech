@@ -103,6 +103,7 @@
     text-decoration: none;
     color: white;
     display: flex;
+    gap: 3px;
 }
 
 @media (max-width: 768px) {
