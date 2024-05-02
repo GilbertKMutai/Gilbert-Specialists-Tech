@@ -1,10 +1,4 @@
-﻿using MagnusApp.Shared;
-using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Web;
-using Syncfusion.Blazor.DataForm;
-using Syncfusion.Blazor.Inputs;
-
-namespace MagnusApp.Client.Pages;
+﻿namespace MagnusApp.Client.Pages;
 
 public class ContactBase : ComponentBase
 {
