@@ -1,12 +1,9 @@
-﻿using Microsoft.AspNetCore.Components;
+﻿namespace MagnusApp.Client.Pages.Reusables;
 
-namespace MagnusApp.Client.Pages.Reusables
+public class DisplayProjectBase : ComponentBase
 {
-    public class DisplayProjectBase : ComponentBase
+    public void OnBtnClick()
     {
-        public void OnBtnClick()
-        {
 
-        }
     }
 }

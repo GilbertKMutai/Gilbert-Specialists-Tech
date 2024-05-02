@@ -1,10 +1,8 @@
 global using MagnusApp.Shared.Services.EmailService;
 global using MagnusApp.Shared.Models;
+global using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-using MimeKit;
-using MailKit.Net.Smtp;
-using MagnusApp.Shared.Configuration;
-using Microsoft.Extensions.Configuration;
+
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 

@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Forms;
-using Syncfusion.Blazor.DataForm;
-
+﻿using Syncfusion.Blazor.DataForm;
 namespace MagnusApp.Client.Pages.Reusables;
 
 public class DataFormBase : ComponentBase

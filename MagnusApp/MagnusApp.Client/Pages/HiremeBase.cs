@@ -1,8 +1,4 @@
-﻿using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Web;
-using Microsoft.JSInterop;
-using Syncfusion.Blazor.Buttons;
-namespace MagnusApp.Client.Pages;
+﻿namespace MagnusApp.Client.Pages;
 
 public class HiremeBase : ComponentBase
 {
