@@ -19,7 +19,7 @@ namespace MagnusApp.Repositories.EmailRepository
 
         public void SendEmail(EmailDto request)
         {
-            string text = $"{request.Body} <br> <br>" + $"{request.From}";
+            string text = $"{request.Body} <br> <br>" + $"FROM: l{request.From}";
             //text = text.Replace("#", Environment.NewLine);
 
             var email = new MimeMessage();
