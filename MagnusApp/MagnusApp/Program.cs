@@ -6,6 +6,12 @@ using MagnusApp.Shared.Configuration;
 using MagnusApp.Repositories.EmailRepository;
 using MagnusApp.Shared.Services.EmailService;
 using Microsoft.AspNetCore.Http.Extensions;
+using Microsoft.AspNetCore.Identity.UI.Services;
+using MagnusApp.Data;
+using MagnusApp.Components.Account;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Components.Authorization;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -42,8 +48,33 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
-
+//Contact Email form 
 builder.Services.AddSingleton<IMailSettings, MailSettings>();
+
+//Identity registration
+builder.Services.AddCascadingAuthenticationState();
+builder.Services.AddScoped<IdentityUserAccessor>();
+builder.Services.AddScoped<IdentityRedirectManager>();
+builder.Services.AddScoped<AuthenticationStateProvider, PersistingRevalidatingAuthenticationStateProvider>();
+
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultScheme = IdentityConstants.ApplicationScheme;
+    options.DefaultSignInScheme = IdentityConstants.ExternalScheme;
+})
+.AddIdentityCookies();
+
+var connectionString = builder.Configuration.GetConnectionString("MagnusDbConnection") ?? throw new InvalidOperationException("Connection string 'MagnusDbConnection' not found.");
+builder.Services.AddDbContext<MagnusAppDbContext>(options =>
+options.UseSqlServer(connectionString));
+builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+
+builder.Services.AddIdentityCore<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
+      .AddEntityFrameworkStores<MagnusAppDbContext>()
+      .AddSignInManager()
+      .AddDefaultTokenProviders();
+
+builder.Services.AddSingleton<IEmailSender<ApplicationUser>, IdentityNoOpEmailSender>();
 
 var app = builder.Build();
 
@@ -56,6 +87,7 @@ if (app.Environment.IsDevelopment())
     {
         options.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
     });
+    app.UseMigrationsEndPoint();
 }
 else
 {
@@ -74,5 +106,8 @@ app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode()
     .AddInteractiveWebAssemblyRenderMode()
     .AddAdditionalAssemblies(typeof(MagnusApp.Client._Imports).Assembly);
+
+// Add additional endpoints required by the  Identity /Account Razor components.
+app.MapAdditionalIdentityEndpoinsts();
 
 app.Run();
