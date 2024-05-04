@@ -12,6 +12,7 @@ using MagnusApp.Components.Account;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Components.Authorization;
+using Microsoft.AspNetCore.Routing;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -108,6 +109,6 @@ app.MapRazorComponents<App>()
     .AddAdditionalAssemblies(typeof(MagnusApp.Client._Imports).Assembly);
 
 // Add additional endpoints required by the  Identity /Account Razor components.
-app.MapAdditionalIdentityEndpoinsts();
+app.MapAdditionalIdentityEndpoints();
 
 app.Run();
