@@ -28,6 +28,16 @@
             <hr />
             <ValidationSummary class="text-danger" role="alert" />
             <div class="form-floating mb-3">
+                <InputText @bind-Value="Input.FirstName" class="form-control" autocomplete="firstname" aria-required="true" placeholder="e.g john" />
+                <label for="firstname">First Name</label>
+                <ValidationMessage For="() => Input.FirstName" class="text-danger" />
+            </div>
+            <div class="form-floating mb-3">
+                <InputText @bind-Value="Input.LastName" class="form-control" autocomplete="lastname" aria-required="true" placeholder="e.g doe" />
+                <label for="lastname">Last Name</label>
+                <ValidationMessage For="() => Input.LastName" class="text-danger" />
+            </div>
+            <div class="form-floating mb-3">
                 <InputText @bind-Value="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
                 <label for="email">Email</label>
                 <ValidationMessage For="() => Input.Email" class="text-danger" />
@@ -126,6 +136,14 @@
 
     private sealed class InputModel
     {
+        [Required]
+        [Display(Name = "First name")]
+        public string? FirstName { get; set; }
+
+        [Required]
+        [Display(Name = "Last name")]
+        public string? LastName { get; set; }
+
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]
