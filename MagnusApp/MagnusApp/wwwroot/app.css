@@ -1,5 +1,14 @@
 html, body {
     font-family: "Montserrat", sans-serif;
+    color: white;
+}
+
+body {
+    background-color: #06014B;
+    /*background-image: url(../images/background-adare-restaurant.jpg);*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 body h1, h2, h3, h4, h5, h6 {
@@ -52,12 +61,4 @@ h1:focus {
 
 .darker-border-checkbox.form-check-input {
     border-color: #929292;
-}
-
-body {
-    background-color: #06014B;
-    /*background-image: url(../images/background-adare-restaurant.jpg);*/
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
