@@ -1,5 +1,4 @@
 ﻿@page "/Account/Login"
-@rendermode InteractiveServer
 
 @using System.ComponentModel.DataAnnotations
 @using Microsoft.AspNetCore.Authentication
@@ -19,42 +18,12 @@
         <section>
             <StatusMessage Message="@errorMessage" />
 
-            <SfDataForm Model="@Input">
-
-                <FormValidator>
-                    <DataAnnotationsValidator/>
-                </FormValidator>
-
-                <FormItems>
-                    <FormItem Field="@nameof(Input.Email)" LabelText="Email"></FormItem>
-                    <ValidationMessage For="() => Input.Email" class="text-danger"/>
-                    
-                    <FormItem Field="@nameof(Input.Password)" LabelText="Password"></FormItem>
-                    <ValidationMessage For="() => Input.Password" class="text-danger"/>
-
-                    <FormTemplate>
-                        <SfCheckBox Label="Remember me" @bind-Checked="Input.RememberMe"></SfCheckBox>
-                    </FormTemplate>
-                </FormItems>
-            </SfDataForm>
-            <div>
-                <p>
-                    <a href="Account/ForgotPassword">Forgot your password?</a>
-                </p>
-                <p>
-                    <a href="@(NavigationManager.GetUriWithQueryParameters("Account/Register", new Dictionary<string, object?> { ["ReturnUrl"] = ReturnUrl }))">Register as a new user</a>
-                </p>
-                <p>
-                    <a href="Account/ResendEmailConfirmation">Resend email confirmation</a>
-                </p>
-            </div>
-
-          @*   <EditForm Model="Input" method="post" OnValidSubmit="LoginUser" FormName="login">
+            <EditForm Model="Input" method="post" OnValidSubmit="LoginUser" FormName="login">
                 <DataAnnotationsValidator />
                 <h2>Use a local account to log in.</h2>
                 <hr />
                 <ValidationSummary class="text-danger" role="alert" />
-                <div class="form-floating mb-3 ">
+                <div class="form-floating mb-3">
                     <InputText @bind-Value="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
                     <label for="email" class="form-label">Email</label>
                     <ValidationMessage For="() => Input.Email" class="text-danger" />
@@ -73,7 +42,7 @@
                 <div>
                     <button type="submit" class="w-100 btn btn-lg btn-primary">Log in</button>
                 </div>
-                <div>
+@*                 <div>
                     <p>
                         <a href="Account/ForgotPassword">Forgot your password?</a>
                     </p>
@@ -83,8 +52,8 @@
                     <p>
                         <a href="Account/ResendEmailConfirmation">Resend email confirmation</a>
                     </p>
-                </div>
-            </EditForm> *@
+                </div> *@
+            </EditForm>
         </section>
     </div>
     <div class="col-md-6 col-md-offset-2">
