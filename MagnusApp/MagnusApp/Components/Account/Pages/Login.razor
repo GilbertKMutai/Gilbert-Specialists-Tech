@@ -1,5 +1,7 @@
 ﻿@page "/Account/Login"
 
+@rendermode InteractiveAuto
+
 @using System.ComponentModel.DataAnnotations
 @using Microsoft.AspNetCore.Authentication
 @using Microsoft.AspNetCore.Identity
@@ -18,7 +20,44 @@
         <section>
             <StatusMessage Message="@errorMessage" />
 
-            <EditForm Model="Input" method="post" OnValidSubmit="LoginUser" FormName="login">
+            <SfDataForm Model="@Input" OnValidSubmit="LoginUser">
+
+                <FormValidator>
+                    <DataAnnotationsValidator />
+                </FormValidator>
+
+                <FormItems>
+                    <FormItem Field="@nameof(Input.Email)" LabelText="Email">
+                        <Template>
+                            <label>Company/Personal Name:</label>
+                            <SfTextBox Placeholder="Full Name*" @bind-Value="Input.Email"></SfTextBox>
+                        </Template>
+                    </FormItem>
+                    <ValidationMessage For="() => Input.Email" class="text-danger" />
+
+                    <FormItem Field="@nameof(Input.Password)" LabelText="Password">
+                        <Template>
+                            <label>Company/Personal Name:</label>
+                            <SfTextBox Placeholder="Full Name*" @bind-Value="Input.Password"></SfTextBox>
+                        </Template>
+                    </FormItem>
+                    <ValidationMessage For="() => Input.Password" class="text-danger" />
+
+                    <FormItem Field="@nameof(Input.RememberMe)">
+                        <Template>
+                            <label>Company/Personal Name:</label>
+                            <SfCheckBox Label="Remember me" @bind-Checked="Input.RememberMe"></SfCheckBox>
+                        </Template>
+                    </FormItem>
+                </FormItems>
+                <FormButtons>
+                    <div>
+                        <SfButton typeof="submit">Log in</SfButton>
+                    </div>
+                </FormButtons>
+            </SfDataForm>
+
+          @*  <EditForm Model="Input" method="post" OnValidSubmit="LoginUser" FormName="login">
                 <DataAnnotationsValidator />
                 <h2>Use a local account to log in.</h2>
                 <hr />
@@ -42,7 +81,7 @@
                 <div>
                     <button type="submit" class="w-100 btn btn-lg btn-primary">Log in</button>
                 </div>
-@*                 <div>
+                <div>
                     <p>
                         <a href="Account/ForgotPassword">Forgot your password?</a>
                     </p>
@@ -52,8 +91,8 @@
                     <p>
                         <a href="Account/ResendEmailConfirmation">Resend email confirmation</a>
                     </p>
-                </div> *@
-            </EditForm>
+                </div> 
+            </EditForm>*@
         </section>
     </div>
     <div class="col-md-6 col-md-offset-2">
@@ -71,10 +110,10 @@
     [CascadingParameter]
     private HttpContext HttpContext { get; set; } = default!;
 
-    [SupplyParameterFromForm]
+    //[SupplyParameterFromForm]
     private InputModel Input { get; set; } = new();
 
-    [SupplyParameterFromQuery]
+   // [SupplyParameterFromQuery]
     private string? ReturnUrl { get; set; }
 
     protected override async Task OnInitializedAsync()
