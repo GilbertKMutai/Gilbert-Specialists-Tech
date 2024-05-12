@@ -40,24 +40,6 @@ internal static class IdentityComponentsEndpointRouteBuilderExtensions
             return TypedResults.Challenge(properties, [provider]);
         });
 
-        //[Inject]
-        //private NavigationManager NavigationManager { get; set; }
-        //AuthenticationProperties properties = new AuthenticationProperties();
-        //properties.IsPersistent = true;
-        //accountGroup.MapPost("/Login", async (
-        //    HttpContext context,
-        //   ClaimsPrincipal user,
-        //   SignInManager<ApplicationUser> signInManager,
-        //   [FromForm] string returnUrl) =>
-        //{
-        //    await signInManager.SignInAsync( context.User, isPersistent: false).ContinueWith(p =>
-        //    {
-        //        var user = ClaimsPrincipal.Current;
-               //return NavigationManager.NavigateTo("/");
-        //    });
-        //    return TypedResults.LocalRedirect($"~/{returnUrl}");
-        //});
-
         accountGroup.MapPost("/Logout", async (
             ClaimsPrincipal user,
             SignInManager<ApplicationUser> signInManager,

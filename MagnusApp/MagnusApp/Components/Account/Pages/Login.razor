@@ -19,7 +19,7 @@
         <section>
             <StatusMessage Message="@errorMessage" />
 
-            <SfDataForm Model="@Input" OnValidSubmit="LoginUser">
+            <SfDataForm ID="Login" @ref="sfLogin" Model="@Input" OnValidSubmit="LoginUser" ButtonsAlignment="FormButtonsAlignment.Center">
 
                 <FormValidator>
                     <DataAnnotationsValidator />
@@ -28,32 +28,47 @@
                 <FormItems>
                     <FormItem Field="@nameof(Input.Email)" LabelText="Email">
                         <Template>
-                            <label>Company/Personal Name:</label>
-                            <SfTextBox Placeholder="Full Name*" @bind-Value="Input.Email"></SfTextBox>
+                            <label>Email:</label>
+                            <SfTextBox Placeholder="Email*" @bind-Value="Input.Email"></SfTextBox>
                         </Template>
                     </FormItem>
                     <ValidationMessage For="() => Input.Email" class="text-danger" />
 
                     <FormItem Field="@nameof(Input.Password)" LabelText="Password">
                         <Template>
-                            <label>Company/Personal Name:</label>
-                            <SfTextBox Placeholder="Full Name*" @bind-Value="Input.Password"></SfTextBox>
+                            <div class="lab-show">
+                                <label>Password:</label>
+                                <a href="" @onclick="ShowPassword">Show</a>
+                            </div>
+                            <SfTextBox Autocomplete="AutoComplete.On" Type="InputType.Password" Placeholder="Password*" @bind-Value="Input.Password"></SfTextBox>
                         </Template>
                     </FormItem>
                     <ValidationMessage For="() => Input.Password" class="text-danger" />
 
                     <FormItem Field="@nameof(Input.RememberMe)">
                         <Template>
-                            <label>Company/Personal Name:</label>
                             <SfCheckBox Label="Remember me" @bind-Checked="Input.RememberMe"></SfCheckBox>
                         </Template>
                     </FormItem>
                 </FormItems>
                 <FormButtons>
                     <div>
-                        <SfButton typeof="submit">Log in</SfButton>
+                        <SfButton CssClass="logintbtn" typeof="submit">Log in</SfButton>
                     </div>
                 </FormButtons>
+
+                <div>
+                    <p>
+                        <a href="Account/ForgotPassword">Forgot your password?</a>
+                    </p>
+                    <p>
+                        <a href="@(NavigationManager.GetUriWithQueryParameters("Account/Register", new Dictionary<string, object?> { ["ReturnUrl"] = ReturnUrl }))">Register as a new user</a>
+                    </p>
+                    <p>
+                        <a href="Account/ResendEmailConfirmation">Resend email confirmation</a>
+                    </p>
+                </div>
+
             </SfDataForm>
 
           @*  <EditForm Model="Input" method="post" OnValidSubmit="LoginUser" FormName="login">
@@ -106,13 +121,17 @@
 @code {
     private string? errorMessage;
 
+    public SfDataForm? sfLogin;
+
+    public string TxtType = "password";
+
     [CascadingParameter]
     private HttpContext HttpContext { get; set; } = default!;
 
     //[SupplyParameterFromForm]
     private InputModel Input { get; set; } = new();
 
-   // [SupplyParameterFromQuery]
+    // [SupplyParameterFromQuery]
     private string? ReturnUrl { get; set; }
 
     protected override async Task OnInitializedAsync()
@@ -164,4 +183,25 @@
         [Display(Name = "Remember me?")]
         public bool RememberMe { get; set; }
     }
+
+    public void ShowPassword()
+    {
+        if(this.TxtType=="password")
+        {
+            this.TxtType = "text";
+        }
+        else
+        {
+            this.TxtType = "password";
+        }
+    }
 }
+
+<style>
+    .e-input-eye:before {
+        content:'\e345';
+        font-family: e-icons;
+        font-size: 13px;
+    }
+
+</style>
