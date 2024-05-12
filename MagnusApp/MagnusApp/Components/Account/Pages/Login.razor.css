@@ -1,1 +1,46 @@
 ﻿
+::deep #Login {
+    background-color: white;
+    /*height: 370px;*/
+    padding: 30px;
+    border-radius: 7px;
+}
+
+    ::deep #Login .formitem {
+        border-radius: 0;
+    }
+
+    ::deep #Login .lab-show {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    ::deep #Login label {
+        color: black;
+        font-size: 1rem;
+    }
+
+    ::deep #Login a {
+        color: #3E75CF;
+        font-size: 1rem;
+    }
+
+    ::deep #Login .logintbtn {
+        border-radius: 0;
+        color: white;
+        background-color: #0D6EFD;
+        padding: 6px 25px;
+        font-weight: 500;
+    }
+    
+    ::deep #Login .logintbtn:hover {
+        background-color: darkblue;
+    }
+
+    ::deep #Login h4 {
+        text-align: center;
+    }
+
+    ::deep #Login .textbox {
+        height: 70px;
+    }
