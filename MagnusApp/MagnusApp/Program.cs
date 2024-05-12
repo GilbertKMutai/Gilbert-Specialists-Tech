@@ -63,6 +63,11 @@ builder.Services.AddAuthentication(options =>
     options.DefaultScheme = IdentityConstants.ApplicationScheme;
     options.DefaultSignInScheme = IdentityConstants.ExternalScheme;
 })
+.AddGoogle(options =>
+{
+    options.ClientId = builder.Configuration["Authentication:Google:ClientId"];
+    options.ClientSecret = builder.Configuration["Authentication:Google:ClientSecret"];
+})
 .AddIdentityCookies();
 
 var connectionString = builder.Configuration.GetConnectionString("MagnusDbConnection") ?? throw new InvalidOperationException("Connection string 'MagnusDbConnection' not found.");

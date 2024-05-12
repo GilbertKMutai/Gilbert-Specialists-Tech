@@ -18,7 +18,7 @@ namespace MagnusApp.Components.Account
         [DoesNotReturn]
         public void RedirectTo(string? uri)
         {
-            uri ??= "/auth";
+            uri ??= "/signin-google";
 
             // Prevent open redirects.
             if (!Uri.IsWellFormedUriString(uri, UriKind.Relative))
