@@ -42,20 +42,21 @@ internal static class IdentityComponentsEndpointRouteBuilderExtensions
 
         //[Inject]
         //private NavigationManager NavigationManager { get; set; }
-        AuthenticationProperties properties = new AuthenticationProperties();
-        properties.IsPersistent = true;
-        accountGroup.MapPost("/Login", async (
-           ClaimsPrincipal user,
-           SignInManager<ApplicationUser> signInManager,
-           [FromForm] string returnUrl) =>
-        {
-            await signInManager.SignInAsync( user, properties).ContinueWith(p =>
-            {
-                var user = ClaimsPrincipal.Current;
+        //AuthenticationProperties properties = new AuthenticationProperties();
+        //properties.IsPersistent = true;
+        //accountGroup.MapPost("/Login", async (
+        //    HttpContext context,
+        //   ClaimsPrincipal user,
+        //   SignInManager<ApplicationUser> signInManager,
+        //   [FromForm] string returnUrl) =>
+        //{
+        //    await signInManager.SignInAsync( context.User, isPersistent: false).ContinueWith(p =>
+        //    {
+        //        var user = ClaimsPrincipal.Current;
                //return NavigationManager.NavigateTo("/");
-            });
-            return TypedResults.LocalRedirect($"~/{returnUrl}");
-        });
+        //    });
+        //    return TypedResults.LocalRedirect($"~/{returnUrl}");
+        //});
 
         accountGroup.MapPost("/Logout", async (
             ClaimsPrincipal user,
