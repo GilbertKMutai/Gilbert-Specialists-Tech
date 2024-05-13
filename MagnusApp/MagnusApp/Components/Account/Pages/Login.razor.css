@@ -34,7 +34,8 @@
     }
     
     ::deep #Login .logintbtn:hover {
-        background-color: darkblue;
+        background-color: blue;
+        /*Change this color to a lighter blue*/
     }
 
     ::deep #Login h4 {
