@@ -14,9 +14,9 @@
 <PageTitle>Log in</PageTitle>
 
 <h1>Log in</h1>
-<div>
-    <div>
-        <section>
+<div class="wrapper">
+    <div class="wrapper">
+        <section class="wrapper">
             <StatusMessage Message="@errorMessage" />
 
             <SfDataForm  Width="400px" ID="Login" @ref="sfLogin" Model="@Input" OnValidSubmit="LoginUser" ButtonsAlignment="FormButtonsAlignment.Stretch">
@@ -24,18 +24,14 @@
                 <FormValidator>
                     <DataAnnotationsValidator />
                 </FormValidator>
+                <FormTemplate>
+                    <ExternalLoginPicker />
 
-                <FormItems>
-                    <FormItem Field="@nameof(Input.Email)" LabelText="Email">
-                        <Template>
-                            <label>Email:</label>
-                            <SfTextBox Placeholder="Email*" @bind-Value="Input.Email"></SfTextBox>
-                        </Template>
-                    </FormItem>
-                    <ValidationMessage For="() => Input.Email" class="text-danger" />
+                            <label for="email">Email:</label>
+                            <SfTextBox ID="email" Placeholder="Email*" @bind-Value="Input.Email"></SfTextBox>
+                            <ValidationMessage For="() => Input.Email" class="text-danger" />
 
-                    <FormItem Field="@nameof(Input.Password)" LabelText="Password">
-                        <Template>
+                        
                             <div class="lab-show">
                                 <label>Password:</label>
                                 <a href="" @onclick="ShowPassword">Show</a>
@@ -46,17 +42,12 @@
                                 <a href="Account/ForgotPassword">Forgot your password?</a>
                             </p>
                             </div>
-                        </Template>
-                    </FormItem>
-                    <ValidationMessage For="() => Input.Password" class="text-danger" />
+                            <ValidationMessage For="() => Input.Password" class="text-danger" />
 
-
-                    <FormItem Field="@nameof(Input.RememberMe)">
-                        <Template>
+                        
                             <SfCheckBox Label="Remember me" @bind-Checked="Input.RememberMe"></SfCheckBox>
-                        </Template>
-                    </FormItem>
-                </FormItems>
+                       
+                </FormTemplate>
                 <FormButtons>
                     <div>
                         <SfButton CssClass="logintbtn" typeof="submit">Log in</SfButton>
