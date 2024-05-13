@@ -1,15 +1,4 @@
-﻿/*.wrapper {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-section {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}*/
-
-::deep #Login {
+﻿::deep #Login {
     background-color: white;
     /*height: 370px;*/
     padding: 30px;
@@ -34,14 +23,15 @@ section {
 
     ::deep #Login a {
         color: #3E75CF;
-        font-size: 1rem;
+        font-size: 0.9rem;
+        text-decoration: none;
     }
 
     ::deep #Login .logintbtn {
         border-radius: 0;
         color: white;
         background-color: #0D6EFD;
-        padding: 6px 25px;
+        padding: 6px 145px;
         font-weight: 500;
     }
 
@@ -57,3 +47,11 @@ section {
     ::deep #Login .textbox {
         height: 70px;
     }
+
+.reg-new {
+    margin-top: 15px;
+}
+
+::deep #Login .check-box {
+    margin-top: -20px;
+}
