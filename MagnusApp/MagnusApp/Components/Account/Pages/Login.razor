@@ -14,10 +14,17 @@
 <PageTitle>Log in</PageTitle>
 
 <h1>Log in</h1>
-<div class="wrapper">
-    <div class="wrapper">
-        <section class="wrapper">
+<div>
+    <div>
+        <section>
             <StatusMessage Message="@errorMessage" />
+
+            <SfCard ID="externallogin">
+            </SfCard
+                   
+                   <div class="ext-login">
+                        <ExternalLoginPicker />
+                   </div>
 
             <SfDataForm  Width="400px" ID="Login" @ref="sfLogin" Model="@Input" OnValidSubmit="LoginUser" ButtonsAlignment="FormButtonsAlignment.Center">
 
@@ -107,15 +114,7 @@
             </EditForm>*@
         </section>
     </div>
-    <div>
-        <section>
-            <h3>Use another service to log in.</h3>
-            <hr />
-            <ExternalLoginPicker />
-        </section>
-    </div>
-</div>
-
+  </div>
 @code {
     private string? errorMessage;
 

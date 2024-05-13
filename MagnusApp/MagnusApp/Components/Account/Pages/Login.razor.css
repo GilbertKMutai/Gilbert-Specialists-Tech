@@ -1,4 +1,16 @@
-﻿::deep #Login {
+﻿/*::deep #externallogin {
+    width: 400px;
+    height: 60px;
+    margin: 45px auto;
+}*/
+
+.ext-login {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+::deep #Login {
     background-color: white;
     /*height: 370px;*/
     padding: 30px;
