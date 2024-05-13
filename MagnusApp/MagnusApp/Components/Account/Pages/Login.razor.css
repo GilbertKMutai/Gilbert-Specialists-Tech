@@ -4,11 +4,11 @@
     margin: 45px auto;
 }*/
 
-.ext-login {
+/*.ext-login {
     display: flex;
     justify-content: center;
     margin-bottom: 15px;
-}
+}*/
 
 ::deep #Login {
     background-color: white;

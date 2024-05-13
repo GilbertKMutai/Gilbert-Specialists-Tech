@@ -14,15 +14,15 @@
 <PageTitle>Log in</PageTitle>
 
 <h1>Log in</h1>
-<div>
-    <div>
+<div class="row">
+    <div class="col-6 mx-auto">
         <section>
             <StatusMessage Message="@errorMessage" />
 
-            <SfCard ID="externallogin">
-            </SfCard
-                   
-                   <div class="ext-login">
+@*             <SfCard ID="externallogin">
+            </SfCard *@
+
+            @*                   <div class="ext-login">
                         <ExternalLoginPicker />
                    </div>
 
@@ -74,25 +74,28 @@
                         <a href="@(NavigationManager.GetUriWithQueryParameters("Account/Register", new Dictionary<string, object?> { ["ReturnUrl"] = ReturnUrl }))">Register as a new user</a
                 </div>
                         <a href="Account/ResendEmailConfirmation">Resend email confirmation</a>
-            </SfDataForm>
+            </SfDataForm> *@
 
-          @*  <EditForm Model="Input" method="post" OnValidSubmit="LoginUser" FormName="login">
+            <EditForm class="form-control" Model="Input" method="post" OnValidSubmit="LoginUser" FormName="login">
                 <DataAnnotationsValidator />
-                <h2>Use a local account to log in.</h2>
-                <hr />
                 <ValidationSummary class="text-danger" role="alert" />
-                <div class="form-floating mb-3">
+
+                <div class="px-3">
+                    <div class="mt-3">
+                         <ExternalLoginPicker />
+                    </div>
+                <div>
+                    <label for="email" class="mt-3">Email</label>
                     <InputText @bind-Value="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
-                    <label for="email" class="form-label">Email</label>
                     <ValidationMessage For="() => Input.Email" class="text-danger" />
                 </div>
-                <div class="form-floating mb-3">
+                <div>
+                        <label for="password" class="mt-3">Password</label>
                     <InputText type="password" @bind-Value="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" placeholder="password" />
-                    <label for="password" class="form-label">Password</label>
                     <ValidationMessage For="() => Input.Password" class="text-danger" />
                 </div>
-                <div class="checkbox mb-3">
-                    <label class="form-label">
+                <div>
+                        <label class="form-label mt-3">
                         <InputCheckbox @bind-Value="Input.RememberMe" class="darker-border-checkbox form-check-input" />
                         Remember me
                     </label>
@@ -111,7 +114,9 @@
                         <a href="Account/ResendEmailConfirmation">Resend email confirmation</a>
                     </p>
                 </div> 
-            </EditForm>*@
+
+                </div>
+            </EditForm>
         </section>
     </div>
   </div>

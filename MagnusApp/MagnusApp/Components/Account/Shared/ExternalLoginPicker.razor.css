@@ -1,5 +1,6 @@
 ﻿.google-auth {
-    padding: 6px 75px;
+    /*padding: 6px 75px;*/
+    padding: 6px 45px;
     color: #3E75CF;
     font-weight: 500;
     border-style: none;
@@ -8,5 +9,6 @@
 }
 
 svg {
-    margin-right: 65px;
+    /*margin-right: 65px;*/
+    margin-right: 30px;
 }
