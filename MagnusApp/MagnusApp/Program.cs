@@ -82,6 +82,11 @@ builder.Services.AddIdentityCore<ApplicationUser>(options => options.SignIn.Requ
 
 builder.Services.AddSingleton<IEmailSender<ApplicationUser>, IdentityNoOpEmailSender>();
 
+//builder.Services.AddAntiforgery(options =>
+//{
+//    options.SuppressXFrameOptionsHeader = true;
+//});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
