@@ -1,6 +1,6 @@
 ﻿.google-auth {
     /*padding: 6px 75px;*/
-    padding: 6px 75px;
+    width: 300px;
     color: #3E75CF;
     font-weight: 500;
     border-style: none;
@@ -9,10 +9,11 @@
 }
 
 svg {
-    /*margin-right: 65px;*/
-    margin-right: 65px;
+/*    margin-right: 65px;
+    margin-right: 65px;*/
 }
 
+/*
 @media (max-width: 947px) {
     .google-auth {
         padding: 6px 45px;
@@ -31,4 +32,4 @@ svg {
     svg {
         margin-right: 15px;
     }
-}
+}*/
