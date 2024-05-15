@@ -15,9 +15,9 @@
         <div class="ext-login">
             <ExternalLoginPicker />
         </div>
+
         <section class="d-flex justify-content-center mb-5">
             <StatusMessage Message="@errorMessage" />
-
             <EditForm class="design py-3 px-3" Model="Input" method="post" OnValidSubmit="LoginUser" FormName="login">
                 <DataAnnotationsValidator />
                 <ValidationSummary class="text-danger" role="alert" />
