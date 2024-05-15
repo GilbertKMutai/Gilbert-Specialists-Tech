@@ -18,8 +18,7 @@
         <section class="d-flex justify-content-center mb-5">
             <StatusMessage Message="@errorMessage" />
 
-
-            <EditForm class="design" Model="Input" method="post" OnValidSubmit="LoginUser" FormName="login">
+            <EditForm class="design py-3 px-3" Model="Input" method="post" OnValidSubmit="LoginUser" FormName="login">
                 <DataAnnotationsValidator />
                 <ValidationSummary class="text-danger" role="alert" />
                 <div>
