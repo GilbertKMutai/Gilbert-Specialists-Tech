@@ -11,5 +11,20 @@
 <h1>You are authenticated</h1>
 
 <AuthorizeView>
-    Hello @context.User.Identity?.Name!
+    <Authorized>
+         Hello @context.User.Identity?.Name!
+
+         <div class="nav-item px-3">
+             <NavLink class="nav-link" href="Account/Manage">
+                <span class="bi bi-person-fill-nav-menu" aria-hidden="true"></span>
+             </NavLink>
+         </div>
+         <div class="nav-item px-3">
+             <form action="Account/Logout" method="post">
+                <AntiforgeryToken/>
+                
+             </form>
+         </div>
+    </Authorized>
 </AuthorizeView>
+
