@@ -15,64 +15,6 @@
 
         <section class="d-flex justify-content-center">
             <StatusMessage Message="@errorMessage" />
-
-@*             <SfCard ID="externallogin">
-            </SfCard *@
-
-            @*                   <div class="ext-login">
-                        <ExternalLoginPicker />
-                   </div>
-
-            <SfDataForm  Width="400px" ID="Login" @ref="sfLogin" Model="@Input" OnValidSubmit="LoginUser" ButtonsAlignment="FormButtonsAlignment.Center">
-
-                <FormValidator>
-                    <DataAnnotationsValidator />
-                </FormValidator>
-
-                <FormItems>
-                    <FormItem Field="@nameof(Input.Email)" LabelText="Email">
-                        <Template>
-                            <label>Email</label>
-                            <SfTextBox Placeholder="Email*" @bind-Value="Input.Email"></SfTextBox>
-                        </Template>
-                    </FormItem>
-                    <ValidationMessage For="() => Input.Email" class="text-danger" />
-
-                    <FormItem Field="@nameof(Input.Password)" LabelText="Password">
-                        <Template>
-                            <div class="lab-show">
-                                <label>Password</label>
-                                <a href="" @onclick="ShowPassword">Show</a>
-                            </div>
-                            <div>
-                                <SfTextBox Autocomplete="AutoComplete.On" Type="InputType.Password" Placeholder="Password*" @bind-Value="Input.Password"></SfTextBox>
-                                <p>
-                                    <a href="Account/ForgotPassword">Forgot your password?</a>
-                                </p>
-                            </div>
-                        </Template>
-                    </FormItem>
-                    <ValidationMessage For="() => Input.Password" class="text-danger" />
-
-
-                    <FormItem Field="@nameof(Input.RememberMe)">
-                        <Template>
-                            <SfCheckBox CssClass="check-box" Label="Remember me?" @bind-Checked="Input.RememberMe"></SfCheckBox>
-                        </Template>
-                    </FormItem>
-                </FormItems>
-                <FormButtons>
-                    <div>
-                        <SfButton CssClass="logintbtn" typeof="submit">Log in</SfButton>
-                    </div>
-                </FormButtons>
-
-                <div class="reg-new">
-                        <a href="@(NavigationManager.GetUriWithQueryParameters("Account/Register", new Dictionary<string, object?> { ["ReturnUrl"] = ReturnUrl }))">Register as a new user</a
-                </div>
-                        <a href="Account/ResendEmailConfirmation">Resend email confirmation</a>
-            </SfDataForm> *@
-
             <EditForm class="form-control w-auto" Model="Input" method="post" OnValidSubmit="LoginUser" FormName="login">
                 <DataAnnotationsValidator />
                 <ValidationSummary class="text-danger" role="alert" />
@@ -117,17 +59,17 @@
 @code {
     private string? errorMessage;
 
-    public SfDataForm? sfLogin;
+    // public SfDataForm? sfLogin;
 
-    public string TxtType = "password";
+    // public string TxtType = "password";
 
     [CascadingParameter]
     private HttpContext HttpContext { get; set; } = default!;
 
-    //[SupplyParameterFromForm]
+    [SupplyParameterFromForm]
     private InputModel Input { get; set; } = new();
 
-    // [SupplyParameterFromQuery]
+    [SupplyParameterFromQuery]
     private string? ReturnUrl { get; set; }
 
     protected override async Task OnInitializedAsync()
@@ -180,24 +122,24 @@
         public bool RememberMe { get; set; }
     }
 
-    public void ShowPassword()
-    {
-        if(this.TxtType=="password")
-        {
-            this.TxtType = "text";
-        }
-        else
-        {
-            this.TxtType = "password";
-        }
-    }
+    // public void ShowPassword()
+    // {
+    //     if(this.TxtType=="password")
+    //     {
+    //         this.TxtType = "text";
+    //     }
+    //     else
+    //     {
+    //         this.TxtType = "password";
+    //     }
+    // }
 }
 
-<style>
+@* <style>
     .e-input-eye:before {
         content:'\e345';
         font-family: e-icons;
         font-size: 13px;
     }
 
-</style>
+</style> *@
