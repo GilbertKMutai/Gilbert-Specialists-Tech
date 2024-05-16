@@ -1,4 +1,5 @@
-﻿@inject NavigationManager NavigationManager
+﻿@page "/nav"
+@inject NavigationManager NavigationManager
 @rendermode InteractiveServer
 <header>
  
@@ -13,7 +14,7 @@
         <a href="@("/Account/Register")">Sign Up</a>
     </nav>
   
-<SfAppBar Mode="AppBarMode.Dense" CssClass="applbar">
+<SfAppBar Mode="AppBarMode.Dense" CssClass="applbar" IsSticky=true>
     
     <div class="first-part appnav">
         <a href="@("/")" class="home navbutton">Home</a>
