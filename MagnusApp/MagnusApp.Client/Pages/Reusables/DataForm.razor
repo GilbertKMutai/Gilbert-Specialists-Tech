@@ -1,8 +1,8 @@
-﻿@rendermode InteractiveAuto
+﻿@rendermode @(new InteractiveAutoRenderMode(prerender:false))
 @inherits DataFormBase
 <div class="col-lg-12 control-section toast-default-section">
-    <SfToast ID="toast_default" @ref="ToastObj" Title="Thanks for reaching out to MagnusQ!" Content="@ToastContent" Timeout="7000" Icon="e-meeting">
-        <ToastPosition X="@ToastPosition"></ToastPosition>
+    <SfToast ID="contactToast" @ref="ToastObj" Content="@ToastContent" Timeout="7000">
+        <ToastPosition X="@PositionX"></ToastPosition>
     </SfToast>
 </div>
 
@@ -46,16 +46,16 @@
         font-weight: 500;
     }
 
-    #toast_default .e-meeting::before {
-        content: "\e705";
-        font-size: 17px;
+    #contactToast .e-toast {
+        background-color: #0EAC4D;
+        border-style: none;
     }
 
-    .bootstrap5 #toast_default .e-meeting::before {
-        content: "\e763";
-        font-size: 20px;
+    #contactToast .e-toast .e-toast-message .e-toast-content {
+        color: white;
+        font-size: 14px;
+        font-weight: normal;
     }
-
 </style>
 
 

@@ -5,8 +5,10 @@ namespace MagnusApp.Client.Pages.Reusables;
 public class DataFormBase : ComponentBase
 {
     protected SfToast ToastObj;
-    protected string ToastPosition = "Right";
-    protected string ToastContent = "We are doing our best to reach out to you within 12 hrs, if not sooner. We appreciate your patience and apologize in advance if it takes a little longer.";
+    protected string PositionX = "Right";
+  
+
+    protected string ToastContent = "<b>Success!</b> We are doing our best to reach out to you within 12 hrs, if not sooner. We appreciate your patience and apologize in advance if it takes a little longer.";
 
     [CascadingParameter]
     public EmailDto ClientModel { get; set; }
