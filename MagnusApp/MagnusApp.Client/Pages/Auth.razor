@@ -2,29 +2,67 @@
 
 @using Microsoft.AspNetCore.Authorization
 @using Microsoft.AspNetCore.Components.Authorization
+@inject NavigationManager NavigationManager
 
 @attribute [Authorize]
 @rendermode InteractiveAuto
 
 <PageTitle>Auth</PageTitle>
 
-<h1>You are authenticated</h1>
+<h1 class="d-flex justify-content-center mt-5 mb-4">You are authenticated</h1>
 
 <AuthorizeView>
     <Authorized>
-         Hello @context.User.Identity?.Name!
+        <div class="d-flex justify-content-center mb-4">
+           Hello @context.User.Identity?.Name!
+        </div>
 
-         <div class="nav-item px-3">
-             <NavLink class="nav-link" href="Account/Manage">
-                <span class="bi bi-person-fill-nav-menu" aria-hidden="true"></span>
-             </NavLink>
-         </div>
-         <div class="nav-item px-3">
-             <form action="Account/Logout" method="post">
-                <AntiforgeryToken/>
-                
-             </form>
-         </div>
+@*         <div class="nav-item px-3">
+            <NavLink class="nav-link" href="Account/Manage">
+                <span class="bi bi-person-fill-nav-menu" aria-hidden="true"></span> @context.User.Identity?.Name
+            </NavLink>
+        </div> *@
+        <div class="nav-item px-3 d-flex justify-content-center mb-4">
+            <form action="Account/Logout" method="post">
+                <AntiforgeryToken />
+                <input type="hidden" name="ReturnUrl" value="@currentUrl" />
+                <button type="submit" class="nav-link">
+                    <span class="bi bi-arrow-bar-left-nav-menu" aria-hidden="true"></span> Logout
+                </button>
+            </form>
+        </div>
     </Authorized>
+    <NotAuthorized>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="Account/Register">
+                <span class="bi bi-person-nav-menu" aria-hidden="true"></span> Register
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="Account/Login">
+                <span class="bi bi-person-badge-nav-menu" aria-hidden="true"></span> Login
+            </NavLink>
+        </div>
+    </NotAuthorized>
 </AuthorizeView>
+ @code{
+    //Logout configuration
+    private string? currentUrl;
 
+    protected override void OnInitialized()
+    {
+        currentUrl = NavigationManager.ToBaseRelativePath(NavigationManager.Uri);
+        NavigationManager.LocationChanged += OnLocationChanged;
+    }
+
+    private void OnLocationChanged(object? sender, LocationChangedEventArgs e)
+    {
+        currentUrl = NavigationManager.ToBaseRelativePath(e.Location);
+        StateHasChanged();
+    }
+
+    public void Dispose()
+    {
+        NavigationManager.LocationChanged -= OnLocationChanged;
+    }
+}
