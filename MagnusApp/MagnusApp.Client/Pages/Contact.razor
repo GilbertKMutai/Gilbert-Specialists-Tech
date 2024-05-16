@@ -1,7 +1,7 @@
 ﻿@page "/contact"   
 @using System.ComponentModel.DataAnnotations
 @using MagnusApp.Client.Pages
-@rendermode InteractiveAuto
+@rendermode @(new InteractiveAutoRenderMode(prerender:false))
 @inherits ContactBase
 
 <PageTitle>Contact</PageTitle>
