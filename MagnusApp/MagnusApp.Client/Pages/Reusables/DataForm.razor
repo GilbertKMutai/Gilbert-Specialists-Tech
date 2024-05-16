@@ -1,14 +1,9 @@
 ﻿@rendermode InteractiveAuto
 @inherits DataFormBase
 <div class="col-lg-12 control-section toast-default-section">
-    <SfToast ID="toast_default" @ref="ToastObj" Title="Thanks for reaching out to MagnusQ!" Content="@ToastContent" Timeout="5000" Icon="e-meeting">
+    <SfToast ID="toast_default" @ref="ToastObj" Title="Thanks for reaching out to MagnusQ!" Content="@ToastContent" Timeout="7000" Icon="e-meeting">
         <ToastPosition X="@ToastPosition"></ToastPosition>
     </SfToast>
-
-    <div class="col-lg-12 col-sm-12 col-md-12 center">
-        <button class="e-btn" onclick="@ShowOnClick">Show Toasts</button>
-        <button class="e-btn" @onclick="@HideOnClick">Hide All</button>
-    </div>
 </div>
 
 <SfDataForm @ref="dataForm" ID="MyForm" Width="330px" Model="@ClientModel" ButtonsAlignment="FormButtonsAlignment.Center" OnValidSubmit="HandleValidSubmit">

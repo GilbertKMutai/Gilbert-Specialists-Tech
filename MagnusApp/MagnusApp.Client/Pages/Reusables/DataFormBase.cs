@@ -27,14 +27,4 @@ public class DataFormBase : ComponentBase
         ClientModel = new EmailDto();
         dataForm.Refresh();
     }
-
-    protected  async Task ShowOnClick()
-    {
-        await this.ToastObj.ShowAsync();
-    }
-
-    protected async Task HideOnClick()
-    {
-        await this.ToastObj.HideAsync("All");
-    }
 }
