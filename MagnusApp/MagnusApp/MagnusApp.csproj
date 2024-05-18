@@ -10,7 +10,8 @@
   <ItemGroup>
     <ProjectReference Include="..\..\MagnusApp.Shared\MagnusApp.Shared.csproj" />
     <ProjectReference Include="..\MagnusApp.Client\MagnusApp.Client.csproj" />
-    <PackageReference Include="MailKit" Version="4.5.0" />
+    <PackageReference Include="AWSSDK.SecretsManager" Version="3.7.302.68" />
+    <PackageReference Include="MailKit" Version="4.6.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="8.0.4" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.4" />
