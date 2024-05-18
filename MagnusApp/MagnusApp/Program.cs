@@ -13,7 +13,21 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Routing;
+using Amazon.SecretsManager;
+using Amazon.SecretsManager.Model;
 
+IAmazonSecretsManager secretsManager = new AmazonSecretsManagerClient(Amazon.RegionEndpoint.AFSouth1);
+var request = new GetSecretValueRequest
+{
+    SecretId = "Authentication_Google_ClientSecret"
+};
+var ClientSecret = await secretsManager.GetSecretValueAsync(request);
+
+var idrequest = new GetSecretValueRequest
+{
+    SecretId = "Authentication_Google_ClientId"
+};
+var ClientId = await secretsManager.GetSecretValueAsync(idrequest);
 
 var builder = WebApplication.CreateBuilder(args);
 //Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MzIzMDA3M0AzMjM1MmUzMDJlMzBMbjBGM3E0WHV1UnZNazVLWXFXaVljbk1WRk5JMEZCUFAwTS9wT1RWSTIwPQ==");
@@ -65,8 +79,8 @@ builder.Services.AddAuthentication(options =>
 })
 .AddGoogle(options =>
 {
-    options.ClientId = builder.Configuration["Authentication:Google:ClientId"]!;
-    options.ClientSecret = builder.Configuration["Authentication:Google:ClientSecret"]!;
+    options.ClientId = ClientId.SecretString;
+    options.ClientSecret = ClientSecret.SecretString;
 })
 .AddIdentityCookies();
 
