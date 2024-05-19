@@ -5,9 +5,16 @@
     "framework"     : "net8.0",
     "self-contained" : true,
     "application"    : "MagnusApp",
-    "environment"    : "MagnusApp-env",
+    "environment"    : "MagnusApp-prod",
     "enable-xray"    : false,
-    "enhanced-health-type" : "enhanced",
-    "additional-options"   : "",
-    "proxy-server"         : "nginx"
+    "enhanced-health-type" : "basic",
+    "additional-options"   : "\"aws:autoscaling:launchconfiguration,SecurityGroups\"=\"sg-01ea78688b5526284,sg-0c20cc44bb98e3e29\";\"aws:ec2:vpc,Subnets\"=\"subnet-0eaef1949a0bf5b7e\"",
+    "proxy-server"         : "nginx",
+    "solution-stack"       : "64bit Amazon Linux 2 v2.7.1 running .NET Core",
+    "environment-type"     : "SingleInstance",
+    "cname"                : "magnusapp-prod",
+    "instance-type"        : "c5.18xlarge",
+    "key-pair"             : "",
+    "instance-profile"     : "aws-elasticbeanstalk-MagnusApp-prod",
+    "service-role"         : "aws-elasticbeanstalk-service-role"
 }
