@@ -15,18 +15,18 @@ using Microsoft.AspNetCore.Components.Authorization;
 using Amazon.SecretsManager;
 using Amazon.SecretsManager.Model;
 
-IAmazonSecretsManager secretsManager = new AmazonSecretsManagerClient(Amazon.RegionEndpoint.AFSouth1);
-var request = new GetSecretValueRequest
-{
-    SecretId = "Authentication_Google_ClientSecret"
-};
-var ClientSecret = await secretsManager.GetSecretValueAsync(request);
+//IAmazonSecretsManager secretsManager = new AmazonSecretsManagerClient(Amazon.RegionEndpoint.AFSouth1);
+//var request = new GetSecretValueRequest
+//{
+//    SecretId = "Authentication_Google_ClientSecret"
+//};
+//var ClientSecret = await secretsManager.GetSecretValueAsync(request);
 
-var idrequest = new GetSecretValueRequest
-{
-    SecretId = "Authentication_Google_ClientId"
-};
-var ClientId = await secretsManager.GetSecretValueAsync(idrequest);
+//var idrequest = new GetSecretValueRequest
+//{
+//    SecretId = "Authentication_Google_ClientId"
+//};
+//var ClientId = await secretsManager.GetSecretValueAsync(idrequest);
 
 var builder = WebApplication.CreateBuilder(args);
 //Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MzIzMDA3M0AzMjM1MmUzMDJlMzBMbjBGM3E0WHV1UnZNazVLWXFXaVljbk1WRk5JMEZCUFAwTS9wT1RWSTIwPQ==");
@@ -76,11 +76,17 @@ builder.Services.AddAuthentication(options =>
     options.DefaultScheme = IdentityConstants.ApplicationScheme;
     options.DefaultSignInScheme = IdentityConstants.ExternalScheme;
 })
-.AddGoogle(options =>
-{
-    options.ClientId = ClientId.SecretString;
-    options.ClientSecret = ClientSecret.SecretString;
-})
+//.AddGoogle(options =>
+//{
+//    var app = builder.Build();
+//    if (app.Environment.IsDevelopment())
+//    {
+//        options.ClientId = builder.Configuration.GetValue<string>("Google:ClientId")!;
+//        options.ClientSecret = builder.Configuration.GetValue<string>("Google:ClientSecret")!;
+//    }
+//    options.ClientId = ClientId.SecretString;
+//    options.ClientSecret = ClientSecret.SecretString;
+//})
 .AddIdentityCookies();
 
 var connectionString = builder.Configuration.GetConnectionString("MagnusDbConnection") ?? throw new InvalidOperationException("Connection string 'MagnusDbConnection' not found.");
