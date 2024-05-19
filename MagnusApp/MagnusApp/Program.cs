@@ -12,7 +12,6 @@ using MagnusApp.Components.Account;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Components.Authorization;
-using Microsoft.AspNetCore.Routing;
 using Amazon.SecretsManager;
 using Amazon.SecretsManager.Model;
 
