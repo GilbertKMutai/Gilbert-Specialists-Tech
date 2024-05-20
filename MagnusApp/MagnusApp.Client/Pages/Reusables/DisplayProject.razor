@@ -13,7 +13,7 @@
     <div class="sub-container">
 
         <div class="main-card">
-            <SfCard ID="Card" @onclick="OpenOnlineShoppingCart">
+            <SfCard ID="Card" @onclick="@(() => OpenWebsite("/"))">
                 <CardHeader Title="Online Shopping Cart"></CardHeader>
 
                 <CardContent>
@@ -26,7 +26,7 @@
         <div class="small-card">
             <SfCard ID="mini-card">
                 <CardHeader>
-                    <SfButton Content="Link" CssClass="view" OnClick="OnBtnClick"></SfButton>
+                    <SfButton Content="Link" CssClass="view" OnClick="@(() => OpenWebsite("/"))"></SfButton>
                 </CardHeader>
 
                 <CardContent>
@@ -61,7 +61,7 @@
     <div class="sub-container">
 
         <div class="main-card">
-            <SfCard ID="Card" @onclick="OpenSalesManagementApp">
+            <SfCard ID="Card" @onclick="@(() => OpenWebsite("/"))">
                 <CardHeader Title="Sales Management App"></CardHeader>
 
                 <CardContent>
@@ -74,7 +74,7 @@
         <div class="small-card">
             <SfCard ID="mini-card">
                 <CardHeader>
-                    <SfButton Content="Link" CssClass="view" OnClick="OnBtnClick"></SfButton>
+                    <SfButton Content="Link" CssClass="view" OnClick="@(() => OpenWebsite("/"))"></SfButton>
                 </CardHeader>
 
                 <CardContent>
@@ -108,7 +108,7 @@
     <div class="sub-container">
 
         <div class="main-card">
-            <SfCard ID="Card" @onclick="OpenLoomon">
+            <SfCard ID="Card" @onclick="@(() => OpenWebsite("/"))">
                 <CardHeader Title="Loomon - A Chat Web app"></CardHeader>
 
                 <CardContent>
@@ -121,7 +121,7 @@
         <div class="small-card">
             <SfCard ID="mini-card">
                 <CardHeader>
-                    <SfButton Content="Link" CssClass="view" OnClick="OnBtnClick"></SfButton>
+                    <SfButton Content="Link" CssClass="view" OnClick="@(() => OpenWebsite("/"))"></SfButton>
                 </CardHeader>
 
                 <CardContent>
@@ -153,7 +153,7 @@
     <div class="sub-container">
 
         <div class="main-card">
-            <SfCard ID="Card" @onclick="OpenBeFit">
+            <SfCard ID="Card" @onclick="@(() => OpenWebsite("/"))">
                 <CardHeader Title="BeFit"></CardHeader>
 
                 <CardContent>
@@ -166,7 +166,7 @@
         <div class="small-card">
             <SfCard ID="mini-card">
                 <CardHeader>
-                    <SfButton Content="Link" CssClass="view" OnClick="OnBtnClick"></SfButton>
+                    <SfButton Content="Link" CssClass="view" OnClick="@(() => OpenWebsite("/"))"></SfButton>
                 </CardHeader>
 
                 <CardContent>

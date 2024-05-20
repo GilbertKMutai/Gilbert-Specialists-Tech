@@ -5,28 +5,10 @@ public class DisplayProjectBase : ComponentBase
 
     [Inject]
     NavigationManager NavigationManager { get; set; }
-    public void OnBtnClick()
-    {
 
-    }
+    protected void OpenWebsite(string uri)
+    {
+        NavigationManager.NavigateTo(uri, false);
+    }   
 
-    protected void OpenOnlineShoppingCart()
-    {
-        NavigationManager.NavigateTo("/", false);
-    }   
-    protected void OpenSalesManagementApp()
-    {
-        NavigationManager.NavigateTo("/", false);
-    }    
-    
-    protected void OpenLoomon()
-    {
-        NavigationManager.NavigateTo("/", false);
-    }   
-    
-    protected void OpenBeFit()
-    {
-        NavigationManager.NavigateTo("/", false);
-    }    
-    
 }

@@ -78,12 +78,12 @@ builder.Services.AddAuthentication(options =>
 })
 .AddGoogle(options =>
 {
-    var app = builder.Build();
-    if (app.Environment.IsDevelopment())
-    {
-        options.ClientId = builder.Configuration.GetValue<string>("Google:ClientId")!;
-        options.ClientSecret = builder.Configuration.GetValue<string>("Google:ClientSecret")!;
-    }
+    //var app = builder.Build();
+    //if (app.Environment.IsDevelopment())
+    //{
+    //    options.ClientId = builder.Configuration.GetValue<string>("Google:ClientId")!;
+    //    options.ClientSecret = builder.Configuration.GetValue<string>("Google:ClientSecret")!;
+    //}
     options.ClientId = ClientId.SecretString;
     options.ClientSecret = ClientSecret.SecretString;
 })
