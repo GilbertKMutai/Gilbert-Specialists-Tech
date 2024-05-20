@@ -16,9 +16,6 @@ using Amazon.SecretsManager;
 using Amazon.SecretsManager.Model;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 
-bool isProduction = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Production";
-if (isProduction)
-{
     IAmazonSecretsManager secretsManager = new AmazonSecretsManagerClient(Amazon.RegionEndpoint.AFSouth1);
     var request = new GetSecretValueRequest
     {
@@ -31,7 +28,7 @@ if (isProduction)
         SecretId = "Authentication_Google_ClientId"
     };
     var ClientId = await secretsManager.GetSecretValueAsync(idrequest);
-}
+
 var builder = WebApplication.CreateBuilder(args);
 //Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MzIzMDA3M0AzMjM1MmUzMDJlMzBMbjBGM3E0WHV1UnZNazVLWXFXaVljbk1WRk5JMEZCUFAwTS9wT1RWSTIwPQ==");
 Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MzI1NTE0NEAzMjM1MmUzMDJlMzBJa1RRdFUzWXl4NHBCYU1pMFExMW9PUFlVWHNBZzFJRlFrNHlQa21qTzVzPQ==");
@@ -85,8 +82,8 @@ builder.Services.AddAuthentication(options =>
     bool isProduction = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Production";
     if (isProduction)
     {
-    //options.ClientId = ClientId.SecretString;
-    //options.ClientSecret = ClientSecret.SecretString;
+        options.ClientId = ClientId.SecretString;
+        options.ClientSecret = ClientSecret.SecretString;
     }
         options.ClientId = builder.Configuration.GetValue<string>("Google:ClientId")!;
         options.ClientSecret = builder.Configuration.GetValue<string>("Google:ClientSecret")!;
