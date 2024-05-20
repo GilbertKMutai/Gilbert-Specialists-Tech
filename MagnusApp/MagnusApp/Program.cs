@@ -14,20 +14,24 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Components.Authorization;
 using Amazon.SecretsManager;
 using Amazon.SecretsManager.Model;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 
-IAmazonSecretsManager secretsManager = new AmazonSecretsManagerClient(Amazon.RegionEndpoint.AFSouth1);
-var request = new GetSecretValueRequest
+bool isProduction = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Production";
+if (isProduction)
 {
-    SecretId = "Authentication_Google_ClientSecret"
-};
-var ClientSecret = await secretsManager.GetSecretValueAsync(request);
+    IAmazonSecretsManager secretsManager = new AmazonSecretsManagerClient(Amazon.RegionEndpoint.AFSouth1);
+    var request = new GetSecretValueRequest
+    {
+        SecretId = "Authentication_Google_ClientSecret"
+    };
+    var ClientSecret = await secretsManager.GetSecretValueAsync(request);
 
-var idrequest = new GetSecretValueRequest
-{
-    SecretId = "Authentication_Google_ClientId"
-};
-var ClientId = await secretsManager.GetSecretValueAsync(idrequest);
-
+    var idrequest = new GetSecretValueRequest
+    {
+        SecretId = "Authentication_Google_ClientId"
+    };
+    var ClientId = await secretsManager.GetSecretValueAsync(idrequest);
+}
 var builder = WebApplication.CreateBuilder(args);
 //Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MzIzMDA3M0AzMjM1MmUzMDJlMzBMbjBGM3E0WHV1UnZNazVLWXFXaVljbk1WRk5JMEZCUFAwTS9wT1RWSTIwPQ==");
 Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MzI1NTE0NEAzMjM1MmUzMDJlMzBJa1RRdFUzWXl4NHBCYU1pMFExMW9PUFlVWHNBZzFJRlFrNHlQa21qTzVzPQ==");
@@ -78,14 +82,14 @@ builder.Services.AddAuthentication(options =>
 })
 .AddGoogle(options =>
 {
-    //var app = builder.Build();
-    //if (app.Environment.IsDevelopment())
-    //{
-    //    options.ClientId = builder.Configuration.GetValue<string>("Google:ClientId")!;
-    //    options.ClientSecret = builder.Configuration.GetValue<string>("Google:ClientSecret")!;
-    //}
-    options.ClientId = ClientId.SecretString;
-    options.ClientSecret = ClientSecret.SecretString;
+    bool isProduction = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Production";
+    if (isProduction)
+    {
+    //options.ClientId = ClientId.SecretString;
+    //options.ClientSecret = ClientSecret.SecretString;
+    }
+        options.ClientId = builder.Configuration.GetValue<string>("Google:ClientId")!;
+        options.ClientSecret = builder.Configuration.GetValue<string>("Google:ClientSecret")!;
 })
 .AddIdentityCookies();
 
