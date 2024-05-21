@@ -37,7 +37,7 @@ footer {
 
 footer p{
     text-align: center;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .contact {
@@ -76,7 +76,10 @@ footer p{
     margin-right:15px;
  }
 
-.location-block {
+.sort-linkedin {
+    margin-bottom: -10px;
+}
+    .location-block {
     display: none;
 }
 
@@ -107,7 +110,7 @@ footer p{
 
     .loc-soc {
         display: flex;
-        justify-content: center;
+/*        justify-content: center;*/
         gap: 40px;
         margin-top: -25px;
     }
@@ -132,8 +135,8 @@ footer p{
     }
 
         .contact-group p {
-            margin-left: auto;
-            margin-right: auto;
+/*            margin-left: auto;
+            margin-right: auto;*/
         }
 }
 
@@ -147,7 +150,7 @@ footer p{
         display: block;
     }
     .location-block {
-        justify-content: center;
+/*        justify-content: center;*/
     }
 
 }

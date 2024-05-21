@@ -30,7 +30,6 @@
 
   <ItemGroup>
     <Folder Include="buildScripts\" />
-    <Folder Include="Aws\" />
     <Folder Include="dist\" />
     <Folder Include="wwwroot\icons\login\" />
   </ItemGroup>

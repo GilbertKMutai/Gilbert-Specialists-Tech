@@ -44,7 +44,7 @@
     }
 
 ::deep #mini-card {
-    width: 245px;
+    width: 250px;
     height: 150px;
     background-color: rgba(78, 0, 243, 0.26);
     border-style: none;
@@ -56,7 +56,7 @@
 }
 
 ::deep #mini-card2 {
-    width: 245px;
+    width: 250px;
     height: 150px;
     background-color: rgba(78, 0, 243, 0.26);
     border-style: none;
