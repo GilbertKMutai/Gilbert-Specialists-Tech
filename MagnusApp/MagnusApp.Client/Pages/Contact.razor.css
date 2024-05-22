@@ -15,6 +15,14 @@
     align-items: center;
 }
 
+.label {
+    text-align: center;
+    background: linear-gradient(#401882, #450A46);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 60px;
+}
+
 .left-text {
     margin-top: 120px;
     margin-left: 25px;
