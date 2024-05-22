@@ -49,7 +49,7 @@ footer p{
 
 .contact-group {
     display: flex;
-    margin-top: 20px;
+    margin-top: 6px;
 }
 
 .contact-group p{
@@ -61,34 +61,21 @@ footer p{
     color: inherit;
 }
 
-/*.wrapper {
-    display: flex;
-    justify-content: center;
-    
-}*/
-
-
  .social {
-    display: flex;
-    gap: 15px;   
     float: right;
-    margin-top: -45px;
+    margin-top: -30px;
     margin-right:15px;
  }
 
-.sort-linkedin {
-    margin-bottom: -10px;
-}
-    .location-block {
-    display: none;
+.social-space {
+    margin-right: 6px;
 }
 
 @media (max-width: 940px) {
     .social {
         float: none;
-        margin-top: 0;
+        margin-top: 35px;
         margin-right: 0;
-        justify-content: center;
     }
 }
 
@@ -99,23 +86,9 @@ footer p{
     }
 
     .contact {
-        display: flex;
-        gap: 20px;
-        justify-content: center;
-    }
-
-    .hide-location {
-        display: none;
-    }
-
-  
-
-    .location-block {
-        display: flex;
-    }
-    .wrapper {
         display: block;
     }
+
 }
 
 @media (max-width: 474px) {
@@ -123,26 +96,6 @@ footer p{
     .contact {
         display: block;
         margin-top: 28px;
-    }
-
-    .contact-group {
-        margin-top: -25px;
-    }
-
-        .contact-group p {
-/*            margin-left: auto;
-            margin-right: auto;*/
-        }
-}
-
-@media (max-width: 355px) {
-
-    .hide-fold {
-        display: none;
-    }
-
-    .location-block {
-/*        justify-content: center;*/
     }
 
 }
