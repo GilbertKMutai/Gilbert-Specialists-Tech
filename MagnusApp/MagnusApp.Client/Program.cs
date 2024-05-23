@@ -4,9 +4,11 @@ global using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.AspNetCore.Components.Authorization;
 using MagnusApp.Client;
+using Syncfusion.Blazor;
 
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
+builder.Services.AddSyncfusionBlazor();
 
 builder.Services.AddHttpClient<IEmailService, EmailService>(client =>
 {

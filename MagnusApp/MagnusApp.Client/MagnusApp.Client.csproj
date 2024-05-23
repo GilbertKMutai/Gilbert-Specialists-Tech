@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -15,10 +15,10 @@
     <PackageReference Include="Microsoft.Extensions.Http" Version="8.0.0" />
     <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="8.0.0" />
     <PackageReference Include="MimeKit" Version="4.5.0" />
-    <PackageReference Include="Syncfusion.Blazor.Buttons" Version="25.1.39" />
-    <PackageReference Include="Syncfusion.Blazor.Cards" Version="25.1.39" />
-    <PackageReference Include="Syncfusion.Blazor.DataForm" Version="25.1.39" />
-    <PackageReference Include="Syncfusion.Blazor.Themes" Version="25.1.39" />
+    <PackageReference Include="Syncfusion.Blazor.Buttons" Version="25.2.5"/>
+    <PackageReference Include="Syncfusion.Blazor.Cards" Version="25.2.5"/>
+    <PackageReference Include="Syncfusion.Blazor.DataForm" Version="25.2.5"/>
+    <PackageReference Include="Syncfusion.Blazor.Themes" Version="25.2.5"/>
   </ItemGroup>
 
   <ItemGroup>

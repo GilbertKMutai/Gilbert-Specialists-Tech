@@ -1,6 +1,6 @@
 using MagnusApp.Client.Pages;
 using MagnusApp.Components;
-using Syncfusion.Blazor;
+
 using Microsoft.OpenApi.Models;
 using MagnusApp.Shared.Configuration;
 using MagnusApp.Repositories.EmailRepository;
@@ -15,6 +15,7 @@ using Microsoft.AspNetCore.Components.Authorization;
 using Amazon.SecretsManager;
 using Amazon.SecretsManager.Model;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Syncfusion.Blazor;
 
     //IAmazonSecretsManager secretsManager = new AmazonSecretsManagerClient(Amazon.RegionEndpoint.AFSouth1);
     //var request = new GetSecretValueRequest
@@ -30,6 +31,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
     //var ClientId = await secretsManager.GetSecretValueAsync(idrequest);
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddSyncfusionBlazor();
 //Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MzIzMDA3M0AzMjM1MmUzMDJlMzBMbjBGM3E0WHV1UnZNazVLWXFXaVljbk1WRk5JMEZCUFAwTS9wT1RWSTIwPQ==");
 Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MzI1NTE0NEAzMjM1MmUzMDJlMzBJa1RRdFUzWXl4NHBCYU1pMFExMW9PUFlVWHNBZzFJRlFrNHlQa21qTzVzPQ==");
 
@@ -38,7 +40,7 @@ builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents()
     .AddInteractiveWebAssemblyComponents();
 
-builder.Services.AddSyncfusionBlazor();
+
 builder.Services.AddControllers();
 
 builder.Services.AddScoped<IEmailRepository, EmailRepository>();
