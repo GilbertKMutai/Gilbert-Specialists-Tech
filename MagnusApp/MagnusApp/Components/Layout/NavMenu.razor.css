@@ -46,19 +46,20 @@
     align-items: flex-start;
     justify-content: flex-start;
     gap: 15px;
+    /**/
 }
 
     .sidebar a {
         margin-left: 25px;
         width: 100%;
         text-decoration: none;
-        color: white;
+        color: #20B3E2;
         font-size: 18px;
         font-weight: 500;
         font-family: "Montserrat", sans-serif;
     }
 
-        .sidebar a:hover {
+        .sidebar a:hover:not(:first-child) {
             background-color: dimgray;
         } 
 
@@ -67,9 +68,9 @@
     margin-top: 10px;
 }
 
-.close:hover {
-    background-color: dimgray;
-}
+/*.close:hover {
+    background: none;
+}*/
 
 ::deep .e-appbar.applbar {
     background-color: black;
@@ -120,10 +121,6 @@
         position: absolute;
         bottom: 58px;
         right: 25px;
-    }
-
-    .menu:hover {
-        background-color: dimgray;
     }
 
     .appnav {
