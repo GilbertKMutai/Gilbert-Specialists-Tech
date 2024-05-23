@@ -16,16 +16,6 @@
 @inject IdentityRedirectManager RedirectManager
 
 <PageTitle>Register</PageTitle>
-<style>
-    .float-f {
-        float: right;
-        width: 33.3333%;
-    }
-
-    fieldset {
-        clear: both;
-    }
-</style>
 
 <div class="ext-login mt-5">
     <ExternalLoginPicker />
@@ -42,7 +32,7 @@
                 </div>
                 <div class="col">
                     <label for="lastname" class="mt-3">Last Name</label>
-                <InputText class="form-control" @bind-Value="Input.LastName" autocomplete="lastname" aria-required="true" placeholder="e.g doe" />
+                    <InputText class="form-control" @bind-Value="Input.LastName" autocomplete="lastname" aria-required="true" placeholder="e.g doe" />
                     <ValidationMessage For="() => Input.LastName" class="text-danger" />
                 </div>
             </div>
