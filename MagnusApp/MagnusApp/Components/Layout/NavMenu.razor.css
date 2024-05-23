@@ -24,8 +24,10 @@
 }
 
     .appnav a:hover {
-        border: 1px solid rgb(64, 234, 132);
-        background-color: rgb(255, 215, 0);
+        /*border: 1px solid rgb(64, 234, 132);*/
+        border: 1px solid #FFE500;
+        background-color: rgba(19, 24, 133, 0.55);
+        /*background-image: linear-gradient(to bottom right, #857A13, #FFE500);*/
     }
 
  
