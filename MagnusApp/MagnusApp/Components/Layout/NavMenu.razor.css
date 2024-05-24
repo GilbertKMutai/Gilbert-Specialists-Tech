@@ -51,7 +51,8 @@
     .sidebar a {
         margin-left: 25px;
         padding-left: 13px;
-        width: 100%;
+        padding-top: 3px;
+        padding-bottom: 3px;
         text-decoration: none;
         color: #20B3E2;
         font-size: 18px;
@@ -59,8 +60,13 @@
         font-family: "Montserrat", sans-serif;
     }
 
+        .sidebar a:not(:first-child) {
+            width: 100%;
+        }
+
         .sidebar a:hover:not(:first-child) {
             background-color: beige;
+            transition-duration: 750ms;
         } 
 
 .close {

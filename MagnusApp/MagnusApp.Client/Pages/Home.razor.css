@@ -22,6 +22,10 @@ header {
     margin-top: 60px;
 }
 
+::deep .sub-container {
+    margin-top: 10px;
+}
+
 /*::deep .e-btn.borders {
     border: 1px solid rgb(64, 234, 132);
     color: white;
@@ -140,7 +144,17 @@ img {
     }
 }*/
 
+.myimage {
+    margin-top: 60px;
+    margin-bottom: 100px;
+}
 
+.non-heroh {
+    color: darkorange;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 70px;
+}
 
 @media (max-width: 768px) {
     .index-intro {

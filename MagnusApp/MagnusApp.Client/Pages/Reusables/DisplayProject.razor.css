@@ -4,18 +4,17 @@
     align-content: center;
 }
 
-    .holder h4 {
-        text-align: center;
-        background: linear-gradient(#401882, #450A46);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
+.sub-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom:40px;
+}
 
 ::deep #Card {
     width: 450px;
     height: 320px;
     margin-bottom: 50px;
-    margin-top: 100px;
     background-color: rgba(78, 0, 243, 0.26);
     border-style: none;
     color: white;
@@ -51,7 +50,6 @@
     color: white;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 100px;
     border-radius: 15px;
 }
 
@@ -96,11 +94,6 @@
     gap: 20px;
 }
 
-.sub-container {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-}
 
 .git {
     background-color: #3D1299;
@@ -117,6 +110,7 @@
 
     .sub-container {
         display: block;
+        margin-bottom: 100px;
     }
 
     .small-card {
