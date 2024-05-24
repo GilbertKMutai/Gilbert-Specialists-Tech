@@ -24,6 +24,7 @@ body {
 }
 
     .opinion i {
+        max-width: 700px;
         margin-top: 4px;
     }
 
@@ -81,8 +82,11 @@ footer p{
 
 @media (max-width: 768px) {
     .opinion {
-        display: block;
         margin-top: 40px;
+    }
+
+    .circle {
+        display: none;
     }
 
     .contact {

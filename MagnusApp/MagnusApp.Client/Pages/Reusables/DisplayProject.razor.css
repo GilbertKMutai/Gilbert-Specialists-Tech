@@ -84,7 +84,14 @@
     border-radius: 8px;
 }
 
-.small-card {
+    ::deep .e-btn.view:hover {
+        color: black; 
+        background: none;
+        background-color: white;
+        transition-duration: 2s;
+    }
+
+    .small-card {
     display: block;
     gap: 20px;
 }

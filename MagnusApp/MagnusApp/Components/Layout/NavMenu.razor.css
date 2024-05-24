@@ -46,11 +46,11 @@
     align-items: flex-start;
     justify-content: flex-start;
     gap: 15px;
-    /**/
 }
 
     .sidebar a {
         margin-left: 25px;
+        padding-left: 13px;
         width: 100%;
         text-decoration: none;
         color: #20B3E2;
@@ -60,7 +60,7 @@
     }
 
         .sidebar a:hover:not(:first-child) {
-            background-color: dimgray;
+            background-color: beige;
         } 
 
 .close {
