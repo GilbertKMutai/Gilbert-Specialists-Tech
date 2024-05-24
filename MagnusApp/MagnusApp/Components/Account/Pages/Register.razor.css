@@ -1,4 +1,12 @@
-﻿.ext-login {
+﻿.line-w {
+    width: 50px;
+}
+
+.cont-email {
+    white-space: nowrap;
+}
+
+.ext-login {
     display: flex;
     justify-content: center;
     margin-bottom: 15px;
@@ -20,4 +28,10 @@
     appearance: none;
     border-radius: .25rem;
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+@media (max-width: 456px) {
+    .line-w {
+        width: 25px;
+    }
 }
