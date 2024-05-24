@@ -1,9 +1,16 @@
-﻿/*::deep #externallogin {
+﻿.line-w {
+    width: 50px;
+}
+
+.cont-email{
+   white-space: nowrap;
+}
+
+/*::deep #externallogin {
     width: 400px;
     height: 60px;
     margin: 45px auto;
 }*/
-
 .ext-login {
     display: flex;
     justify-content: center;
@@ -86,9 +93,12 @@
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
 
 }
 
-@media (min-width: 456px) {
+@media (max-width: 456px) {
+    .line-w {
+        width: 25px;
+    }
 }
