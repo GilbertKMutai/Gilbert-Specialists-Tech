@@ -5,8 +5,6 @@ using Microsoft.OpenApi.Models;
 using MagnusApp.Shared.Configuration;
 using MagnusApp.Repositories.EmailRepository;
 using MagnusApp.Shared.Services.EmailService;
-using Microsoft.AspNetCore.Http.Extensions;
-using Microsoft.AspNetCore.Identity.UI.Services;
 using MagnusApp.Data;
 using MagnusApp.Components.Account;
 using Microsoft.AspNetCore.Identity;
@@ -14,7 +12,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Components.Authorization;
 using Amazon.SecretsManager;
 using Amazon.SecretsManager.Model;
-using Microsoft.EntityFrameworkCore.Infrastructure;
 using Syncfusion.Blazor;
 
 IAmazonSecretsManager secretsManager = new AmazonSecretsManagerClient(Amazon.RegionEndpoint.AFSouth1);
@@ -68,6 +65,8 @@ builder.Services.AddSwaggerGen(c =>
 //Contact Email form 
 builder.Services.AddSingleton<IMailSettings, MailSettings>();
 
+builder.Services.Configure<AuthMessageSenderOptions>(builder.Configuration);
+
 //Identity registration
 builder.Services.AddCascadingAuthenticationState();
 builder.Services.AddScoped<IdentityUserAccessor>();
@@ -87,8 +86,9 @@ builder.Services.AddAuthentication(options =>
         options.ClientId = ClientId.SecretString;
         options.ClientSecret = ClientSecret.SecretString;
     }
-        options.ClientId = builder.Configuration.GetValue<string>("Google:ClientId")!;
-        options.ClientSecret = builder.Configuration.GetValue<string>("Google:ClientSecret")!;
+
+    options.ClientId = builder.Configuration.GetValue<string>("Google:ClientId")!;
+    options.ClientSecret = builder.Configuration.GetValue<string>("Google:ClientSecret")!;
 })
 .AddIdentityCookies();
 
@@ -131,6 +131,11 @@ else
 
 app.MapControllers();
 app.UseHttpsRedirection();
+
+app.UseCookiePolicy(new CookiePolicyOptions()
+{
+    MinimumSameSitePolicy = SameSiteMode.Lax
+});
 
 app.UseStaticFiles();
 app.UseAntiforgery();
