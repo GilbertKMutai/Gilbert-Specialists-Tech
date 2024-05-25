@@ -92,7 +92,7 @@ builder.Services.AddAuthentication(options =>
 })
 .AddIdentityCookies();
 
-var connectionString = builder.Configuration.GetConnectionString("MagnusDbConnection") ?? throw new InvalidOperationException("Connection string 'MagnusDbConnection' not found.");
+var connectionString = builder.Configuration.GetConnectionString("MagnusAppAWSDb") ?? throw new InvalidOperationException("Connection string 'MagnusDbConnection' not found.");
 builder.Services.AddDbContext<MagnusAppDbContext>(options =>
 options.UseSqlServer(connectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
