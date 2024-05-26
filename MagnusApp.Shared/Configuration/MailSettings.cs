@@ -10,7 +10,11 @@ public class MailSettings : IMailSettings
         this.configuration = configuration;
     }
 
-    public string EmailHost => configuration["MailSettings:EmailHost"];  
-    public string EmailUserName  => configuration["MailSettings:EmailUserName"]; 
-    public string EmailPassword => configuration["MailSettings:EmailPassword"];  
+    public string EmailHost => configuration["EmailHost"]!;
+    public string EmailUserName => configuration["EmailUserName"]!;
+    public string EmailPassword => configuration["EmailPassword"]!;
+
+    //public string EmailHost => configuration["MailSettings:EmailHost"]!;
+    //public string EmailUserName => configuration["MailSettings:EmailUserName"]!;
+    //public string EmailPassword => configuration["MailSettings:EmailPassword"]!;
 }
