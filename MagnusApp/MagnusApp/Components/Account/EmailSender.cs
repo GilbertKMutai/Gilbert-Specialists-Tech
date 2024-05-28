@@ -14,17 +14,14 @@ namespace MagnusApp.Components.Account
 
         public AuthMessageSenderOptions Options { get; } = optionsAccessor.Value;
 
-        public Task SendConfirmationLinkAsync(ApplicationUser user, string email, string confirmationLink) => SendEmailAsync(email, "Confirm your email", $"Please confirm your account by" + "<a href='{confirmationLink}'>clicking here</a>.");
+        public Task SendConfirmationLinkAsync(ApplicationUser user, string email,
+            string confirmationLink) => SendEmailAsync(email, "Confirm your email", $"Please confirm your account by" + $"<a href='{confirmationLink}'>clicking here</a>.");
 
-        public Task SendPasswordResetCodeAsync(ApplicationUser user, string email, string resetCode)
-        {
-            throw new NotImplementedException();
-        }
+        public Task SendPasswordResetCodeAsync(ApplicationUser user, string email, 
+            string resetCode) => SendEmailAsync(email, "Reset your password", $"Resest your password using the following code: <br /> {resetCode}");
 
-        public Task SendPasswordResetLinkAsync(ApplicationUser user, string email, string resetLink)
-        {
-            throw new NotImplementedException();
-        }
+        public Task SendPasswordResetLinkAsync(ApplicationUser user, string email,
+            string resetLink) => SendEmailAsync(email, "Reset your password", $"Please reset your password by <a href='{resetLink}'>clicking here</a>");
 
         public async Task SendEmailAsync(string toEmail, string subject, string message)
         {

@@ -103,8 +103,16 @@ builder.Services.AddIdentityCore<ApplicationUser>(options => options.SignIn.Requ
       .AddSignInManager()
       .AddDefaultTokenProviders();
 
-builder.Services.AddSingleton<IEmailSender<ApplicationUser>, IdentityNoOpEmailSender>();
+builder.Services.AddSingleton<IEmailSender<ApplicationUser>, EmailSender>();
 
+builder.Services.ConfigureApplicationCookie( options =>
+{
+    options.ExpireTimeSpan = TimeSpan.FromDays(5);
+    options.SlidingExpiration = true;
+});
+
+builder.Services.Configure<DataProtectionTokenProviderOptions>(options =>
+    options.TokenLifespan = TimeSpan.FromHours(3));
 //builder.Services.AddAntiforgery(options =>
 //{
 //    options.SuppressXFrameOptionsHeader = true;
@@ -132,11 +140,6 @@ else
 
 app.MapControllers();
 app.UseHttpsRedirection();
-
-app.UseCookiePolicy(new CookiePolicyOptions()
-{
-    MinimumSameSitePolicy = SameSiteMode.Lax
-});
 
 app.UseStaticFiles();
 app.UseAntiforgery();
