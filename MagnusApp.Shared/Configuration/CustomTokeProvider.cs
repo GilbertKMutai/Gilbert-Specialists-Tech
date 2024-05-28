@@ -14,8 +14,8 @@ public class CustomEmailConfirmationTokenProvider<TUser> : DataProtectorTokenPro
     public CustomEmailConfirmationTokenProvider(
         IDataProtectionProvider dataProtectionProvider, 
         IOptions<EmailConfirmationTokenProviderOptions> options,
-        ILogger<DataProtectorTokenProvider<TUser>> logger)
-        : base(dataProtectionProvider, options, logger)
+        ILogger<DataProtectorTokenProvider<TUser>> logger
+        ) : base(dataProtectionProvider, options)
     {
     }
 }
@@ -36,7 +36,7 @@ public class CustomPasswordResetTokenProvider<TUser> : DataProtectorTokenProvide
         IDataProtectionProvider dataProtectionProvider, 
         IOptions<PasswordResetTokenProviderOptions> options,
         ILogger<DataProtectorTokenProvider<TUser>> logger
-        ) : base(dataProtectionProvider, options, logger)
+        ) : base(dataProtectionProvider, options)
     {
     }
 }
