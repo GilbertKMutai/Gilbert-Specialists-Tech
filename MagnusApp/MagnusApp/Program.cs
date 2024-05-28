@@ -98,10 +98,20 @@ builder.Services.AddDbContext<MagnusAppDbContext>(options =>
 options.UseSqlServer(connectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-builder.Services.AddIdentityCore<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
+builder.Services.AddIdentityCore<ApplicationUser>(options =>
+       {
+           options.SignIn.RequireConfirmedAccount = true;
+           options.Tokens.ProviderMap.Add("CustomEmailConfirmation",
+               new TokenProviderDescriptor(
+                   typeof(CustomEmailConfirmationTokenProvider<ApplicationUser>)));
+           options.Tokens.EmailConfirmationTokenProvider = "CustomEmailConfirmation";
+       
+       })
       .AddEntityFrameworkStores<MagnusAppDbContext>()
       .AddSignInManager()
       .AddDefaultTokenProviders();
+
+builder.Services.AddTransient<CustomEmailConfirmationTokenProvider<ApplicationUser>>();
 
 builder.Services.AddSingleton<IEmailSender<ApplicationUser>, EmailSender>();
 
