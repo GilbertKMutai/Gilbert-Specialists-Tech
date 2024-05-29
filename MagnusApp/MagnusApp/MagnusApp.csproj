@@ -10,7 +10,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\MagnusApp.Shared\MagnusApp.Shared.csproj" />
     <ProjectReference Include="..\MagnusApp.Client\MagnusApp.Client.csproj" />
-    <PackageReference Include="AWSSDK.SecretsManager" Version="3.7.302.68" />
+    <PackageReference Include="AWSSDK.SecretsManager" Version="3.7.303.3" />
     <PackageReference Include="MailKit" Version="4.6.0" />
     <PackageReference Include="Mandrill.net" Version="9.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="8.0.4" />

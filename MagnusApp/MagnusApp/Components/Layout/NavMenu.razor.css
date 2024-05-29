@@ -121,7 +121,7 @@
 }
 
 /* Tablet View */
-@media (max-width: 768px) {
+@media (max-width: 778px) {
     .menu {
         fill: white;
         position: absolute;

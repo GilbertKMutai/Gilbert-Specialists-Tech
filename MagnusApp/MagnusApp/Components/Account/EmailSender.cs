@@ -7,6 +7,8 @@ using Microsoft.Extensions.Options;
 
 namespace MagnusApp.Components.Account
 {
+
+    //Custom Email confirmation configuration of identity using MailChimp as the provider
     public class EmailSender(IOptions<AuthMessageSenderOptions> optionsAccessor, ILogger<EmailSender> logger) : IEmailSender<ApplicationUser>
 
     {
