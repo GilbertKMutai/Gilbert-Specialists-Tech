@@ -8,6 +8,6 @@ namespace MagnusApp.Shared.Configuration
 {
     public class AuthMessageSenderOptions
     {
-        public string? EmailAuthKey { get; set; }
+        public required string EmailAuthKey { get; set; }
     }
 }

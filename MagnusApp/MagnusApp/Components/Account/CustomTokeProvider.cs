@@ -9,13 +9,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 namespace MagnusApp.Shared.Configuration;
+
+//Custom Token provider for Email and Password 
 public class CustomEmailConfirmationTokenProvider<TUser> : DataProtectorTokenProvider<TUser> where TUser : class
 {
     public CustomEmailConfirmationTokenProvider(
         IDataProtectionProvider dataProtectionProvider, 
         IOptions<EmailConfirmationTokenProviderOptions> options,
         ILogger<DataProtectorTokenProvider<TUser>> logger
-        ) : base(dataProtectionProvider, options)
+        ) : base(dataProtectionProvider, options, logger)
     {
     }
 }
@@ -36,7 +38,7 @@ public class CustomPasswordResetTokenProvider<TUser> : DataProtectorTokenProvide
         IDataProtectionProvider dataProtectionProvider, 
         IOptions<PasswordResetTokenProviderOptions> options,
         ILogger<DataProtectorTokenProvider<TUser>> logger
-        ) : base(dataProtectionProvider, options)
+        ) : base(dataProtectionProvider, options, logger)
     {
     }
 }
