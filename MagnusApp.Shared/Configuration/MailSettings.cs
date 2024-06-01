@@ -14,7 +14,7 @@ public class MailSettings : IMailSettings
     //public string EmailUserName => configuration["EmailUserName"]!;
     //public string EmailPassword => configuration["EmailPassword"]!;
 
-    public string EmailHost => configuration["MailSettings:EmailHost"]!;
+    public string EmailHost => configuration["MailSettings:EmailHost"]!;  
     public string EmailUserName => configuration["MailSettings:EmailUserName"]!;
     public string EmailPassword => configuration["MailSettings:EmailPassword"]!;
 }
