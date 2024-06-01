@@ -66,7 +66,7 @@ builder.Services.AddSwaggerGen(c =>
 //Contact Email form 
 builder.Services.AddSingleton<IMailSettings, MailSettings>();
 
-builder.Services.Configure<AuthMessageSenderOptions>(builder.Configuration);
+builder.Services.Configure<MessageOptions>(builder.Configuration);
 
 //Identity registration
 builder.Services.AddCascadingAuthenticationState();

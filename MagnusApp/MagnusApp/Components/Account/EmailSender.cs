@@ -9,12 +9,12 @@ namespace MagnusApp.Components.Account
 {
 
     //Custom Email confirmation configuration of identity using MailChimp as the provider
-    public class EmailSender(IOptions<AuthMessageSenderOptions> optionsAccessor, ILogger<EmailSender> logger) : IEmailSender<ApplicationUser>
+    public class EmailSender(IOptions<MessageOptions> optionsAccessor, ILogger<EmailSender> logger) : IEmailSender<ApplicationUser>
 
     {
         private readonly ILogger logger = logger;
 
-        public AuthMessageSenderOptions Options { get; } = optionsAccessor.Value;
+        public MessageOptions Options { get; } = optionsAccessor.Value;
 
         public Task SendConfirmationLinkAsync(ApplicationUser user, string email,
             string confirmationLink) => SendEmailAsync(email, "Confirm your email", $"Please confirm your account by" + $"<a href='{confirmationLink}'>clicking here</a>.");

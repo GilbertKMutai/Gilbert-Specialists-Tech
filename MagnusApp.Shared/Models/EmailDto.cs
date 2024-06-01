@@ -12,3 +12,5 @@ public class EmailDto
     public string Body { get; set; } = string.Empty;
 
 }
+
+
