@@ -44,8 +44,8 @@ builder.Services.AddScoped<IEmailRepository, EmailRepository>();
 
 builder.Services.AddHttpClient<IEmailService, EmailService>(client =>
 {
-   // client.BaseAddress = new Uri(builder.Configuration.GetValue<string>("BaseUri")!);
-    client.BaseAddress = new Uri(builder.Configuration.GetValue<string>("ProdBaseUri")!);
+    client.BaseAddress = new Uri(builder.Configuration.GetValue<string>("BaseUri")!);
+    //client.BaseAddress = new Uri(builder.Configuration.GetValue<string>("ProdBaseUri")!);
 });
 builder.Services.AddSwaggerGen(c =>
 {

@@ -10,10 +10,18 @@ namespace MagnusApp.Shared.Configuration
 {
     public class AuthMessageSenderOptions
     {
+        private readonly IConfiguration configuration;
 
-        //[Inject]
-        //public IConfiguration configuration1 { get; set; }
-        //public string EmailAuthKey => configuration1["MailChimpAuthKey"]!;
-        public string EmailAuthKey { get; set; } = "974a1041e36f7a0d807fbc5d788c741c-us17";
+        public AuthMessageSenderOptions()
+        {
+        }
+
+        public AuthMessageSenderOptions(IConfiguration configuration)
+        {
+            this.configuration = configuration;
+        }
+
+        public string EmailAuthKey => configuration["MailChimpAuthKey"];
+
     }
 }
