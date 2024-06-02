@@ -88,8 +88,8 @@ builder.Services.AddAuthentication(options =>
         //options.ClientSecret = ClientSecret.SecretString;
     }
 
-    options.ClientId = builder.Configuration.GetValue<string>("Google:ClientId")!;
-    options.ClientSecret = builder.Configuration.GetValue<string>("Google:ClientSecret")!;
+    options.ClientId = builder.Configuration.GetValue<string>("Authentication:Google:ClientId")!;
+    options.ClientSecret = builder.Configuration.GetValue<string>("Authentication:Google:ClientSecret")!;
 })
 .AddIdentityCookies();
 
