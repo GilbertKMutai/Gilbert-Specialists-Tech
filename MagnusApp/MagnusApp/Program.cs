@@ -13,19 +13,7 @@ using Microsoft.AspNetCore.Components.Authorization;
 using Amazon.SecretsManager;
 using Amazon.SecretsManager.Model;
 using Syncfusion.Blazor;
-
-IAmazonSecretsManager secretsManager = new AmazonSecretsManagerClient(Amazon.RegionEndpoint.AFSouth1);
-var request = new GetSecretValueRequest
-{
-    SecretId = "GoogleClientCredentials"
-};
-var ClientSecret = await secretsManager.GetSecretValueAsync(request);
-
-var idrequest = new GetSecretValueRequest
-{
-    SecretId = "GoogleClientCredentials"
-};
-var ClientId = await secretsManager.GetSecretValueAsync(idrequest);
+using MagnusApp.Shared.Configuration.Aws;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSyncfusionBlazor();
@@ -44,8 +32,7 @@ builder.Services.AddScoped<IEmailRepository, EmailRepository>();
 
 builder.Services.AddHttpClient<IEmailService, EmailService>(client =>
 {
-    //client.BaseAddress = new Uri(builder.Configuration.GetValue<string>("BaseUri")!);
-    client.BaseAddress = new Uri(builder.Configuration.GetValue<string>("ProdBaseUri")!);
+    client.BaseAddress = new Uri(builder.Configuration.GetValue<string>("BaseUri")!);
 });
 builder.Services.AddSwaggerGen(c =>
 {
@@ -79,23 +66,24 @@ builder.Services.AddAuthentication(options =>
     options.DefaultScheme = IdentityConstants.ApplicationScheme;
     options.DefaultSignInScheme = IdentityConstants.ExternalScheme;
 })
-.AddGoogle(options =>
+.AddGoogle(async options =>
 {
     bool isProduction = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Production";
     if (isProduction)
-    {
-        options.ClientId = ClientId.SecretString;
-        options.ClientSecret = ClientSecret.SecretString;
-    }
+    { }
+        options.ClientId = await GoogleSecret.GetClientId();
+        options.ClientSecret = await GoogleSecret.GetClientSecret();
+    
 
-    options.ClientId = builder.Configuration.GetValue<string>("Authentication:Google:ClientId")!;
-    options.ClientSecret = builder.Configuration.GetValue<string>("Authentication:Google:ClientSecret")!;
+    //options.ClientId = builder.Configuration.GetValue<string>("Authentication:Google:ClientId")!;
+    //options.ClientSecret = builder.Configuration.GetValue<string>("Authentication:Google:ClientSecret")!;
 })
 .AddIdentityCookies();
 
-//var connectionString = builder.Configuration.GetConnectionString("MagnusAppAWSDb") ?? throw new InvalidOperationException("Connection string 'MagnusAWSDb' not found.");
-//builder.Services.AddDbContext<MagnusAppDbContext>(options =>
-//options.UseSqlServer(connectionString));
+//var connectionString = builder.Configuration.GetConnectionString("AWSMagnusAppConnectionString") ?? throw new InvalidOperationException("Connection string 'MagnusAWSDb' not found.");
+var connectionString = (DatabaseSecret.GetConnectionString()).ToString() ?? throw new InvalidOperationException("Connection string 'MagnusAWSDb' not found.");
+builder.Services.AddDbContext<MagnusAppDbContext>(options =>
+options.UseSqlServer(connectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddIdentityCore<ApplicationUser>(options =>
@@ -123,10 +111,6 @@ builder.Services.ConfigureApplicationCookie( options =>
 
 builder.Services.Configure<DataProtectionTokenProviderOptions>(options =>
     options.TokenLifespan = TimeSpan.FromHours(3));
-//builder.Services.AddAntiforgery(options =>
-//{
-//    options.SuppressXFrameOptionsHeader = true;
-//});
 
 var app = builder.Build();
 
