@@ -12,6 +12,6 @@ public class MessageOptions : IMessageOptions
         this.configuration = configuration;
     }
 
-    public string EmailAuthKey => configuration["EmailAuthKey"]!;
+    public string EmailAuthKey => configuration["MandrillApiKey"]!;
     //public new string EmailAuthKey => configuration.GetSection("MailChimpAuthKey").ToString()!;
 }
