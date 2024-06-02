@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MagnusApp.Shared.Configuration
+namespace MagnusApp.Shared.Configuration;
+
+public interface IMessageOptions
 {
-    public class IMessageOptions
-    {
-        public string EmailAuthKey { get; }
-        public string EmailHost { get; }
-    }
+    public string EmailAuthKey { get; }
 }

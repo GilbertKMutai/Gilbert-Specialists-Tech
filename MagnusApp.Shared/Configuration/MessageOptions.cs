@@ -7,14 +7,11 @@ public class MessageOptions : IMessageOptions
 {
     private readonly IConfiguration configuration;
 
-    public MessageOptions()
-    {
-    }
-
     public MessageOptions(IConfiguration configuration)
     {
         this.configuration = configuration;
     }
-    public string EmailHost => configuration["MailSettings:EmailHost"]!;
-    //public string EmailAuthKey => configuration.GetSection("MailChimpAuthKey").ToString();
+
+    public string EmailAuthKey => configuration["EmailAuthKey"]!;
+    //public new string EmailAuthKey => configuration.GetSection("MailChimpAuthKey").ToString()!;
 }
