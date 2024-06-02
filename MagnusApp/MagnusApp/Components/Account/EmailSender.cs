@@ -9,12 +9,10 @@ namespace MagnusApp.Components.Account
 {
 
     //Custom Email confirmation configuration of identity using MailChimp as the provider
-    public class EmailSender(IOptions<MessageOptions> optionsAccessor, ILogger<EmailSender> logger) : IEmailSender<ApplicationUser>
+    public class EmailSender(IMessageOptions messageOptions, ILogger<EmailSender> logger) : IEmailSender<ApplicationUser>
 
     {
         private readonly ILogger logger = logger;
-
-        public MessageOptions Options { get; } = optionsAccessor.Value;
 
         public Task SendConfirmationLinkAsync(ApplicationUser user, string email,
             string confirmationLink) => SendEmailAsync(email, "Confirm your email", $"Please confirm your account by" + $"<a href='{confirmationLink}'>clicking here</a>.");
@@ -27,12 +25,12 @@ namespace MagnusApp.Components.Account
 
         public async Task SendEmailAsync(string toEmail, string subject, string message)
         {
-            if (string.IsNullOrEmpty(Options.EmailAuthKey))
+            if (string.IsNullOrEmpty(messageOptions.EmailAuthKey))
             {
                 throw new Exception("Null EmailAuthKey");
             }
 
-            await Execute(Options.EmailAuthKey, subject, message, toEmail);
+            await Execute(messageOptions.EmailAuthKey, subject, message, toEmail);
         }
 
         public async Task Execute (string apiKey, string subject, string message, string toEmail)
