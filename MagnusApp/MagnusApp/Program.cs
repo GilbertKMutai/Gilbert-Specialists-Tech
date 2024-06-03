@@ -72,15 +72,18 @@ builder.Services.AddAuthentication(options =>
 bool isProduction = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Production";
     if (isProduction)
     {
+        //Get from aws secrets manager
         options.ClientId = await GoogleSecret.GetClientId();
         options.ClientSecret = await GoogleSecret.GetClientSecret();
 
     }
 
+    //Get from secrets.json
 
     //options.ClientId = builder.Configuration.GetValue<string>("Authentication:Google:ClientId")!;
     //options.ClientSecret = builder.Configuration.GetValue<string>("Authentication:Google:ClientSecret")!;
     
+    //Get from appsettings.json
     options.ClientId = builder.Configuration.GetValue<string>("Google:ClientId")!;
     options.ClientSecret = builder.Configuration.GetValue<string>("Google:ClientSecret")!;
 })
