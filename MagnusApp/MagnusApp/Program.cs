@@ -14,6 +14,7 @@ using Amazon.SecretsManager;
 using Amazon.SecretsManager.Model;
 using Syncfusion.Blazor;
 using MagnusApp.Shared.Configuration.Aws;
+using Amazon;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSyncfusionBlazor();
@@ -68,15 +69,20 @@ builder.Services.AddAuthentication(options =>
 })
 .AddGoogle(async options =>
 {
-    bool isProduction = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Production";
+bool isProduction = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Production";
     if (isProduction)
-    { }
+    {
         options.ClientId = await GoogleSecret.GetClientId();
         options.ClientSecret = await GoogleSecret.GetClientSecret();
-    
+
+    }
+
 
     //options.ClientId = builder.Configuration.GetValue<string>("Authentication:Google:ClientId")!;
     //options.ClientSecret = builder.Configuration.GetValue<string>("Authentication:Google:ClientSecret")!;
+    
+    options.ClientId = builder.Configuration.GetValue<string>("Google:ClientId")!;
+    options.ClientSecret = builder.Configuration.GetValue<string>("Google:ClientSecret")!;
 })
 .AddIdentityCookies();
 
