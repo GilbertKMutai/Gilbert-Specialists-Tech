@@ -92,8 +92,8 @@ bool isProduction = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT")
 })
 .AddIdentityCookies();
 
-//var connectionString = builder.Configuration.GetConnectionString("AWSMagnusAppConnectionString") ?? throw new InvalidOperationException("Connection string 'MagnusAWSDb' not found.");
-var connectionString = (DatabaseSecret.GetConnectionString()).ToString() ?? throw new InvalidOperationException("Connection string 'MagnusAWSDb' not found.");
+var connectionString = builder.Configuration.GetConnectionString("MagnusAppAWSDb") ?? throw new InvalidOperationException("Connection string 'MagnusAWSDb' not found.");
+//var connectionString = (DatabaseSecret.GetConnectionString()).ToString() ?? throw new InvalidOperationException("Connection string 'MagnusAWSDb' not found.");
 builder.Services.AddDbContext<MagnusAppDbContext>(options =>
 options.UseSqlServer(connectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
