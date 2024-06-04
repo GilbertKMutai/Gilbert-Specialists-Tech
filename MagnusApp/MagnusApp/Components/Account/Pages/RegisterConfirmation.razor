@@ -12,13 +12,17 @@
 
 <PageTitle>Register confirmation</PageTitle>
 
-<h1 class="text-center">Register confirmation</h1>
+<h1 class="text-center mt-4">Register confirmation</h1>
 
 <StatusMessage Message="@statusMessage" />
 
 
-    <p class="text-center">Please check your email to confirm your account.</p>
-
+    <p class="text-center mat">Please check your email to confirm your account.</p>
+    <style>
+        .mat{
+            margin-top: 70px;
+        }
+    </style>
 @code {
     private string? statusMessage;
 
