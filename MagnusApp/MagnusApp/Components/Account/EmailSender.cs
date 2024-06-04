@@ -4,6 +4,7 @@ using Mandrill;
 using Mandrill.Model;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
+using MimeKit;
 
 namespace MagnusApp.Components.Account
 {
@@ -17,7 +18,7 @@ namespace MagnusApp.Components.Account
         public Task SendConfirmationLinkAsync(ApplicationUser user, string email,
             string confirmationLink) => SendEmailAsync(email, "Confirm your email", $"Please confirm your account by" + $"<a href='{confirmationLink}'>clicking here</a>.");
 
-        public Task SendPasswordResetCodeAsync(ApplicationUser user, string email, 
+        public Task SendPasswordResetCodeAsync(ApplicationUser user, string email,
             string resetCode) => SendEmailAsync(email, "Reset your password", $"Resest your password using the following code: <br /> {resetCode}");
 
         public Task SendPasswordResetLinkAsync(ApplicationUser user, string email,
@@ -35,11 +36,17 @@ namespace MagnusApp.Components.Account
 
         public async Task Execute (string apiKey, string subject, string message, string toEmail)
         {
-            var api = new MandrillApi(apiKey);
-            var mandrillMessage = new MandrillMessage("mutaigilly02@gmail.com", toEmail, subject, message);
-            await api.Messages.SendAsync(mandrillMessage);
-           
-            logger.LogInformation("Email to {EmailAddress} sent!", toEmail);
+            var email = new MimeMessage();
         }
+
+        //Sending email using Mandrill requires google workspace account yet I only have personal account at the moment
+        //public async Task Execute (string apiKey, string subject, string message, string toEmail)
+        //{
+        //    var api = new MandrillApi(apiKey);
+        //    var mandrillMessage = new MandrillMessage("mutaigilly02@gmail.com", toEmail, subject, message);
+        //    await api.Messages.SendAsync(mandrillMessage);
+
+        //    logger.LogInformation("Email to {EmailAddress} sent!", toEmail);
+        //}
     }
 }
