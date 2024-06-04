@@ -20,7 +20,7 @@ namespace MagnusApp.Components.Account
         private readonly IMailSettings mailSettings = mailSettings;
 
         public Task SendConfirmationLinkAsync(ApplicationUser user, string email,
-            string confirmationLink) => SendEmailAsync(email, "Confirm your email", $"Please confirm your account by" + $"<a href='{confirmationLink}'>clicking here</a>.");
+            string confirmationLink) => SendEmailAsync(email, "Confirm your email", $"Please confirm your account by " + $"<a href='{confirmationLink}'>clicking here</a>.");
 
         public Task SendPasswordResetCodeAsync(ApplicationUser user, string email,
             string resetCode) => SendEmailAsync(email, "Reset your password", $"Resest your password using the following code: <br /> {resetCode}");
