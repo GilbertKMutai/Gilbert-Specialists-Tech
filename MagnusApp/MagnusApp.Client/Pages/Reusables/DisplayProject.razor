@@ -2,6 +2,8 @@
 @inherits DisplayProjectBase
 
 <div class="holder">
+       
+    <h5>Online Shopping Cart</h5>
 
     <div class="sub-container">
 
@@ -51,18 +53,9 @@
     </div>
 
 
+    <h5 class="hmb">Sales Management App</h5>
+
     <div class="sub-container">
-
-        <div class="main-card">
-            <SfCard ID="Card" @onclick="@(() => OpenWebsite("/"))">
-                <CardHeader Title="Sales Management App"></CardHeader>
-
-                <CardContent>
-                    <img src="images/salesmanagement.png" alt="picture of a sales managemeny web app" />
-                </CardContent>
-
-            </SfCard>
-        </div>
 
         <div class="small-card">
             <SfCard ID="mini-card">
@@ -97,7 +90,20 @@
 
             </SfCard>
         </div>
+        <div class="main-card">
+            <SfCard ID="Card" @onclick="@(() => OpenWebsite("/"))">
+                <CardHeader Title="Sales Management App"></CardHeader>
+
+                <CardContent>
+                    <img src="images/salesmanagement.png" alt="picture of a sales managemeny web app" />
+                </CardContent>
+
+            </SfCard>
+        </div>
     </div>
+
+    <h5>Loomon - A Chat Web app</h5>
+
     <div class="sub-container">
 
         <div class="main-card">
@@ -143,18 +149,10 @@
             </SfCard>
         </div>
     </div>
+
+    <h5 class="hmb">BeFit</h5>
+
     <div class="sub-container">
-
-        <div class="main-card">
-            <SfCard ID="Card" @onclick="@(() => OpenWebsite("/"))">
-                <CardHeader Title="BeFit"></CardHeader>
-
-                <CardContent>
-                    <img src="images/befit.png" alt="picture of an fitness website" />
-                </CardContent>
-
-            </SfCard>
-        </div>
 
         <div class="small-card">
             <SfCard ID="mini-card">
@@ -183,6 +181,16 @@
                         C#, Blazor WASM, BootstrapV5,<br />
                         MSSQL, EF Core and REST API<br />
                     </p>
+                </CardContent>
+
+            </SfCard>
+        </div>
+        <div class="main-card">
+            <SfCard ID="Card" @onclick="@(() => OpenWebsite("/"))">
+                <CardHeader Title="BeFit"></CardHeader>
+
+                <CardContent>
+                    <img src="images/befit.png" alt="picture of an fitness website" />
                 </CardContent>
 
             </SfCard>
