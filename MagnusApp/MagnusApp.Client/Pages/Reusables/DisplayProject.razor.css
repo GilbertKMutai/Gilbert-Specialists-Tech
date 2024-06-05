@@ -27,9 +27,9 @@ h5 {
     border-radius: 0;
 }
 
-::deep #Card:hover {
-    box-shadow: 10px 10px lightblue;
-}
+    ::deep #Card:hover {
+        box-shadow: 0px 4px 8px 0 rgba(0, 58, 170, 0.2), 0 6px 20px 0 rgba(0, 58, 170, 0.19);
+    }
 
     ::deep #Card .e-card-content {
         width: 400px;
