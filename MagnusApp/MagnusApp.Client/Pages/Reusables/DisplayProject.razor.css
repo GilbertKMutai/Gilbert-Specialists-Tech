@@ -6,6 +6,7 @@
 
 h5 {
     text-align: center;
+    margin-bottom: 25px;
 }
 
 .sub-container {
@@ -27,11 +28,14 @@ h5 {
     border-radius: 0;
     transition: box-shadow 0.3s ease-in-out;
     overflow: hidden;
+    transition: 0.5s ease-in-out;
 }
 
     ::deep #Card:hover {
         box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         transition: box-shadow 0.3s ease-in-out;
+        transform: scale(1.02);
+        transition: 0.4s ease-in-out;
     }
 
     ::deep #Card .e-card-content {
@@ -39,18 +43,13 @@ h5 {
         height: 270px;
         margin-right: auto;
         margin-left: auto;
+        transition: 0.4s ease-in-out;
     }
 
         ::deep #Card .e-card-content img {
             height: 100%;
             width: 100%;
             object-fit: contain;
-            transition: 0.5s ease-in-out;
-        }
-
-        ::deep @Card .e-card-content img:hover {
-            transform: scale(1.07);
-            transition: 0.5s ease-in-out;
         }
 
     ::deep #Card .e-card-header .e-card-header-caption .e-card-header-title, #mini-card .e-card-header .e-card-header-caption .e-card-header-title, #mini-card2 .e-card-header .e-card-header-caption .e-card-header-title {
@@ -68,11 +67,16 @@ h5 {
     margin-right: auto;
     margin-left: auto;
     border-radius: 0;
+    transition: box-shadow 0.3s ease-in-out;
+    overflow: hidden;
+    transition: 0.4s ease-in-out;
 }
 
 ::deep #mini-card:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px, 20px, 0 rgba(0, 0, 0, 0.19);
     transition: box-shadow 0.3s ease-in-out;
+    transform: scale(1.02);
+    transition: 0.4s ease-in-out;
 }
 
 ::deep #mini-card2 {
@@ -85,11 +89,16 @@ h5 {
     margin-left: auto;
     border-radius: 0;
     margin-top: 20px;
+    transition: box-shadow 0.3s ease-in-out;
+    overflow: hidden;
+    transition: 0.4s ease-in-out;
 }
 
 ::deep #mini-card2:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: box-shadow 0.3s ease-in-out;
+    transform: scale(1.02);
+    transition: 0.4s ease-in-out;
 }
 
     ::deep #mini-card2 .e-card-content, ::deep #mini-card .e-card-content {
@@ -102,7 +111,7 @@ h5 {
         }
 
 ::deep .e-btn.view {
-    background-image: linear-gradient(#3D1299, #D10FD0);
+    background-image: linear-gradient(to right, #3D1299, #D10FD0);
     padding: 8px 24px;
     margin-right: 135px;
     border-style: none;
@@ -110,9 +119,7 @@ h5 {
 }
 
     ::deep .e-btn.view:hover {
-        color: black; 
-        background: none;
-        background-color: white;
+        background-image: linear-gradient(to right, rgba(51, 10, 143, 1), rgba(189, 0, 188, 1));
         transition-duration: 2s;
     }
 
@@ -133,7 +140,15 @@ h5 {
     gap: 3px;
 }
 
+    .git:hover {
+        background-color: rgba(51, 10, 143, 1);
+    }
+
 @media (max-width: 768px) {
+    h5 {
+        margin-bottom: 15px;
+    }
+
     .hmb {
         margin-bottom: 30px;
     }
