@@ -26,6 +26,12 @@ img {
     height: 250px;
     border-radius: 8px;
     margin-top: 60px;
+    transition: 0.5s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.07);
+    transition: 0.5s ease-in-out;
 }
 
 ::deep #about-me {
@@ -80,6 +86,12 @@ img {
     align-self: center;
     margin-right: auto;
     margin-left: auto;
+    transition: 0.5s ease-in-out;
+}
+
+::deep #metrics:hover {
+    transform: scale(1.03);
+    transition: 0.5s ease-in-out;
 }
 
         ::deep #metrics .e-card-content {
