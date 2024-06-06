@@ -25,6 +25,8 @@ h5 {
     margin-right: auto;
     margin-left: auto;
     border-radius: 0;
+    transition: box-shadow 0.3s ease-in-out;
+    overflow: hidden;
 }
 
     ::deep #Card:hover {
@@ -43,6 +45,12 @@ h5 {
             height: 100%;
             width: 100%;
             object-fit: contain;
+            transition: 0.5s ease-in-out;
+        }
+
+        ::deep @Card .e-card-content img:hover {
+            transform: scale(1.07);
+            transition: 0.5s ease-in-out;
         }
 
     ::deep #Card .e-card-header .e-card-header-caption .e-card-header-title, #mini-card .e-card-header .e-card-header-caption .e-card-header-title, #mini-card2 .e-card-header .e-card-header-caption .e-card-header-title {
