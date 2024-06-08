@@ -30,6 +30,10 @@
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
+.myregister-btn:hover {
+    background-color: #0E54C8;
+}
+
 @media (max-width: 456px) {
     .line-w {
         width: 25px;

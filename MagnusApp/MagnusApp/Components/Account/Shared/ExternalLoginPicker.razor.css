@@ -5,8 +5,12 @@
     font-weight: 500;
     border-style: none;
     border-radius: 3px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.204);
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.204);
 }
+
+    .google-auth:hover {
+        color: #0E54C8;
+    }
 
 @media (max-width: 416px) {
     .google-auth {
