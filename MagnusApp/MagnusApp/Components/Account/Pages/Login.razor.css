@@ -93,8 +93,8 @@
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
-@media (max-width: 768px) {
-
+.mylogin-btn:hover {
+    background-color: #0E54C8;
 }
 
 @media (max-width: 456px) {

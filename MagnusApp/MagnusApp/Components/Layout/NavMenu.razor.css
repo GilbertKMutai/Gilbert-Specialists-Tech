@@ -45,19 +45,20 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    gap: 15px;
+    gap: 10px;
 }
 
     .sidebar a {
         margin-left: 25px;
         padding-left: 13px;
-        padding-top: 1px;
-        padding-bottom: 1px;
+        padding-top: 2px;
+        padding-bottom: 2px;
         text-decoration: none;
         color: #20B3E2;
         font-size: 18px;
         font-weight: 500;
         font-family: "Montserrat", sans-serif;
+        transition-duration: .5s;
     }
 
         .sidebar a:not(:first-child) {
@@ -65,8 +66,9 @@
         }
 
         .sidebar a:hover:not(:first-child) {
+            color: black;
             background-color: beige;
-            transition-duration: 100ms;
+            transition-duration: .5s;
         } 
 
 .close {
