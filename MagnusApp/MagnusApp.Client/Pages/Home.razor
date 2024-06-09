@@ -2,6 +2,10 @@
 @rendermode @(new InteractiveAutoRenderMode(prerender: false))
 <PageTitle>Home</PageTitle>
 
+<div class="spin-container">
+    <SfSpinner Visible="true"></SfSpinner>
+</div>
+
 <header>
     <div class="index-intro">
         <h2 class="text-start ">Hi. I'm Magnus 👋</h2>
@@ -15,7 +19,6 @@
     <SfButton Content="Hire Me" CssClass="borders" OnClick="OnBtnClick"></SfButton>
 *@
   <section>
-
 
     <div class="skill">
         <img src="/icons/skill/blazor-icon.svg" alt="blazor icon">
