@@ -1,9 +1,21 @@
-﻿.spin-container {
-    position: fixed;
-    top: 0; bottom: 0; left: 0; right: 0;
-    background-color: white;
-}
+﻿/*::deep .e-spinner-pane.e-custom-color .e-spinner-inner .e-spin-fabric {
+    stroke: gold;
+}*/
 
+/*::deep .e-spinner-pane.e-customClass .e-spinner-inner .e-spin-material {
+    stroke: gold;
+}*/
+
+.spin-container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #06014B;
+    z-index: 1000;
+}
+  
 header {
     background-image: url(../images/introimage.jpg);
     background-size: cover;
@@ -86,7 +98,7 @@ header {
         margin-top: auto;
         margin-bottom: auto;
     }
-
+    
 section {
     padding-top: 80px;
     /*margin-bottom: 10px;*/

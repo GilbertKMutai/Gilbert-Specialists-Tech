@@ -1,9 +1,22 @@
 ﻿@page "/"
 @rendermode @(new InteractiveAutoRenderMode(prerender: false))
+@inherits HomeBase
 <PageTitle>Home</PageTitle>
 
-<div class="spin-container">
-    <SfSpinner Visible="true"></SfSpinner>
+<style>
+ /*   .e-spinner-pane .e-spinner-inner .e-spin-fabric {
+    stroke: green;
+    fill: green;
+    } */
+      .e-customClass .e-spinner-inner .e-spin-fabric{
+        stroke: gold;
+        fill: gold;
+    }
+
+</style>
+
+<div class="@CssClass">
+    <SfSpinner @bind-Visible="IsVisible" Type="SpinnerType.Fabric" CssClass="e-customClass" Size="40"></SfSpinner>
 </div>
 
 <header>
@@ -68,4 +81,5 @@
 <h4 class="non-heroh">My world of personal projects</h4>
 
 <DisplayProject/>
+
 
