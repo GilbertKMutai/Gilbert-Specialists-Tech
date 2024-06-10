@@ -7,7 +7,7 @@ public class HomeBase:ComponentBase
 
     protected override async Task OnInitializedAsync()
     {
-        await Task.Delay(5000);
+        await Task.Delay(3500);
         IsVisible = false;
         CssClass = null;
     }

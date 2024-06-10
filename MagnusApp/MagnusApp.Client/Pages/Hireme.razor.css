@@ -15,12 +15,6 @@
     align-items: center;
 }
 
-.label {
-    color: darkorange;
-    text-align: center;
-    margin-top: 60px;
-}
-
 .text {
     display: flex;
     justify-content: center;
