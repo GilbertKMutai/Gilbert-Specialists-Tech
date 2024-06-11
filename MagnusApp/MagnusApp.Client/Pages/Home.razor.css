@@ -1,9 +1,7 @@
-﻿/*::deep .e-spinner-pane.e-custom-color .e-spinner-inner .e-spin-fabric {
-    stroke: gold;
-}*/
-
-/*::deep .e-spinner-pane.e-customClass .e-spinner-inner .e-spin-material {
-    stroke: gold;
+﻿/*This color customisation only functional semi-transparent and solid spinner like fabric*/
+/*::deep .e-spinner-pane.customClass .e-spinner-inner .e-spin-fabric {
+    stroke: green;
+    fill: green;
 }*/
 
 .spin-container {
