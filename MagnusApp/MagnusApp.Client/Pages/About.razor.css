@@ -140,6 +140,7 @@ img:hover {
         margin-left: auto;
         transition: 0.4s ease-in-out;
         background-color: rgba(78, 0, 243, 0);
+        border-color: #3D1299;
     }
 
     ::deep #metrics-two:hover {
@@ -184,7 +185,10 @@ img:hover {
 
 @media (max-width: 355px) {
 
-    ::deep #metrics-two .e-card-content {
+    ::deep #metrics-two {
+        height: 325px;
+    }
+        :: deep #metrics-two .e-card-content {
         white-space: nowrap;
     }
 
@@ -195,5 +199,9 @@ img:hover {
     .bottom-achievement {
         /*text-align: left;*/
         margin-right: 0;
+    }
+
+    .achievement {
+        margin-bottom: 35px;
     }
  }
