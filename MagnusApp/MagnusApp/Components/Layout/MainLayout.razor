@@ -1,5 +1,12 @@
 ﻿@inherits LayoutComponentBase
+
+    <div class="@Cssclass">
+        <SfSpinner @bind-Visible="IsVisible" Type="SpinnerType.Fabric" CssClass="customCss" Size="40"></SfSpinner>
+    </div>
+
 <body>
+   @*  <SfSpinner @bind-Visible="IsVisible" Type="SpinnerType.Fabric" CssClass="customCss" Size="40"></SfSpinner> *@
+
     <header class="sticky-top">
       <NavMenu />
    </header>  
@@ -62,6 +69,20 @@
 
     </footer>
 </body>
+
+@code{
+    private string? Cssclass = "spinner-container";
+    private bool IsVisible = true;
+
+
+    // protected override void OnInitialized()
+    // {
+    //      Thread.Sleep(5000);
+    //      IsVisible = false;
+    //      Cssclass = null;
+    // }
+
+}
 
 
 
