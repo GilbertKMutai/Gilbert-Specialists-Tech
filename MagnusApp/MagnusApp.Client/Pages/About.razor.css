@@ -20,7 +20,7 @@
     gap: 80px;
     justify-content: center;
     align-items: center;
-    margin-bottom: 260px;
+    margin-bottom: 150px;
     padding: 0 20px;
 }
 
@@ -40,7 +40,7 @@ img:hover {
 ::deep #about-me {
     background-color: rgba(78, 0, 243, 0.26);
     max-width: 840px;
-    height: 340px;
+    height: 350px;
     margin-top: 100px;
     border-style: none;
     color: white;
