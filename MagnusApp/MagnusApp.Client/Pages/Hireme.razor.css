@@ -22,6 +22,10 @@
     padding: 0 15px;
 }
 
+.sm-text {
+    display: none;
+}
+
 i {
     text-align: left;
 }
@@ -84,3 +88,14 @@ h5 {
 /*::deep #Dialog {
     width: 350px;
 }*/
+
+
+@media (max-width: 456px) {
+    .sm-text {
+        display: block;
+    }
+
+    .bg-text {
+        display: none;
+    }
+}
