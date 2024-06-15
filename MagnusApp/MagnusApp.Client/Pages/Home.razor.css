@@ -162,8 +162,15 @@ img {
 
 @media (max-width: 768px) {
     .index-intro {
-        width: 60%;
+        width: 80%;
+        text-align: left;
     }
+
+        .index-intro p {
+            margin-left: 10px;
+            margin-right: 5px;
+            margin-top: 10px;
+        }
 
     .hide-tablet {
         display: none;

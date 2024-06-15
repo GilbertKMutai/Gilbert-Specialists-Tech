@@ -13,7 +13,6 @@ namespace MagnusApp.Components.Account
 
     //Custom Email confirmation configuration of identity using MailChimp as the provider
     public class EmailSender(IMessageOptions messageOptions, ILogger<EmailSender> logger, IMailSettings mailSettings) : IEmailSender<ApplicationUser>
-
     {
         private readonly IMessageOptions messageOptions = messageOptions;
         private readonly ILogger logger = logger;
