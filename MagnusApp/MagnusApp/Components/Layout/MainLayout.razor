@@ -71,15 +71,18 @@
 </body>
 
 @code{
-    private string? Cssclass = "spinner-container";
-    private bool IsVisible = true;
+    // [Parameter]
+    // public string? Cssclass { get; set; } = "spinner-container";
+    
+    // [Parameter]
+    // public bool IsVisible { get; set; } = true;
 
 
-    // protected override void OnInitialized()
+    // protected override async Task OnInitializedAsync()
     // {
-    //      Thread.Sleep(5000);
-    //      IsVisible = false;
-    //      Cssclass = null;
+    //     await Task.Delay(4000);
+    //     IsVisible = false;
+    //     Cssclass = null;
     // }
 
 }
