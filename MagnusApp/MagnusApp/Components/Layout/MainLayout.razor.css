@@ -137,7 +137,7 @@ footer p:last-child {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 778px) {
     .opinion {
         margin-top: 40px;
     }
