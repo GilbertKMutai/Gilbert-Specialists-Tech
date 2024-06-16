@@ -40,7 +40,7 @@ img:hover {
 ::deep #about-me {
     background-color: rgba(78, 0, 243, 0.26);
     max-width: 840px;
-    height: 350px;
+    min-height: 350px;
     margin-top: 100px;
     border-style: none;
     color: white;
@@ -51,6 +51,7 @@ img:hover {
         color: white;
         /*text-align: left;*/
         margin-left:10px;
+        padding-bottom: 10px;
     }
 
     ::deep #about-me .e-card-header .e-card-header-caption .e-card-header-title {
@@ -167,8 +168,7 @@ img:hover {
     }
 
     .bottom-achievement {
-        /*text-align: left;*/
-        margin-right: 170px;
+        margin-right: 100px;
     }
 
 
