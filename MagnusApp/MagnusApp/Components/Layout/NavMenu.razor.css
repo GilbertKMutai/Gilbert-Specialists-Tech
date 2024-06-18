@@ -27,7 +27,7 @@
         background-color: rgba(19, 24, 133, 0.55);
         /*background-image: linear-gradient(to bottom right, #857A13, #FFE500);*/
     }
- 
+
 .sidebar {
     position: fixed;
     top: 0;
@@ -41,8 +41,19 @@
     display: none;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: flex-start; 
+    justify-content: flex-start;
     gap: 10px;
+    animation: fadeIn 500ms;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
     .sidebar a {
@@ -144,9 +155,18 @@
 
     .hidesidebar {
         display: none;
+         animation: fadeOut 500ms;
     }
 
+    @keyframes fadeOut {
+        0% {
+            opacity: 1;
+        }
 
+        100% {
+            opacity: 0;
+        }
+    }
 }
 
 /* Mobile View */
