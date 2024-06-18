@@ -43,6 +43,10 @@
     align-items: flex-start;
     justify-content: flex-start;
     gap: 10px;
+   /* animation: fadeIn 500ms;*/
+}
+
+.fadeInAnimation {
     animation: fadeIn 500ms;
 }
 
@@ -53,6 +57,20 @@
 
     100% {
         opacity: 1;
+    }
+}
+
+.fadeOutAnimation {
+    animation: fadeOut 500ms;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
     }
 }
 
@@ -155,18 +173,8 @@
 
     .hidesidebar {
         display: none;
-         animation: fadeOut 500ms;
     }
 
-    @keyframes fadeOut {
-        0% {
-            opacity: 1;
-        }
-
-        100% {
-            opacity: 0;
-        }
-    }
 }
 
 /* Mobile View */
