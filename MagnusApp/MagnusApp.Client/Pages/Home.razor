@@ -1,10 +1,11 @@
 ﻿@page "/"
+@rendermode InteractiveAuto
 @inherits HomeBase
 <PageTitle>Home</PageTitle>
 
-@* <div class="@Cssclass">
+<div class="@Cssclass">
     <SfSpinner @bind-Visible="IsVisible" Type="SpinnerType.Fabric" CssClass="customCss" Size="40"></SfSpinner>
-</div> *@
+</div>
 
 <header>
     <div class="index-intro">
@@ -60,8 +61,12 @@
 
 </header>
 
-<h4 class="non-heroh">My world of personal projects</h4>
+<div>
 
-<DisplayProject/>
+    <h4 class="non-heroh">My world of personal projects</h4>
+
+    <DisplayProject/>
+
+</div>
 
 
