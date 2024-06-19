@@ -43,12 +43,12 @@
     align-items: flex-start;
     justify-content: flex-start;
     gap: 10px;
-   /* animation: fadeIn 500ms;*/
-}
-
-.fadeInAnimation {
     animation: fadeIn 500ms;
 }
+
+/*.fadeInAnimation {
+    animation: fadeIn 500ms;
+}*/
 
 @keyframes fadeIn {
     0% {
