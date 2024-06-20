@@ -46,10 +46,6 @@
     animation: fadeIn 500ms;
 }
 
-/*.fadeInAnimation {
-    animation: fadeIn 500ms;
-}*/
-
 @keyframes fadeIn {
     0% {
         opacity: 0;

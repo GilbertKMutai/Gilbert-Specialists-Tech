@@ -40,7 +40,6 @@
 @code {
     public string? ClassCss { get; set; }
     public string? FadeOutAnimation { get; set; }
-    // public string? FadeInAnimation { get; set; }
 
     public void Navigatopage()
     {
@@ -51,14 +50,12 @@
     protected void ShowSidebar()
     {
         ClassCss = "showsidebar";
-        // FadeInAnimation = "fadeInAnimation";
         FadeOutAnimation = null;
 
     }
 
     protected void HideSidebar()
     {
-        // FadeInAnimation = null;
         FadeOutAnimation = "fadeOutAnimation";
         ClassCss = null;
     }

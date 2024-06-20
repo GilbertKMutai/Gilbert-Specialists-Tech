@@ -19,7 +19,7 @@ using Amazon;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSyncfusionBlazor();
 
-Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MzMzOTg2N0AzMjM1MmUzMDJlMzBWQmEwcXlNN2tkSVpoRE1WRlMvZVI0cWVFSy82OEt2bGx6emxPOS85bGRjPQ==");
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("Mgo+DSMBaFt5QHFqVkNrXVNbdV5dVGpAd0N3RGlcdlR1fUUmHVdTRHRbQlthSX9XckJiX3pedH0=;ORg4AjUWIQA/Gnt2U1hhQlJBfV5AQmBIYVp/TGpJfl96cVxMZVVBJAtUQF1hTX5VdEViXXtZcXJQRmRV;NRAiBiAaIQQuGjN/V0B+XU9Hc1RDX3xKf0x/TGpQb19xflBPallYVBYiSV9jS3pTcEdjWHtad3VTQ2JcVA==;Mgo+DSMBMAY9C3t2U1hhQlJBfV5AQmBIYVp/TGpJfl96cVxMZVVBJAtUQF1hTX5VdEViXXtZcXJQRWhd;MzM0MDgyNEAzMjM2MmUzMDJlMzBjT3VtdXpBRXpmWFdJeXU5UG9qODlLb1Nsalk5dTRNVWNNSzg1SlZxUnBvPQ==");
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
