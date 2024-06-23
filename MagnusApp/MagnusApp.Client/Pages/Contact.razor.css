@@ -32,9 +32,13 @@
 
 }
 
+.p-small {
+    display: none;
+}
+
 .text-flex {
     display: flex;
-    gap: 30px
+    gap: 50px
 }
 
 .left-side h5, .right-side h5 {
@@ -110,6 +114,16 @@
     .maps iframe {
         width: 768px;
         height: 450px;
+    }
+}
+
+@media (max-width: 946px) {
+    .p-big {
+        display: none;
+    }
+
+    .p-small {
+        display: block;
     }
 }
 
