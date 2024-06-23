@@ -4,7 +4,7 @@ namespace MagnusApp.Client.Pages.Reusables;
 
 public class DataFormBase : ComponentBase
 {
-    protected SfToast ToastObj;
+    protected SfToast ToastObj = new SfToast();
     protected string PositionX = "Right";
   
 
