@@ -10,7 +10,6 @@ public class EmailDto
     public string From { get; set; } = string.Empty;
     [Required(ErrorMessage = "Please enter a message")]
     public string Body { get; set; } = string.Empty;
-
 }
 
 
