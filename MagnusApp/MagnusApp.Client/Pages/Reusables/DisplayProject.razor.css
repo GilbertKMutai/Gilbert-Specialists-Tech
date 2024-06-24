@@ -40,15 +40,10 @@ h5 {
     }
 
     ::deep #Card .e-card-content {
-        width: 400px;
-        height: 270px;
-        margin-right: auto;
-        margin-left: auto;
         transition: 0.4s ease-in-out;
     }
 
         ::deep #Card .e-card-content img {
-            height: 100%;
             width: 100%;
             object-fit: contain;
         }
@@ -166,25 +161,14 @@ h5 {
 
     ::deep #Card {
         width: 360px;
-        height: 320px;
+        height: 300px;
     }
-
-        ::deep #Card .e-card-content {
-            width: 320px;
-            height: 240px;
-        }
-
 }
 
 @media (max-width: 355px) {
 
     ::deep #Card {
         width: 280px;
-        height: 320px;
+        height: 250px;
     }
-
-        ::deep #Card .e-card-content {
-            width: 248px;
-            height: 240px;
-        }
 }
