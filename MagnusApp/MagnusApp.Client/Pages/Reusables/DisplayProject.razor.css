@@ -29,24 +29,23 @@ h5 {
     border-radius: 15px;
     transition: box-shadow 0.3s ease-in-out;
     overflow: hidden;
-    transition: 0.5s ease-in-out;
 }
 
     ::deep #Card:hover {
         box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        transition: box-shadow 0.3s ease-in-out;
-        transform: scale(1.02);
-        transition: 0.4s ease-in-out;
-    }
-
-    ::deep #Card .e-card-content {
-        transition: 0.4s ease-in-out;
+        transition: box-shadow 0.3s ease-in-out
     }
 
         ::deep #Card .e-card-content img {
             width: 100%;
             object-fit: contain;
+            transition: 0.4s ease-in-out;
         }
+
+    ::deep #Card .e-card-content img:hover {
+        transform: scale(1.03);
+        transition: 0.4s ease-in-out;
+    }
 
     ::deep #Card .e-card-header .e-card-header-caption .e-card-header-title, #mini-card .e-card-header .e-card-header-caption .e-card-header-title, #mini-card2 .e-card-header .e-card-header-caption .e-card-header-title {
         color: white;
