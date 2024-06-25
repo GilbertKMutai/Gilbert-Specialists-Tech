@@ -12,14 +12,10 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Components.Authorization;
 using Amazon.SecretsManager;
 using Amazon.SecretsManager.Model;
-using Syncfusion.Blazor;
 using MagnusApp.Shared.Configuration.Aws;
 using Amazon;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddSyncfusionBlazor();
-
-Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("Ngo9BigBOggjHTQxAR8/V1NCaF5cXmZCf1FpRmJGdld5fUVHYVZUTXxaS00DNHVRdkdnWXlccnRXR2ReV0dyX0M=");
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
