@@ -14,10 +14,14 @@ using Amazon.SecretsManager;
 using Amazon.SecretsManager.Model;
 using MagnusApp.Shared.Configuration.Aws;
 using Amazon;
+using Syncfusion.Blazor;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+//Add Syncfusion Blazor service.
+builder.Services.AddSyncfusionBlazor();
+
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents()
     .AddInteractiveWebAssemblyComponents();
