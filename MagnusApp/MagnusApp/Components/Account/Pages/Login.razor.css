@@ -75,27 +75,48 @@
     margin-top: -20px;
 }*/
 
-.design {
+ h4 {
+    text-align: center;
+}
+
+::deep .design {
     display: block;
-    /*width: 90%;*/
     padding: .375rem .75rem;
-    font-size: 1rem;
+    width: 350px;
+    font-size: .9rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #212529;
-    background-color: #E0D2F8;
+    color: white;
+    background-color: rgba(78, 0, 243, 0.26);
     background-clip: padding-box;
-    border: 1px solid #ced4da;
+   /* border: 1px solid #ced4da;*/
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     border-radius: .25rem;
-    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
-.mylogin-btn:hover {
-    background-color: #0E54C8;
+::deep .form-control {
+    border-radius: 25px;
 }
+
+.links {
+    text-decoration: none;
+}
+
+.links:hover {
+    color: greenyellow;
+}
+
+.mylogin-btn {
+   font-size: 1rem;
+   background-color: #0E54C8;
+   border-radius: 25px;
+}
+
+    .mylogin-btn:hover {
+        background-color: #1b6ec2;
+    }
 
 @media (max-width: 456px) {
     .line-w {
