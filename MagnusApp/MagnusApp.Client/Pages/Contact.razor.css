@@ -46,15 +46,8 @@
     margin-bottom: 10px;
 }
 
-/*.right-side, .left-side {
-    margin-bottom: 70px;
-}*/
-
 .f-margin {
     padding-top: 20px;
-}
-.social {
-    /*white-space: nowrap;*/
 }
 
 .social img {
@@ -67,7 +60,6 @@
 
 ::deep #MyForm {
     background-color: #01903A;
-    /*height: 370px;*/
     padding: 30px;
     border-radius: 7px;
 }
@@ -95,10 +87,6 @@
 .formtwo {
     display: none;
 }
-
-/*::deep #FormTwo {
-    display: none;
-}*/
 
 .maps {
     text-align: center;
