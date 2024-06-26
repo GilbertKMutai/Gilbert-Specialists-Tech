@@ -7,9 +7,9 @@ using MagnusApp.Client;
 using Syncfusion.Blazor;
 
 
-var builder = WebAssemblyHostBuilder.CreateDefault(args);
-
 Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("Ngo9BigBOggjHTQxAR8/V1NCaF5cXmZCf1FpRmJGdld5fUVHYVZUTXxaS00DNHVRdkdnWXlccnRXR2ReV0dyX0M=");
+
+var builder = WebAssemblyHostBuilder.CreateDefault(args);
 
 builder.Services.AddSyncfusionBlazor();
 
