@@ -155,7 +155,7 @@
 }
 
 .bottom-links {
-    margin-left: 60px;
+    margin-left: 50px;
 }
 
 @media (max-width: 456px) {
@@ -165,5 +165,9 @@
 
     ::deep .design {
         width: 320px;
+    }
+
+    .bottom-links {
+        margin-left: 40px;
     }
 }
