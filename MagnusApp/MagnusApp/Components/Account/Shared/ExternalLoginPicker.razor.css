@@ -1,10 +1,9 @@
 ﻿.google-auth {
-    /*padding: 6px 75px;*/
-    width: 350px;
+    width: 345px;
     color: #3E75CF;
     font-weight: 500;
     border-style: none;
-    border-radius: 3px;
+    border-radius: 10px;
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.204);
 }
 
@@ -12,14 +11,8 @@
         color: #0E54C8;
     }
 
-@media (max-width: 416px) {
+@media (max-width: 456px) {
     .google-auth {
-        width: 360px;
-    }
-}
-
-@media (max-width: 360px) {
-    .google-auth {
-        width: 344px;
+        width: 320px;
     }
 }
