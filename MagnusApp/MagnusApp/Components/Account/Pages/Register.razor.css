@@ -50,6 +50,10 @@
     margin-bottom: 30px;
 }
 
+::deep .text-danger {
+    margin-left: 10px;
+}
+
 ::deep ::placeholder {
     color: white;
 }
@@ -59,7 +63,12 @@
 }
 
 @media (max-width: 456px) {
+
     .line-w {
-        width: 25px;
+        width: 45px;
+    }
+
+    ::deep .design {
+        width: 320px;
     }
 }
