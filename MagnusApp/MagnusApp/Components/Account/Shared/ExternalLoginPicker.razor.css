@@ -1,4 +1,5 @@
 ﻿.google-auth {
+    display: flex;
     width: 345px;
     color: #3E75CF;
     font-weight: 500;
@@ -10,6 +11,12 @@
     .google-auth:hover {
         color: #0E54C8;
     }
+
+svg {
+   text-align: start;
+   margin-left: 15px;
+   margin-right: 50px;
+}
 
 @media (max-width: 456px) {
     .google-auth {
