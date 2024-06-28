@@ -12,22 +12,43 @@
     margin-bottom: 15px;
 }
 
-.design {
+::deep .design {
     display: block;
-    width: 200px;
     padding: .375rem .75rem;
-    font-size: 1rem;
-    font-weight: 400;
+    width: 350px;
+    font-size: .85rem;
+    font-weight: 500;
     line-height: 1.5;
-    color: #212529;
-    background-color: #E8E8E8;
+    color: white;
+    background-color: rgba(78, 0, 243, 0.2);
+    backdrop-filter: blur(24px);
     background-clip: padding-box;
-    border: 1px solid #ced4da;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    border-radius: .25rem;
-    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    border: .5px solid white;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px 0 rgba(78, 0, 243, 0.2), 0 6px 5px 0 rgba(78, 0, 243, 0.19);
+}
+
+.row {
+    padding-top: 2rem;
+}
+
+::deep .form-control {
+    font-size: .9rem;
+    width: 97%;
+    background: none;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    border: .5px solid white;
+    border-radius: 25px;
+}
+
+::deep placeholder {
+    color: white;
 }
 
 .myregister-btn:hover {
