@@ -76,10 +76,6 @@
     margin-top: -20px;
 }*/
 
- h4 {
-    text-align: center;
-}
-
 ::deep .design {
     display: block;
     padding: .375rem .75rem;
@@ -138,7 +134,7 @@
 
 
 .links {
-    text-decoration: none;
+    /*text-decoration: none;*/
     color: inherit;
     margin-left: 10px;
 }
