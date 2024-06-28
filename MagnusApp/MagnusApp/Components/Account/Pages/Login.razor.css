@@ -1,10 +1,11 @@
 ﻿.line-w {
-    width: 30px;
+    width: 60px;
     /*vertical-align: text-top;*/
 }
 
-.cont-email{
-   white-space: nowrap;
+.email-container {
+    white-space: nowrap;
+    padding-top: 4px;
 }
 
 /*::deep #externallogin {
@@ -88,13 +89,15 @@
     font-weight: 500;
     line-height: 1.5;
     color: white;
-    background-color: rgba(78, 0, 243, 0.26);
+    background-color: rgba(78, 0, 243, 0.2);
+    backdrop-filter: blur(24px);
     background-clip: padding-box;
-   /* border: 1px solid #ced4da;*/
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    border: .5px solid white;
     border-radius: 15px;
+    box-shadow: 0 2px 8px 0 rgba(78, 0, 243, 0.2), 0 6px 5px 0 rgba(78, 0, 243, 0.19);
 }
 
 .form-label {
@@ -105,22 +108,28 @@
     margin-left:40px;
 }
 
+::deep .email {
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
 ::deep .form-control {
-    border-radius: 25px;
     font-size: .9rem;
     width: 97%;
-    margin-left: auto;
-    margin-right: auto;
     background: none;
     color: white;
+    margin-left: auto;
+    margin-right: auto;
+    border: .5px solid white;
+    border-radius: 25px;
 }
 
     ::deep .form-control:active {
         background: none;
     }
-::deep .email {
-    margin-top: 40px;
-    margin-bottom: 30px;
+   
+::deep .text-danger {
+    margin-left: 10px;
 }
 
 ::deep ::placeholder {
@@ -160,7 +169,7 @@
 
 @media (max-width: 456px) {
     .line-w {
-        width: 25px;
+        width: 45px;
     }
 
     ::deep .design {
