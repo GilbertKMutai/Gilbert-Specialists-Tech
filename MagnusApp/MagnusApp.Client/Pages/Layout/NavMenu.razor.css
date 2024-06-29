@@ -93,13 +93,21 @@
             transition-duration: .1s;
         } 
 
+.showsidebar {
+    display: flex;
+}
+
+.hidesidebar {
+    display: none;
+}
+
 .close {
     fill: white;
     margin-top: 10px;
 }
 
 ::deep .e-appbar.applbar {
-    background-color: black;
+    background-color: transparent;
     color: white;
     padding: 60px 0px;
 }
@@ -130,22 +138,19 @@
     margin-right: 15px;
 }
 
-.showsidebar {
-    display: flex;
-}
-
-.hidesidebar {
+.menu {
     display: none;
 }
 
 /* Tablet View */
 @media (max-width: 778px) {
-    .menu {
-        fill: white;
-        position: absolute;
-        bottom: 58px;
-        right: 25px;
-    }
+
+
+/*    ::deep .e-appbar.applbar {
+        background-color: transparent;
+        color: white;
+        padding: 60px 0px;
+    }*/
 
     .appnav {
         margin-top: -20px;
@@ -161,6 +166,14 @@
         bottom: 55px;
         right: 15px;
         display: none;
+    }
+
+    .menu {
+        display: block;
+        fill: white;
+        position: absolute;
+        bottom: 58px;
+        right: 25px;
     }
 
     .showsidebar {

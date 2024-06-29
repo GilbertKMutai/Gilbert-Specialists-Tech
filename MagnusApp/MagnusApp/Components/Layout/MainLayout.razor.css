@@ -4,6 +4,10 @@ body {
     flex-direction: column;
 }
 
+.content {
+    margin-top: -130px;
+}
+
 .circle {
     background-image: url(../images/myicon.jpg);
     background-size: cover;
