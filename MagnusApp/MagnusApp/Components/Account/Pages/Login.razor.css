@@ -1,4 +1,9 @@
-﻿.line-w {
+﻿.welcome {
+    text-align: center;
+    margin-top: 200px;
+}
+
+.line-w {
     width: 60px;
 }
 
