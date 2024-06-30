@@ -36,6 +36,10 @@ header {
     margin-top: 170px;
 }
 
+.index-intro p {
+    font-size: 15px;
+}
+
 .text-start {
     padding-left: 10px;
 }
@@ -99,7 +103,6 @@ header {
     
 section {
     padding-top: 80px;
-    /*margin-bottom: 10px;*/
     display: flex;
     margin-right: auto;
     margin-left: auto;
@@ -117,16 +120,12 @@ section {
     margin-top: 10px;
 }
 
-.index-intro p {
-    font-size: 15px;
-}
 
 img {
-    /*margin-left: 1px;*/
     margin-right: 4px;
 }
 
-.stick {
+/*.stick {
     height: 40px;
     width: 1px;
     background: white;
@@ -141,7 +140,7 @@ img {
     border-top: 15px solid white;
     border-right: 5px solid transparent;
     align-self: center;
-}
+}*/
 
 /*.pointer { 
     animation: move 1.1s infinite ease-in-out;
