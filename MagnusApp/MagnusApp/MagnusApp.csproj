@@ -33,4 +33,11 @@
     <Folder Include="dist\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="wwwroot\images\project.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>

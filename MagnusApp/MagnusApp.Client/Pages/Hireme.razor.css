@@ -28,7 +28,7 @@ h4 {
     display: none;
 }
 
-i {
+p {
     text-align: left;
 }
 
@@ -77,6 +77,7 @@ h5 {
 .hireme-btn {
     display: flex;
     justify-content: center;
+    margin-bottom: 80px;
 }
 
 /*Non-functional | monitor to see if functions*/
@@ -93,12 +94,16 @@ h5 {
 }*/
 
 
-@media (max-width: 456px) {
+@media (max-width: 600px) {
     .sm-text {
         display: block;
     }
 
     .bg-text {
         display: none;
+    }
+
+    h5 {
+        margin-top: 70px;
     }
 }

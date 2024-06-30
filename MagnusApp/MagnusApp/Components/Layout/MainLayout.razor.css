@@ -9,11 +9,12 @@ body {
 }
 
 .circle {
+    position: absolute;
     background-image: url(../images/myicon.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 50px;
-    width: 50px;
+    height: 3rem;
+    width: 3rem;
     border-radius: 50%;
     background-color: #bbb;
     margin-left: 15px;
@@ -35,6 +36,7 @@ body {
 }
 
 .opinion {
+    position: relative;
     display: flex;
     color: white;
     gap: 12px;
@@ -45,6 +47,7 @@ body {
     .opinion i {
         max-width: 700px;
         margin-top: 4px;
+        margin-left: 80px;
     }
 
 footer {
@@ -136,9 +139,10 @@ footer p:last-child {
         margin-top: 40px;
     }
 
-    .circle {
-        display: none;
-    }
+/*    .circle {
+        width: 2rem;
+        height: 2rem;
+    }*/
 
     .contact {
         display: block;
