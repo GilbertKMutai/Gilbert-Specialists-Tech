@@ -105,12 +105,8 @@
     margin-top: 10px;
 }
 
-::deep .e-appbar.upperappbar {
-    background-color: #161616;
-}
-
 ::deep .e-appbar.applbar {
-   /* background-color: transparent;*/
+    /* background-color: transparent;*/
     background-color: black;
     height: 60px;
     color: white;

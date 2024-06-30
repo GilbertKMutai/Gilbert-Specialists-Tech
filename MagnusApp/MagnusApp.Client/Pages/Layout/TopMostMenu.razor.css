@@ -1,0 +1,10 @@
+﻿::deep .e-appbar.upperappbar {
+    background-color: #161616;
+    color: white;
+}
+
+.profile {
+    position: absolute;
+    bottom: 8px;
+    right: 32px;
+}
