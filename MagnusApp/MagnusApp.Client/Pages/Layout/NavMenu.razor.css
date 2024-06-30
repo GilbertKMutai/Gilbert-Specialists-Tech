@@ -106,7 +106,6 @@
 }
 
 ::deep .e-appbar.applbar {
-    /* background-color: transparent;*/
     background-color: black;
     height: 60px;
     color: white;
@@ -131,6 +130,7 @@
     position: absolute;
     bottom: 1px;
     right: 15px;
+    white-space: nowrap;
 }
 
 ::deep .ralign {
@@ -142,19 +142,7 @@
 }
 
 /* Tablet View */
-@media (max-width: 778px) {
-
-
-/*    ::deep .e-appbar.applbar {
-        background-color: transparent;
-        color: white;
-        padding: 60px 0px;
-    }*/
-
-    .appnav {
-        margin-top: -20px;
-        display: none;
-    }
+@media (max-width: 714px) {
 
     .navbutton {
         display: none;
