@@ -1,5 +1,4 @@
 .appnav {
-    margin-top: -20px;
     display: flex;
 }
 
@@ -8,7 +7,7 @@
 }
 
 .appnav a {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 500;
     color: white;
     /* letter-spacing: -.18px;*/
@@ -16,7 +15,7 @@
     margin-right: 15px;
     border: 1px solid rgb(255, 215, 0);
     border-radius: 1000px;
-    padding: 5px 15px;
+    padding: 3.5px 15px;
     font-family: "Montserrat", sans-serif;
     white-space: nowrap;
 }
@@ -106,31 +105,35 @@
     margin-top: 10px;
 }
 
+::deep .e-appbar.upperappbar {
+    background-color: #161616;
+}
+
 ::deep .e-appbar.applbar {
-    background-color: transparent;
+   /* background-color: transparent;*/
+    background-color: black;
+    height: 60px;
     color: white;
-    padding: 60px 0px;
 }
 
 .first-part {
     padding-right: 410px;
-    margin-top: -20px;
 }
 
 .second-part {
     position: absolute;
-    bottom: 55px;
+    bottom: 15px;
     right: 15px;
 }
 
 ::deep .e-btn.outline {
     border: 1px solid rgb(64, 234, 132);
-    color: rgb(64, 234, 132);
-    background: none;
+    color: black;
+    background: rgb(64, 234, 132);
     padding: 2px 18px;
-    border-radius: 0;
+    border-radius: 15px;
     position: absolute;
-    bottom: 12px;
+    bottom: 1px;
     right: 15px;
 }
 
@@ -163,16 +166,15 @@
 
     .second-part {
         position: absolute;
-        bottom: 55px;
-        right: 15px;
-        display: none;
+        bottom: 16px;
+        right: 35px;
     }
 
     .menu {
         display: block;
         fill: white;
         position: absolute;
-        bottom: 58px;
+        bottom: 18px;
         right: 25px;
     }
 
