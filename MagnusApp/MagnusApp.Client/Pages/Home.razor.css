@@ -33,7 +33,7 @@ header {
     margin-right: auto;
     margin-left: auto;
     width: 700px;
-    margin-top: 55px;
+    margin-top: 45px;
 }
 
 .index-intro p {
@@ -102,7 +102,7 @@ header {
     }
     
 section {
-    padding-top: 80px;
+    padding-top: 50px;
     display: flex;
     margin-right: auto;
     margin-left: auto;
@@ -118,6 +118,10 @@ section {
     justify-content: center;
     padding-bottom: 10px;
     margin-top: 10px;
+}
+
+.hide-laptop {
+    display: none;
 }
 
 
@@ -186,7 +190,7 @@ img {
 
 }
 
-@media (max-width: 474px)
+@media (max-width: 494px)
 {
 
     .hide-mobile {
@@ -197,6 +201,12 @@ img {
         display: none;
     }
 
+    .second-layer .hide-laptop {
+        display: flex;
+    }
+    .hidefromNZ {
+        display: none;
+    }
 }
 
 @media (max-width: 355px) {
@@ -210,6 +220,14 @@ img {
 
     .hide-zfold {
         display: none;
+    }
+
+   .second-layer .hide-zfold {
+        display: none;
+    }
+
+    .hidefromNZ {
+        display: flex;
     }
 
 }
