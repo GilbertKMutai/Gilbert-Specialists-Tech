@@ -188,6 +188,9 @@ img {
         display: none;
     }
 
+    .showtablet.hide-laptop {
+        display: flex;
+    }
 }
 
 @media (max-width: 494px)
@@ -200,6 +203,10 @@ img {
     .hide-tablet {
         display: none;
     }
+    
+/*    .second-layer:last-of-type {
+        padding-bottom: 20px;
+    }*/
 
     .second-layer .hide-laptop {
         display: flex;
