@@ -191,7 +191,6 @@ img {
 
     .text-cta {
         text-align: center;
-        /*margin-left: 5px;*/
         margin-right: 5px;
     }
 
@@ -206,6 +205,11 @@ img {
 
 @media (max-width: 494px)
 {
+    .text-cta {
+        text-align: center;
+        margin-right: 5px;
+    }
+
     .hide-mobile {
         display: none;
     }
@@ -221,6 +225,14 @@ img {
     .second-layer .hide-laptop {
         display: flex;
     }
+
+    .second-layer .special {
+        display: none;
+    }
+
+    /*   .show-tablet.hide-mobile {
+        display: none;
+    }*/
     .hidefromNZ {
         display: none;
     }
