@@ -36,12 +36,17 @@ header {
     margin-top: 45px;
 }
 
+.text-start {
+    padding-left: 10px;
+}
+
 .index-intro p {
     font-size: 15px;
 }
 
-.text-start {
-    padding-left: 10px;
+.text-cta {
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 ::deep .sub-container {
@@ -183,6 +188,12 @@ img {
             margin-right: 5px;
             margin-top: 10px;
         }
+
+    .text-cta {
+        text-align: center;
+        /*margin-left: 5px;*/
+        margin-right: 5px;
+    }
 
     .hide-tablet {
         display: none;
