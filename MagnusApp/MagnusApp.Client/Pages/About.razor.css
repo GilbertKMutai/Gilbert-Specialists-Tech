@@ -27,7 +27,6 @@ h4 {
 }
 
 img {
-    /*width: 290px;*/
     height: 250px;
     border-radius: 8px;
     margin-top: 60px;
@@ -51,7 +50,6 @@ img:hover {
 
     ::deep #about-me .e-card-content {
         color: white;
-        /*text-align: left;*/
         margin-left:10px;
         padding-bottom: 10px;
     }
@@ -154,7 +152,6 @@ img:hover {
         ::deep #metrics-two .e-card-content {
             display: block;
             color: #0EAC4D;
-            /*padding: 0 40px;*/
             text-align: center;
         }
 
@@ -170,7 +167,7 @@ img:hover {
     }
 
     .bottom-achievement {
-        margin-right: 100px;
+        margin-right: 150px;
     }
 
 
@@ -179,7 +176,6 @@ img:hover {
 @media (max-width: 474px) {
 
     img {
-       /* width: 210px;*/
         height: 175px;
     }
 
