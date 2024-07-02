@@ -218,7 +218,7 @@ img {
         display: none;
     }
     
-/*    .second-layer:last-of-type {
+/*    .second-layer:nth-of-type() {
         padding-bottom: 20px;
     }*/
 
