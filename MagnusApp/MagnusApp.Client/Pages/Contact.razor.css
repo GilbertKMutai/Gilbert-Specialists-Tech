@@ -102,7 +102,6 @@ h4 {
 
 @media (max-width: 1024px) {
     .left-text h3 {
-        text-align: center;
         margin-bottom: 60px;
     }
 
@@ -134,7 +133,7 @@ h4 {
         margin-right: 20px;
     }
 
-        .left-text h3 {
+        .left-text h2 {
             margin-bottom: 40px;
         }
 
@@ -159,7 +158,15 @@ h4 {
 }
 
 @media (max-width: 474px) {
-    .text-flex {
+
+    .left-text h2 {
+        /*text-align: center;*/
+    }
+
+    .p-small {
+        /*text-align: center;*/
+    }
+        .text-flex {
         display: block;
         gap: 20px
     }
