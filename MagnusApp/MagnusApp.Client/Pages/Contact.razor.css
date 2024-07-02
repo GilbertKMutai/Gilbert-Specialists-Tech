@@ -159,14 +159,7 @@ h4 {
 
 @media (max-width: 474px) {
 
-    .left-text h2 {
-        /*text-align: center;*/
-    }
-
-    .p-small {
-        /*text-align: center;*/
-    }
-        .text-flex {
+    .text-flex {
         display: block;
         gap: 20px
     }
