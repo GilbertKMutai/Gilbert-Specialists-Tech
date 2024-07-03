@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace MagnusApp.Shared.Configuration.Aws;
 
+//Add interface of this class for dependency injection purposes
 public static class GoogleSecret
 {
     public static async Task<string> GetClientId()
