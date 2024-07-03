@@ -80,7 +80,7 @@ section {
     padding-left: 8px;
 }
 
-.second-layer {
+.skill-layers {
     display: flex;
     color: white;
     justify-content: center;
@@ -220,15 +220,15 @@ img {
         display: none;
     }
     
-/*    .second-layer:nth-of-type() {
+/*    .skill-layers:nth-of-type() {
         padding-bottom: 20px;
     }*/
 
-    .second-layer .hide-laptop {
+    .skill-layers .hide-laptop {
         display: flex;
     }
 
-    .second-layer .special {
+    .skill-layers .special {
         display: none;
     }
 
@@ -253,7 +253,7 @@ img {
         display: none;
     }
 
-   .second-layer .hide-zfold {
+   .skill-layers .hide-zfold {
         display: none;
     }
 
