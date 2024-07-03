@@ -4,11 +4,12 @@
 }
 
 .line-w {
-    width: 50px;
+    width: 65px;
 }
 
-.cont-email {
+.email-container {
     white-space: nowrap;
+    padding-top: 4px;
 }
 
 .ext-login {
@@ -42,7 +43,7 @@
 
 ::deep .form-control {
     font-size: .9rem;
-    width: 97%;
+    width: 95%;
     background: none;
     color: white;
     margin-left: auto;
@@ -63,6 +64,21 @@
     color: white;
 }
 
+
+.myregister-btn {
+    display: block;
+    font-size: 1rem;
+    font-weight: 500;
+    width: 95%;
+    border-radius: 25px;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    margin-top: 15px;
+    margin-right: auto;
+    margin-bottom: 15px;
+    margin-left: auto;
+}
+
 .myregister-btn:hover {
     background-color: #0E54C8;
 }
@@ -70,7 +86,7 @@
 @media (max-width: 456px) {
 
     .line-w {
-        width: 45px;
+        width: 50px;
     }
 
     ::deep .design {

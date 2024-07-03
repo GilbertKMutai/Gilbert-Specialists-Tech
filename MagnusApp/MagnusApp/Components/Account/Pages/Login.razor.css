@@ -4,7 +4,7 @@
 }
 
 .line-w {
-    width: 60px;
+    width: 65px;
 }
 
 .email-container {
@@ -169,7 +169,7 @@
 
 @media (max-width: 456px) {
     .line-w {
-        width: 45px;
+        width: 50px;
     }
 
     ::deep .design {
