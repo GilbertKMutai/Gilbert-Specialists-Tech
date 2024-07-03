@@ -246,6 +246,11 @@ img {
 }
 
 @media (max-width: 368px) {
+    
+    section {
+        margin-top: 20px;
+    }
+
     .hide-mobile {
         display: none;
     }
@@ -258,7 +263,11 @@ img {
         display: none;
     }
 
-   .skill-layers .hide-zfold {
+    .skill-layers {
+        padding-top: 4px;
+    }
+       
+    .skill-layers .hide-zfold {
         display: none;
     }
 
