@@ -71,14 +71,30 @@ header {
         border: 1px solid rgb(0, 0, 0);
         transition-duration: 2s;
     }*/
+section {
+    display: flex;
+    color: white;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    padding-left: 8px;
+}
+
+.second-layer {
+    display: flex;
+    color: white;
+    justify-content: center;
+    padding-bottom: 10px;
+    padding-left: 8px;
+}
 
 .skill {
     margin-right: 8px;
     background-color: rgba(78, 0, 243, 0.26);
     font-size: 15px;
     border-radius: 1000px;
-    padding: 3px 10px;
-    min-width: 110px;
+    padding: 3px 0;
+    width: 120px;
     display: flex;
     justify-content: center;
 }
@@ -94,8 +110,8 @@ header {
     background-color: rgba(78, 0, 243, 0.26);
     font-size: 15px;
     border-radius: 1000px;
-    padding: 3px 10px;
-    min-width: 110px;
+    padding: 3px 0px;
+    width: 120px;
     display: flex;
     justify-content: center;
 }
@@ -106,20 +122,6 @@ header {
         margin-bottom: auto;
     }
     
-section {
-    display: flex;
-    color: white;
-    justify-content: center;
-    padding-top: 50px;
-    padding-bottom: 10px;
-}
-
-.second-layer {
-    display: flex;
-    color: white;
-    justify-content: center;
-    padding-bottom: 10px;
-}
 
 .hide-laptop {
     display: none;
@@ -127,7 +129,11 @@ section {
 
 
 img {
+    width: 15px;
+    height: 15px;
     margin-right: 4px;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 /*.stick {
@@ -199,7 +205,7 @@ img {
     }
 }
 
-@media (max-width: 494px)
+@media (max-width: 505px)
 {
     .text-cta {
         text-align: center;
@@ -234,7 +240,7 @@ img {
     }
 }
 
-@media (max-width: 355px) {
+@media (max-width: 390px) {
     .hide-mobile {
         display: none;
     }
