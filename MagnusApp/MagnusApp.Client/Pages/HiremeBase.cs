@@ -23,7 +23,11 @@ public class HiremeBase : ComponentBase
     }
 
 
-
+    public async Task HandleSubmit()
+    {
+        this.IsVisible = false;
+        //ClientModel = new EmailDto();
+    }
 
     //public void OnChangeHandler(ChangeArgs<string> arg)
     //{

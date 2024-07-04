@@ -21,7 +21,7 @@ public class DataFormBase : ComponentBase
     [Parameter]
     public EventCallback<EmailDto> OnFormSubmited { get; set; }
 
-    protected async void HandleValidSubmit()
+    protected async void HandleSubmit()
     {
         await EmailService.SendEmail(ClientModel);
         await OnFormSubmited.InvokeAsync(ClientModel);
