@@ -23,10 +23,11 @@ public class DataFormBase : ComponentBase
 
     protected async void HandleSubmit()
     {
-        await EmailService.SendEmail(ClientModel);
-        await OnFormSubmited.InvokeAsync(ClientModel);
         await this.ToastObj.ShowAsync();
+        await EmailService.SendEmail(ClientModel);
         ClientModel = new EmailDto();
         dataForm.Refresh();
+        await Task.Delay(2200);
+        await OnFormSubmited.InvokeAsync(ClientModel);
     }
 }
