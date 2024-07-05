@@ -28,16 +28,17 @@
 
     <div class="stick"></div> <div class="arrow"></div>
 
-    <SfDialog ID="Dialog" Width="350px" ShowCloseIcon="false" @bind-Visible="@IsVisible">
-            <DialogTemplates>
-                <Content>
-                    <CascadingValue Value="@ClientModel">
-                            <DataForm OnFormSubmited="HandleSubmit"></DataForm>
-                    </CascadingValue>
-                </Content>
-            </DialogTemplates>
-            <DialogAnimationSettings Duration="750"/>
-        </SfDialog>
+    <SfDialog ID="Dialog" Width="350px" ShowCloseIcon="false" IsModal="true" @bind-Visible="@IsVisible">
+        <DialogEvents OnOverlayModalClick="OverlayModalClickHandler"></DialogEvents>
+        <DialogTemplates>
+            <Content>
+                <CascadingValue Value="@ClientModel">
+                    <DataForm OnFormSubmited="HandleSubmit"></DataForm>
+                </CascadingValue>
+            </Content>
+        </DialogTemplates>
+        <DialogAnimationSettings Duration="750" />
+    </SfDialog>
     <div class="hireme-btn"><SfButton Content="Hire Me" CssClass="borders" @onclick="@OpenDialog"></SfButton></div>
 
 </section>
