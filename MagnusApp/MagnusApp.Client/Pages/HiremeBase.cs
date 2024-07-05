@@ -1,4 +1,6 @@
-﻿namespace MagnusApp.Client.Pages;
+﻿using Syncfusion.Blazor.Popups;
+
+namespace MagnusApp.Client.Pages;
 
 public class HiremeBase : ComponentBase
 {
@@ -26,6 +28,11 @@ public class HiremeBase : ComponentBase
     {
         this.IsVisible = false;
         //ClientModel = new EmailDto();
+    }
+
+    public void OverlayModalClickHandler()
+    {
+        this.IsVisible = false;
     }
 
     //public void OnChangeHandler(ChangeArgs<string> arg)
