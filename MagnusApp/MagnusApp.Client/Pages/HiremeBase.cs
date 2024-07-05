@@ -30,7 +30,7 @@ public class HiremeBase : ComponentBase
         //ClientModel = new EmailDto();
     }
 
-    public void OverlayModalClickHandler()
+    public void OverlayModalClickHandler(OverlayModalClickEventArgs Args)
     {
         this.IsVisible = false;
     }
