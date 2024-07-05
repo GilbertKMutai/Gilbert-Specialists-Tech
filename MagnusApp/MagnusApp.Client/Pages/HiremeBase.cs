@@ -22,7 +22,6 @@ public class HiremeBase : ComponentBase
         this.IsVisible = false;
     }
 
-
     public async Task HandleSubmit()
     {
         this.IsVisible = false;

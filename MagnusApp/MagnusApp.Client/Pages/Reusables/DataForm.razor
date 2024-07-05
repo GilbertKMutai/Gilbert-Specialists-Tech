@@ -6,7 +6,7 @@
     </SfToast>
 </div>
 
-<SfDataForm @ref="dataForm" ID="MyForm" Width="330px" Model="@ClientModel" ButtonsAlignment="FormButtonsAlignment.Center" OnSubmit="HandleSubmit">
+<SfDataForm @ref="dataForm" ID="MyForm" Width="330px" Model="@ClientModel" ButtonsAlignment="FormButtonsAlignment.Center" OnValidSubmit="HandleValidSubmit">
     <FormValidator>
         <DataAnnotationsValidator />
     </FormValidator>
