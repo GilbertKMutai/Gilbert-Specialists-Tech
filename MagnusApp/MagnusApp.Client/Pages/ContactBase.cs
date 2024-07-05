@@ -8,12 +8,4 @@ public class ContactBase : ComponentBase
 
     [Inject]
     public IEmailService EmailService { get; set; }
-
-    public async Task HandleSubmit()
-    {
-        //ClientModel = new EmailDto();
-    }
-
-
-
 }
