@@ -6,7 +6,7 @@
     </SfToast>
 </div>
 
-<SfDataForm @ref="dataForm" ID="MyForm" Width="330px" Model="@ClientModel" ButtonsAlignment="FormButtonsAlignment.Center" OnValidSubmit="HandleValidSubmit">
+<SfDataForm @ref="dataForm" ID="MyForm" Model="@ClientModel" ButtonsAlignment="FormButtonsAlignment.Center" OnValidSubmit="HandleValidSubmit">
     <FormValidator>
         <DataAnnotationsValidator />
     </FormValidator>
@@ -37,15 +37,6 @@
 </SfDataForm>
 
 <style>
-
-    #Dialog .e-dlg-content #MyForm .submitbtn {
-        border-radius: 0;
-        color: white;
-        background-color: #0EAC4D;
-        padding: 6px 25px;
-        font-weight: 500;
-    }
-
     #contactToast .e-toast {
         background-color: #0EAC4D;
         border-style: none;
