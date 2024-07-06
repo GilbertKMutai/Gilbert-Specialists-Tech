@@ -56,7 +56,11 @@ h5 {
     margin-right: auto;
 }
 
-.dialog-box {
+::deep .dialog-box {
+    width: 350px;
+}
+
+::deep #Dialog {
     width: 350px;
 }
 

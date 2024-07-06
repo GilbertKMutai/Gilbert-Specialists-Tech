@@ -8,7 +8,7 @@ public class HiremeBase : ComponentBase
 
     protected string Xvalue = "center";
     protected string Yvalue = "center";
-    protected bool IsVisible { get; set; } = false;
+    protected bool IsVisible { get; set; } = true;
     protected string Checked { get; set; } = "center center";
     protected int ViewportWidth { get; set; }
     protected int ViewportHeight { get; set; }

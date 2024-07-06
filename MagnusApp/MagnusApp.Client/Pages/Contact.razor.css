@@ -17,22 +17,22 @@ h4 {
     margin-top: 40px;
 }
 
+.upper-body {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin-top: 160px;
+
+}
+
 .left-text {
-    margin-top: 60px;
     margin-left: 25px;
 }
 
-.left-text h3 {
+.left-text h2 {
     margin-bottom:80px;
 }
 
-.upper-body {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    gap: 20px;
-
-}
 
 .p-small {
     display: none;
@@ -57,13 +57,15 @@ h4 {
 }
 
 .right-form {
+    display: block;
+    min-width: 350px;
     margin-right: 25px;
 }
 
 ::deep #MyForm {
     background-color: #01903A;
-    padding: 30px;
-    border-radius: 7px;
+    padding: 20px;
+    border-radius: 15px;
 }
 
 ::deep #MyForm .formitem {
@@ -71,7 +73,7 @@ h4 {
 }
 
     ::deep #MyForm .submitbtn {
-        border-radius: 0;
+        border-radius: 5;
         color: white;
         background-color: #FF0000;
         padding: 6px 25px;
@@ -88,6 +90,8 @@ h4 {
 
 .formtwo {
     display: none;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .maps {
@@ -101,7 +105,16 @@ h4 {
     }
 
 @media (max-width: 1024px) {
-    .left-text h3 {
+
+    .upper-body {
+        margin-top: 140px;
+    }
+
+    .right-form {
+        min-width: 320px;
+    }
+
+    .left-text h2 {
         margin-bottom: 60px;
     }
 
@@ -113,6 +126,10 @@ h4 {
 }
 
 @media (max-width: 946px) {
+    .upper-body {
+        margin-top: 120px;
+    }
+
     .p-big {
         display: none;
     }
@@ -122,9 +139,10 @@ h4 {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 821px) {
     .upper-body {
         flex-direction: column;
+        margin-top: 100px;
         margin-bottom: 60px;
     }
 
@@ -147,17 +165,56 @@ h4 {
     }
 
     .formtwo {
+        width: 350px;
         display: block;
         margin-top: 30px;
     }
 
     .maps iframe {
-        width: 474px;
+        width: 600px;
         height: 400px;
+    }
+
+}
+
+@media (max-width: 658px)
+{
+    .upper-body {
+        margin-top: 80px;
+    }
+
+    .f-margin {
+        padding-top: 0px;
+    }
+}
+
+@media (max-width: 625px)
+{
+   .maps iframe {
+       width: 445px;
+   }
+}
+
+@media (max-width: 510px)
+{
+    .right-side h5:not(:first-child) {
+        margin-top: 25px;
     }
 }
 
 @media (max-width: 474px) {
+
+    ::deep #MyForm {
+        padding: 15px;
+    }
+
+    .upper-body {
+        margin-top: 60px;
+    }
+
+    .formtwo {
+        width: 320px;
+    }
 
     .text-flex {
         display: block;
@@ -165,13 +222,21 @@ h4 {
     }
 
     .maps iframe {
-        width: 355px;
+        width: 335px;
         height: 350px;
     }
 }
 
 
 @media (max-width: 355px) {
+
+    .upper-body {
+        margin-top: 40px;
+    }
+
+    .formtwo {
+        width: 310px;
+    }
 
     .maps iframe {
         width: 280px;
