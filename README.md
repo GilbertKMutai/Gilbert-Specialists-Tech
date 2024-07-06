@@ -1,6 +1,6 @@
 # MagnusQ
 
--MagnusQ is a website for a professional developer that helps him land clients. <br />
+-MagnusQ is a website for a professional developer that helps him land prospects. <br />
 -It has Clean Ui and a Robust back-end. <br />
 -Hosted in AWS 
 <br />
