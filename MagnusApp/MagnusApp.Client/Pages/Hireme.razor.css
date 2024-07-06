@@ -56,6 +56,10 @@ h5 {
     margin-right: auto;
 }
 
+.dialog-box {
+    width: 350px;
+}
+
 ::deep .e-btn.borders {
     border: 1px solid rgb(64, 234, 132);
     color: black;
