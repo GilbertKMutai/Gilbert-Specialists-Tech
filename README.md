@@ -12,5 +12,6 @@
 -BootstrapV5
 -Html5/Css3
 
-![homepagemagnusapp](https://github.com/MagnusMutai/MagnusApp/assets/125874084/8017c9cb-f9dc-488c-917a-835c42b80c14)
+
+![aboutpagemagnusapp](https://github.com/MagnusMutai/MagnusApp/assets/125874084/c43cf650-ebdb-4ffe-9c6d-fe681f3907a1)
 
