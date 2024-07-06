@@ -21,14 +21,22 @@ public class DataFormBase : ComponentBase
     [Parameter]
     public EventCallback<EmailDto> OnFormSubmited { get; set; }
 
+    private bool IsEventSet => OnFormSubmited.HasDelegate;
     protected async void HandleValidSubmit()
     {
         await this.ToastObj.ShowAsync();
         await EmailService.SendEmail(ClientModel);
-        ClientModel = new EmailDto();
-        dataForm.Refresh();
-        await Task.Delay(2750);
-        await OnFormSubmited.InvokeAsync(ClientModel);
+        
+        if(!IsEventSet)
+        {    
+            ClientModel = new EmailDto();
+            dataForm.Refresh();
+        }
+        else
+        {
+            await Task.Delay(2750);
+            await OnFormSubmited.InvokeAsync(ClientModel);
+        }
 
     }
 }

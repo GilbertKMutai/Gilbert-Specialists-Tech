@@ -13,15 +13,15 @@ public class HiremeBase : ComponentBase
     protected int ViewportWidth { get; set; }
     protected int ViewportHeight { get; set; }
 
-    
+    protected override async Task OnInitializedAsync()
+    {
+        await Task.Delay(4000);
+        OpenDialog();
+    }
+
     protected void OpenDialog()
     {
         this.IsVisible = true;
-    }
-
-    protected void CloseDialog()
-    {
-        this.IsVisible = false;
     }
 
     public async Task HandleSubmit()

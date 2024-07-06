@@ -2,8 +2,6 @@
 
 public class ContactBase : ComponentBase
 {
-    
-
     protected EmailDto ClientModel = new EmailDto();
 
     [Inject]
