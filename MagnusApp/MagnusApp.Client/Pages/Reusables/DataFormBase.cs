@@ -27,7 +27,7 @@ public class DataFormBase : ComponentBase
         await EmailService.SendEmail(ClientModel);
         ClientModel = new EmailDto();
         dataForm.Refresh();
-        await Task.Delay(2200);
+        await Task.Delay(2750);
         await OnFormSubmited.InvokeAsync(ClientModel);
 
     }
