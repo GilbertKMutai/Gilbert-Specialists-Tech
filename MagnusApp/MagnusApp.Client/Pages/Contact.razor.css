@@ -54,7 +54,7 @@
 }
 
 p {
-    /*font-size: 1.15rem;*/
+    font-size: 1.07rem;
 }
 
 .f-margin {
@@ -72,7 +72,7 @@ p {
 }
 
 ::deep #MyForm {
-    background-color: rgba(0, 0, 0, .2);
+    background-color: rgba(78, 0, 243, 0.26);
     padding: 40px 25px;
     border-radius: 15px;
 }
