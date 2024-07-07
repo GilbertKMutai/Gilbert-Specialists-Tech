@@ -48,25 +48,28 @@ img:hover {
     border-radius: 15px;
 }
 
+
+    ::deep #about-me .e-card-header .e-card-header-caption .e-card-header-title {
+        color: white;
+        margin-left: 10px;
+    }
+
+    ::deep #about-me .e-card-header .e-card-header-caption .e-card-sub-title {
+        color: white;
+        margin-left: 10px;
+        font-size: 1.25rem;
+    }
+
     ::deep #about-me .e-card-content {
         color: white;
         margin-left:10px;
         padding-bottom: 10px;
     }
 
-    ::deep #about-me .e-card-header .e-card-header-caption .e-card-header-title {
-        color: white;
-        margin-left: 10px;
-        font-weight: bold;
-        font-size: 35px;
+    ::deep #about-me .e-card-content p {
+        font-size: 1.15rem;
+        margin-top: 20px;
     }
-
-    ::deep #about-me .e-card-header .e-card-header-caption .e-card-sub-title {
-        color: white;
-        margin-left: 10px;
-        font-weight: bold;
-    }
-
 
 .lower-card {
     padding: 0 20px;
