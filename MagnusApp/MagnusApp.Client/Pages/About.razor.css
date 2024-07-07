@@ -40,12 +40,13 @@ img:hover {
 
 ::deep #about-me {
     background-color: rgba(78, 0, 243, 0.26);
+    color: white;
+    border-style: none;
+    border-radius: 15px;
     max-width: 840px;
     min-height: 350px;
+    padding: 20px 30px;
     margin-top: 100px;
-    border-style: none;
-    color: white;
-    border-radius: 15px;
 }
 
 
@@ -89,10 +90,11 @@ img:hover {
     border-style: none;
 }
 
-::deep #metrics:hover {
-    transform: scale(1.01);
-    transition: 0.4s ease-in-out;
-}
+    ::deep #metrics:hover {
+        background-color: rgba(0, 0, 0, .26);
+        transform: scale(1.01);
+        transition: 0.4s ease-in-out;
+    }
 
         ::deep #metrics .e-card-content {
             display: flex;
@@ -148,6 +150,7 @@ img:hover {
     }
 
     ::deep #metrics-two:hover {
+        background-color: rgba(0, 0, 0, .26);
         transform: scale(1.01);
         transition: 0.4s ease-in-out;
     }
@@ -182,14 +185,18 @@ img:hover {
         height: 175px;
     }
 
+    ::deep #metrics-two {
+        background-color: rgba(0, 0, 0, .26);
+    }
 }
 
 @media (max-width: 355px) {
 
     ::deep #metrics-two {
-        height: 325px;
+        height: 350px;
     }
-        :: deep #metrics-two .e-card-content {
+
+    ::deep #metrics-two .e-card-content {
         white-space: nowrap;
     }
 

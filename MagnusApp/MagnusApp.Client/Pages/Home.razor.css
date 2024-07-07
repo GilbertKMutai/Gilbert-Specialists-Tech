@@ -224,10 +224,10 @@ img {
     .hide-tablet {
         display: none;
     }
-    
-/*    .skill-layers:nth-of-type() {
-        padding-bottom: 20px;
-    }*/
+
+    .skill-layers {
+        padding-top: 3px;
+    }
 
     .skill-layers .hide-laptop {
         display: flex;
