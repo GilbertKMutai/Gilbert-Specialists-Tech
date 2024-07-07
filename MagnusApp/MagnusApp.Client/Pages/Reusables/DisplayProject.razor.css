@@ -97,11 +97,11 @@ h5 {
     margin-right: 135px;
     border-style: none;
     border-radius: 8px;
+    
 }
 
     ::deep .e-btn.view:hover {
         background-image: linear-gradient(to right, rgba(51, 10, 143, 1), rgba(189, 0, 188, 1));
-        transition-duration: 2s;
     }
 
     .small-card {
@@ -119,10 +119,12 @@ h5 {
     color: white;
     display: flex;
     gap: 3px;
+    transition: .3s ease-in-out;
 }
 
     .git:hover {
         background-color: rgba(51, 10, 143, 1);
+        transition: .3s ease-in-out;
     }
 
 @media (max-width: 768px) {
