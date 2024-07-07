@@ -18,13 +18,20 @@
     padding: 3.5px 15px;
     font-family: "Montserrat", sans-serif;
     white-space: nowrap;
+    transition: .3s ease-in-out;
 }
 
     .appnav a:hover {
         /*border: 1px solid rgb(64, 234, 132);*/
         border: 1px solid #FFE500;
         background-color: rgba(19, 24, 133, 0.55);
+        transition: .3s ease-in-out;
         /*background-image: linear-gradient(to bottom right, #857A13, #FFE500);*/
+    }
+
+    .appnav a:active {
+        border: 1px solid #FFE500;
+        background-color: rgba(19, 24, 133, 0.55);
     }
 
 .sidebar {
@@ -87,10 +94,15 @@
         }
 
         .sidebar a:hover:not(:first-child) {
-            color: black;
+            color: darkorange;
             background-color: beige;
             transition-duration: .1s;
-        } 
+        }
+
+        .sidebar a:active:not(:first-child) {
+            color: darkorange;
+            background-color: beige;
+        }
 
 .showsidebar {
     display: flex;

@@ -81,14 +81,6 @@ p {
     border-radius: 0;
 }
 
-    ::deep #MyForm .submitbtn {
-        border-radius: 15px;
-        font-weight: 500;
-        color: white;
-        background-color: rgb(238, 48, 48);
-        width: 100%;
-        padding: 6px 25px;
-    }
 
     ::deep #MyForm h4 {
         text-align: center;
@@ -98,6 +90,21 @@ p {
         height: 70px;
     }
 
+    ::deep #MyForm .submitbtn {
+        border-radius: 15px;
+        font-weight: 500;
+        color: white;
+        background-color: rgb(238, 48, 48);
+        width: 100%;
+        padding: 6px 25px;
+        transition: .25s ease-in-out;
+    }
+
+    ::deep #MyForm .submitbtn:hover {
+        color: black;
+        background-color: white;
+        transition: .25s ease-in-out;
+    }
 .formtwo {
     display: none;
     margin-left: auto;
