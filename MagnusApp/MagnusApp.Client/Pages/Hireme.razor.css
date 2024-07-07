@@ -56,14 +56,42 @@ h5 {
     margin-right: auto;
 }
 
-::deep .dialog-box {
-    width: 350px;
+/*Starting point*/
+/*::deep #MyForm {*/
+    /*background-color: rgba(78, 0, 243, 0.26);*/
+    /*padding: 40px 25px;
+    border-radius: 15px;
 }
 
-::deep #Dialog {
-    width: 350px;
-}
+    ::deep #MyForm .formitem {
+        border-radius: 0;
+    }
 
+
+    ::deep #MyForm h4 {
+        text-align: center;
+    }
+
+    ::deep #MyForm .textbox {
+        height: 70px;
+    }
+
+    ::deep #MyForm .submitbtn {
+        border-radius: 15px;
+        font-weight: 500;
+        color: white;
+        background-color: rgb(238, 48, 48);
+        width: 100%;
+        padding: 6px 25px;
+        transition: .25s ease-in-out;
+    }
+
+        ::deep #MyForm .submitbtn:hover {
+            color: black;
+            background-color: white;
+            transition: .25s ease-in-out;
+        }*/
+/*Ending point*/
 ::deep .e-btn.borders {
     border: 1px solid rgb(64, 234, 132);
     color: black;

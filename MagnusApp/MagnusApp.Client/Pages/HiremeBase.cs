@@ -13,11 +13,11 @@ public class HiremeBase : ComponentBase
     protected int ViewportWidth { get; set; }
     protected int ViewportHeight { get; set; }
 
-    protected override async Task OnInitializedAsync()
-    {
-        await Task.Delay(4000);
-        OpenDialog();
-    }
+    //protected override async Task OnInitializedAsync()
+    //{
+    //    await Task.Delay(4000);
+    //    OpenDialog();
+    //}
 
     protected void OpenDialog()
     {
@@ -32,7 +32,7 @@ public class HiremeBase : ComponentBase
 
     public void OverlayModalClickHandler(OverlayModalClickEventArgs Args)
     {
-        this.IsVisible = false;
+        //this.IsVisible = false;
     }
 
     //public void OnChangeHandler(ChangeArgs<string> arg)

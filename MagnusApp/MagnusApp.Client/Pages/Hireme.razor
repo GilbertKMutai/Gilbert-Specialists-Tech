@@ -27,7 +27,7 @@
 
     <div class="stick"></div> <div class="arrow"></div>
     
-        <SfDialog ID="Dialog" CssClass="dialog-box" ShowCloseIcon="true" IsModal="true" @bind-Visible="IsVisible">
+        <SfDialog ID="Dialog" CssClass="dialog-box" ShowCloseIcon="false" IsModal="true" @bind-Visible="IsVisible">
             <DialogEvents OnOverlayModalClick="OverlayModalClickHandler"></DialogEvents>
             <DialogTemplates>
                 <Content>
@@ -44,34 +44,63 @@
 </section>
 
 <style>
-/*  ::deep .dialog-box {
-    width: 350px;
-} */
-
-#Dialog {
-    width: 280px;
-}
-
-@@media ( max-width:456px )
-{
-    #Dialog .e-dlg-content #MyForm .submitbtn {
-        border-radius: 5;
-        color: white;
-        background-color: #0EAC4D;
-        padding: 6px 25px;
-        font-weight: 500;
-    }
-
-    #Dialog .e-dlg-content #MyForm {
-        width: 305px;
-    }
 
     #Dialog {
-        width: 320px;
+        width: 350px;
+        background-color: rgba(78, 0, 243, 0.26);
+        border-radius: 10px;
+        border-style: none;
     }
 
-    ::deep #MyForm {
-        width: 305px;
+    #Dialog .e-dlg-content {
+        color: white;
+        background-color: transparent;
+        width: 325px;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 35px 15px;
     }
-}
+
+         #MyForm .formitem {
+            border-radius: 15px;
+        }
+
+
+         #MyForm h4 {
+            text-align: center;
+        }
+
+         #MyForm .textbox {
+            height: 70px;
+        }
+
+         #MyForm .submitbtn {
+            border-radius: 15px;
+            font-weight: 500;
+            color: white;
+            background-color: #0EAC4D;
+            width: 100%;
+            padding: 6px 25px;
+            transition: .5s ease-in-out;
+        }
+
+             #MyForm .submitbtn:hover {
+                color: black;
+                background-color: white;
+                transition: .5s ease-in-out;
+            }
+
+    @@media ( max-width:456px ) {
+
+        #Dialog {
+            width: 320px;
+        }
+    }
+    
+    @@media ( max-width:355px ) {
+
+        #Dialog {
+            width: 310px;
+        }
+    }
 </style>

@@ -102,7 +102,7 @@ p {
 
     ::deep #MyForm .submitbtn:hover {
         color: black;
-        background-color: white;
+        background-color: mintcream;
         transition: .25s ease-in-out;
     }
 .formtwo {
