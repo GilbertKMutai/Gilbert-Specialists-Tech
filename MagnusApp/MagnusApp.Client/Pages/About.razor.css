@@ -86,12 +86,11 @@ img:hover {
     margin-right: auto;
     margin-left: auto;
     transition: 0.4s ease-in-out;
-    background-color: white;
+    background-color: rgb(26, 26, 26);
     border-style: none;
 }
 
     ::deep #metrics:hover {
-        background-color: rgba(0, 0, 0, .26);
         transform: scale(1.01);
         transition: 0.4s ease-in-out;
     }
@@ -118,7 +117,15 @@ img:hover {
 .lower-card-two {
     display: none;
 }
+
+@media (max-width: 986px) {
+    ::deep #about-me {
+        padding: 20px 10px;
+    }
+}
+
 @media (max-width: 768px) {
+
     .upper-cards {
         display: block;
        
@@ -128,7 +135,7 @@ img:hover {
           text-align: center;
         }
 
-    .lower-card {
+.lower-card {
         display: none;
     }
 
@@ -145,7 +152,7 @@ img:hover {
         margin-right: auto;
         margin-left: auto;
         transition: 0.4s ease-in-out;
-        background-color: rgba(78, 0, 243, 0);
+        background-color: rgba(0, 0, 0, .26);
         border-color: #3D1299;
     }
 
@@ -181,6 +188,10 @@ img:hover {
 
 @media (max-width: 474px) {
 
+    ::deep #about-me {
+        padding: 15px 3px;
+    }
+
     img {
         height: 175px;
     }
@@ -191,6 +202,10 @@ img:hover {
 }
 
 @media (max-width: 355px) {
+
+    ::deep #about-me {
+        padding: 15px 0;
+    }
 
     ::deep #metrics-two {
         height: 350px;
