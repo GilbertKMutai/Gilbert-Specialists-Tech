@@ -24,15 +24,14 @@ public class HiremeBase : ComponentBase
         this.IsVisible = true;
     }
 
-    public async Task HandleSubmit()
+    public void HandleSubmit()
     {
         this.IsVisible = false;
-        //ClientModel = new EmailDto();
     }
 
     public void OverlayModalClickHandler(OverlayModalClickEventArgs Args)
     {
-        //this.IsVisible = false;
+        this.IsVisible = false;
     }
 
     //public void OnChangeHandler(ChangeArgs<string> arg)
