@@ -33,32 +33,36 @@
     margin-bottom:80px;
 }
 
-.p-big {
+.contactinfo-big {
     line-height: 32px;
 }
 
-.p-small {
+.contactinfo-small {
     display: none;
     line-height: 32px;
 }
 
-.text-flex {
-    display: flex;
-    gap: 50px;
+.text-block {
     margin-top: 80px;
 }
 
-.left-side h5, .right-side h5 {
+.top-content {
+    display: flex;
+    gap: 180px;
+}
+
+.top-content h5, .bottom-content h5 {
     margin-top: 100px;
     margin-bottom: 15px;
 }
 
-p {
-    font-size: 1.07rem;
+.bottom-content {
+    display: flex;
+    gap: 90px;
 }
 
-.f-margin {
-    padding-top: 20px;
+p {
+    font-size: 1.1rem;
 }
 
 .social img {
@@ -123,14 +127,16 @@ p {
 
 @media  (max-width: 1220px)
 {
-    .p-big {
+    .contactinfo-big {
         display: none;
     }
 
-    .p-small {
+    .contactinfo-small {
         display: block;
     }
+
 }
+
 
 @media (max-width: 1024px) {
 
@@ -146,7 +152,15 @@ p {
         margin-bottom: 80px;
     }
 
-    .left-side h5, .right-side h5 {
+    .top-content {
+       gap: 140px;
+    }
+
+    .bottom-content {
+        gap: 45px;
+    }
+
+    .top-content h5, .bottom-content h5 {
         margin-top: 90px;
         margin-bottom: 15px;
     }
@@ -158,7 +172,7 @@ p {
 
 }
 
-@media (max-width: 821px) {
+@media (max-width: 876px) {
     .upper-body {
         flex-direction: column;
         margin-top: 100px;
@@ -170,8 +184,13 @@ p {
         margin-right: 20px;
     }
 
-    .left-side h5, .right-side h5 {
-        margin-top: 50px;
+    .top-content, .bottom-content {
+        display: block;
+    }
+        
+
+    .top-content h5, .bottom-content h5 {
+        margin-top: 60px;
         margin-bottom: 15px;
     }
 
@@ -198,32 +217,22 @@ p {
 
 }
 
-@media (max-width: 658px)
+@media (max-width: 625px)
 {
     .upper-body {
         margin-top: 80px;
     }
 
-    .f-margin {
-        padding-top: 0px;
-    }
-}
-
-@media (max-width: 625px)
-{
    .maps iframe {
        width: 445px;
    }
 }
 
-@media (max-width: 510px)
-{
-    .right-side h5:not(:first-child) {
-        margin-top: 35px 20px;
-    }
-}
-
 @media (max-width: 474px) {
+
+    .top-content h5, .bottom-content h5 {
+        margin-top: 50px;
+    }
 
     .upper-body {
         margin-top: 60px;
