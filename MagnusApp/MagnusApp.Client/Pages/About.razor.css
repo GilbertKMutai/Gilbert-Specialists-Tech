@@ -49,7 +49,6 @@ img:hover {
     margin-top: 100px;
 }
 
-
     ::deep #about-me .e-card-header .e-card-header-caption .e-card-header-title {
         color: white;
         margin-left: 10px;
@@ -78,6 +77,7 @@ img:hover {
 }
 
 ::deep #metrics {
+    background-color: rgba(0, 0, 0, .20);
     max-width: 1121px;
     height: 140px;
     margin-bottom: 60px;
@@ -86,11 +86,12 @@ img:hover {
     margin-right: auto;
     margin-left: auto;
     transition: 0.4s ease-in-out;
-    background-color: rgb(26, 26, 26);
-    border-style: none;
+    border: none;
+    border-radius: 15px;
 }
 
     ::deep #metrics:hover {
+        box-shadow: 0 8px 10px 0 rgba(0, 0, 0, .1);
         transform: scale(1.01);
         transition: 0.4s ease-in-out;
     }
@@ -145,6 +146,8 @@ img:hover {
     }
 
     ::deep #metrics-two {
+        background-color: rgba(0, 0, 0, .20);
+        border-color: #3D1299;
         max-width: 500px;
         height: 300px;
         margin-top: 60px;
@@ -152,15 +155,13 @@ img:hover {
         margin-right: auto;
         margin-left: auto;
         transition: 0.4s ease-in-out;
-        background-color: rgba(0, 0, 0, .26);
-        border-color: #3D1299;
+        border-radius: 15px;
     }
 
-    ::deep #metrics-two:hover {
-        background-color: rgba(0, 0, 0, .26);
-        transform: scale(1.01);
-        transition: 0.4s ease-in-out;
-    }
+        ::deep #metrics-two:hover {
+            transform: scale(1.01);
+            transition: 0.4s ease-in-out;
+        }
 
         ::deep #metrics-two .e-card-content {
             display: block;
@@ -194,10 +195,6 @@ img:hover {
 
     img {
         height: 175px;
-    }
-
-    ::deep #metrics-two {
-        background-color: rgba(0, 0, 0, .26);
     }
 }
 

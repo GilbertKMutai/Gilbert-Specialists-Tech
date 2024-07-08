@@ -1,7 +1,6 @@
 ﻿using Syncfusion.Blazor.Popups;
 
 namespace MagnusApp.Client.Pages;
-
 public class HiremeBase : ComponentBase
 {
     protected EmailDto ClientModel = new EmailDto();
