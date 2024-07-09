@@ -23,6 +23,11 @@ public class HiremeBase : ComponentBase
         this.IsVisible = true;
     }
 
+    protected void CloseDialog()
+    {
+        this.IsVisible = false;
+    }
+
     public void HandleSubmit()
     {
         this.IsVisible = false;
