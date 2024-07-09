@@ -85,7 +85,6 @@ p {
     border-radius: 0;
 }
 
-
     ::deep #MyForm h4 {
         text-align: center;
     }
@@ -109,6 +108,7 @@ p {
         background-color: mintcream;
         transition: .25s ease-in-out;
     }
+
 .formtwo {
     display: none;
     margin-left: auto;
@@ -136,7 +136,6 @@ p {
     }
 
 }
-
 
 @media (max-width: 1024px) {
 
@@ -186,8 +185,7 @@ p {
 
     .top-content, .bottom-content {
         display: block;
-    }
-        
+    } 
 
     .top-content h5, .bottom-content h5 {
         margin-top: 60px;
