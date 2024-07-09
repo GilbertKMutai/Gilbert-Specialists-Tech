@@ -32,7 +32,7 @@
             <DialogTemplates>
                 <Content>
                     <div>
-                        <a onclick="@CloseDialog"><svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="30"><path d="m251.333-204.667-46.666-46.666L433.334-480 204.667-708.667l46.666-46.666L480-526.666l228.667-228.667 46.666 46.666L526.666-480l228.667 228.667-46.666 46.666L480-433.334 251.333-204.667Z" /></svg></a>
+                        <a onclick="@CloseDialog"><svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 -960 960 960" width="28"><path d="m251.333-204.667-46.666-46.666L433.334-480 204.667-708.667l46.666-46.666L480-526.666l228.667-228.667 46.666 46.666L526.666-480l228.667 228.667-46.666 46.666L480-433.334 251.333-204.667Z" /></svg></a>
                     </div>
                     <CascadingValue Value="@ClientModel">
                         <DataForm OnFormSubmitted="HandleSubmit"></DataForm>
@@ -65,13 +65,19 @@
         padding: 35px 15px;
     }
 
-        #Dialog .e-dlg-content svg{
+        #Dialog .e-dlg-content a {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+        }
+
+        #Dialog .e-dlg-content svg {
             fill: white;
             transition: .4s ease-in-out;
             float: right;
         }
         
-        #Dialog .e-dlg-content svg:hover{
+        #Dialog .e-dlg-content svg:hover {
             fill: darkorange;
             transition: .4s ease-in-out;
         }

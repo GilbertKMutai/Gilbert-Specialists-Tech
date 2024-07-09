@@ -143,6 +143,16 @@
     bottom: 1px;
     right: 15px;
     white-space: nowrap;
+    transition: .25s ease-in-out;
+}
+
+
+::deep .e-btn.outline:hover {
+    background-color: white;
+    color: #07F468;
+    border: 1px solid rgb(0, 0, 0);
+    margin-bottom: 4px;
+    transition: .25s ease-in-out;
 }
 
 ::deep .ralign {
