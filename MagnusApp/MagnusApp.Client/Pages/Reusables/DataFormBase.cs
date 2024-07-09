@@ -12,6 +12,7 @@ public class DataFormBase : ComponentBase
 
     [CascadingParameter]
     public EmailDto ClientModel { get; set; }
+
     public SfDataForm dataForm { get; set; }
 
     [Inject]
@@ -19,6 +20,7 @@ public class DataFormBase : ComponentBase
 
     [Parameter]
     public EventCallback<EmailDto> OnFormSubmitted { get; set; }
+
     private bool IsEventSet => OnFormSubmitted.HasDelegate;
     protected async void HandleValidSubmit()
     {
@@ -26,10 +28,9 @@ public class DataFormBase : ComponentBase
         await EmailService.SendEmail(ClientModel);
         
         if(!IsEventSet)
-        {
-            //ClientModel = new EmailDto();
-            //dataForm.Refresh();
-            StateHasChanged();     
+        {    
+            ClientModel = new EmailDto();
+            dataForm.Refresh();
         }
         else
         {
