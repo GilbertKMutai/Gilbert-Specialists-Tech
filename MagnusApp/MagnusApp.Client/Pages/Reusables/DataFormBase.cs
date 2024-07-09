@@ -12,30 +12,29 @@ public class DataFormBase : ComponentBase
 
     [CascadingParameter]
     public EmailDto ClientModel { get; set; }
-
     public SfDataForm dataForm { get; set; }
 
     [Inject]
     public IEmailService EmailService { get; set; }
 
     [Parameter]
-    public EventCallback<EmailDto> OnFormSubmited { get; set; }
-
-    private bool IsEventSet => OnFormSubmited.HasDelegate;
+    public EventCallback<EmailDto> OnFormSubmitted { get; set; }
+    private bool IsEventSet => OnFormSubmitted.HasDelegate;
     protected async void HandleValidSubmit()
     {
         await this.ToastObj.ShowAsync();
         await EmailService.SendEmail(ClientModel);
         
         if(!IsEventSet)
-        {    
-            ClientModel = new EmailDto();
-            dataForm.Refresh();
+        {
+            //ClientModel = new EmailDto();
+            //dataForm.Refresh();
+            StateHasChanged();     
         }
         else
         {
             await Task.Delay(2750);
-            await OnFormSubmited.InvokeAsync(ClientModel);
+            await OnFormSubmitted.InvokeAsync(ClientModel);
         }
 
     }
