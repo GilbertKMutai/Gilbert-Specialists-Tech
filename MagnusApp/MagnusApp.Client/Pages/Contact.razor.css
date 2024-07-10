@@ -65,9 +65,33 @@ p {
     font-size: 1.1rem;
 }
 
+/*.social a{
+    background-color: grey;
+    width: 15px;
+    height: 15px;*/
+    /*border-radius: 50%;*/
+/*}*/
+
 .social img {
+    background-color: grey;
+    /*fill: blue;*/
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding: 3px;
     margin-right: 10px;
 }
+
+.social svg {
+    background-color: gray;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+/*.social img:hover {
+    margin-bottom: 4px;
+}*/
 
 .right-form {
     display: block;
