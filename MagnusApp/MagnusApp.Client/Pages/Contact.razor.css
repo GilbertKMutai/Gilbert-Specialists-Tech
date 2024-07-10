@@ -67,38 +67,51 @@ p {
 
 .social {
     display: flex;
-} 
+}
 
-.social div {
+    .social div {
+        display: flex;
+        background-color: grey;
+        min-width: 35px;
+        min-height: 35px;
+        max-width: 35px;
+        max-height: 35px;
+        border-radius: 50%;
+        margin-right: 10px;
+        transition: .4s ease-in-out;
+    }
 
-    display: flex;
-    /*padding: 3px;*/
-    /*justify-content: center;*/
 
-    background-color: grey;
-    min-width: 35px;
-    min-height: 35px;
-    max-width: 35px;
-    max-height: 35px;
-    border-radius: 50%;
-    margin-right: 10px;
+.social div:hover {
+    background-color: red;
+    transition: .4s ease-in-out;
 }
 
 .inside {
     margin: auto;
-    padding-bottom: 2px;
-    padding-left: 0.4px;
+}
+
+.linkedin-icon {
+    margin-bottom: .5px;
+    margin-left: .35px;
+}
+
+.github-icon {
+    margin-bottom: 1px;
+    margin-left: .3px;
+}
+
+.insta-icon {
+    margin-bottom: 1px;
 }
 
 .x-icon {
     width: 24px;
     height: 24px;
+    margin-bottom: .85px;
+    margin-left: .2px;
 }
 
-/*a img {
-    width: 25px;
-    height: 25px;
-}*/
 .right-form {
     display: block;
     min-width: 350px;
