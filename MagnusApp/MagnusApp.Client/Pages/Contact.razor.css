@@ -65,34 +65,40 @@ p {
     font-size: 1.1rem;
 }
 
-/*.social a{
-    background-color: grey;
-    width: 15px;
-    height: 15px;*/
-    /*border-radius: 50%;*/
-/*}*/
+.social {
+    display: flex;
+} 
 
-.social img {
+.social div {
+
+    display: flex;
+    /*padding: 3px;*/
+    /*justify-content: center;*/
+
     background-color: grey;
-    /*fill: blue;*/
-    width: 30px;
-    height: 30px;
+    min-width: 35px;
+    min-height: 35px;
+    max-width: 35px;
+    max-height: 35px;
     border-radius: 50%;
-    padding: 3px;
     margin-right: 10px;
 }
 
-.social svg {
-    background-color: gray;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
+.inside {
+    margin: auto;
+    padding-bottom: 2px;
+    padding-left: 0.4px;
 }
 
-/*.social img:hover {
-    margin-bottom: 4px;
-}*/
+.x-icon {
+    width: 24px;
+    height: 24px;
+}
 
+/*a img {
+    width: 25px;
+    height: 25px;
+}*/
 .right-form {
     display: block;
     min-width: 350px;
