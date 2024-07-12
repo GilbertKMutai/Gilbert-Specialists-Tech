@@ -174,8 +174,10 @@ img {
 }*/
 
 .non-heroh {
-    color: darkorange;
     text-align: center;
+    background-image: linear-gradient(to right, #3D1299, #D10FD0);
+    text-fill-color: transparent;
+    background-clip: text;
     margin-top: 40px;
     margin-bottom: 70px;
 }
