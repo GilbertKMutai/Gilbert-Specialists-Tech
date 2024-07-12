@@ -37,24 +37,41 @@ h5 {
     margin-top: 100px;
 }
 
+.arrow {
+    animation: move 1s infinite ease-in-out;
+    position: absolute;
+    left: 50%;
+}
+
+@keyframes move {
+    0% {
+        margin-top: 6px;
+    }
+
+    50% {
+        margin-top: 0;
+    }
+
+    100% {
+        margin-top: 6px;
+    }
+}
+
 .stick {
     height: 40px;
     width: 1.6px;
     background: white;
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 4px;
 }
 
-.arrow {
+.arrow-head {
     width: 0px;
     height: 0px;
     border-left: 5px solid transparent;
     border-top: 15px solid white;
     border-right: 5px solid transparent;
-    margin-left: auto;
-    margin-right: auto;
 }
+
 
 /*Starting point*/
 /*::deep #MyForm {*/
@@ -98,7 +115,7 @@ h5 {
     background: #07F468;
     padding: 7px 36px;
     border-radius: 20px;
-    margin-top: 30px;
+    margin-top: 80px;
     font-size: 18px;
     transition: .25s ease-in-out;
 }
