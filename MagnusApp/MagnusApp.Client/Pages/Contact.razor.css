@@ -29,9 +29,12 @@
     margin-left: 25px;
 }
 
-.left-text h1 {
-    margin-bottom:80px;
-}
+    .left-text h1 {
+        background-image: linear-gradient(to right, #3D1299, #D10FD0);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        margin-bottom: 80px;
+    }
 
 .contactinfo-big {
     line-height: 32px;
@@ -71,25 +74,34 @@ p {
 
     .social div {
         display: flex;
-        background-color: grey;
-        min-width: 35px;
-        min-height: 35px;
-        max-width: 35px;
-        max-height: 35px;
+        background-image: linear-gradient(to right, #3D1299, #D10FD0);
+        min-width: 45px;
+        min-height: 45px;
+        max-width: 45px;
+        max-height: 45px;
         border-radius: 50%;
         margin-right: 10px;
-        transition: .4s ease-in-out;
+        transition: .3s ease-in-out;
     }
 
-
-.social div:hover {
-    background-color: red;
-    transition: .4s ease-in-out;
-}
+        .social div:hover {
+            transition: .3s ease-in-out;
+            transition-delay: .3s;
+        }
 
 .inside {
     margin: auto;
 }
+
+.icons {
+    transition: .3s ease-in-out;
+}
+
+    .icons:hover {
+        /*margin-bottom: 4px;*/
+        transform: scale(1.1);
+        transition: .3s ease-in-out;
+    }
 
 .linkedin-icon {
     margin-bottom: .5px;
@@ -108,8 +120,8 @@ p {
 .x-icon {
     width: 24px;
     height: 24px;
-    margin-bottom: .85px;
-    margin-left: .2px;
+    margin-bottom: .84px;
+    margin-left: .22px;
 }
 
 .right-form {
