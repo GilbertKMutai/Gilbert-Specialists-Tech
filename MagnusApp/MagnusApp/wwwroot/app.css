@@ -61,3 +61,11 @@ h1:focus {
 .darker-border-checkbox.form-check-input {
     border-color: #929292;
 }
+
+
+@media (max-width: 768px) {
+    body {
+        background-repeat: no-repeat;
+        background-position: top-center;
+    }
+}
