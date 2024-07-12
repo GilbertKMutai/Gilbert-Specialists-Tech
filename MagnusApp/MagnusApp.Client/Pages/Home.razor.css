@@ -176,8 +176,8 @@ img {
 .non-heroh {
     text-align: center;
     background-image: linear-gradient(to right, #3D1299, #D10FD0);
-    text-fill-color: transparent;
-    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
     margin-top: 40px;
     margin-bottom: 70px;
 }
