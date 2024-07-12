@@ -93,16 +93,19 @@ h5 {
         }
 
 ::deep .e-btn.view {
+    position: relative;
     background-image: linear-gradient(to right, #3D1299, #D10FD0);
     padding: 8px 24px;
     margin-right: 135px;
     border-style: none;
     border-radius: 8px;
-    
+    z-index: 1;
+    transition: .25s ease-in-out;
 }
 
     ::deep .e-btn.view:hover {
-        background-image: linear-gradient(to right, rgba(51, 10, 143, 1), rgba(189, 0, 188, 1));
+        box-shadow: -2px 2px 5px 1px #0000007a;
+        transition: .25s ease-in-out;
     }
 
     .small-card {
