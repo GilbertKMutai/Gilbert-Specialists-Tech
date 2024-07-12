@@ -4,9 +4,8 @@ html, body {
 }
 
 body {
-    background-color: #06014B;
-    /*background-image: url(../images/background-adare-restaurant.jpg);*/
-    background-size: cover;
+    background-image: url(images/image-lion-background.png);
+    background-color: rgba(6, 1, 75, .97);
     background-repeat: no-repeat;
     background-position: center;
 }
