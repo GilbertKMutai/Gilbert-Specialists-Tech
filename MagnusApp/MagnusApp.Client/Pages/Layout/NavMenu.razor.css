@@ -22,11 +22,9 @@
 }
 
     .appnav a:hover {
-        /*border: 1px solid rgb(64, 234, 132);*/
         border: 1px solid #FFE500;
         background-color: rgba(19, 24, 133, 0.55);
         transition: .3s ease-in-out;
-        /*background-image: linear-gradient(to bottom right, #857A13, #FFE500);*/
     }
 
     .appnav a:active {
@@ -94,13 +92,14 @@
         }
 
         .sidebar a:hover:not(:first-child) {
-            color: darkorange;
+            color: black;
             background-color: beige;
             transition-duration: .1s;
+            border-radius: 10px;
         }
 
         .sidebar a:active:not(:first-child) {
-            color: darkorange;
+            color: black;
             background-color: beige;
         }
 
@@ -116,6 +115,15 @@
     fill: white;
     margin-top: 10px;
 }
+
+.close:hover {
+    fill: black;
+}
+
+    .close svg {
+        width: 24px;
+        height: 24px;
+    }
 
 ::deep .e-appbar.applbar {
     background-color: black;
