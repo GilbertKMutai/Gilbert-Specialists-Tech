@@ -10,6 +10,7 @@
     background-repeat: no-repeat;
     width: 100%;
     display: flex;
+    animation: fadeIn 3s;
 }
 
 h4 {
@@ -31,6 +32,17 @@ img {
     border-radius: 8px;
     margin-top: 60px;
     transition: 0.4s ease-in-out;
+    animation: fadeIn 3s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 img:hover {

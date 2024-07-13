@@ -74,7 +74,7 @@ p {
 
     .social div {
         display: flex;
-        background-image: linear-gradient(to right, #3D1299, #D10FD0);
+        background-image: linear-gradient(to right, #3D1299, #90178F);
         min-width: 45px;
         min-height: 45px;
         max-width: 45px;
