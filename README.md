@@ -13,7 +13,7 @@
 -BootstrapV5 <br />
 -Html5/Css3 <br />
 
-•Designed by me with Figma 
+•Designed by me using Figma 
 
 Link: https://magnusQ.com
 
