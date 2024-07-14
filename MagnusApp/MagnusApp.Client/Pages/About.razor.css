@@ -89,7 +89,7 @@ img:hover {
 }
 
 ::deep #metrics {
-    background-color: rgba(0, 0, 0, .20);
+    background-color: rgba(0, 0, 0, .10);
     max-width: 1121px;
     height: 140px;
     margin-bottom: 60px;
@@ -158,7 +158,7 @@ img:hover {
     }
 
     ::deep #metrics-two {
-        background-color: rgba(0, 0, 0, .20);
+        background-color: rgba(0, 0, 0, .10);
         border-color: #3D1299;
         max-width: 500px;
         height: 300px;

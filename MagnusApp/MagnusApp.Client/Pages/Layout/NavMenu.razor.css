@@ -92,15 +92,10 @@
         }
 
         .sidebar a:hover:not(:first-child) {
-            color: black;
-            background-color: beige;
+            background-image: linear-gradient( to right, #000000, #444343, #6C6C6C, #A3A3A3);
+            background-color: black;
             transition-duration: .1s;
-            border-radius: 10px;
-        }
-
-        .sidebar a:active:not(:first-child) {
-            color: black;
-            background-color: beige;
+            border-radius: 10px 5px;
         }
 
 .showsidebar {
