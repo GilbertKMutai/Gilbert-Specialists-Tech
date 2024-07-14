@@ -29,12 +29,60 @@
     margin-left: 25px;
 }
 
-    .left-text h1 {
-        background-image: linear-gradient(to right, #3D1299, #D10FD0);
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
-        margin-bottom: 80px;
+.h1-container {
+    display: inline-block;
+    margin-bottom: 80px;
+}
+
+.left-text h1:first-child {
+    background-image: linear-gradient(to right, #3D1299, #D10FD0);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    /*typewriter effect*/
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 1.5s steps(22), 
+               cursor .4s step-end infinite alternate;
+}
+
+.left-text h1:not(:first-child) {
+    background-image: linear-gradient( to right, #3D1299, #D10FD0);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    margin-top: -10px;
+    /*typewriter effect*/
+    width: 100%;
+    white-space: nowrap;
+    opacity: 0;
+    overflow: hidden;
+    animation: typing 1.5s steps(21), 
+               cursor .4s step-end infinite alternate;
+    animation-delay: 1.7s;
+    animation-fill-mode: forwards;
+}
+
+/*cursor blinking*/
+@keyframes cursor {
+
+    50% {
+        border-color: transparent;
     }
+}
+/*typing animation*/
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    1% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
 
 .contactinfo-big {
     line-height: 32px;
@@ -131,7 +179,7 @@ p {
 }
 
 ::deep #MyForm {
-    background-color: rgba(78, 0, 243, 0.26);
+    background-color: rgba(36, 21, 243, 0.36);
     padding: 40px 25px;
     border-radius: 15px;
 }
@@ -152,16 +200,17 @@ p {
         border-radius: 15px;
         font-weight: 500;
         color: white;
+        background-image: linear-gradient( to right, #3D1299, #D10FD0);
         background-color: rgb(238, 48, 48);
         width: 100%;
         padding: 6px 25px;
-        transition: .25s ease-in-out;
+        border-style: none;
+        transition: .35s ease-in-out;
     }
 
     ::deep #MyForm .submitbtn:hover {
-        color: black;
-        background-color: mintcream;
-        transition: .25s ease-in-out;
+        transform: scale(1.05);
+        transition: .35s ease-in-out;
     }
 
 .formtwo {
@@ -200,10 +249,6 @@ p {
 
     .right-form {
         min-width: 320px;
-    }
-
-    .left-text h1 {
-        margin-bottom: 80px;
     }
 
     .top-content {
