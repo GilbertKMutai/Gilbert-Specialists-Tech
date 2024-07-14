@@ -113,19 +113,19 @@ h5 {
     border: 1px solid rgb(64, 234, 132);
     color: black;
     background: #07F468;
-    padding: 7px 36px;
+    padding: 6px 30px;
     border-radius: 20px;
     margin-top: 80px;
     font-size: 18px;
-    transition: .25s ease-in-out;
+    transition: .30s ease-in-out;
 }
 
     ::deep .e-btn.borders:hover {
         background-color: white;
         color: #07F468;
         border: 1px solid rgb(0, 0, 0);
-        transform: scaleY(1.07);
-        transition: .25s ease-in-out;
+        transform: scale(1.07);
+        transition: .30s ease-in-out;
     }
 
 .hireme-btn {
