@@ -10,15 +10,16 @@ public class DisplayProjectBase : ComponentBase
 
     [Inject]
     public IJSRuntime JSRuntime { get; set; }
+    
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await JSRuntime.InvokeAsync<string>("onscroll");
+    }
 
     protected void OpenWebsite(string uri)
     {
         NavigationManager.NavigateTo(uri, false);
     }
 
-    protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        await JSRuntime.InvokeAsync<string>("onscroll");
-    }
 
 }
