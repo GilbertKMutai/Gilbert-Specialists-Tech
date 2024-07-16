@@ -27,8 +27,8 @@ h5 {
     margin-right: auto;
     margin-left: auto;
     border-radius: 15px;
-    transition: box-shadow 0.3s ease-in-out;
     overflow: hidden;
+    transition: box-shadow 0.3s ease-in-out;
 }
 
     ::deep #Card:hover {
@@ -53,6 +53,19 @@ h5 {
         text-align: center;
         margin-bottom: 30px;
     }
+
+/*::deep #Card.bouncein-left {
+    animation: bounceInLeft 1s;
+    animation-timeline: view();
+}*/
+
+
+
+.small-card {
+    display: block;
+    gap: 20px;
+    
+}
 
 ::deep #mini-card {
     width: 250px;
@@ -107,11 +120,6 @@ h5 {
         box-shadow: -2px 2px 5px 1px #0000007a;
         transition: .25s ease-in-out;
     }
-
-    .small-card {
-    display: block;
-    gap: 20px;
-}
 
 .git {
     background-color: #3D1299;
