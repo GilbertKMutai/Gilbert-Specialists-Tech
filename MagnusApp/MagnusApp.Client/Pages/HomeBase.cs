@@ -4,6 +4,7 @@ namespace MagnusApp.Client.Pages;
 
 public class HomeBase:ComponentBase
 {
+    public bool firstRender = true;
     //protected string? Cssclass { get; set; } = "spinner-container";
     //protected bool IsVisible { get; set; } = true;
 
@@ -16,6 +17,11 @@ public class HomeBase:ComponentBase
 
     [Inject]
     public IJSRuntime JSRuntime { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        //await JSRuntime.InvokeAsync<string>("onscroll");
+    }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
