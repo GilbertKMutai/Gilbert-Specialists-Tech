@@ -4,7 +4,6 @@
     align-content: center;
 }
 
-
 h5 {
     display: none;
     text-align: center;
@@ -15,53 +14,36 @@ h5 {
     gap: 20px;
     justify-content: center;
     margin-bottom: 40px;
-    animation: fade 2.5s;
-    animation-timeline: view();
-    animation-range: entry 0% cover 40%;
 }
 
+.sec-1 .animate {
+    transform: translateX(-100%);
+}
 
+.sec-1.show-animate .animate {
+    transform: translateX(0);
+}
+
+.sub-container .animate {
+    transition: 1s;
+}
 
 ::deep #Card {
-    width: 450px;
-    height: 320px;
-    margin-bottom: 50px;
-    background-color: rgba(78, 0, 243, 0.26);
-    border-style: none;
-    color: white;
-    margin-right: auto;
-    margin-left: auto;
-    border-radius: 15px;
-    overflow: hidden;
-    transition: box-shadow 0.3s ease-in-out;
-/*    animation: fade 2s;
+        width: 450px;
+        height: 320px;
+        margin-bottom: 50px;
+        background-color: rgba(78, 0, 243, 0.26);
+        border-style: none;
+        color: white;
+        margin-right: auto;
+        margin-left: auto;
+        border-radius: 15px;
+        overflow: hidden;
+        transition: box-shadow 0.3s ease-in-out;
+        /*    animation: fade 2s;
     animation-timeline: view();
     animation-range: entry 0;*/
-}
-
-@keyframes fade {
-/*    0% {
-        opacity: 0;
-        scale: 0.5;
     }
-
-    100% {
-        opacity: 1;
-        scale: 1;
-    }*/
-
-    0% {
-        transform: translateX(-2000px);
-    }
-
-    50% {
-        transform: translateX(20px);
-    }
-
-    100% {
-        transform: translateX(0);
-    }
-}
 
     ::deep #Card:hover {
         box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -74,7 +56,6 @@ h5 {
             transition: 0.4s ease-in-out;
         }
 
-
     ::deep #Card .e-card-content img:hover {
         transform: scale(1.03);
         transition: 0.4s ease-in-out;
@@ -85,13 +66,6 @@ h5 {
         text-align: center;
         margin-bottom: 30px;
     }
-
-/*::deep #Card.bouncein-left {
-    animation: bounceInLeft 1s;
-    animation-timeline: view();
-}*/
-
-
 
 .small-card {
     display: block;

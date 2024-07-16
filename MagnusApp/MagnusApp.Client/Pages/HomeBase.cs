@@ -1,4 +1,6 @@
-﻿namespace MagnusApp.Client.Pages;
+﻿using Microsoft.JSInterop;
+
+namespace MagnusApp.Client.Pages;
 
 public class HomeBase:ComponentBase
 {
@@ -11,5 +13,16 @@ public class HomeBase:ComponentBase
     //    IsVisible = false;
     //    Cssclass = null;
     //}
+
+    [Inject]
+    public IJSRuntime JSRuntime { get; set; }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender) { 
+
+            await JSRuntime.InvokeAsync<string>("onscroll");
+        }
+    }
 
 }
