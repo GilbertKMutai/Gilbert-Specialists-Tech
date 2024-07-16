@@ -14,8 +14,13 @@ h5 {
     display: flex;
     gap: 20px;
     justify-content: center;
-    margin-bottom:40px;
+    margin-bottom: 40px;
+    animation: fade 2s;
+    animation-timeline: view();
+    animation-range: entry 20%;
 }
+
+
 
 ::deep #Card {
     width: 450px;
@@ -29,6 +34,19 @@ h5 {
     border-radius: 15px;
     overflow: hidden;
     transition: box-shadow 0.3s ease-in-out;
+/*    animation: fade 2s;
+    animation-timeline: view();
+    animation-range: entry 0;*/
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
     ::deep #Card:hover {
