@@ -1,6 +1,6 @@
-﻿let sections = document.querySelectorAll('sub-container');
-
+﻿
     window.onscroll = () => {
+    let sections = document.querySelectorAll('.sub-container');
     sections.forEach(sec => {
         let top = window.scrollY;
         let offset = sec.offsetTop - 150;

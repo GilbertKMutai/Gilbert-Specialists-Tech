@@ -32,8 +32,8 @@
 
     <script>
 
-        let sections = document.querySelectorAll('sub-container');
 
+        let sections = document.querySelectorAll(".sub-container");
         window.onscroll = () => {
             sections.forEach(sec => {
                 let top = window.scrollY;
@@ -41,15 +41,43 @@
                 let height = sec.offsetHeight;
 
                 if (top >= offset && top < offset + height) {
-                    sec.classList.add('show-animate');
+                    sec.classList.add("show-animate");
                 }
                 //if want to use repeating animation on scroll use this
                 else {
-                    sec.classList.remove('show-animate');
+                    sec.classList.remove("show-animate");
                 }
             })
         }
 
+    </script>
+
+    <script>
+        window.convertArray = (win1251Array) => {
+            var win1251decoder = new TextDecoder('windows-1251');
+            var bytes = new Uint8Array(win1251Array);
+            var decodedArray = win1251decoder.decode(bytes);
+            return decodedArray;
+        };
+    </script>
+
+    <script>
+        const boxes = document.querySelectorAll(".sub-container")
+
+        window.addEventListener("scroll", () => {
+            const innerHeightOfWindow = window.innerHeight;
+
+            boxes.forEach(box => {
+                const boxTop = box.getBoundingClientRect().top
+
+                if(boxTop < innerHeightOfWindow) {
+                    box.classList.add("show-animate")
+                }
+                // else {
+                //     box.classList.remove("show-animate")
+                // }
+            })
+        })
     </script>
 
 </body>
