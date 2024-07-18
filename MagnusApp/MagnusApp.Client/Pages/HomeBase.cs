@@ -15,8 +15,8 @@ public class HomeBase:ComponentBase
     //    Cssclass = null;
     //}
 
-    [Inject]
-    public IJSRuntime JSRuntime { get; set; }
+    //[Inject]
+    //public IJSRuntime JSRuntime { get; set; }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
@@ -24,7 +24,8 @@ public class HomeBase:ComponentBase
         {
 
             //await JSRuntime.InvokeAsync<string>("addEventListener");
-            await JSRuntime.InvokeAsync<string>("onscroll");
+            //await JSRuntime.InvokeAsync<string>("onscroll");
+            //StateHasChanged();
         }
     }
 
