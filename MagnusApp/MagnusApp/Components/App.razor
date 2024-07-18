@@ -28,9 +28,9 @@
     <Routes />
     <script src="_framework/blazor.web.js"></script>
 
-    <script src="~/scripts/scripts.js"></script>
+    @* <script src="~/scripts/scripts.js"></script> *@
 
-    <script>
+   @*  <script>
         let sections = document.querySelectorAll(".sub-container");
         window.onscroll = () => {
             sections.forEach(sec => {
@@ -49,25 +49,31 @@
         }
 
     </script>
+     *@
+    <script> 
+        const boxes = document.querySelectorAll(".sub-container")
 
-    @* <script> 
-        // const boxes = document.querySelectorAll(".sub-container")
+        window.addEventListener("scroll", () => {
+            const innerHeightOfWindow = window.innerHeight;
 
-        // window.addEventListener("scroll", () => {
-        //     const innerHeightOfWindow = window.innerHeight;
+            boxes.forEach(box => {
+                const boxTop = box.getBoundingClientRect().top
 
-        //     boxes.forEach(box => {
-        //         const boxTop = box.getBoundingClientRect().top
-
-        //         if(boxTop < innerHeightOfWindow) {
-        //             box.classList.add("show-animate")
-        //         }
-        //         // else {
-        //         //     box.classList.remove("show-animate")
-        //         // }
-        //     })
-        // })
-    // </script>*@
+                if(boxTop < innerHeightOfWindow) {
+                    box.classList.add("show-animate")
+                }
+                // else {
+                //     box.classList.remove("show-animate")
+                // }
+            })
+        })
+     </script>
+ 
+     <script>
+        window.showAnimation = () => {
+            DotNet.invokeMethodAsync('MagnusApp.Client', 'AddAnimation');
+        };
+     </script>
 
 </body>
 
