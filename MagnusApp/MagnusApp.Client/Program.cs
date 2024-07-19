@@ -11,6 +11,8 @@ Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("Ngo9BigBOggjHTQx
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 
+
+
 builder.Services.AddSyncfusionBlazor();
 
 builder.Services.AddHttpClient<IEmailService, EmailService>(client =>
