@@ -24,7 +24,7 @@ h4 {
     justify-content: center;
     align-items: center;
     margin-bottom: 150px;
-    padding: 0 20px;
+    padding: 0 24px;
 }
 
 img {
@@ -98,7 +98,7 @@ img:hover {
     margin-right: auto;
     margin-left: auto;
     transition: 0.4s ease-in-out;
-    border: none;
+    border-color: #3D1299;
     border-radius: 15px;
 }
 
@@ -132,6 +132,11 @@ img:hover {
 }
 
 @media (max-width: 986px) {
+
+    .upper-cards {
+        gap: 40px;
+    }
+
     ::deep #about-me {
         padding: 20px 10px;
     }
