@@ -15,6 +15,7 @@ using Amazon.SecretsManager.Model;
 using MagnusApp.Shared.Configuration.Aws;
 using Amazon;
 using Syncfusion.Blazor;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -126,6 +127,13 @@ builder.Services.ConfigureApplicationCookie( options =>
 
 builder.Services.Configure<DataProtectionTokenProviderOptions>(options =>
     options.TokenLifespan = TimeSpan.FromHours(3));
+
+//DO NOT DELETE(Checking the Assembly name of a specific class)
+
+//Type t = typeof(MagnusApp.Client.Pages.Reusables.DisplayProjectBase);
+//string s = t.Assembly.FullName.ToString();
+//Console.WriteLine("The fully qualified assembly name " +
+//    "containing the specified class is {0}.", s);
 
 var app = builder.Build();
 
