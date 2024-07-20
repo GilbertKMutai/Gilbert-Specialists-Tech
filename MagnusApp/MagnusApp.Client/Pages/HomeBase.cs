@@ -15,8 +15,8 @@ public class HomeBase:ComponentBase
     //    Cssclass = null;
     //}
 
-    //[Inject]
-    //public IJSRuntime JSRuntime { get; set; }
+    [Inject]
+    public IJSRuntime JSRuntime { get; set; }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
@@ -28,5 +28,7 @@ public class HomeBase:ComponentBase
             //StateHasChanged();
         }
     }
+
+
 
 }

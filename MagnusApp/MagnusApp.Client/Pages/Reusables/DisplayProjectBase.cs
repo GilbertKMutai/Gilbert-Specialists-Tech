@@ -13,14 +13,13 @@ public class DisplayProjectBase : ComponentBase
     [Inject]
     public IJSRuntime JSRuntime { get; set; }
 
-    //protected override async Task OnAfterRenderAsync(bool firstRender)
-    //{
-    //        //await JSRuntime.InvokeAsync<string>("showAnimation");
-    //    //if (firstRender)
-    //    //{
-
-    //    //}
-    //}
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JSRuntime.InvokeAsync<string>("addEventListener");
+        }
+    }
 
     protected async void Clicktoanimate()
     {
@@ -39,4 +38,9 @@ public class DisplayProjectBase : ComponentBase
         displayProjectBase.Css = "show-animate";
     }
 
+
+    public async void HelloWorld()
+    {
+        await JSRuntime.InvokeVoidAsync("HelloWorld");
+    }
 }

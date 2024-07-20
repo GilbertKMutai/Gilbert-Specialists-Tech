@@ -50,7 +50,7 @@
 
     </script>
      *@
-@*     <script> 
+    <script> 
         const boxes = document.querySelectorAll(".sub-container")
 
         window.addEventListener("scroll", () => {
@@ -60,14 +60,16 @@
                 const boxTop = box.getBoundingClientRect().top
 
                 if(boxTop < innerHeightOfWindow) {
-                    box.classList.add("show-animate")
+                    // DotNet.invokeMethod("MagnusApp.Client", "AddAnimation");
+                    // box.classList.add("show-animate")
+                    console.log("Hello world!")
                 }
                 // else {
                 //     box.classList.remove("show-animate")
                 // }
             })
         })
-     </script> *@
+     </script>
  
      <script>
         function CallMethod() {
@@ -75,22 +77,11 @@
         };
      </script>
 
-
      <script>
-        // const boxes = document.querySelectorAll(".sub-container")
-        //  window.addEventListener("scroll", () => {
-        //      const innerHeightOfWindow = window.innerHeight;
-        //      boxes.forEach(box => {
-        //          const boxTop = box.getBoundingClientRect().top
-        //          if (boxTop < innerHeightOfWindow) {
-        //             DotNet.invokeMethodAsync("MagnusApp.Client", "AddAnimation");
-        //          }
-        //          // else {
-        //          //     box.classList.remove("show-animate")
-        //          // }  
-        //  })
-        // });
-     </script>
+         window.HelloWorld = () => {
+             console.log("Hello world!")
+         }
+    </script>
 
 </body>
 
