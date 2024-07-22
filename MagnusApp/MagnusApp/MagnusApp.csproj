@@ -9,6 +9,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="dist\**" />
+    <Content Remove="dist\**" />
+    <EmbeddedResource Remove="dist\**" />
+    <None Remove="dist\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\MagnusApp.Shared\MagnusApp.Shared.csproj" />
     <ProjectReference Include="..\MagnusApp.Client\MagnusApp.Client.csproj" />
     <PackageReference Include="AWSSDK.SecretsManager" Version="3.7.304.5" />
@@ -30,7 +37,6 @@
 
   <ItemGroup>
     <Folder Include="buildScripts\" />
-    <Folder Include="dist\" />
   </ItemGroup>
 
   <ItemGroup>
