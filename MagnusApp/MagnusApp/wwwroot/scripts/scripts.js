@@ -23,16 +23,16 @@
 
 
 
-const boxes = document.querySelectorAll(".sub-container")
-window.addEventListener("scroll", () => {
-    const innerHeightOfWindow = window.innerHeight;
-    boxes.forEach(box => {
-        const boxTop = box.getBoundingClientRect().top
-        if (boxTop < innerHeightOfWindow) {
-            DotNet.invokeMethodAsync('MagnusApp.Client', 'AddAnimation');
-        }
-        // else {
-        //     box.classList.remove("show-animate")
-        // }  
-    });
-});
+//const boxes = document.querySelectorAll(".sub-container")
+//window.addEventListener("scroll", () => {
+//    const innerHeightOfWindow = window.innerHeight;
+//    boxes.forEach(box => {
+//        const boxTop = box.getBoundingClientRect().top
+//        if (boxTop < innerHeightOfWindow) {
+//            DotNet.invokeMethodAsync('MagnusApp.Client', 'AddAnimation');
+//        }
+//        // else {
+//        //     box.classList.remove("show-animate")
+//        // }  
+//    });
+//});
