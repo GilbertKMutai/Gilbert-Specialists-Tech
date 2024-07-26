@@ -27,29 +27,7 @@
 <body>
     <Routes />
     <script src="_framework/blazor.web.js"></script>
-
-    @* <script src="~/scripts/scripts.js"></script> *@
-
-   @*  <script>
-        let sections = document.querySelectorAll(".sub-container");
-        window.onscroll = () => {
-            sections.forEach(sec => {
-                let top = window.scrollY;
-                let offset = sec.offsetTop - 150;
-                let height = sec.offsetHeight;
-
-                if (top >= offset && top < offset + height) {
-                    sec.classList.add("show-animate");
-                }
-                //if want to use repeating animation on scroll use this
-                // else {
-                //     sec.classList.remove("show-animate");
-                // }
-            })
-        }
-
-    </script>
-     *@
+    
     <script> 
         const boxes = document.querySelectorAll(".sub-container")
 
@@ -60,28 +38,17 @@
                 const boxTop = box.getBoundingClientRect().top
 
                 if(boxTop < innerHeightOfWindow) {
-                    // DotNet.invokeMethod("MagnusApp.Client", "AddAnimation");
-                    // box.classList.add("show-animate")
+                    box.classList.add("show-animate")
                     console.log("Hello world!")
+                    console.log("Hi there")
                 }
-                // else {
-                //     box.classList.remove("show-animate")
-                // }
+                else {
+                    box.classList.remove("show-animate")
+                }
             })
         })
      </script>
- 
-     <script>
-        function CallMethod() {
-            DotNet.invokeMethod("MagnusApp.Client", "AddAnimation");
-        };
-     </script>
-
-     <script>
-         window.HelloWorld = () => {
-             console.log("Hello world!")
-         }
-    </script>
+   
 
 </body>
 
