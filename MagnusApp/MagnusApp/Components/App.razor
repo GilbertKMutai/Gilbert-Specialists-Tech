@@ -48,14 +48,33 @@
             })
         })
      </script>
-    @*This is aos javascript (aos animations)https://michalsnik.github.io/aos/ *@
+    @*Javascript Aos https://michalsnik.github.io/aos/ *@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    @* function to initialize AOS *@
-    <script>
+    @* Initialize AOS *@
+@*     <script>
         window.addEventListener("load", function () {
             AOS.init();
         });
+    </script> *@
+
+    <script>
+        // document.querySelector('html').classList.remove('no-js');
+        if (!window.Cypress) {
+            const scrollCounter = document.querySelector('.js-scroll-counter');
+
+            AOS.init({
+                mirror: true
+            });
+
+            document.addEventListener('aos:in', function (e) {
+                console.log('in!', e.detail);
+            });
+
+            window.addEventListener('scroll', function () {
+                scrollCounter.innerHTML = window.pageYOffset;
+            });
+        }
     </script>
 
 </body>
