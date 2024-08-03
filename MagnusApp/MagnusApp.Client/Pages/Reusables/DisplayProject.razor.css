@@ -16,17 +16,6 @@ h5 {
     margin-bottom: 40px;
 }
 
-/* Animation starts here */
-/*[data-aos='bounce-left'] {
-    transform: translateX(-100%);
-}*/
-
-/* Animation ends here */
-/*[data-aos='bounce-left'].aos-animate {
-    transform: translateX(0);
-}*/
-
-
 ::deep #Card {
         width: 450px;
         height: 326px;
