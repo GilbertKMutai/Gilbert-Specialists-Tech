@@ -1,6 +1,8 @@
 ﻿@page "/"
 @inherits HomeBase
-@* @rendermode InteractiveServer *@
+@* @rendermode @(new InteractiveAutoRenderMode()); *@
+@rendermode InteractiveAuto
+
 
 <PageTitle>Home</PageTitle>
 
