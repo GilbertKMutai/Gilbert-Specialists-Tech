@@ -30,24 +30,7 @@
     <Routes />
     <script src="_framework/blazor.web.js"></script>
     
-    <script> 
-        const boxes = document.querySelectorAll(".sub-container")
 
-        window.addEventListener("scroll", () => {
-            const innerHeightOfWindow = window.innerHeight;
-
-            boxes.forEach(box => {
-                const boxTop = box.getBoundingClientRect().top
-
-                if(boxTop < innerHeightOfWindow) {
-                    box.classList.add("show-animate")
-                }
-                else {
-                    box.classList.remove("show-animate")
-                }
-            })
-        })
-     </script>
     @*Javascript Aos https://michalsnik.github.io/aos/ *@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 

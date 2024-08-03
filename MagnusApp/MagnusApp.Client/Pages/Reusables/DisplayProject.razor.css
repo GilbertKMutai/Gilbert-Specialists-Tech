@@ -16,17 +16,16 @@ h5 {
     margin-bottom: 40px;
 }
 
-.sec-1 .animate {
+/* Animation starts here */
+/*[data-aos='bounce-left'] {
     transform: translateX(-100%);
-}
+}*/
 
-.sec-1.show-animate .animate {
+/* Animation ends here */
+/*[data-aos='bounce-left'].aos-animate {
     transform: translateX(0);
-}
+}*/
 
-.sub-container .animate {
-    transition: 1s;
-}
 
 ::deep #Card {
         width: 450px;
