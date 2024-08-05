@@ -4,8 +4,10 @@
        
     <h5>Shop online</h5>
 
-    <div class="sub-container aos-item" data-aos="fade-up" data-aos-duration="1000">
-        <div class="main-card">
+    @* data-aos-delay="500" *@
+
+    <div class="sub-container" >
+        <div class="main-card aos-item" data-aos="fade-up" data-aos-duration="1000">
             <SfCard ID="Card" @onclick="@(() => OpenWebsite(""))" CssClass="bouncein-left">
                 <CardHeader Title="Online Shopping Cart"></CardHeader>
 
@@ -53,10 +55,10 @@
 
     <h5 class="hmb">Sales management app</h5>
 
-    <div class="sub-container aos-item" data-aos="fade-up" data-aos-duration="1000">
+    <div class="sub-container">
 
         <div class="small-card">
-            <SfCard ID="mini-card">
+            <SfCard ID="mini-card" CssClass="aos-item" data-aos="fade-up" data-aos-duration="1000">
                 <CardHeader>
                     <SfButton Content="Link" CssClass="view" OnClick="@(() => OpenWebsite(""))"></SfButton>
                 </CardHeader>
@@ -73,7 +75,7 @@
             </SfCard>
 
 
-            <SfCard ID="mini-card2">
+            <SfCard ID="mini-card2" CssClass="aos-item" data-aos="fade-up" data-aos-duration="1000">
                 <CardHeader>
                     <a href="https://github.com/MagnusMutai/SalesManagementApp" class="git" target="_blank"> <img src="/icons/git-icon.svg" alt="github icon" /> Code</a>
                 </CardHeader>
@@ -102,9 +104,9 @@
 
     <h5>Loomon online chat</h5>
 
-    <div class="sub-container aos-item" data-aos="fade-up" data-aos-duration="1000">
+    <div class="sub-container">
 
-        <div class="main-card">
+        <div class="main-card aos-item" data-aos="fade-up" data-aos-duration="1000">
             <SfCard ID="Card" @onclick="@(() => OpenWebsite(""))">
                 <CardHeader Title="Loomon - A Chat Web app"></CardHeader>
 
@@ -150,9 +152,9 @@
 
     <h5 class="hmb">Befit</h5>
 
-    <div class="sub-container aos-item" data-aos="fade-up" data-aos-duration="1000">
+    <div class="sub-container">
 
-        <div class="small-card">
+        <div class="small-card aos-item" data-aos="fade-up" data-aos-duration="1000">
             <SfCard ID="mini-card">
                 <CardHeader>
                     <SfButton Content="Link" CssClass="view" OnClick="@(() => OpenWebsite(""))"></SfButton>
