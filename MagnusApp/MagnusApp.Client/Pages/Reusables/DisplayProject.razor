@@ -7,8 +7,8 @@
     @* data-aos-delay="500" *@
 
     <div class="sub-container" >
-        <div class="main-card aos-item" data-aos="fade-up" data-aos-duration="1000">
-            <SfCard ID="Card" @onclick="@(() => OpenWebsite(""))" CssClass="bouncein-left">
+        <div class="main-card aos-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="2500">
+            <SfCard ID="Card" @onclick="@(() => OpenWebsite(""))" CssClass="bouncein-left" data-aos-delay="2500">
                 <CardHeader Title="Online Shopping Cart"></CardHeader>
 
                 <CardContent>
@@ -19,6 +19,7 @@
         </div>
 
         <div class="small-card" >
+            <div class="aos-item" data-aos="fade-up" data-aos-duration="1000">
             <SfCard ID="mini-card">
                 <CardHeader>
                     <SfButton Content="Link" CssClass="view" OnClick="@(() => OpenWebsite(""))"></SfButton>
@@ -33,8 +34,9 @@
                 </CardContent>
 
             </SfCard>
+            </div>
 
-
+            <div class="aos-item" data-aos="fade-up" data-aos-duration="2250">
             <SfCard ID="mini-card2">
                 <CardHeader>
                     <a href="https://github.com/MagnusMutai/ShopOnline" class="git" target="_blank"><img src="/icons/git-icon.svg" alt="github icon" /> Code</a>
@@ -49,6 +51,8 @@
                 </CardContent>
 
             </SfCard>
+            </div>
+
         </div>
     </div>
 
