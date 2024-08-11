@@ -7,8 +7,8 @@
     @* data-aos-delay="500" *@
 
     <div class="sub-container" >
-        <div class="main-card aos-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="2500">
-            <SfCard ID="Card" @onclick="@(() => OpenWebsite(""))" CssClass="bouncein-left" data-aos-delay="2500">
+        <div class="main-card aos-item" data-aos="fade-up" data-aos-duration="1000">
+            <SfCard ID="Card" @onclick="@(() => OpenWebsite(""))">
                 <CardHeader Title="Online Shopping Cart"></CardHeader>
 
                 <CardContent>
@@ -19,38 +19,38 @@
         </div>
 
         <div class="small-card" >
-            <div class="aos-item" data-aos="fade-up" data-aos-duration="1000">
-            <SfCard ID="mini-card">
-                <CardHeader>
-                    <SfButton Content="Link" CssClass="view" OnClick="@(() => OpenWebsite(""))"></SfButton>
-                </CardHeader>
+            <div class="aos-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                <SfCard ID="mini-card">
+                    <CardHeader>
+                        <SfButton Content="Link" CssClass="view" OnClick="@(() => OpenWebsite(""))"></SfButton>
+                    </CardHeader>
 
-                <CardContent>
-                    <p>
-                        This is an Online Shopping Cart <br />
-                        like Amazon where people can <br />
-                        view and buy items.
-                    </p>
-                </CardContent>
+                    <CardContent>
+                        <p>
+                            This is an Online Shopping Cart <br />
+                            like Amazon where people can <br />
+                            view and buy items.
+                        </p>
+                    </CardContent>
 
-            </SfCard>
+                </SfCard>
             </div>
 
-            <div class="aos-item" data-aos="fade-up" data-aos-duration="2250">
-            <SfCard ID="mini-card2">
-                <CardHeader>
-                    <a href="https://github.com/MagnusMutai/ShopOnline" class="git" target="_blank"><img src="/icons/git-icon.svg" alt="github icon" /> Code</a>
-                </CardHeader>
+            <div class="aos-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="750">
+                <SfCard ID="mini-card2">
+                    <CardHeader>
+                        <a href="https://github.com/MagnusMutai/ShopOnline" class="git" target="_blank"><img src="/icons/git-icon.svg" alt="github icon" /> Code</a>
+                    </CardHeader>
 
-                <CardContent>
-                    <p>
-                        Technologies used include:<br />
-                        C#, Blazor WASM, BootstrapV5,<br />
-                        MSSQL, EF Core and REST API<br />
-                    </p>
-                </CardContent>
+                    <CardContent>
+                        <p>
+                            Technologies used include:<br />
+                            C#, Blazor WASM, BootstrapV5,<br />
+                            MSSQL, EF Core and REST API<br />
+                        </p>
+                    </CardContent>
 
-            </SfCard>
+                </SfCard>
             </div>
 
         </div>
@@ -62,39 +62,42 @@
     <div class="sub-container">
 
         <div class="small-card">
-            <SfCard ID="mini-card" CssClass="aos-item" data-aos="fade-up" data-aos-duration="1000">
-                <CardHeader>
-                    <SfButton Content="Link" CssClass="view" OnClick="@(() => OpenWebsite(""))"></SfButton>
-                </CardHeader>
+            <div class="aos-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                <SfCard ID="mini-card">
+                    <CardHeader>
+                        <SfButton Content="Link" CssClass="view" OnClick="@(() => OpenWebsite(""))"></SfButton>
+                    </CardHeader>
 
-                <CardContent>
-                    <p>
-                        This is a sales management app  <br />
-                        which can be tailored to be used <br />
-                        by any company’s sales team.
+                    <CardContent>
+                        <p>
+                            This is a sales management app  <br />
+                            which can be tailored to be used <br />
+                            by any company’s sales team.
 
-                    </p>
-                </CardContent>
+                        </p>
+                    </CardContent>
 
-            </SfCard>
+                </SfCard>
+            </div>
 
+            <div class ="aos-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="750">
+                <SfCard ID="mini-card2" CssClass="aos-item" data-aos="fade-up" data-aos-duration="1000">
+                    <CardHeader>
+                        <a href="https://github.com/MagnusMutai/SalesManagementApp" class="git" target="_blank"> <img src="/icons/git-icon.svg" alt="github icon" /> Code</a>
+                    </CardHeader>
 
-            <SfCard ID="mini-card2" CssClass="aos-item" data-aos="fade-up" data-aos-duration="1000">
-                <CardHeader>
-                    <a href="https://github.com/MagnusMutai/SalesManagementApp" class="git" target="_blank"> <img src="/icons/git-icon.svg" alt="github icon" /> Code</a>
-                </CardHeader>
+                    <CardContent>
+                        <p>
+                            Technologies used include: <br />
+                            C#, Blazor Server, Syncfusion,<br />
+                            MSSQL, EF Core and REST API
+                        </p>
+                    </CardContent>
 
-                <CardContent>
-                    <p>
-                        Technologies used include: <br />
-                        C#, Blazor Server, Syncfusion,<br />
-                        MSSQL, EF Core and REST API
-                    </p>
-                </CardContent>
-
-            </SfCard>
+                </SfCard>
+            </div>
         </div>
-        <div class="main-card">
+        <div class="main-card aos-item" data-aos="fade-up" data-aos-duration="1000">
             <SfCard ID="Card" @onclick="@(() => OpenWebsite(""))" CssClass="bouncein-right">
                 <CardHeader Title="Sales Management App"></CardHeader>
 
@@ -122,35 +125,38 @@
         </div>
 
         <div class="small-card">
-            <SfCard ID="mini-card">
-                <CardHeader>
-                    <SfButton Content="Link" CssClass="view" OnClick="@(() => OpenWebsite(""))"></SfButton>
-                </CardHeader>
+            <div class="aos-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                <SfCard ID="mini-card">
+                    <CardHeader>
+                        <SfButton Content="Link" CssClass="view" OnClick="@(() => OpenWebsite(""))"></SfButton>
+                    </CardHeader>
 
-                <CardContent>
-                    <p>
-                        This is a chat web application. It’s a <br />
-                        web version of an app like Whatsapp.
-                    </p>
-                </CardContent>
+                    <CardContent>
+                        <p>
+                            This is a chat web application. It’s a <br />
+                            web version of an app like Whatsapp.
+                        </p>
+                    </CardContent>
 
-            </SfCard>
+                </SfCard>
+            </div>
 
+            <div class="aos-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="750">
+                <SfCard ID="mini-card2">
+                    <CardHeader>
+                        <a href="https://github.com/MagnusMutai/Loomon" class="git" target="_blank"> <img src="/icons/git-icon.svg" alt="github icon" /> Code</a>
+                    </CardHeader>
 
-            <SfCard ID="mini-card2">
-                <CardHeader>
-                    <a href="https://github.com/MagnusMutai/Loomon" class="git" target="_blank"> <img src="/icons/git-icon.svg" alt="github icon" /> Code</a>
-                </CardHeader>
+                    <CardContent>
+                        <p>
+                            Technologies used: C#,<br />
+                            Blazor Web, SignalR, MSSQL,<br />
+                            BootstrapV5, EFCore & gRPC
+                        </p>
+                    </CardContent>
 
-                <CardContent>
-                    <p>
-                        Technologies used: C#,<br />
-                        Blazor Web, SignalR, MSSQL,<br />
-                        BootstrapV5, EFCore & gRPC
-                    </p>
-                </CardContent>
-
-            </SfCard>
+                </SfCard>
+            </div>
         </div>
     </div>
 
@@ -158,38 +164,41 @@
 
     <div class="sub-container">
 
-        <div class="small-card aos-item" data-aos="fade-up" data-aos-duration="1000">
-            <SfCard ID="mini-card">
-                <CardHeader>
-                    <SfButton Content="Link" CssClass="view" OnClick="@(() => OpenWebsite(""))"></SfButton>
-                </CardHeader>
+        <div class="small-card">
+            <div class="aos-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                <SfCard ID="mini-card">
+                    <CardHeader>
+                        <SfButton Content="Link" CssClass="view" OnClick="@(() => OpenWebsite(""))"></SfButton>
+                    </CardHeader>
 
-                <CardContent>
-                    <p>
-                        This is a virtual fitness site that has <br />
-                        free fitness courses for all!
-                    </p>
-                </CardContent>
+                    <CardContent>
+                        <p>
+                            This is a virtual fitness site that has <br />
+                            free fitness courses for all!
+                        </p>
+                    </CardContent>
 
-            </SfCard>
+                </SfCard>
+            </div>
 
+            <div class="aos-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="750">
+                <SfCard ID="mini-card2">
+                    <CardHeader>
+                        <a href="https://github.com/MagnusMutai/BeFit" class="git" target="_blank"> <img src="/icons/git-icon.svg" alt="github icon" /> Code</a>
+                    </CardHeader>
 
-            <SfCard ID="mini-card2">
-                <CardHeader>
-                    <a href="https://github.com/MagnusMutai/BeFit" class="git" target="_blank"> <img src="/icons/git-icon.svg" alt="github icon" /> Code</a>
-                </CardHeader>
+                    <CardContent>
+                        <p>
+                            Technologies used:<br />
+                            C#, Blazor WASM, BootstrapV5,<br />
+                            MSSQL, EF Core and REST API<br />
+                        </p>
+                    </CardContent>
 
-                <CardContent>
-                    <p>
-                        Technologies used:<br />
-                        C#, Blazor WASM, BootstrapV5,<br />
-                        MSSQL, EF Core and REST API<br />
-                    </p>
-                </CardContent>
-
-            </SfCard>
+                </SfCard>
+            </div>
         </div>
-        <div class="main-card">
+        <div class="main-card aos-item" data-aos="fade-up" data-aos-duration="1000">
             <SfCard ID="Card" @onclick="@(() => OpenWebsite(""))">
                 <CardHeader Title="BeFit"></CardHeader>
 

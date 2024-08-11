@@ -2,7 +2,7 @@
     color: white;
     margin-top: 60px;
     align-content: center;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 h5 {
