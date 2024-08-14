@@ -4,7 +4,28 @@
        
     <h5>Shop online</h5>
 
-    @* data-aos-delay="500" *@
+    <style>
+        /* General styling for subcomponents */
+        .subcomponent {
+            opacity: 0; /* Initially hidden */
+            transform: translateY(20px); /* Offset to match the fade-up effect */
+            transition: opacity 1s, transform 1s; /* Match the duration with AOS */
+        }
+
+        /* Delay for subcomponent 1 */
+        sub-container[data-aos].aos-animate .subcomponent-1 {
+            transition-delay: 0.5s;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Delay for subcomponent 2 */
+        sub-container[data-aos].aos-animate .subcomponent-2 {
+            transition-delay: 0.75s;
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 
     <div class="sub-container aos-item" data-aos="fade-up" data-aos-duration="1000">
         <div class="main-card">
@@ -18,8 +39,8 @@
             </SfCard>
         </div>
 
-        <div class="small-card" >
-            <div class="aos-item" data-aos-delay="500">
+        <div class="small-card">
+            <div class="subcomponent subcomponent-1">
                 <SfCard ID="mini-card">
                     <CardHeader>
                         <SfButton Content="Link" CssClass="view" OnClick="@(() => OpenWebsite(""))"></SfButton>
@@ -36,7 +57,7 @@
                 </SfCard>
             </div>
 
-            <div class="aos-item" data-aos-delay="750">
+            <div class="subcomponent subcomponent-2">
                 <SfCard ID="mini-card2">
                     <CardHeader>
                         <a href="https://github.com/MagnusMutai/ShopOnline" class="git" target="_blank"><img src="/icons/git-icon.svg" alt="github icon" /> Code</a>
