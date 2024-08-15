@@ -5,8 +5,10 @@
     <h5>Shop online</h5>
 
     <style>
+
+        
         /* General styling for subcomponents */
-        .subcomponent {
+        sub-container[data-aos].aos-animate .subcomponent-1 {
             opacity: 0; /* Initially hidden */
             transform: translateY(20px); /* Offset to match the fade-up effect */
             transition: opacity 1s, transform 1s; /* Match the duration with AOS */
@@ -21,7 +23,7 @@
 
         /* Delay for subcomponent 2 */
         sub-container[data-aos].aos-animate .subcomponent-2 {
-            transition-delay: 0.75s;
+            transition-delay: 4s;
             opacity: 1;
             transform: translateY(0);
         }
