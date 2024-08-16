@@ -4,33 +4,8 @@
        
     <h5>Shop online</h5>
 
-    <style>
-
-        
-        /* General styling for subcomponents */
-        sub-container[data-aos].aos-animate .subcomponent-1 {
-            opacity: 0; /* Initially hidden */
-            transform: translateY(20px); /* Offset to match the fade-up effect */
-            transition: opacity 1s, transform 1s; /* Match the duration with AOS */
-        }
-
-        /* Delay for subcomponent 1 */
-        sub-container[data-aos].aos-animate .subcomponent-1 {
-            transition-delay: 0.5s;
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Delay for subcomponent 2 */
-        sub-container[data-aos].aos-animate .subcomponent-2 {
-            transition-delay: 4s;
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
-
-    <div class="sub-container aos-item" data-aos="fade-up" data-aos-duration="1000">
-        <div class="main-card">
+    <div class="sub-container">
+        <div class="main-card aos-item" data-aos="fade-up" data-aos-duration="1000">
             <SfCard ID="Card" @onclick="@(() => OpenWebsite(""))">
                 <CardHeader Title="Online Shopping Cart"></CardHeader>
 
@@ -42,7 +17,7 @@
         </div>
 
         <div class="small-card">
-            <div class="subcomponent subcomponent-1">
+            <div>
                 <SfCard ID="mini-card">
                     <CardHeader>
                         <SfButton Content="Link" CssClass="view" OnClick="@(() => OpenWebsite(""))"></SfButton>
@@ -59,7 +34,7 @@
                 </SfCard>
             </div>
 
-            <div class="subcomponent subcomponent-2">
+            <div>
                 <SfCard ID="mini-card2">
                     <CardHeader>
                         <a href="https://github.com/MagnusMutai/ShopOnline" class="git" target="_blank"><img src="/icons/git-icon.svg" alt="github icon" /> Code</a>
@@ -82,7 +57,7 @@
 
     <h5 class="hmb">Sales management app</h5>
 
-    <div class="sub-container">
+    <div>
 
         <div class="small-card">
             <div class="aos-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
