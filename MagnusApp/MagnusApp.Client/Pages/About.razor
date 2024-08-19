@@ -1,5 +1,5 @@
 ﻿@page "/about"
-
+@rendermode InteractiveAuto
 <PageTitle>About</PageTitle>
 
 
@@ -11,7 +11,7 @@
     
   <div class="upper-cards">
         <div class="my-image">
-             <img src="images/myimage.jpg" alt="A potrait of Magnus Mutai"/>
+             <img class="personal-photo" src="images/myimage.jpg" alt="A potrait of Magnus Mutai"/>
         </div>
     <SfCard ID="about-me">
            
@@ -96,6 +96,63 @@
         </CardContent>
     </SfCard>
     </div>
+
+
+
+<div class="control-container">
+    <SfCarousel>
+        <CarouselItem>
+            <div class="d-flex justify-content-between">
+                    <div style="height: 100%; width:  50%; ">
+                        <figure class="img-container">
+                            <img src="images/onlinestore.jpg" alt="Golden Gate Bridge, San Francisco" style="height:100%;width:100%;" />
+                            <figcaption class="img-caption">Golden Gate Bridge, San Francisco</figcaption>
+                        </figure>
+                </div>
+                <div style=" height: 290px;">
+                    <figure class="img-container">
+                        <img src="images/onlinestore.jpg" alt="Golden Gate Bridge, San Francisco" style="height:100%;width:100%;" />
+                        <figcaption class="img-caption">Golden Gate Bridge, San Francisco</figcaption>
+                    </figure>
+                </div>
+                </div>
+        </CarouselItem>
+@*         <CarouselItem>
+                <figure class="img-container">
+                    <img src="images/onlinestore.jpg" alt="Golden Gate Bridge, San Francisco" style="height:100%;width:100%;" />
+                    <figcaption class="img-caption">Golden Gate Bridge, San Francisco</figcaption>
+                </figure>
+                <figure class="img-container">
+                    <img src="images/onlinestore.jpg" alt="Golden Gate Bridge, San Francisco" style="height:100%;width:100%;" />
+                    <figcaption class="img-caption">Golden Gate Bridge, San Francisco</figcaption>
+                </figure>
+        </CarouselItem> *@
+    </SfCarousel>
+</div>
+
+<style>
+    .control-container {
+        background-color: #e5e5e5;
+        height: 300px;
+        margin: 0 auto;
+        width: 900px;
+    }
+
+    .e-carousel .e-carousel-items .e-carousel-item .img-container {
+        height: 100%;
+    }
+
+    .e-carousel .e-carousel-items .e-carousel-item .img-caption {
+        bottom: 4em;
+        color: #fff;
+        font-size: 12pt;
+        height: 2em;
+        position: relative;
+        padding: 0.3em 1em;
+        text-align: center;
+        width: 100%;
+    }
+</style>
 
 </section>
 
