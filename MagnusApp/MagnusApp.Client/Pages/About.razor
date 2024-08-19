@@ -102,20 +102,20 @@
 <div class="control-container">
     <SfCarousel>
         <CarouselItem>
-            <div class="d-flex justify-content-between">
-                    <div style="height: 100%; width:  50%; ">
+
+                    <div style="height: 290px;">
                         <figure class="img-container">
                             <img src="images/onlinestore.jpg" alt="Golden Gate Bridge, San Francisco" style="height:100%;width:100%;" />
                             <figcaption class="img-caption">Golden Gate Bridge, San Francisco</figcaption>
                         </figure>
-                </div>
-                <div style=" height: 290px;">
-                    <figure class="img-container">
-                        <img src="images/onlinestore.jpg" alt="Golden Gate Bridge, San Francisco" style="height:100%;width:100%;" />
-                        <figcaption class="img-caption">Golden Gate Bridge, San Francisco</figcaption>
-                    </figure>
-                </div>
-                </div>
+                    </div>
+                    <div style=" height: 290px;">
+                        <figure class="img-container">
+                            <img src="images/onlinestore.jpg" alt="Golden Gate Bridge, San Francisco" style="height:100%;width:100%;" />
+                            <figcaption class="img-caption">Golden Gate Bridge, San Francisco</figcaption>
+                        </figure>
+                    </div>
+
         </CarouselItem>
 @*         <CarouselItem>
                 <figure class="img-container">
@@ -133,13 +133,19 @@
 <style>
     .control-container {
         background-color: #e5e5e5;
-        height: 300px;
+        height: 400px;
         margin: 0 auto;
         width: 900px;
     }
 
     .e-carousel .e-carousel-items .e-carousel-item .img-container {
         height: 100%;
+    }
+    
+    .e-carousel .e-carousel-items .e-carousel-item {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
     }
 
     .e-carousel .e-carousel-items .e-carousel-item .img-caption {
