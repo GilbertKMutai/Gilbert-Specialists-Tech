@@ -50,7 +50,7 @@ h4 {
     transition: 0.4s ease-in-out;
 }
 
-::deep #about-me {
+::deep #About-me {
     background-color: rgba(78, 0, 243, 0.26);
     color: white;
     border-style: none;
@@ -61,24 +61,24 @@ h4 {
     margin-top: 100px;
 }
 
-    ::deep #about-me .e-card-header .e-card-header-caption .e-card-header-title {
+    ::deep #About-me .e-card-header .e-card-header-caption .e-card-header-title {
         color: white;
         margin-left: 10px;
     }
 
-    ::deep #about-me .e-card-header .e-card-header-caption .e-card-sub-title {
+    ::deep #About-me .e-card-header .e-card-header-caption .e-card-sub-title {
         color: white;
         margin-left: 10px;
         font-size: 1.25rem;
     }
 
-    ::deep #about-me .e-card-content {
+    ::deep #About-me .e-card-content {
         color: white;
         margin-left:10px;
         padding-bottom: 10px;
     }
 
-    ::deep #about-me .e-card-content p {
+    ::deep #About-me .e-card-content p {
         font-size: 1.15rem;
         margin-top: 20px;
     }
@@ -137,7 +137,7 @@ h4 {
         gap: 40px;
     }
 
-    ::deep #about-me {
+    ::deep #About-me {
         padding: 20px 10px;
     }
 }
@@ -206,7 +206,7 @@ h4 {
 
 @media (max-width: 474px) {
 
-    ::deep #about-me {
+    ::deep #About-me {
         padding: 15px 3px;
     }
 
@@ -217,7 +217,7 @@ h4 {
 
 @media (max-width: 355px) {
 
-    ::deep #about-me {
+    ::deep #About-me {
         padding: 15px 0;
     }
 
