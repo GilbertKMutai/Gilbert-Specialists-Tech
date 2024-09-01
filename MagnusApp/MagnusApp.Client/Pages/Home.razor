@@ -115,23 +115,24 @@
 
 </div>
 
-@* <div class="control-container">
-    <SfCarousel>
+<div class="control-container">
+    <SfCarousel ID="Testimonials">
         <CarouselItem>
 
-            <div style="height: 260px;">
-                <figure class="img-container">
-                    <img src="images/onlinestore.jpg" alt="Golden Gate Bridge, San Francisco" style="height:100%;width:100%;" />
-                    <figcaption class="img-caption">Golden Gate Bridge, San Francisco</figcaption>
-                </figure>
+
+            <div class="carousel-item-wrapper">
+                    @* <div class="circle"></div> *@
+                    <SfCard ID="Testimonial-Card">
+                        <CardContent>
+                        <p>"We like how Magnus implemented the dark mode in our website. Next, we are making another contract to develop a Blazor App."</p>
+                        </CardContent>
+                    </SfCard>
             </div>
-            <div style=" height: 260px;">
-                <figure class="img-container">
-                    <img src="images/onlinestore.jpg" alt="Golden Gate Bridge, San Francisco" style="height:100%;width:100%;" />
-                    <figcaption class="img-caption">Golden Gate Bridge, San Francisco</figcaption>
-                </figure>
-            </div>
-            <div style=" height: 260px;">
+
+        </CarouselItem>
+        <CarouselItem>
+
+            <div class="carousel-item-wrapper">
                 <figure class="img-container">
                     <img src="images/onlinestore.jpg" alt="Golden Gate Bridge, San Francisco" style="height:100%;width:100%;" />
                     <figcaption class="img-caption">Golden Gate Bridge, San Francisco</figcaption>
@@ -141,7 +142,7 @@
         </CarouselItem>
         <CarouselItem>
 
-            <div style="height: 260px;">
+            <div class="carousel-item-wrapper">
                 <figure class="img-container">
                     <img src="images/onlinestore.jpg" alt="Golden Gate Bridge, San Francisco" style="height:100%;width:100%;" />
                     <figcaption class="img-caption">Golden Gate Bridge, San Francisco</figcaption>
@@ -151,32 +152,4 @@
         </CarouselItem>
 
     </SfCarousel>
-</div> *@
-
-<style>
-    .control-container {
-        background-color: transparent;
-        margin: 0 auto;
-    }
-
-    .e-carousel .e-carousel-items .e-carousel-item .img-container {
-        height: 80%;
-    }
-
-    .e-carousel .e-carousel-items .e-carousel-item {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-
-        .e-carousel .e-carousel-items .e-carousel-item .img-caption {
-            bottom: 4em;
-            color: #fff;
-            font-size: 12pt;
-            height: 1em;
-            position: relative;
-            padding: 0.3em 1em;
-            text-align: center;
-            width: 100%;
-        }
-</style>
+</div>
