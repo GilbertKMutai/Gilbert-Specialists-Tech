@@ -40,7 +40,8 @@
             const scrollCounter = document.querySelector('.js-scroll-counter');
 
             AOS.init({
-                mirror: true
+                mirror: true,
+                once: true
             });
 
             document.addEventListener('aos:in', function (e) {

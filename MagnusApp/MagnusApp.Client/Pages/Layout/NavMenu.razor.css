@@ -92,7 +92,7 @@
         }
 
         .sidebar a:hover:not(:first-child) {
-            background-color: black;
+            background-color: #151616;
             transition-duration: .1s;
             border-radius: 10px;
         }
@@ -110,9 +110,9 @@
     margin-top: 10px;
 }
 
-.close:hover {
-    fill: black;
-}
+    .close:hover {
+        fill: #151616;
+    }
 
     .close svg {
         width: 24px;
