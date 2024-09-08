@@ -2,7 +2,7 @@
 
 -MagnusQ is a website for a professional developer that helps him land prospects. <br />
 -It has a simple, clean Ui and a robust back-end. <br />
--Hosted in AWS 
+-Hosted on AWS 
 <br />
 <br />
 #Technology stack used to build MagnusQ <br />
@@ -15,5 +15,5 @@
 
 •Designed by me using Figma 
 
-![aboutpagemagnusapp](https://github.com/MagnusMutai/MagnusApp/assets/125874084/c43cf650-ebdb-4ffe-9c6d-fe681f3907a1)
+<img width="619" alt="MagnusQHome" src="https://github.com/user-attachments/assets/a69ba3ea-ca2d-44db-8a8f-9debb4f00657">
 
