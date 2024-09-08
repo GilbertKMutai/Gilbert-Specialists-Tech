@@ -1,15 +1,12 @@
 ﻿@page "/"
 @inherits HomeBase
-@* @rendermode @(new InteractiveAutoRenderMode()); *@
-@rendermode InteractiveAuto
-
 
 <PageTitle>Home</PageTitle>
 
 <header> 
     <div class="index-intro">
-        <h2 class="text-start">Hi. I'm Magnus 👋</h2>
-        <p> I'm a Full-stack .NET/Blazor Software Engineer based in Nairobi, Kenya. I enjoy building exciting and highly converting softwares for my clients using C#. <br /> </p>
+        <h2 class="text-start">Hi, I'm Magnus 👋</h2>
+        <p> A Full-stack .NET/Blazor Software Engineer based in Nairobi, Kenya. I enjoy building exciting and highly converting softwares for my clients using C#. <br /> </p>
         <p class="text-cta">Explore my website, my past projects and contact me in the <a style="color:darkorange;" href="contact">contact page</a>. Hire me by going to the <a href="hireme" style="color:darkorange">hiring page</a></p>
     </div>
 
@@ -19,92 +16,93 @@
 @*    <div class="stick"></div> <div class="arrow"></div>
     <SfButton Content="Hire Me" CssClass="borders" OnClick="OnBtnClick"></SfButton>
 *@
-  <section>
+    <div class="aos-item" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="800">
+        <section>
 
-    <div class="skill">
-        <img src="/icons/skill/blazor-icon.svg" alt="blazor icon">
-        <p>Blazor</p>
-    </div>
-    <div class="skill">
-      <img src="/icons/skill/dotnet-icon.svg" alt="dotnet icon">
-        <p>.NET/C#</p>
-    </div>
-    <div class="skill hide-zfold">
-       <img src="/icons/skill/syncfusion-icon.svg" alt="syncfusion icon">
-        <p>Syncfusion</p>
-    </div>
-    <div class="skill hide-mobile">
-      <img src="/icons/skill/html-icon.svg" alt="html icon ">
-        <p>Html/Css</p>
-    </div>
-    <div class="skill hide-tablet">
-      <img src="/icons/skill/azure-icon.svg" alt="azure icon">
-        <p>Azure</p>
-    </div> 
-    <div class="skill hide-tablet">
-      <img src="/icons/skill/docker-icon.svg" alt="docker icon">
-        <p>Docker</p>
-    </div>
+            <div class="skill">
+                <img src="/icons/skill/blazor-icon.svg" alt="blazor icon">
+                <p>Blazor</p>
+            </div>
+            <div class="skill">
+                <img src="/icons/skill/dotnet-icon.svg" alt="dotnet icon">
+                <p>.NET/C#</p>
+            </div>
+            <div class="skill hide-zfold">
+                <img src="/icons/skill/syncfusion-icon.svg" alt="syncfusion icon">
+                <p>Syncfusion</p>
+            </div>
+            <div class="skill hide-mobile">
+                <img src="/icons/skill/html-icon.svg" alt="html icon ">
+                <p>Html/Css</p>
+            </div>
+            <div class="skill hide-tablet">
+                <img src="/icons/skill/azure-icon.svg" alt="azure icon">
+                <p>Azure</p>
+            </div>
+            <div class="skill hide-tablet">
+                <img src="/icons/skill/docker-icon.svg" alt="docker icon">
+                <p>Docker</p>
+            </div>
 
-   </section>
+        </section>
 
 
-    <div class="skill-layers">
-        <div class="skill-over hide-laptop">
-            <img src="/icons/skill/html-icon.svg" alt="html icon">
-            <p>Html/Css</p>
+        <div class="skill-layers">
+            <div class="skill-over hide-laptop">
+                <img src="/icons/skill/html-icon.svg" alt="html icon">
+                <p>Html/Css</p>
+            </div>
+            <div class="skill-over hide-laptop showtablet">
+                <img src="/icons/skill/azure-icon.svg" alt="azure icon">
+                <p>Azure</p>
+            </div>
+            <div class="skill-over hide-zfold special hide-laptop showtablet">
+                <img src="/icons/skill/docker-icon.svg" alt="docker icon">
+                <p>Docker</p>
+            </div>
+            <div class="skill-over hide-mobile">
+                <img src="/icons/skill/kubernetes-icon.svg" alt="kubernetes icon">
+                <p>Kubernetes</p>
+            </div>
+            <div class="skill-over hide-mobile hide-tablet">
+                <img src="/icons/skill/figma-icon.svg" alt="figma icon">
+                <p>Figma</p>
+            </div>
         </div>
-        <div class="skill-over hide-laptop showtablet">
-            <img src="/icons/skill/azure-icon.svg" alt="azure icon">
-            <p>Azure</p>
+
+        <div class="skill-layers">
+            <div class="skill-over hide-zfold hide-tablet hide-laptop">
+                <img src="/icons/skill/docker-icon.svg" alt="docker icon">
+                <p>Docker</p>
+            </div>
+            <div class="skill-over hide-tablet hide-laptop">
+                <img src="/icons/skill/kubernetes-icon.svg" alt="kubernetes icon">
+                <p>Kubernetes</p>
+            </div>
+            <div class="skill-over showtablet hide-laptop hide-zfold">
+                <img src="/icons/skill/figma-icon.svg" alt="figma icon">
+                <p>Figma</p>
+            </div>
         </div>
-        <div class="skill-over hide-zfold special hide-laptop showtablet">
-            <img src="/icons/skill/docker-icon.svg" alt="docker icon">
-            <p>Docker</p>
+
+        <div class="skill-layers hidefromNZ">
+            <div class="skill-over hide-laptop hide-tablet hide-mobile">
+                <img src="/icons/skill/figma-icon.svg" alt="figma icon">
+                <p>Figma</p>
+            </div>
+            <div class="skill-over hide-mobile hide-laptop">
+                <img src="/icons/skill/syncfusion-icon.svg" alt="syncfusion icon">
+                <p>Syncfusion</p>
+            </div>
         </div>
-        <div class="skill-over hide-mobile">
-            <img src="/icons/skill/kubernetes-icon.svg" alt="kubernetes icon">
-            <p>Kubernetes</p>
-        </div>
-        <div class="skill-over hide-mobile hide-tablet">
-            <img src="/icons/skill/figma-icon.svg" alt="figma icon">
-            <p>Figma</p>
+
+        <div class="skill-layers hidefromNZ">
+            <div class="skill-over hide-mobile hide-tablet hide-laptop">
+                <img src="/icons/skill/docker-icon.svg" alt="docker icon">
+                <p>Docker</p>
+            </div>
         </div>
     </div>
-
-    <div class="skill-layers">
-        <div class="skill-over hide-zfold hide-tablet hide-laptop">
-            <img src="/icons/skill/docker-icon.svg" alt="docker icon">
-            <p>Docker</p>
-        </div>
-        <div class="skill-over hide-tablet hide-laptop">
-            <img src="/icons/skill/kubernetes-icon.svg" alt="kubernetes icon">
-            <p>Kubernetes</p>
-        </div>
-        <div class="skill-over showtablet hide-laptop hide-zfold">
-            <img src="/icons/skill/figma-icon.svg" alt="figma icon">
-            <p>Figma</p>
-        </div>
-    </div>
-
-     <div class="skill-layers hidefromNZ">
-        <div class="skill-over hide-laptop hide-tablet hide-mobile">
-            <img src="/icons/skill/figma-icon.svg" alt="figma icon">
-            <p>Figma</p>
-        </div>
-        <div class="skill-over hide-mobile hide-laptop">
-            <img src="/icons/skill/syncfusion-icon.svg" alt="syncfusion icon">
-            <p>Syncfusion</p>
-        </div>
-     </div>
-    
-     <div class="skill-layers hidefromNZ">
-        <div class="skill-over hide-mobile hide-tablet hide-laptop">
-            <img src="/icons/skill/docker-icon.svg" alt="docker icon">
-            <p>Docker</p>
-        </div>
-     </div>
-
 </header>
 
 <div>
