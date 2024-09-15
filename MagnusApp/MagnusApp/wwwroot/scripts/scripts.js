@@ -43,3 +43,31 @@
 //        DotNet.invokeMethodAsync("MagnusApp", "DisableAutoplay")
 //    }
 //});
+
+if (!window.Cypress) {
+    const scrollCounter = document.querySelector('.js-scroll-counter');
+
+    AOS.init({
+        mirror: true,
+        once: true
+    });
+
+    document.addEventListener('aos:in', function (e) {
+        console.log('in!', e.detail);
+    });
+}
+
+
+//export function startResizeListener(dotNetHelper) {
+//    window.addEventListener('resize', () => {
+
+//        if (window.innerWidth > 1000) {
+//            dotNetHelper.invokeMethodAsync("MagnusApp.Client", "DisableAutoPlay")
+//        }
+//    });
+
+//    // Check on page load
+//    if (window.innerWidth > 1000) {
+//        dotNetHelper.invokeMethodAsync("MagnusApp.Client", "DisableAutoPlay");
+//    }
+//}

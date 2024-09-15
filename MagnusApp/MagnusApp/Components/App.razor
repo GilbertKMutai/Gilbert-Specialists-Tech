@@ -33,6 +33,7 @@
 
     @*Javascript Aos https://michalsnik.github.io/aos/ *@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="/scripts/scripts.js"></script>
 
 
     <script>
@@ -51,17 +52,19 @@
     </script>
 
     <script>
-        window.addEventListener('resize', () => {
-
-            if(window.innerWidth > 1000) {
-                DotNet.invokeMethodAsync("MagnusApp.Client", "DisableAutoPlay")
+        function startResizeListener(dotNetHelper) {
+            function checkWindowSize() {
+                let windowWidth = document.documentElement.clientWidth;
+                dotNetHelper.invokeMethodAsync("DisableAutoPlay", windowWidth);
             }
-        });
 
-        // Check on page load
-        if (window.innerWidth > 1000) {
-            DotNet.invokeMethodAsync("MagnusApp.Client", "DisableAutoPlay");
+            // Listen for window resize event
+            window.addEventListener('resize', checkWindowSize);
+
+            // Initial check on page load
+            checkWindowSize();
         }
+
     </script>
 
 </body>
