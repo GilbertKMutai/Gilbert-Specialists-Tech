@@ -12,12 +12,13 @@
                         <p>"We like how Magnus implemented the dark mode in our website. Next, we are making another contract to develop a Blazor App."</p>
                     </CardContent>
                 </SfCard>
-
-                <SfCard ID="Testimonial-Card">
-                    <CardContent>
-                        <p>"It was a delight working with Magnus. He delivered a top-notch Blazor tutorial with clear instructions, clean and focused example code, and detailed demo images—all ahead of schedule. Magnus was also quick and helpful in processing peer review feedback from our developers. If we need someone for .NET, C#, or Blazor in the future, I’ll definitely reach out to Magnus."</p>
-                    </CardContent>
-                </SfCard>
+                <div class="hide-tablet">
+                    <SfCard ID="Testimonial-Card">
+                        <CardContent>
+                            <p>"It was a delight working with Magnus. He delivered a top-notch Blazor tutorial with clear instructions, clean and focused example code, and detailed demo images—all ahead of schedule. Magnus was also quick and helpful in processing peer review feedback from our developers. If we need someone for .NET, C#, or Blazor in the future, I’ll definitely reach out to Magnus."</p>
+                        </CardContent>
+                    </SfCard>
+                </div>
                 <div class="hide-tablet">
                     <SfCard ID="Testimonial-Card">
                         <CardContent>
@@ -28,8 +29,8 @@
             </div>
 
         </CarouselItem>
-        <div class="hide-laptop">
-            <CarouselItem CssClass="hide-laptop">
+
+            <CarouselItem>
 
                 <div class="carousel-item-wrapper">
                     <SfCard ID="Testimonial-Card">
@@ -40,7 +41,18 @@
                 </div>
 
             </CarouselItem>
-        </div>
+            
+            <CarouselItem>
+
+                <div class="carousel-item-wrapper">
+                    <SfCard ID="Testimonial-Card">
+                        <CardContent>
+                            <p>"It was a delight working with Magnus. He delivered a top-notch Blazor tutorial with clear instructions, clean and focused example code, and detailed demo images—all ahead of schedule. Magnus was also quick and helpful in processing peer review feedback from our developers. If we need someone for .NET, C#, or Blazor in the future, I’ll definitely reach out to Magnus."</p>
+                        </CardContent>
+                    </SfCard>
+                </div>
+
+            </CarouselItem>
 
     </SfCarousel>
 </div>
