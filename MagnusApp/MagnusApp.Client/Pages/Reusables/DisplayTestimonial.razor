@@ -1,7 +1,8 @@
 ﻿@rendermode InteractiveAuto
+@inherits DisplayTestimonialBase
 
 <div class="control-container">
-    <SfCarousel ID="Testimonials">
+    <SfCarousel ID="Testimonials" @ref="carouselRef" AutoPlay="@carouselAutoPlay">
         <CarouselItem>
 
             <div class="carousel-item-wrapper">
@@ -43,6 +44,4 @@
 
     </SfCarousel>
 </div>
-@code {
 
-}
