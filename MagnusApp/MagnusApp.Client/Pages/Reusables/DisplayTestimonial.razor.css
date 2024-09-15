@@ -1,36 +1,41 @@
 ﻿.control-container {
     background-color: transparent;
     margin: 0 auto;
-    width: 600px;
+    /*width: 1000px;*/
 }
 
 .carousel-item-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
     height: 300px;
-    width: 400px;
+    /*width: 100%;*/
 }
 
-::deep #Testimonials .e-carousel-items .e-carousel-item .img-container {
-    height: 80%;
+.tablet-cards {
+    display: flex;
+    gap: 30px;
 }
 
 ::deep #Testimonial-Card {
     height: 78%;
-    width: 100%;
+    width: 300px;
 }
 
 ::deep #Testimonials .e-carousel-items .e-carousel-item {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    margin-top: 50px;
 }
 
-    ::deep #Testimonials .e-carousel-items .e-carousel-item .img-caption {
-        bottom: 4em;
-        color: #fff;
-        font-size: 12pt;
-        height: 1em;
-        position: relative;
-        padding: 0.3em 1em;
-        text-align: center;
-        width: 100%;
+@media (min-width: 1000px)
+{
+    ::deep .e-carousel .e-carousel-items .hide-laptop {
+        display: none !important;
     }
+}
+
+@media (max-width: 1000px)
+{
+    .hide-tablet {
+        display: none;
+    }
+}
