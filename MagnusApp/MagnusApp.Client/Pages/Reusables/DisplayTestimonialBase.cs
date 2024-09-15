@@ -7,20 +7,31 @@ namespace MagnusApp.Client.Pages.Reusables
     {
 
         protected SfCarousel carouselRef;
-        protected static bool carouselAutoPlay = true;
+        protected bool carouselAutoPlay = true;
+        public DotNetObjectReference<DisplayTestimonialBase> objRef;
 
         [Inject]
         public IJSRuntime JSRuntime { get; set; }
 
+        protected override void OnInitialized()
+        {
+            objRef = DotNetObjectReference.Create(this);
+        }
+        protected override async Task OnAfterRenderAsync(bool firstRender)
+        {
+            if (firstRender)
+            {
+                await JSRuntime.InvokeVoidAsync("startResizeListener", objRef);
 
+            }
+        }
 
         [JSInvokable]
-        private static void DisableAutoPlay()
+        public void DisableAutoPlay(int windowWidth)
         {
             // Disable autoplay for screen sizes greater than or equal to 1000px
-            carouselAutoPlay = false;
-
-            //InvokeAsync(StateHasChanged);
+            carouselAutoPlay = windowWidth < 1000;
+            StateHasChanged();
         }
 
     }
