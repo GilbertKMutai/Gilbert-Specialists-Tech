@@ -21,11 +21,15 @@
     margin-top: 50px;
 }
 
+::deep .e-carousel-indicators .e-indicator-bars .e-indicator-bar, ::deep .e-carousel-navigators {
+    display: none;
+}
+
 @media (min-width: 1000px)
 {
-    ::deep .e-carousel .e-carousel-items .hide-laptop {
+/*    ::deep .e-carousel .e-carousel-items .hide-laptop {
         display: none !important;
-    }
+    }*/
 }
 
 @media (max-width: 1000px)
@@ -33,7 +37,14 @@
     .carousel-item-wrapper {
         gap: 50px;
     }
-        .hide-tablet {
+    .hide-tablet {
+        display: none;
+    }
+}
+
+@media (max-width: 682px)
+{
+    .hide-mobile {
         display: none;
     }
 }
