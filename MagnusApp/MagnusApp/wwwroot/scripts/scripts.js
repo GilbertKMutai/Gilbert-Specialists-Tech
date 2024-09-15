@@ -33,6 +33,13 @@
 //        }
 //        // else {
 //        //     box.classList.remove("show-animate")
-//        // }  
+//        // }
 //    });
+//});
+
+//window.addEventListener('resize', () => {
+
+//    if (window.innerWidth > 1000) {
+//        DotNet.invokeMethodAsync("MagnusApp", "DisableAutoplay")
+//    }
 //});

@@ -50,6 +50,20 @@
         }
     </script>
 
+    <script>
+        window.addEventListener('resize', () => {
+
+            if(window.innerWidth > 1000) {
+                DotNet.invokeMethodAsync("MagnusApp.Client", "DisableAutoPlay")
+            }
+        });
+
+        // Check on page load
+        if (window.innerWidth > 1000) {
+            DotNet.invokeMethodAsync("MagnusApp.Client", "DisableAutoPlay");
+        }
+    </script>
+
 </body>
 
 </html>
