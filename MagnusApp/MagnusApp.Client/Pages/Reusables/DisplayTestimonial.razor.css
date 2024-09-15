@@ -12,11 +12,6 @@
     /*width: 100%;*/
 }
 
-.tablet-cards {
-    display: flex;
-    gap: 30px;
-}
-
 ::deep #Testimonial-Card {
     height: 78%;
     width: 300px;
@@ -35,7 +30,10 @@
 
 @media (max-width: 1000px)
 {
-    .hide-tablet {
+    .carousel-item-wrapper {
+        gap: 50px;
+    }
+        .hide-tablet {
         display: none;
     }
 }
