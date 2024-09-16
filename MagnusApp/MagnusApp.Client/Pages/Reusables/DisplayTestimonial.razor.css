@@ -25,9 +25,12 @@
     display: none;
 }
 
-@media (min-width: 1000px)
-{
-/*    ::deep .e-carousel .e-carousel-items .hide-laptop {
+::deep .e-carousel .e-carousel-navigators {
+    display: none;
+}
+
+@media (min-width: 1000px) {
+    /*    ::deep .e-carousel .e-carousel-items .hide-laptop {
         display: none !important;
     }*/
 }
