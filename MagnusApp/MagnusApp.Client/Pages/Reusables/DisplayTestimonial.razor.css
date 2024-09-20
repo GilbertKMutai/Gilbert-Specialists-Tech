@@ -13,13 +13,9 @@
     /*width: 100%;*/
 }
 
-::deep #Testimonial-Card {
+::deep .testimonial-card {
     height: 78%;
     width: 300px;
-}
-
-::deep #Testimonials .e-carousel-items .e-carousel-item {
-    margin-top: 50px;
 }
 
 ::deep .e-carousel-indicators .e-indicator-bars .e-indicator-bar, ::deep .e-carousel-navigators {
@@ -28,12 +24,6 @@
 
 ::deep .e-carousel .e-carousel-navigators {
     display: none;
-}
-
-@media (min-width: 1000px) {
-    /*    ::deep .e-carousel .e-carousel-items .hide-laptop {
-        display: none !important;
-    }*/
 }
 
 @media (max-width: 1000px)
