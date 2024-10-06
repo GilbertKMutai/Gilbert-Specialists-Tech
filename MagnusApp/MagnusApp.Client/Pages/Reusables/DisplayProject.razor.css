@@ -17,7 +17,7 @@ h5 {
     margin-bottom: 40px;
 }
 
-::deep #Card {
+::deep .card {
         width: 450px;
         height: 326px;
         margin-bottom: 50px;
@@ -34,23 +34,24 @@ h5 {
         animation-range: entry 0;*/
     }
 
-    ::deep #Card:hover {
+    ::deep .card:hover {
+        background-color: rgba(78, 0, 243, 0.26);
         box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         transition: box-shadow 0.3s ease-in-out
     }
 
-        ::deep #Card .e-card-content img {
+        ::deep .card .e-card-content img {
             width: 100%;
             object-fit: contain;
             transition: 0.4s ease-in-out;
         }
 
-    ::deep #Card .e-card-content img:hover {
+    ::deep .card .e-card-content img:hover {
         transform: scale(1.03);
         transition: 0.4s ease-in-out;
     }
 
-    ::deep #Card .e-card-header .e-card-header-caption .e-card-header-title, #mini-card .e-card-header .e-card-header-caption .e-card-header-title, #mini-card2 .e-card-header .e-card-header-caption .e-card-header-title {
+    ::deep .card .e-card-header .e-card-header-caption .e-card-header-title, ::deep .mini-card .e-card-header .e-card-header-caption .e-card-header-title, ::deep .mini-card2 .e-card-header .e-card-header-caption .e-card-header-title {
         color: white;
         text-align: center;
         margin-bottom: 30px;
@@ -62,7 +63,7 @@ h5 {
     
 }
 
-::deep #mini-card {
+::deep .mini-card {
     width: 250px;
     height: 150px;
     background-color: rgba(78, 0, 243, 0.26);
@@ -76,7 +77,11 @@ h5 {
     transform: scale(1.02);
 }
 
-::deep #mini-card2 {
+::deep .mini-card2:hover, ::deep .mini-card:hover {
+    background-color: rgba(78, 0, 243, 0.26);
+}
+
+::deep .mini-card2 {
     width: 250px;
     height: 150px;
     background-color: rgba(78, 0, 243, 0.26);
@@ -91,12 +96,12 @@ h5 {
     transform: scale(1.02);
 }
 
-    ::deep #mini-card2 .e-card-content, ::deep #mini-card .e-card-content {
+    ::deep .mini-card2 .e-card-content, ::deep .mini-card .e-card-content {
         color: white;
         margin-left: 5px;
     }
 
-        ::deep #mini-card2 .e-card-content p, ::deep #mini-card .e-card-content p {
+        ::deep .mini-card2 .e-card-content p, ::deep .mini-card .e-card-content p {
             line-height: 20px;
         }
 
@@ -154,11 +159,11 @@ h5 {
         margin-top: -20px;
     }
 
-    ::deep #mini-card, #mini-card2 {
+    ::deep .mini-card, ::deep .mini-card2 {
         margin-top: 0px;
     }
 
-    ::deep #mini-card {
+    ::deep .mini-card {
         margin-bottom: 20px;
     }
 
@@ -166,7 +171,7 @@ h5 {
 
 @media (max-width: 474px) {
 
-    ::deep #Card {
+    ::deep .card {
         width: 360px;
         height: 300px;
     }
@@ -174,7 +179,7 @@ h5 {
 
 @media (max-width: 355px) {
 
-    ::deep #Card {
+    ::deep .card {
         width: 280px;
         height: 250px;
     }
