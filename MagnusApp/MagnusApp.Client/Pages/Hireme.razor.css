@@ -72,43 +72,6 @@ h5 {
     border-right: 5px solid transparent;
 }
 
-
-/*Starting point*/
-/*::deep #MyForm {*/
-    /*background-color: rgba(78, 0, 243, 0.26);*/
-    /*padding: 40px 25px;
-    border-radius: 15px;
-}
-
-    ::deep #MyForm .formitem {
-        border-radius: 0;
-    }
-
-
-    ::deep #MyForm h4 {
-        text-align: center;
-    }
-
-    ::deep #MyForm .textbox {
-        height: 70px;
-    }
-
-    ::deep #MyForm .submitbtn {
-        border-radius: 15px;
-        font-weight: 500;
-        color: white;
-        background-color: rgb(238, 48, 48);
-        width: 100%;
-        padding: 6px 25px;
-        transition: .25s ease-in-out;
-    }
-
-        ::deep #MyForm .submitbtn:hover {
-            color: black;
-            background-color: white;
-            transition: .25s ease-in-out;
-        }*/
-/*Ending point*/
 ::deep .e-btn.borders {
     border: 1px solid rgb(64, 234, 132);
     color: black;
@@ -133,20 +96,6 @@ h5 {
     justify-content: center;
     margin-bottom: 80px;
 }
-
-/*Non-functional | monitor to see if functions*/
-/*::deep #Dialog .e-dlg-content #MyForm .submitbtn {
-    border-radius: 0;
-    color: white;
-    background-color: #FF0000;
-    padding: 4px 18px;
-    font-weight: 500;
-}*/
-
-/*::deep #Dialog {
-    width: 350px;
-}*/
-
 
 @media (max-width: 600px) {
     .sm-text {
