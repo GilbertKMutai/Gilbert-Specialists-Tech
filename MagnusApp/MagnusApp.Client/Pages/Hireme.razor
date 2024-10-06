@@ -31,7 +31,7 @@
         </div>
     </div>
     
-        <SfDialog ID="Dialog" CssClass="dialog-box" IsModal="true" @bind-Visible="IsVisible">
+        <SfDialog ID="Dialog" IsModal="true" @bind-Visible="IsVisible">
             <DialogEvents OnOverlayModalClick="OverlayModalClickHandler"></DialogEvents>
             <DialogTemplates>
                 <Content>
@@ -110,7 +110,7 @@
         }
 
              #MyForm .submitbtn:hover {
-                color: black;
+                 color: black; 
                 background-color: white;
                 transition: .5s ease-in-out;
             }
