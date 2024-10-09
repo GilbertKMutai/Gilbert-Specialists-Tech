@@ -15,10 +15,18 @@
     height: 98%;
     width: 300px;
     border: none;
+    transition: 0.4s ease-in-out;
+    border-radius: 15px;
 }
 
 
 ::deep .testimonial-card:hover {
+    background-color: rgba(78, 0, 243, 0.26);
+    transform: scale(1.03);
+    transition: 0.4s ease-in-out;
+}
+
+::deep .testimonial-card:focus {
     background-color: rgba(78, 0, 243, 0.26);
 }
 
