@@ -52,7 +52,7 @@ header {
 }
 
 .index-intro p {
-    font-size: 15px;
+    font-size: 0.9rem;
 }
 
 .text-cta {
@@ -72,7 +72,7 @@ header {
     align-self: safe center;
     border-radius: 0;
     margin-top: 10px;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-style: italic;
 }
 
@@ -103,7 +103,7 @@ section {
 .skill {
     margin-right: 8px;
     background-color: rgba(78, 0, 243, 0.26);
-    font-size: 15px;
+    font-size: 0.9rem;
     border-radius: 1000px;
     padding: 3px 0;
     width: 120px;
@@ -120,7 +120,7 @@ section {
 .skill-over {
     margin-right: 8px;
     background-color: rgba(78, 0, 243, 0.26);
-    font-size: 15px;
+    font-size: 0.9rem;
     border-radius: 1000px;
     padding: 3px 0px;
     width: 120px;
