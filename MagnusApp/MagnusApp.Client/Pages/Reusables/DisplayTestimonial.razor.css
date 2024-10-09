@@ -12,11 +12,12 @@
 
 ::deep .testimonial-card {
     background-color: rgba(78, 0, 243, 0.26);
+    background-image: radial-gradient(closest-side, #8C215B, rgba(78, 0, 243, 0.26));
     height: 98%;
     width: 300px;
     border: none;
     transition: 0.4s ease-in-out;
-    border-radius: 35px 10px;
+    border-radius: 10px 35px;
 }
 
 
