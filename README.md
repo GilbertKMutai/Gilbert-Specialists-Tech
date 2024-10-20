@@ -13,6 +13,8 @@
 -BootstrapV5 <br />
 -Html5/Css3 <br />
 
+https://magnusq.com
+
 •Designed by me using Figma 
 
 <img width="619" alt="MagnusQHome" src="https://github.com/user-attachments/assets/a69ba3ea-ca2d-44db-8a8f-9debb4f00657">
