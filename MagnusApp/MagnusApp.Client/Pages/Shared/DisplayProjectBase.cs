@@ -1,6 +1,6 @@
 ﻿using Microsoft.JSInterop;
 
-namespace MagnusApp.Client.Pages.Reusables;
+namespace MagnusApp.Client.Pages.Shared;
 
 public class DisplayProjectBase : ComponentBase
 {

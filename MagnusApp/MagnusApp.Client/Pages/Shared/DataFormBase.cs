@@ -1,6 +1,6 @@
 ﻿using Syncfusion.Blazor.DataForm;
 using Syncfusion.Blazor.Notifications;
-namespace MagnusApp.Client.Pages.Reusables;
+namespace MagnusApp.Client.Pages.Shared;
 
 public class DataFormBase : ComponentBase
 {
