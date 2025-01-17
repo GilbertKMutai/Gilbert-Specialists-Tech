@@ -1,7 +1,7 @@
 ﻿using Microsoft.JSInterop;
 using Syncfusion.Blazor.Navigations;
 
-namespace MagnusApp.Client.Pages.Reusables;
+namespace MagnusApp.Client.Pages.Shared;
 
 public class DisplayTestimonialBase : ComponentBase
 {
