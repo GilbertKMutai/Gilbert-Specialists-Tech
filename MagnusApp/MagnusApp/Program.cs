@@ -38,9 +38,9 @@ builder.Services.AddScoped<IEmailRepository, EmailRepository>();
 builder.Services.AddHttpClient<IEmailService, EmailService>(client =>
 {
     //dev baseaddress
-    //client.BaseAddress = new Uri(builder.Configuration.GetValue<string>("BaseUri")!);
+    client.BaseAddress = new Uri(builder.Configuration.GetValue<string>("BaseUri")!);
     //prod baseaddress
-    client.BaseAddress = new Uri(builder.Configuration.GetValue<string>("ProdBaseUri")!);
+    //client.BaseAddress = new Uri(builder.Configuration.GetValue<string>("ProdBaseUri")!);
 });
 builder.Services.AddSwaggerGen(c =>
 {
@@ -74,32 +74,32 @@ builder.Services.AddAuthentication(options =>
     options.DefaultScheme = IdentityConstants.ApplicationScheme;
     options.DefaultSignInScheme = IdentityConstants.ExternalScheme;
 })
-.AddGoogle(async options =>
-{
-bool isProduction = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Production";
-    if (isProduction)
-    {
-        //Get from aws secrets manager
-        options.ClientId = await GoogleSecret.GetClientId();
-        options.ClientSecret = await GoogleSecret.GetClientSecret();
+//.AddGoogle(async options =>
+//{
+//bool isProduction = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Production";
+//    if (isProduction)
+//    {
+//        //Get from aws secrets manager
+//        options.ClientId = await GoogleSecret.GetClientId();
+//        options.ClientSecret = await GoogleSecret.GetClientSecret();
 
-    }
+//    }
 
-    //Get from secrets.json
+//    //Get from secrets.json
 
-    //options.ClientId = builder.Configuration.GetValue<string>("Authentication:Google:ClientId")!;
-    //options.ClientSecret = builder.Configuration.GetValue<string>("Authentication:Google:ClientSecret")!;
+//    //options.ClientId = builder.Configuration.GetValue<string>("Authentication:Google:ClientId")!;
+//    //options.ClientSecret = builder.Configuration.GetValue<string>("Authentication:Google:ClientSecret")!;
     
-    //Get from appsettings.json
-    options.ClientId = builder.Configuration.GetValue<string>("Google:ClientId")!;
-    options.ClientSecret = builder.Configuration.GetValue<string>("Google:ClientSecret")!;
-})
+//    //Get from appsettings.json
+//    options.ClientId = builder.Configuration.GetValue<string>("Google:ClientId")!;
+//    options.ClientSecret = builder.Configuration.GetValue<string>("Google:ClientSecret")!;
+//})
 .AddIdentityCookies();
 
-var connectionString = builder.Configuration.GetConnectionString("MagnusAppAWSDb") ?? throw new InvalidOperationException("Connection string 'MagnusAWSDb' not found.");
+//var connectionString = builder.Configuration.GetConnectionString("MagnusAppAWSDb") ?? throw new InvalidOperationException("Connection string 'MagnusAWSDb' not found.");
 //var connectionString = (DatabaseSecret.GetConnectionString()).ToString() ?? throw new InvalidOperationException("Connection string 'MagnusAWSDb' not found.");
 builder.Services.AddDbContext<MagnusAppDbContext>(options =>
-options.UseSqlServer(connectionString));
+options.UseSqlServer(builder.Configuration.GetConnectionString("MagnusDbConnection")));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddIdentityCore<ApplicationUser>(options =>
